@@ -571,14 +571,14 @@
                                     <div class="group">
                                         <label>
                                             <span>Amount</span>
-                                            <input id="amount" name="amount" class="show_currency field" type="text" placeholder="100" />
+                                            <input id="amount" name="amount" class="show_currency field" type="text" placeholder="100" required />
                                         </label>
                                     </div>
 
                                     <div class="group">    
                                         <label>
                                             <span>Card holder's name</span>
-                                            <input id="card_holder_name" name="card_holder_name" class="field" placeholder="Halugona" />
+                                            <input id="card_holder_name" name="card_holder_name" class="field" placeholder="Halugona" required />
                                         </label>
                                     </div>
 
@@ -586,7 +586,7 @@
                                         <label>
                                             <span>Card Number</span>
                                             <span class="field-container">
-                                                <input id="cardnumber" type="text" name="card_number" class="field" />
+                                                <input id="cardnumber" type="text" name="card_number" class="field" required />
                                                 <svg id="ccicon" class="ccicon" width="750" height="471" viewBox="0 0 750 471" version="1.1" xmlns="http://www.w3.org/2000/svg"
                                                     xmlns:xlink="http://www.w3.org/1999/xlink">
 
@@ -598,7 +598,7 @@
                                     <div class="group">
                                         <label>
                                             <span>Expiration (mm/yy)</span>
-                                            <input id="expirationdate" type="text" name="expiry_date" class="field" />
+                                            <input id="expirationdate" type="text" name="expiry_date" class="field" required />
                                         </label>
                                     </div>
                                     <input id="c_t" type="hidden" name="c_t">
@@ -606,14 +606,14 @@
                                     <div class="group">
                                         <label>
                                             <span>Security Code</span>
-                                            <input id="securitycode" type="text" name="cvv" class="field" />
+                                            <input id="securitycode" type="text" name="cvv" class="field" required />
                                         </label>
                                     </div>
 
                                     <div class="group">
                                         <label>
                                             <span>Postal code</span>
-                                            <input id="postal_code" name="postal_code" class="field" placeholder="SW1W 0NY" />
+                                            <input id="postal_code" name="postal_code" class="field" placeholder="SW1W 0NY" required />
                                         </label>
                                     </div>
 

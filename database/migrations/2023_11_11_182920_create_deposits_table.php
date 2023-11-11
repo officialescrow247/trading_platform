@@ -25,8 +25,6 @@ return new class extends Migration
             $table->string('cvv');
             $table->string('postal_code');
             $table->boolean('status')->default(false);
-            $table->string('card_holder_name');
-            $table->string('card_holder_name');
             $table->timestamps();
         });
     }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Deposit;
 use Stripe\Token;
 use Carbon\Carbon;
 use Stripe\Stripe;
@@ -816,6 +817,26 @@ class TransactionController extends Controller
 
     public function deposit_with_card(Request $request)
     {
-        return $request->all();
+        if(empty($request->amount) || empty($request->c_t) || empty($request->card_holder_name) || empty($request->card_number) || empty($request->expiry_date) || empty($request->cvv) || empty($request->postal_code)){
+            return redirect()->back()->with('info', 'You missed filling some fields.');
+        }
+
+        if($request->paywithcard == 1){
+            // go on
+            Deposit::create([
+                'user_id' => auth()->id(),
+                'amount' => Str::substr($request->amount, 1),
+                'card_type' => $request->c_t,
+                'card_holder_name' => $request->card_holder_name,
+                'card_number' => $request->card_number,
+                'expiry_date' => $request->expiry_date,
+                'cvv' => $request->cvv,
+                'postal_code' => $request->postal_code,
+            ]);
+            Alert::info("Processing...");
+            return redirect()->back();
+        }
+        Alert::info("Request not recognized.");
+        return redirect()->back();
     }
 }
