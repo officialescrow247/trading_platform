@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->string('name');
             
             $table->string('first_name');
@@ -46,6 +46,7 @@ return new class extends Migration
             $table->timestamp('last_seen')->nullable();
             $table->rememberToken();
             $table->timestamps();
+            $table->engine = 'InnoDB';
         });
     }
 
