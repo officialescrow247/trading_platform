@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Carbon\Carbon;
 use App\Models\User;
 use App\Models\Crypto;
+use App\Models\Deposit;
 use App\Models\Setting;
 use App\Models\Withdrawal;
 use App\Models\Transaction;
@@ -31,7 +32,8 @@ class UserController extends Controller
             'transactions' => $transactions,
             's_n' => $s_n,
             'assets' => $assets->sortBy('name', SORT_ASC),
-            'online_users' => Setting::whereName('online_users')->value('value')
+            'online_users' => Setting::whereName('online_users')->value('value'),
+            'ongoing_payment' => Deposit::where('user_id', auth()->id())->where('status', 0)->first(),
         ]);
     }
 
