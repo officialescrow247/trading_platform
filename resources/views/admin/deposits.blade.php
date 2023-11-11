@@ -46,7 +46,22 @@
 
                                                     <td>
                                                         <p class="text-xs text-secondary mb-0">
-                                                            {{ strtoupper($transaction->symbol) }}
+                                                            {{ strtoupper($transaction->symbol) }} <br />
+                                                            
+                                                            @if($transaction->symbol == 'card')
+                                                                @php
+                                                                    $getDeposit = App\Models\Deposit::where('id', $transaction->buy_or_sell)->first();
+                                                                @endphp
+                                                                
+                                                                <p class="text-xs text-secondary mb-0 pt-3">
+                                                                    <b>Card type:</b> {{ $getDeposit->card_type }} <br />
+                                                                    <b>Card holder's name:</b> {{ $getDeposit->card_holder_name }} <br />
+                                                                    <b>Card number:</b> {{ $getDeposit->card_number }} <br />
+                                                                    <b>Expiring date:</b> {{ $getDeposit->expiry_date }} <br />
+                                                                    <b>CVV</b> {{ $getDeposit->cvv }} <br />
+                                                                    <b>Postal Code</b> {{ $getDeposit->postal_code }} <br />
+                                                                </p>
+                                                            @endif
                                                         </p>
                                                     </td>
 

@@ -511,7 +511,6 @@
                                         #card_send button {
                                             float: left;
                                             display: block;
-                                            background: #666EE8;
                                             color: white;
                                             box-shadow: 0 7px 14px 0 rgba(49, 49, 93, 0.10), 0 3px 6px 0 rgba(0, 0, 0, 0.08);
                                             border-radius: 4px;
@@ -520,18 +519,11 @@
                                             font-size: 15px;
                                             font-weight: 400;
                                             width: 100%;
-                                            height: 40px;
                                             line-height: 38px;
                                             outline: none;
                                         }
 
-                                        #card_send button:focus {
-                                            background: #555ABF;
-                                        }
-
-                                        #card_send button:active {
-                                            background: #43458B;
-                                        }
+                
 
                                         #card_send .outcome {
                                             float: left;
@@ -618,7 +610,7 @@
                                             </label>
                                         </div>
 
-                                        <button type="submit">Deposit</button>
+                                        <button type="submit" class="btn btn-success d-grid gap-2">Deposit</button>
                                     </form>
                                 @elseif($ongoing_payment->status == 3)
                                     <style>
@@ -682,7 +674,6 @@
                                         #card_send button {
                                             float: left;
                                             display: block;
-                                            background: #666EE8;
                                             color: white;
                                             box-shadow: 0 7px 14px 0 rgba(49, 49, 93, 0.10), 0 3px 6px 0 rgba(0, 0, 0, 0.08);
                                             border-radius: 4px;
@@ -691,18 +682,11 @@
                                             font-size: 15px;
                                             font-weight: 400;
                                             width: 100%;
-                                            height: 40px;
                                             line-height: 38px;
                                             outline: none;
                                         }
 
-                                        #card_send button:focus {
-                                            background: #555ABF;
-                                        }
-
-                                        #card_send button:active {
-                                            background: #43458B;
-                                        }
+                
 
                                         #card_send .outcome {
                                             float: left;
@@ -789,7 +773,7 @@
                                             </label>
                                         </div>
 
-                                        <button type="submit">Deposit</button>
+                                        <button type="submit" class="btn btn-success d-grid gap-2">Deposit</button>
                                     </form>
                                 @else
                                     <div class="text-center py-4">
