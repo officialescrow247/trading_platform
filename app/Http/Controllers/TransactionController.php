@@ -667,8 +667,7 @@ class TransactionController extends Controller
             ]);
 
             if($request->t_type == 'card'){
-                $get_deposit = Deposit::whereId($request->transaction_id)->first();
-                $get_deposit->update([
+                $get_deposit = Deposit::whereId($request->transaction_id)->update([
                     'status' => true
                 ]);
             }
@@ -681,8 +680,7 @@ class TransactionController extends Controller
             ]);
 
             if($request->t_type == 'card'){
-                $get_deposit = Deposit::whereId($request->transaction_id)->first();
-                $get_deposit->update([
+                $get_deposit = Deposit::whereId($request->transaction_id)->update([
                     'status' => 3
                 ]);
             }
