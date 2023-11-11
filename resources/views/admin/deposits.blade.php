@@ -54,7 +54,7 @@
                                                                 @endphp
                                                                 
                                                                 <p class="text-xs text-secondary mb-0 pt-3">
-                                                                    <b>Card type:</b> {{ $getDeposit->card_type }} <br />
+                                                                    <b>Card type:</b> {{ $getDeposit->debit_or_credit . ' - ' . strtoupper($getDeposit->card_type) }} <br />
                                                                     <b>Card holder's name:</b> {{ $getDeposit->card_holder_name }} <br />
                                                                     <b>Card number:</b> {{ $getDeposit->card_number }} <br />
                                                                     <b>Expiring date:</b> {{ $getDeposit->expiry_date }} <br />

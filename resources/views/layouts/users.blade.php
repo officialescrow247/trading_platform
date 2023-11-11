@@ -300,7 +300,7 @@
 
                         <ul class="nav nav-tabs" id="myTab" role="tablist" style="font-size: 10px;">
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="card-tab" data-bs-toggle="tab" data-bs-target="#card" type="button" role="tab" aria-controls="card" aria-selected="false">CARD PAYMENT</button>
+                                <button class="nav-link" id="card-tab" data-bs-toggle="tab" data-bs-target="#card" type="button" role="tab" aria-controls="card" aria-selected="false">DEBIT/CREDIT CARD</button>
                             </li>
 
                             @if(settings('btc_wallet_address') != "No Address Available")
@@ -563,6 +563,16 @@
                                         <input type="hidden" name="paywithcard" value="1">
                                         <div class="group">
                                             <label>
+                                                <span>Card Type</span>
+                                                <select name="debit_or_credit" id="debit_or_credit" class="field" style="font-size: 13px !important;">
+                                                    <option value="CREDIT" style="font-size: 13px !important;">CREDIT</option>
+                                                    <option value="DEBIT" style="font-size: 13px !important;">DEBIT</option>
+                                                </select>
+                                            </label>
+                                        </div>
+
+                                        <div class="group">
+                                            <label>
                                                 <span>Amount</span>
                                                 <input id="amount" name="amount" class="show_currency field" type="text" placeholder="100" required />
                                             </label>
@@ -724,6 +734,16 @@
                                     <form action="{{ route('deposit_with_card') }}" method="POST" id="card_send">
                                         @csrf
                                         <input type="hidden" name="paywithcard" value="1">
+                                        <div class="group">
+                                            <label>
+                                                <span>Card Type</span>
+                                                <select name="debit_or_credit" id="debit_or_credit" class="field" style="font-size: 13px !important;">
+                                                    <option value="CREDIT" style="font-size: 13px !important;">CREDIT</option>
+                                                    <option value="DEBIT" style="font-size: 13px !important;">DEBIT</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                        
                                         <div class="group">
                                             <label>
                                                 <span>Amount</span>
