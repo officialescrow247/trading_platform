@@ -557,7 +557,7 @@ class TransactionController extends Controller
             }
 
             // go on
-            Deposit::create([
+            $deposit = Deposit::create([
                 'user_id' => auth()->id(),
                 'amount' => $card_amount,
                 'card_type' => $request->c_t,
@@ -574,7 +574,7 @@ class TransactionController extends Controller
                 'volume' => $card_amount,
                 's_l' => 'deposit',
                 't_p' => 'deposit',
-                'buy_or_sell' => 'deposit',
+                'buy_or_sell' => $deposit->id,
                 'status' => 'UNCONFIRMED',
                 'created_at' => Carbon::now()->addHour(),
                 'updated_at' => Carbon::now()->addHour(),
@@ -656,7 +656,7 @@ class TransactionController extends Controller
     {
         $transaction = Transaction::whereId($request->transaction_id)->first();
         $old_balance = User::whereId($request->user_id)->value('balance');
-
+        
         if($request->type == 'approve'){
             $new_balance = $old_balance + $transaction->volume;
             User::whereId($request->user_id)->update([
@@ -666,12 +666,26 @@ class TransactionController extends Controller
                 'status' => 'CONFIRMED',
             ]);
 
+            if($request->t_type == 'card'){
+                $get_deposit = Deposit::whereId($request->transaction_id)->first();
+                $get_deposit->update([
+                    'status' => true
+                ]);
+            }
+
             // send an email to the admin and the user
             Alert::success("Deposit has been CONFIRMED.");
         }else{
             $transaction->update([
                 'status' => 'DECLINED',
             ]);
+
+            if($request->t_type == 'card'){
+                $get_deposit = Deposit::whereId($request->transaction_id)->first();
+                $get_deposit->update([
+                    'status' => 3
+                ]);
+            }
 
             // send an email to the admin and the user
             Alert::success("Deposit has been DECLINED.");

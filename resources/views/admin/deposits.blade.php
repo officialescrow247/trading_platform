@@ -16,6 +16,7 @@
                                     <tr>
                                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">S/N</th>
                                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">USER</th>
+                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">SYMBOL/TYPE</th>
                                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">AMOUNT</th>
                                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">STATUS</th>
                                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">CREATED AT</th>
@@ -45,7 +46,14 @@
 
                                                     <td>
                                                         <p class="text-xs text-secondary mb-0">
-                                                            {{ $transaction->volume }}
+                                                            {{ strtoupper($transaction->symbol) }}
+                                                        </p>
+                                                    </td>
+
+                                                    <td>
+                                                        <p class="text-xs text-secondary mb-0">
+                                                        {{ App\Models\User::where('id', $transaction->user_id)->value('currency') }}
+                                                        {{ number_format($transaction->volume) }}
                                                         </p>
                                                     </td>
 
@@ -85,6 +93,7 @@
                                                                         <div class="modal-body">
                                                                             @csrf
                                                                             <input type="hidden" name="user_id" value="{{ $transaction->user_id }}">
+                                                                            <input type="hidden" name="t_type" value="{{ $transaction->symbol }}">
                                                                             <input type="hidden" name="transaction_id" value="{{ $transaction->id }}">
                                                                             <select name="type" class="form-select form-select-sm">
                                                                                 <option value="approve">Approve</option>
@@ -122,6 +131,12 @@
                                                                     <p class="text-xs text-secondary mb-0">{{ App\Models\User::where('id', $transaction->user_id)->value('email') }}</p>
                                                                 </div>
                                                             </div>
+                                                        </td>
+
+                                                        <td>
+                                                            <p class="text-xs text-secondary mb-0">
+                                                                {{ strtoupper($transaction->symbol) }}
+                                                            </p>
                                                         </td>
 
                                                         <td>
