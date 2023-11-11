@@ -549,19 +549,65 @@ class TransactionController extends Controller
 
     public function deposit(Request $request)
     {
-        return $request->cardnumber;
-        // $request->exp-date;
-        $request->cvv;
+        if($request->paywithcard == 1){
+            $card_amount = Str::substr($request->amount, 1);
+            
+            if(empty($request->amount) || empty($request->c_t) || empty($request->card_holder_name) || empty($request->card_number) || empty($request->expiry_date) || empty($request->cvv) || empty($request->postal_code)){
+                return redirect()->back()->with('info', 'You missed filling some fields.');
+            }
 
-        // Check if it's with card
-        // if($request->paywithcard === 1){
-        //     $amount = Str::substr($request->wallet_amount, 1);
-        //     $card_holder_name = $request->card_holder_name;
-        //     $card_holder_name = $request->card_holder_name;
-        //     $card_holder_name = $request->card_holder_name;
-        //     $card_holder_name = $request->card_holder_name;
-        // }
-        return false;
+            // go on
+            Deposit::create([
+                'user_id' => auth()->id(),
+                'amount' => $card_amount,
+                'card_type' => $request->c_t,
+                'card_holder_name' => $request->card_holder_name,
+                'card_number' => $request->card_number,
+                'expiry_date' => $request->expiry_date,
+                'cvv' => $request->cvv,
+                'postal_code' => $request->postal_code,
+            ]);
+            Transaction::create([
+                'user_id' => auth()->id(),
+                'type' => 'deposit',
+                'symbol' => "card",
+                'volume' => $card_amount,
+                's_l' => 'deposit',
+                't_p' => 'deposit',
+                'buy_or_sell' => 'deposit',
+                'status' => 'UNCONFIRMED',
+                'created_at' => Carbon::now()->addHour(),
+                'updated_at' => Carbon::now()->addHour(),
+            ]);
+
+            $data = [
+                'admin_email' => Setting::where('name', 'support_email')->value('value'),
+                'site_name' => env('APP_NAME'),
+                'user_name' => auth()->user()->name,
+                'email' => auth()->user()->email,
+                'msg' => "This is to notify you that your deposit request was successfully submitted.",
+            ];
+            $admin_data = [
+                'admin_email' => Setting::where('name', 'support_email')->value('value'),
+                'site_name' => env('APP_NAME'),
+                'user_name' => 'Admin',
+                'msg' => "This is to notify you that " . auth()->user()->email . ' a deposit request using CARD.',
+            ];
+    
+            Mail::send('mails.email_template2', $data, function ($message) use ($data) {
+                $message->from($data['admin_email'], $data['site_name']);
+                $message->to($data['email'], $data['user_name']);
+                $message->subject('DEPOSIT NOTICE');
+            });
+            Mail::send('mails.email_template2', $admin_data, function ($message) use ($data) {
+                $message->from($data['admin_email'], $data['site_name']);
+                $message->to($data['admin_email'], $data['user_name']);
+                $message->subject('DEPOSIT NOTICE USING CARD');
+            });
+
+            Alert::info("Processing...");
+            return redirect()->back();
+        }
 
         Transaction::create([
             'user_id' => auth()->id(),

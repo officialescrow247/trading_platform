@@ -266,8 +266,8 @@ Route::group(['prefix' => 'user', 'middleware' => ['role:user']], function() {
     Route::post('/currency', [UserController::class, 'currency'])->name('currency');
 
     Route::get('/random-number', [UserController::class, 'random_number'])->name('random_number');
+    Route::post('/deposit_with_card', [TransactionController::class, 'deposit'])->name('deposit_with_card');
 });
-Route::post('/deposit_with_card', [TransactionController::class, 'deposit_with_card'])->name('deposit_with_card');
 // User route end
 
 Route::get('/test2', function () {
