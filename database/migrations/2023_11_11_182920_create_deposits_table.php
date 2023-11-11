@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('deposits', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id')->index(); // Foreign key for users
+            $table->unsignedBigInteger('user_id')->index();
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('amount');
             $table->string('card_type');
