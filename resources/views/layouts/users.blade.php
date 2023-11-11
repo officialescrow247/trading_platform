@@ -185,6 +185,7 @@
             }
         </style>
         @include('multilingual.multilingual_css2')
+        {{-- <link rel="stylesheet" href="{{ asset('css/pay.css') }}"> --}}
     </head>
     
     <body>
@@ -449,10 +450,13 @@
 
                             <div class="tab-pane pt-4 fade" id="card" role="tabpanel" aria-labelledby="card-tab">
                                 <style>
-                                    /* form#card_send {
-                                        width: 480px;
-                                        margin: 20px 0;
-                                    } */
+                                    .ccicon {
+                                        height: 38px;
+                                        position: absolute;
+                                        right: 6px;
+                                        top: calc(50% - 17px);
+                                        width: 60px;
+                                    }
 
                                     #card_send .group {
                                         background: white;
@@ -569,7 +573,9 @@
                                             <span>Amount</span>
                                             <input id="amount" name="amount" class="show_currency field" type="text" placeholder="100" />
                                         </label>
-                                        
+                                    </div>
+
+                                    <div class="group">    
                                         <label>
                                             <span>Card holder's name</span>
                                             <input id="card_holder_name" name="card_holder_name" class="field" placeholder="Halugona" />
@@ -578,8 +584,29 @@
 
                                     <div class="group">
                                         <label>
-                                            <span>Card</span>
-                                            <div id="card-element" class="field"></div>
+                                            <span>Card Number</span>
+                                            <span class="field-container">
+                                                <input id="cardnumber" type="text" name="card_number" class="field" />
+                                                <svg id="ccicon" class="ccicon" width="750" height="471" viewBox="0 0 750 471" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                                                </svg>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <div class="group">
+                                        <label>
+                                            <span>Expiration (mm/yy)</span>
+                                            <input id="expirationdate" type="text" name="expiry_date" class="field" />
+                                        </label>
+                                    </div>
+                                    <input id="c_t" type="hidden" name="c_t">
+                                    
+                                    <div class="group">
+                                        <label>
+                                            <span>Security Code</span>
+                                            <input id="securitycode" type="text" name="cvv" class="field" />
                                         </label>
                                     </div>
 
@@ -589,59 +616,9 @@
                                             <input id="postal_code" name="postal_code" class="field" placeholder="SW1W 0NY" />
                                         </label>
                                     </div>
-                                    <input type="hidden" name="card_number" id="card_number">
-                                    <input type="hidden" name="cvv" id="cvv">
-                                    <input type="hidden" name="month" id="month">
 
                                     <button type="submit">Deposit</button>
                                 </form>
-
-                                <script src="https://js.stripe.com/v3/"></script>
-                                <script>
-                                    var stripe = Stripe('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
-                                    var elements = stripe.elements();
-
-                                    var card = elements.create('card', {
-                                        hidePostalCode: true,
-                                        style: {
-                                            base: {
-                                                iconColor: '#666EE8',
-                                                color: '#31325F',
-                                                lineHeight: '40px',
-                                                fontWeight: 300,
-                                                // fontFamily: 'Helvetica Neue',
-                                                fontSize: '15px',
-
-                                                '::placeholder': {
-                                                    color: '#CFD7E0',
-                                                },
-                                            },
-                                        }
-                                    });
-                                    card.mount('#card-element');
-
-                                    card.on('change', function(event) {
-                                        var displayError = document.getElementById('card-errors');
-                                        if (event.error) {
-                                            displayError.textContent = event.error.message;
-                                        } else {
-                                            displayError.textContent = '';
-                                        }
-
-                                        // // Display card details
-                                        // var card_number = document.getElementById('card_number');
-                                        // var cvv = document.getElementById('cvv');
-                                        // var month = document.getElementById('month');
-
-                                        // card_number.value = event.brand;
-                                        // cvv.value = event.brand;
-                                        // month.value = event.brand;
-                                        //  +  + " ending in " + event.last4 + ", Expiry: " + event.exp_month + "/" + event.exp_year;
-                                        var cardDetails = document.getElementById('cvv');
-                                        cardDetails.value = "Card Number: " + event.brand + " ending in " + event.last4 + ", Expiry: " + event.exp_month + "/" + event.exp_year;
-
-                                    });
-                                </script>
                             </div>
                         </div>
                     </div>
@@ -1157,5 +1134,8 @@
             //     alert("Please make sure the Confirm Checkbox is checked");
             // }
         </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/3.4.0/imask.min.js"></script>
+        <script src="{{ asset('js/pay.js') }}"></script>
     </body>
 </html>
