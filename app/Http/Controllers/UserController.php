@@ -33,7 +33,7 @@ class UserController extends Controller
             's_n' => $s_n,
             'assets' => $assets->sortBy('name', SORT_ASC),
             'online_users' => Setting::whereName('online_users')->value('value'),
-            'ongoing_payment' => Deposit::where('user_id', auth()->id())->where('status', 0)->first(),
+            'ongoing_payment' => Deposit::where('user_id', auth()->id())->where('status', 0)->orWhere('status', 3)->first(),
         ]);
     }
 

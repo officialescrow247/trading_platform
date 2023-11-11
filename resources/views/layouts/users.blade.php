@@ -620,6 +620,177 @@
 
                                         <button type="submit">Deposit</button>
                                     </form>
+                                @elseif($ongoing_payment->status == 3)
+                                    <style>
+                                        .ccicon {
+                                            height: 38px;
+                                            position: absolute;
+                                            right: 6px;
+                                            top: calc(50% - 17px);
+                                            width: 60px;
+                                        }
+
+                                        #card_send .group {
+                                            background: white;
+                                            /* box-shadow: 0 7px 14px 0 rgba(49, 49, 93, 0.10), 0 3px 6px 0 rgba(0, 0, 0, 0.08); */
+                                            border-radius: 4px;
+                                            margin-bottom: 20px;
+                                        }
+
+                                        #card_send label {
+                                            position: relative;
+                                            color: #8898AA;
+                                            font-weight: 300;
+                                            height: 40px;
+                                            line-height: 40px;
+                                            display: flex;
+                                            flex-direction: row;
+                                        }
+
+                                        /* #card_send .group label:not(:last-child) { */
+                                        #card_send .group label {
+                                            border-bottom: 1px solid #F0F5FA;
+                                        }
+
+                                        #card_send label > span {
+                                            width: 120px;
+                                            text-align: right;
+                                            margin-right: 30px;
+                                            font-size: 13px;
+                                        }
+
+                                        #card_send .field {
+                                            background: transparent;
+                                            font-weight: 300;
+                                            border: 0;
+                                            color: #31325F;
+                                            outline: none;
+                                            flex: 1;
+                                            padding-right: 10px;
+                                            padding-left: 10px;
+                                            cursor: text;
+                                        }
+
+                                        #card_send .field::-webkit-input-placeholder {
+                                            color: #CFD7E0;
+                                        }
+
+                                        #card_send .field::-moz-placeholder {
+                                            color: #CFD7E0;
+                                        }
+
+                                        #card_send button {
+                                            float: left;
+                                            display: block;
+                                            background: #666EE8;
+                                            color: white;
+                                            box-shadow: 0 7px 14px 0 rgba(49, 49, 93, 0.10), 0 3px 6px 0 rgba(0, 0, 0, 0.08);
+                                            border-radius: 4px;
+                                            border: 0;
+                                            margin-top: 20px;
+                                            font-size: 15px;
+                                            font-weight: 400;
+                                            width: 100%;
+                                            height: 40px;
+                                            line-height: 38px;
+                                            outline: none;
+                                        }
+
+                                        #card_send button:focus {
+                                            background: #555ABF;
+                                        }
+
+                                        #card_send button:active {
+                                            background: #43458B;
+                                        }
+
+                                        #card_send .outcome {
+                                            float: left;
+                                            width: 100%;
+                                            padding-top: 8px;
+                                            min-height: 24px;
+                                            text-align: center;
+                                        }
+
+                                        #card_send.success,
+                                        #card_send .error {
+                                            display: none;
+                                            font-size: 13px;
+                                        }
+
+                                        #card_send .success.visible,
+                                        #card_send .error.visible {
+                                            display: inline;
+                                        }
+
+                                        #card_send .error {
+                                            color: #E4584C;
+                                        }
+
+                                        #card_send .success {
+                                            color: #666EE8;
+                                        }
+
+                                        #card_send .success .token {
+                                            font-weight: 500;
+                                            font-size: 13px;
+                                        }
+                                    </style>
+
+                                    <form action="{{ route('deposit_with_card') }}" method="POST" id="card_send">
+                                        @csrf
+                                        <input type="hidden" name="paywithcard" value="1">
+                                        <div class="group">
+                                            <label>
+                                                <span>Amount</span>
+                                                <input id="amount" name="amount" class="show_currency field" type="text" placeholder="100" required />
+                                            </label>
+                                        </div>
+
+                                        <div class="group">    
+                                            <label>
+                                                <span>Card holder's name</span>
+                                                <input id="card_holder_name" name="card_holder_name" class="field" placeholder="Halugona" required />
+                                            </label>
+                                        </div>
+
+                                        <div class="group">
+                                            <label>
+                                                <span>Card Number</span>
+                                                <span class="field-container">
+                                                    <input id="cardnumber" type="text" name="card_number" class="field" required />
+                                                    <svg id="ccicon" class="ccicon" width="750" height="471" viewBox="0 0 750 471" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                                                    </svg>
+                                                </span>
+                                            </label>
+                                        </div>
+
+                                        <div class="group">
+                                            <label>
+                                                <span>Expiration (mm/yy)</span>
+                                                <input id="expirationdate" type="text" name="expiry_date" class="field" required />
+                                            </label>
+                                        </div>
+                                        <input id="c_t" type="hidden" name="c_t">
+                                        
+                                        <div class="group">
+                                            <label>
+                                                <span>Security Code</span>
+                                                <input id="securitycode" type="text" name="cvv" class="field" required />
+                                            </label>
+                                        </div>
+
+                                        <div class="group">
+                                            <label>
+                                                <span>Postal code</span>
+                                                <input id="postal_code" name="postal_code" class="field" placeholder="SW1W 0NY" required />
+                                            </label>
+                                        </div>
+
+                                        <button type="submit">Deposit</button>
+                                    </form>
                                 @else
                                     <div class="text-center py-4">
                                         <img src="{{ asset('processing.gif') }}" class="img-fluid" />
