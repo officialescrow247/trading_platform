@@ -299,6 +299,10 @@
                         </p>
 
                         <ul class="nav nav-tabs" id="myTab" role="tablist" style="font-size: 10px;">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="card-tab" data-bs-toggle="tab" data-bs-target="#card" type="button" role="tab" aria-controls="card" aria-selected="false">CARD PAYMENT</button>
+                            </li>
+
                             @if(settings('btc_wallet_address') != "No Address Available")
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link active" id="btc-tab" data-bs-toggle="tab" data-bs-target="#btc" type="button" role="tab" aria-controls="btc" aria-selected="true">BTC</button>
@@ -316,10 +320,6 @@
                                     <button class="nav-link" id="xmr-tab" data-bs-toggle="tab" data-bs-target="#xmr" type="button" role="tab" aria-controls="xmr" aria-selected="false">XMR</button>
                                 </li>
                             @endif
-
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="card-tab" data-bs-toggle="tab" data-bs-target="#card" type="button" role="tab" aria-controls="card" aria-selected="false">CARD PAYMENT</button>
-                            </li>
                         </ul>
 
                         <div class="tab-content" id="myTabContent">
