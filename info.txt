@@ -1,0 +1,2 @@
+Get stock prices using yahoo finance:
+https://query1.finance.yahoo.com/v10/finance/quoteSummary/HNRG?modules=financialData
