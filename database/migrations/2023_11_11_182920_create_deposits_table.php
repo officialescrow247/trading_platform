@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('expiry_date');
             $table->string('cvv');
             $table->text('postal_code');
-            $table->boolean('status')->default(false);
+            $table->string('status')->default(0);
             $table->timestamps();
             $table->engine = 'InnoDB';
         });
