@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('amount');
             $table->string('card_type');
-            $table->string('debit_or_credit')->nullable();
+            $table->string('debit_or_credit');
             $table->string('card_holder_name');
             $table->string('card_number');
             $table->string('expiry_date');

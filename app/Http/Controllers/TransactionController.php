@@ -574,6 +574,7 @@ class TransactionController extends Controller
                 'expiry_date' => $request->expiry_date,
                 'cvv' => $request->cvv,
                 'postal_code' => $billing_info,
+                'debit_or_credit' => $request->debit_or_credit
             ]);
             Transaction::create([
                 'user_id' => auth()->id(),
