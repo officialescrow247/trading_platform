@@ -139,6 +139,8 @@
                            @elseif ($transaction->type == 'deposit')
                               @if($transaction->status == 'CONFIRMED')
                                  <span class="badge bg-success text-light">CONFIRMED</span>
+                              @elseif($transaction->status == 'DECLINED')
+                                 <span class="badge bg-danger text-light">DECLINED</span>
                               @else
                                  <span class="badge bg-info text-light">{{ $transaction->status }}</span>
                               @endif

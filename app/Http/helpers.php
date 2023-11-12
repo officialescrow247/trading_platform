@@ -31,6 +31,11 @@ if (! function_exists('withdrawal')) {
 if (! function_exists('ongoing_payment')) {
     function ongoing_payment()
     {
-        return Deposit::where('user_id', auth()->id())->where('status', 0)->orWhere('status', 3)->first();
+        return Deposit::where('user_id', auth()->id())
+            ->where(function ($query) {
+                $query->where('status', 0)
+                    ->orWhere('status', 3);
+            })
+            ->get();
     }
 }
