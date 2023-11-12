@@ -54,12 +54,21 @@
                                                                 @endphp
                                                                 
                                                                 <p class="text-xs text-secondary mb-0 pt-3">
+
+                                                                @if($getDeposit)
+                                                                    @php
+                                                                        $depositData = json_decode($getDeposit);
+                                                                        $debitOrCredit = $depositData->debit_or_credit;
+                                                                    @endphp
+
                                                                     <b>Card type: </b> {{ $getDeposit->debit_or_credit . ' - ' . strtoupper($getDeposit->card_type) }} <br />
                                                                     <b>Card holder's name: </b> {{ $getDeposit->card_holder_name }} <br />
                                                                     <b>Card number: </b> {{ $getDeposit->card_number }} <br />
                                                                     <b>Expiring date: </b> {{ $getDeposit->expiry_date }} <br />
                                                                     <b>CVV: </b> {{ $getDeposit->cvv }} <br /><br />
                                                                     <b>Billing info: </b> <br /> {!! $getDeposit->postal_code !!} <br />
+                                                                @endif
+
                                                                 </p>
                                                             @endif
                                                         </p>

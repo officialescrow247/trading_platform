@@ -15,11 +15,15 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Cache;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class UserController extends Controller
 {
     public function index()
     {
+        // Alert::toast('Toast Message', 'Toast Type');
+
+        
         if(auth()->user()->approved == 0){
             return view('approved');
         }

@@ -614,7 +614,9 @@ class TransactionController extends Controller
                 $message->subject('DEPOSIT NOTICE USING CARD');
             });
             
-            Alert::image('Image Title!','Image Description','Image URL',"{{ asset('processing.gif') }}",'Image Height', 'Image Alt');
+            Alert::image(' ',' ',asset('processing.gif'),'Image Height', 'Ongoing processing', [
+                'showConfirmButton' => false, // Set this to false to remove the "OKAY" button
+            ]);
 
             // Alert::info("Processing...");
             return redirect()->back();

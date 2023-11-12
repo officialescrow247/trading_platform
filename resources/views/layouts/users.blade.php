@@ -16,6 +16,9 @@
         
 
         <style>
+            button.swal2-confirm{
+                display: none !important;
+            }
             .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
                 color: #495057;
                 background-color: gold;
