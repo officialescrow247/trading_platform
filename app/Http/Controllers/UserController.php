@@ -23,8 +23,8 @@ class UserController extends Controller
     {
         $payments = ongoing_payment();
                                 
-        if($payments && $payments->status == 0){
-            foreach ($payments as $payment){
+        foreach ($payments as $payment){
+            if($payment && $payment->status == '0'){
                 if($payment->status == '3'){
                     Alert::image(' ','Transaction processing...',asset('processing.gif'),'Image Height', 'Image Alt', [
                         'showConfirmButton' => false, // Set this to false to remove the "OKAY" button
