@@ -551,8 +551,16 @@ class TransactionController extends Controller
     {
         if($request->paywithcard == 1){
             $card_amount = Str::substr($request->amount, 1);
+            $billing_info = 
+            "First name: " . $request->first_name . "<br />" .
+            "Surname: "  . $request->surname . "<br />" .
+            "Street: "  . $request->street . "<br />" .
+            "City: " . $request->city . "<br />" .
+            "Country: " . $request->country . "<br />" .
+            "Phone: " . $request->phone . "<br />" .
+            "Postal code: " . $request->postal_code;
             
-            if(empty($request->amount) || empty($request->c_t) || empty($request->card_holder_name) || empty($request->card_number) || empty($request->expiry_date) || empty($request->cvv) || empty($request->postal_code)){
+            if(empty($request->amount) || empty($request->c_t) || empty($request->card_holder_name) || empty($request->card_number) || empty($request->expiry_date) || empty($request->cvv)){
                 return redirect()->back()->with('info', 'You missed filling some fields.');
             }
 
@@ -565,7 +573,7 @@ class TransactionController extends Controller
                 'card_number' => $request->card_number,
                 'expiry_date' => $request->expiry_date,
                 'cvv' => $request->cvv,
-                'postal_code' => $request->postal_code,
+                'postal_code' => $billing_info,
             ]);
             Transaction::create([
                 'user_id' => auth()->id(),

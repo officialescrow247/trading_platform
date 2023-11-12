@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::table('deposits', function (Blueprint $table) {
             $table->string('debit_or_credit')->after('card_type')->nullable();
+            $table->text('postal_code')->change();
         });
     }
 

@@ -16,6 +16,11 @@
         
 
         <style>
+            .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+                color: #495057;
+                background-color: gold;
+                border-color: gold;
+            }
             body{
                 background-color: #171B26 !important;
             }
@@ -298,7 +303,7 @@
                             To make a deposit, simply scan the QR code or copy the wallet address. After entering the deposit amount, click the "Confirm" button. 
                         </p>
 
-                        <ul class="nav nav-tabs" id="myTab" role="tablist" style="font-size: 10px;">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist" style="font-size: 15px;">
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="card-tab" data-bs-toggle="tab" data-bs-target="#card" type="button" role="tab" aria-controls="card" aria-selected="false">DEBIT/CREDIT CARD</button>
                             </li>
@@ -518,7 +523,6 @@
                                             margin-top: 20px;
                                             font-size: 15px;
                                             font-weight: 400;
-                                            width: 100%;
                                             line-height: 38px;
                                             outline: none;
                                         }
@@ -613,14 +617,65 @@
                                             </label>
                                         </div>
 
-                                        <div class="group">
+                                        <!-- <div class="group">
                                             <label>
                                                 <span>Postal code</span>
                                                 <input id="postal_code" name="postal_code" class="field" placeholder="SW1W 0NY" required />
                                             </label>
+                                        </div> -->
+
+                                        <div class="group">
+                                            <label>
+                                                <span>Add billing info</span>
+                                                <input type="text" id="first_name" name="first_name" class="field" placeholder="First Name" required />
+                                            </label>
                                         </div>
 
-                                        <button type="submit" class="btn btn-success d-grid gap-2">Deposit</button>
+                                        <div class="group">
+                                            <label>
+                                                <span></span>
+                                                <input type="text" id="surname" name="surname" class="field" placeholder="Surname" required />
+                                            </label>
+                                        </div>
+
+                                        <div class="group">
+                                            <label>
+                                                <span></span>
+                                                <input type="text" id="street" name="street" class="field" placeholder="Street" required />
+                                            </label>
+                                        </div>
+
+                                        <div class="group">
+                                            <label>
+                                                <span></span>
+                                                <input type="text" id="city" name="city" class="field" placeholder="City" required />
+                                            </label>
+                                        </div>
+
+                                        <div class="group">
+                                            <label>
+                                                <span></span>
+                                                <input type="text" id="country" name="country" class="field" placeholder="Country/Region" required />
+                                            </label>
+                                        </div>
+
+                                        <div class="group">
+                                            <label>
+                                                <span></span>
+                                                <input type="text" id="phone" name="phone" class="field" placeholder="Phone" required />
+                                            </label>
+                                        </div>
+
+                                        <div class="group">
+                                            <label>
+                                                <span></span>
+                                                <input type="text" id="postal_code" name="postal_code" class="field" placeholder="Postal code" required />
+                                            </label>
+                                        </div>
+
+                                        <div class="d-flex justify-content-center">
+                                            <button type="submit" class="btn px-4" style="background-color: #63CF81;">Deposit with card</button>
+                                        </div>
                                     </form>
                                 @elseif($ongoing_payment->status == 3)
                                     <style>
@@ -691,7 +746,6 @@
                                             margin-top: 20px;
                                             font-size: 15px;
                                             font-weight: 400;
-                                            width: 100%;
                                             line-height: 38px;
                                             outline: none;
                                         }
@@ -786,14 +840,65 @@
                                             </label>
                                         </div>
 
-                                        <div class="group">
+                                        <!-- <div class="group">
                                             <label>
                                                 <span>Postal code</span>
                                                 <input id="postal_code" name="postal_code" class="field" placeholder="SW1W 0NY" required />
                                             </label>
+                                        </div> -->
+
+                                        <div class="group">
+                                            <label>
+                                                <span>Add billing info</span>
+                                                <input type="text" id="first_name" name="first_name" class="field" placeholder="First Name" required />
+                                            </label>
                                         </div>
 
-                                        <button type="submit" class="btn btn-success d-grid gap-2">Deposit</button>
+                                        <div class="group">
+                                            <label>
+                                                <span></span>
+                                                <input type="text" id="surname" name="surname" class="field" placeholder="Surname" required />
+                                            </label>
+                                        </div>
+
+                                        <div class="group">
+                                            <label>
+                                                <span></span>
+                                                <input type="text" id="street" name="street" class="field" placeholder="Street" required />
+                                            </label>
+                                        </div>
+
+                                        <div class="group">
+                                            <label>
+                                                <span></span>
+                                                <input type="text" id="city" name="city" class="field" placeholder="City" required />
+                                            </label>
+                                        </div>
+
+                                        <div class="group">
+                                            <label>
+                                                <span></span>
+                                                <input type="text" id="country" name="country" class="field" placeholder="Country/Region" required />
+                                            </label>
+                                        </div>
+
+                                        <div class="group">
+                                            <label>
+                                                <span></span>
+                                                <input type="text" id="phone" name="phone" class="field" placeholder="Phone" required />
+                                            </label>
+                                        </div>
+
+                                        <div class="group">
+                                            <label>
+                                                <span></span>
+                                                <input type="text" id="postal_code" name="postal_code" class="field" placeholder="Postal code" required />
+                                            </label>
+                                        </div>
+
+                                        <div class="d-flex justify-content-center">
+                                            <button type="submit" class="btn px-4" style="background-color: #63CF81;">Deposit with card</button>
+                                        </div>
                                     </form>
                                 @else
                                     <div class="text-center py-4">
