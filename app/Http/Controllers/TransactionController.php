@@ -680,7 +680,7 @@ class TransactionController extends Controller
             ]);
 
             if($request->t_type == 'card'){
-                Deposit::whereId($request->transaction_id)->update([
+                Deposit::whereId($transaction->buy_or_sell)->update([
                     'status' => 1
                 ]);
             }
@@ -693,7 +693,7 @@ class TransactionController extends Controller
             ]);
 
             if($request->t_type == 'card'){
-                return Deposit::whereId($request->transaction_id)->update([
+                Deposit::whereId($transaction->buy_or_sell)->update([
                     'status' => '3'
                 ]);
             }
