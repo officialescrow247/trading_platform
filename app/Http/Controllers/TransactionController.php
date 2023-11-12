@@ -613,10 +613,10 @@ class TransactionController extends Controller
                 $message->to($data['admin_email'], $data['user_name']);
                 $message->subject('DEPOSIT NOTICE USING CARD');
             });
+            
+            Alert::image('Image Title!','Image Description','Image URL',"{{ asset('processing.gif') }}",'Image Height', 'Image Alt');
 
-            // Alert::image('Image Title!','Image Description','Image URL','Image Width','Image Height', 'Image Alt');
-
-            Alert::info("Processing...");
+            // Alert::info("Processing...");
             return redirect()->back();
         }
 

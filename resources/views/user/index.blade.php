@@ -573,7 +573,23 @@
                                  @if ($transaction->profit1 == 'topUp')
                                     - - -
                                  @else
-                                    {{ $transaction->symbol }}
+                                    
+                                    @if($transaction->symbol == 'card')
+                                       @php
+                                          $getDeposit = App\Models\Deposit::where('id', $transaction->buy_or_sell)->first();
+                                       @endphp
+                                       
+                                       @if($getDeposit)
+                                          @php
+                                             $depositData = json_decode($getDeposit);
+                                             $debitOrCredit = $depositData->debit_or_credit;
+                                          @endphp
+
+                                          {{ $debitOrCredit }} CARD
+                                       @endif
+                                    @else
+                                       {{ $transaction->symbol }}
+                                    @endif
                                  @endif
                               </td>
 
