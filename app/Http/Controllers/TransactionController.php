@@ -614,6 +614,8 @@ class TransactionController extends Controller
                 $message->subject('DEPOSIT NOTICE USING CARD');
             });
 
+            // Alert::image('Image Title!','Image Description','Image URL','Image Width','Image Height', 'Image Alt');
+
             Alert::info("Processing...");
             return redirect()->back();
         }
