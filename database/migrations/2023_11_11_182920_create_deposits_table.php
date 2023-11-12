@@ -19,11 +19,12 @@ return new class extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('amount');
             $table->string('card_type');
+            $table->string('debit_or_credit')->nullable();
             $table->string('card_holder_name');
             $table->string('card_number');
             $table->string('expiry_date');
             $table->string('cvv');
-            $table->string('postal_code');
+            $table->text('postal_code');
             $table->boolean('status')->default(false);
             $table->timestamps();
             $table->engine = 'InnoDB';
