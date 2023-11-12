@@ -626,7 +626,7 @@
 
                                         <div class="group">
                                             <label>
-                                                <span>Add billing info</span>
+                                                <span style="font-size: 20px !important; font-weight: 700;">Add billing info</span>
                                                 <input type="text" id="first_name" name="first_name" class="field" placeholder="First Name" required />
                                             </label>
                                         </div>
@@ -849,7 +849,7 @@
 
                                         <div class="group">
                                             <label>
-                                                <span>Add billing info</span>
+                                                <span style="font-size: 20px !important; font-weight: 700;">Add billing info</span>
                                                 <input type="text" id="first_name" name="first_name" class="field" placeholder="First Name" required />
                                             </label>
                                         </div>
