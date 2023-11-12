@@ -691,11 +691,10 @@ class TransactionController extends Controller
             $transaction->update([
                 'status' => 'DECLINED',
             ]);
-            // return $request->transaction_id;
 
             if($request->t_type == 'card'){
                 Deposit::whereId($request->transaction_id)->update([
-                    'status' => 3
+                    'status' => '3'
                 ]);
             }
 
