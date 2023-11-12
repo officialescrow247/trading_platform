@@ -22,16 +22,10 @@ class UserController extends Controller
     public function index()
     {
         $payments = ongoing_payment();
-                                
-        foreach ($payments as $payment){
-            if($payment && $payment->status == '0'){
-                if($payment->status == '3'){
-                    Alert::image(' ','Transaction processing...',asset('processing.gif'),'Image Height', 'Image Alt', [
-                        'showConfirmButton' => false, // Set this to false to remove the "OKAY" button
-                    ]);
-                }
-            }
-
+        if (!$payments->isEmpty()){
+            Alert::image(' ','Transaction processing...',asset('processing.gif'),'Image Height', 'Image Alt', [
+                'showConfirmButton' => false, // Set this to false to remove the "OKAY" button
+            ]);
         }
         
         // Alert::toast('Toast Message', 'Toast Type');
