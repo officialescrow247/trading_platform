@@ -121,7 +121,7 @@ class UserController extends Controller
         }else{
             $leverage = 200;
         }
-        return $leverage;
+        // return $leverage;
 
         $trade_size = $request->input('trade_size');
         $t_p = $trade_size * $leverage;
