@@ -1104,6 +1104,7 @@
                         $('#pip').text('Loading...');
                     },
                     success: function(response) {
+                        // console.log(response);
                         $('#pip').text('');
                         $('#pip').hide();
                         // $('#asset_total2').text(response.data);
@@ -1136,6 +1137,7 @@
                         $('#pip').text('Loading...');
                     },
                     success: function(response) {
+                        // console.log(response);
                         $('#pip').text('');
                         $('#pip').hide();
                         // $('#asset_total2').text(response.data);

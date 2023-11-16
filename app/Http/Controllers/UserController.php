@@ -121,6 +121,7 @@ class UserController extends Controller
         }else{
             $leverage = 200;
         }
+        return $leverage;
 
         $trade_size = $request->input('trade_size');
         $t_p = $trade_size * $leverage;
@@ -214,11 +215,13 @@ class UserController extends Controller
             $current_price = $b['USD'];
             $t_p2 = $t_p / $current_price; // get the price
             $profit = $t_p2 * $request->input('piont');
+            // return $profit;
+            // return number_format($profit, 6);
 
             // Return a response
             return response()->json([
                 'success' => true,
-                'data' => number_format($profit),
+                'data' => number_format($profit, 6),
             ]);
         }
 
