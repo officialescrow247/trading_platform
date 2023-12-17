@@ -1038,31 +1038,42 @@
             $(".asset_type, .asset_type2").on('change', function() { // check if the radiobox has been clicked
                 if(this.checked) {
                     var selectedValue = this.value;
-                    if(selectedValue === 'Crypto'){
+                    // if(selectedValue === 'Crypto'){
+                    //     $('.asset_crypto').show();
+                    //     $('.asset_stocks').hide();
+                    //     $('.asset_forex').hide();
+                    //     $('.asset_commodities').hide();
+                    // }else if(selectedValue === 'Stocks'){
+                    //     $('.asset_stocks').show();
+                    //     $('.asset_crypto').hide();
+                    //     $('.asset_forex').hide();
+                    //     $('.asset_commodities').hide();
+                    // }else if(selectedValue === 'Forex'){
+                    //     $('.asset_forex').show();
+                    //     $('.asset_stocks').hide();
+                    //     $('.asset_crypto').hide();
+                    //     $('.asset_commodities').hide();
+                    // }else if(selectedValue === 'Commodities'){
+                    //     $('.asset_commodities').show();
+                    //     $('.asset_forex').hide();
+                    //     $('.asset_stocks').hide();
+                    //     $('.asset_crypto').hide();
+                    // }else{
+                    //     $('.asset_crypto').hide();
+                    //     $('.asset_stocks').hide();
+                    //     $('.asset_forex').hide();
+                    //     $('.asset_commodities').hide();
+                    // }
+                    $('.asset_crypto, .asset_stocks, .asset_forex, .asset_commodities').hide();
+            
+                    if (selectedValue === 'Crypto') {
                         $('.asset_crypto').show();
-                        $('.asset_stocks').hide();
-                        $('.asset_forex').hide();
-                        $('.asset_commodities').hide();
-                    }else if(selectedValue === 'Stocks'){
+                    } else if (selectedValue === 'Stocks') {
                         $('.asset_stocks').show();
-                        $('.asset_crypto').hide();
-                        $('.asset_forex').hide();
-                        $('.asset_commodities').hide();
-                    }else if(selectedValue === 'Forex'){
+                    } else if (selectedValue === 'Forex') {
                         $('.asset_forex').show();
-                        $('.asset_stocks').hide();
-                        $('.asset_crypto').hide();
-                        $('.asset_commodities').hide();
-                    }else if(selectedValue === 'Commodities'){
+                    } else if (selectedValue === 'Commodities') {
                         $('.asset_commodities').show();
-                        $('.asset_forex').hide();
-                        $('.asset_stocks').hide();
-                        $('.asset_crypto').hide();
-                    }else{
-                        $('.asset_crypto').hide();
-                        $('.asset_stocks').hide();
-                        $('.asset_forex').hide();
-                        $('.asset_commodities').hide();
                     }
                 }
             });

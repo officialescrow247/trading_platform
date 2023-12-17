@@ -143,6 +143,16 @@ class UserController extends Controller
                 $profit = $t_p2 * $request->input('piont');
             }else{
                 $response = Http::get('https://query1.finance.yahoo.com/v10/finance/quoteSummary/' . $asset . '?modules=financialData');
+                // new url
+                // $crumb = 'wrHySw1iPKv'; // https://query1.finance.yahoo.com/v1/test/getcrumb
+                // $a1Cookie = 'YahooCookieContainer';
+
+                // $url = 'https://query2.finance.yahoo.com/v10/finance/quoteSummary/AAPL?modules=summaryProfile%2CfinancialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&ssl=true&crumb=' . $crumb;
+
+                // $response = Http::withHeaders([
+                //     'cookie' => 'A1=' . $a1Cookie,
+                // ])->get($url);
+                
                 
                 $data = $response->json();
                 $current_price = $data['quoteSummary']['result'][0]['financialData']['currentPrice']['raw'];
@@ -215,9 +225,6 @@ class UserController extends Controller
             $current_price = $b['USD'];
             $t_p2 = $t_p / $current_price; // get the price
             $profit = $t_p2 * $request->input('piont');
-            // return $profit;
-            // return number_format($profit, 6);
-
             // Return a response
             return response()->json([
                 'success' => true,
