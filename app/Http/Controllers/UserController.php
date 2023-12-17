@@ -168,6 +168,8 @@ class UserController extends Controller
             ]);
         }
 
+        // 1N98M6ZZSBTX8ST9
+
         if($request->asset_type == 'Commodities'){
             $response = Http::get('https://commodities-api.com/api/latest?access_key=8e6ixb0lgfsz66bwomxg568246bytp7467bo1yc3zr18aq2y0p5yf3c0h1r4&base=USD&symbols=' . $asset);
             $data = $response->json();

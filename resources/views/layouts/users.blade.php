@@ -1012,160 +1012,163 @@
         @include('sweetalert::alert')
 
         <script>
-            $('#pip').hide();
-            $('.asset_crypto').hide();
-            $('.asset_stocks').hide();
-            $('.asset_forex').hide();
-            $('.asset_commodities').hide();
+            $(document).ready(function() {
 
-            $('#dropdownMenuButton1').addClass("text-light");
-            $(window).scroll(function() {
-                const threshold = 50;
-                const $navbar = $(".navbar");
-                const $navbarLinks = $(".navbar a");
-                if ($(this).scrollTop() > threshold) {
-                    $navbar.removeClass("dark navbar-dark").addClass("light navbar-light");
-                    $navbarLinks.removeClass("text-light").addClass("text-dark");
-                    $('#dropdownMenuButton1').removeClass("text-light").addClass("text-dark");
-                } else {
-                    $navbar.removeClass("light navbar-light").addClass("dark navbar-dark");
-                    $navbarLinks.removeClass("text-dark").addClass("text-light");
-                    $('#dropdownMenuButton1').removeClass("text-dark").addClass("text-light");
-                }
-                $navbar.fadeIn();
-            });
-                
-            $(".asset_type, .asset_type2").on('change', function() { // check if the radiobox has been clicked
-                if(this.checked) {
-                    var selectedValue = this.value;
-                    // if(selectedValue === 'Crypto'){
-                    //     $('.asset_crypto').show();
-                    //     $('.asset_stocks').hide();
-                    //     $('.asset_forex').hide();
-                    //     $('.asset_commodities').hide();
-                    // }else if(selectedValue === 'Stocks'){
-                    //     $('.asset_stocks').show();
-                    //     $('.asset_crypto').hide();
-                    //     $('.asset_forex').hide();
-                    //     $('.asset_commodities').hide();
-                    // }else if(selectedValue === 'Forex'){
-                    //     $('.asset_forex').show();
-                    //     $('.asset_stocks').hide();
-                    //     $('.asset_crypto').hide();
-                    //     $('.asset_commodities').hide();
-                    // }else if(selectedValue === 'Commodities'){
-                    //     $('.asset_commodities').show();
-                    //     $('.asset_forex').hide();
-                    //     $('.asset_stocks').hide();
-                    //     $('.asset_crypto').hide();
-                    // }else{
-                    //     $('.asset_crypto').hide();
-                    //     $('.asset_stocks').hide();
-                    //     $('.asset_forex').hide();
-                    //     $('.asset_commodities').hide();
-                    // }
-                    $('.asset_crypto, .asset_stocks, .asset_forex, .asset_commodities').hide();
-            
-                    if (selectedValue === 'Crypto') {
-                        $('.asset_crypto').show();
-                    } else if (selectedValue === 'Stocks') {
-                        $('.asset_stocks').show();
-                    } else if (selectedValue === 'Forex') {
-                        $('.asset_forex').show();
-                    } else if (selectedValue === 'Commodities') {
-                        $('.asset_commodities').show();
+                $('#pip').hide();
+                $('.asset_crypto').hide();
+                $('.asset_stocks').hide();
+                $('.asset_forex').hide();
+                $('.asset_commodities').hide();
+    
+                $('#dropdownMenuButton1').addClass("text-light");
+                $(window).scroll(function() {
+                    const threshold = 50;
+                    const $navbar = $(".navbar");
+                    const $navbarLinks = $(".navbar a");
+                    if ($(this).scrollTop() > threshold) {
+                        $navbar.removeClass("dark navbar-dark").addClass("light navbar-light");
+                        $navbarLinks.removeClass("text-light").addClass("text-dark");
+                        $('#dropdownMenuButton1').removeClass("text-light").addClass("text-dark");
+                    } else {
+                        $navbar.removeClass("light navbar-light").addClass("dark navbar-dark");
+                        $navbarLinks.removeClass("text-dark").addClass("text-light");
+                        $('#dropdownMenuButton1').removeClass("text-dark").addClass("text-light");
                     }
-                }
-            });
-
-            $(".asset_type").on('change', function() {
-                if(this.checked) {
-                    $('#my-select').prop('disabled', false);
-                }else{
-                    $('#my-select').prop('disabled', true);
-                }
-            });
-
-            $(".asset_type2").on('change', function() {
-                if(this.checked) {
-                    $('#my-select2').prop('disabled', false);
-                }else{
-                    $('#my-select2').prop('disabled', true);
-                }
-            });
-
-            $('#stoploss1').keyup(function(){
-                // Get the value of the input box
-                var piont = $(this).val();
+                    $navbar.fadeIn();
+                });
+                    
+                $(".asset_type, .asset_type2").on('change', function() { // check if the radiobox has been clicked
+                    if(this.checked) {
+                        var selectedValue = this.value;
+                        // if(selectedValue === 'Crypto'){
+                        //     $('.asset_crypto').show();
+                        //     $('.asset_stocks').hide();
+                        //     $('.asset_forex').hide();
+                        //     $('.asset_commodities').hide();
+                        // }else if(selectedValue === 'Stocks'){
+                        //     $('.asset_stocks').show();
+                        //     $('.asset_crypto').hide();
+                        //     $('.asset_forex').hide();
+                        //     $('.asset_commodities').hide();
+                        // }else if(selectedValue === 'Forex'){
+                        //     $('.asset_forex').show();
+                        //     $('.asset_stocks').hide();
+                        //     $('.asset_crypto').hide();
+                        //     $('.asset_commodities').hide();
+                        // }else if(selectedValue === 'Commodities'){
+                        //     $('.asset_commodities').show();
+                        //     $('.asset_forex').hide();
+                        //     $('.asset_stocks').hide();
+                        //     $('.asset_crypto').hide();
+                        // }else{
+                        //     $('.asset_crypto').hide();
+                        //     $('.asset_stocks').hide();
+                        //     $('.asset_forex').hide();
+                        //     $('.asset_commodities').hide();
+                        // }
+                        $('.asset_crypto, .asset_stocks, .asset_forex, .asset_commodities').hide();
                 
-                // Run the AJAX request
-                $.ajax({
-                    url: '{{ route("cal_pip") }}',
-                    type: 'GET',
-                    data: { 
-                        asset: $('#my-select2').val(),
-                        trade_size: $('#calc_volume2').val(),
-                        piont: piont,
-                        asset_type: $(':radio[name=asset_type2]:checked').val(),
-                    },
-                    beforeSend: function() {
-                        // Show loading indicator or message here
-                        $('#pip').text('');
-                        $('#pip').show();
-                        $('#pip').text('Loading...');
-                    },
-                    success: function(response) {
-                        // console.log(response);
-                        $('#pip').text('');
-                        $('#pip').hide();
-                        // $('#asset_total2').text(response.data);
-                        $('#stoploss3').val('-' + '{{ auth()->user()->currency }}' + response.data + '.00');
-                    },
-                    error: function(error) {
-                        // $('#asset_total2').text('Please try again');
+                        if (selectedValue === 'Crypto') {
+                            $('.asset_crypto').show();
+                        } else if (selectedValue === 'Stocks') {
+                            $('.asset_stocks').show();
+                        } else if (selectedValue === 'Forex') {
+                            $('.asset_forex').show();
+                        } else if (selectedValue === 'Commodities') {
+                            $('.asset_commodities').show();
+                        }
                     }
                 });
-            });
-
-            $('#takeprofit1').keyup(function(){
-                // Get the value of the input box
-                var piont = $(this).val();
-            
-                // Run the AJAX request
-                $.ajax({
-                    url: '{{ route("cal_pip") }}',
-                    type: 'GET',
-                    data: { 
-                        asset: $('#my-select2').val(),
-                        trade_size: $('#calc_volume2').val(),
-                        piont: piont,
-                        asset_type: $(':radio[name=asset_type2]:checked').val(),
-                    },
-                    beforeSend: function() {
-                        // Show loading indicator or message here
-                        $('#pip').text('');
-                        $('#pip').show();
-                        $('#pip').text('Loading...');
-                    },
-                    success: function(response) {
-                        // console.log(response);
-                        $('#pip').text('');
-                        $('#pip').hide();
-                        // $('#asset_total2').text(response.data);
-                        $('#takeprofit3').val('{{ auth()->user()->currency }}' + response.data + '.00');
-                    },
-                    error: function(error) {
-                        // $('#asset_total2').text('Please try again');
+    
+                $(".asset_type").on('change', function() {
+                    if(this.checked) {
+                        $('#my-select').prop('disabled', false);
+                    }else{
+                        $('#my-select').prop('disabled', true);
                     }
                 });
-            });
-
-            var copyButton = document.getElementById("copy-button");
-            var textToCopy = document.getElementById("text-to-copy");
-
-            copyButton.addEventListener("click", function() {
-                textToCopy.select();
-                document.execCommand("copy");
+    
+                $(".asset_type2").on('change', function() {
+                    if(this.checked) {
+                        $('#my-select2').prop('disabled', false);
+                    }else{
+                        $('#my-select2').prop('disabled', true);
+                    }
+                });
+    
+                $('#stoploss1').keyup(function(){
+                    // Get the value of the input box
+                    var piont = $(this).val();
+                    
+                    // Run the AJAX request
+                    $.ajax({
+                        url: '{{ route("cal_pip") }}',
+                        type: 'GET',
+                        data: { 
+                            asset: $('#my-select2').val(),
+                            trade_size: $('#calc_volume2').val(),
+                            piont: piont,
+                            asset_type: $(':radio[name=asset_type2]:checked').val(),
+                        },
+                        beforeSend: function() {
+                            // Show loading indicator or message here
+                            $('#pip').text('');
+                            $('#pip').show();
+                            $('#pip').text('Loading...');
+                        },
+                        success: function(response) {
+                            // console.log(response);
+                            $('#pip').text('');
+                            $('#pip').hide();
+                            // $('#asset_total2').text(response.data);
+                            $('#stoploss3').val('-' + '{{ auth()->user()->currency }}' + response.data + '.00');
+                        },
+                        error: function(error) {
+                            // $('#asset_total2').text('Please try again');
+                        }
+                    });
+                });
+    
+                $('#takeprofit1').keyup(function(){
+                    // Get the value of the input box
+                    var piont = $(this).val();
+                
+                    // Run the AJAX request
+                    $.ajax({
+                        url: '{{ route("cal_pip") }}',
+                        type: 'GET',
+                        data: { 
+                            asset: $('#my-select2').val(),
+                            trade_size: $('#calc_volume2').val(),
+                            piont: piont,
+                            asset_type: $(':radio[name=asset_type2]:checked').val(),
+                        },
+                        beforeSend: function() {
+                            // Show loading indicator or message here
+                            $('#pip').text('');
+                            $('#pip').show();
+                            $('#pip').text('Loading...');
+                        },
+                        success: function(response) {
+                            // console.log(response);
+                            $('#pip').text('');
+                            $('#pip').hide();
+                            // $('#asset_total2').text(response.data);
+                            $('#takeprofit3').val('{{ auth()->user()->currency }}' + response.data + '.00');
+                        },
+                        error: function(error) {
+                            // $('#asset_total2').text('Please try again');
+                        }
+                    });
+                });
+    
+                var copyButton = document.getElementById("copy-button");
+                var textToCopy = document.getElementById("text-to-copy");
+    
+                copyButton.addEventListener("click", function() {
+                    textToCopy.select();
+                    document.execCommand("copy");
+                });
             });
         </script>
 
