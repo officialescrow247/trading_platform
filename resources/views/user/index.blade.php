@@ -518,7 +518,7 @@
             </div>
             <!-- TradingView Widget END -->
 
-            <p style="cursor: pointer;" class="text-warning float-end" onclick="openrightchat();"><i class="fa-solid fa-expand"></i></p>
+            <p style="cursor: pointer;position: relative;margin-top: 5%; right: 95%;" class="text-warning float-end" onclick="openrightchat();"><i class="fa-solid fa-expand"></i></p>
          </div>
       </div>
       
