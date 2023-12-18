@@ -107,6 +107,7 @@
                      @csrf
                      <input type="hidden" name="trade_type_select" value="m_e">
                      <label class="text-secondary">Assets</label>
+                     
                      <select name="type" id="my-select" class="form-select mb-2" style="background-color: #171B26; color: #E1E4ED;" disabled>
                         
                         <option value="" selected>-- Select Asset --</option>
@@ -119,10 +120,8 @@
                         <option class="asset_stocks" value="MSFT">Microsoft Corp</option>
                         <option class="asset_stocks" value="AMZN">Amazon Com Inc</option>
                         <option class="asset_stocks" value="TSLA">Tesla Inc</option>
-
                         <option class="asset_stocks" value="DOW">DOW JONES INDUSTRAIL AVERAGE INDEX</option>
                         <option class="asset_stocks" value="SP500">S&P 500</option>
-
                         <option class="asset_stocks" value="BABA">Alibaba Group Holdings LTD</option>
                         <option class="asset_stocks" value="ABNB">ABNB</option>
                         <option class="asset_stocks" value="SPOT">Spotify Technology S.A</option>
@@ -154,9 +153,7 @@
 
                         <option class="asset_commodities" value="XAU">GOLD</option>
                         <option class="asset_commodities" value="XAG">SILVER</option>
-
                         <option class="asset_commodities" value="WTIOIL">WTI Crude Oil</option>
-
                         <option class="asset_commodities" value="ALU">Aluminum</option>
                         <option class="asset_commodities" value="NI">Nickel</option>
                         <option class="asset_commodities" value="SUGAR">SUGAR</option>
