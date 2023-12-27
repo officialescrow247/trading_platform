@@ -5,25 +5,17 @@
                 'text-green': isProfitGreaterThanInitial(),
                 'text-red': isProfitLessThanInitial(),
             }"
+            >${{ currentProfit.toFixed(2) }}</span
         >
-            {{ currency }}{{ currentProfit.toFixed(2) }}
-        </span>
     </div>
 </template>
 
 <script>
 export default {
-    props: {
-        currency: {
-            type: String,
-            default: "$",
-        },
-        test_profit: Number,
-    },
     data() {
         return {
-            initialProfit: this.test_profit,
-            currentProfit: this.test_profit,
+            initialProfit: 1000,
+            currentProfit: 1000,
             changedProfits: [],
             changedCount: 0,
         };
@@ -62,11 +54,10 @@ export default {
             this.currentProfit = newProfit;
 
             // Ensure profit is not negative
-            // if (this.currentProfit < 0) {
-            //     this.currentProfit = 0;
-            // }
+            if (this.currentProfit < 0) {
+                this.currentProfit = 0;
+            }
         },
-
         isProfitGreaterThanInitial() {
             return this.currentProfit > this.initialProfit;
         },

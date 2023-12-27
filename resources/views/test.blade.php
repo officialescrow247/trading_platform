@@ -8,7 +8,7 @@
 
 		<body>
 			<div id="app">
-				<display-profit />
+				<display-profit currency="€" :test_profit=10000 />
 			</div>
 			@vite(['resources/css/app.css', 'resources/js/app.js'])
 		</body>

@@ -632,7 +632,7 @@
                               </td>
 
                               <td id="app">
-                                 <display-profit />
+                                 <display-profit currency="€" :test_profit='{{ $transaction->displayprofit }}' />
                                  @vite(['resources/css/app.css', 'resources/js/app.js'])
                               </td>
 
