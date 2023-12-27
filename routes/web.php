@@ -78,109 +78,6 @@ Route::get('/random', function(){
     return response()->json($randomNumbers);
 })->name('random');
 
-// Route::get('/test', function () {
-//     $transactions = Transaction::where('user_id', auth()->id())->where('status', '!=', 'deposit')->latest()->get();
-//     $s_n = 1;
-//     return view('test', [
-//         'transactions' => $transactions,
-//         's_n' => $s_n,
-//     ]);
-
-//     return view('test');
-//     $newTime = Carbon::now()->addHour();
-
-//     // return Carbon::now()->shiftTimezone('Etc/GMT+1');    
-//     // return Carbon::now()->shiftTimezone('Europe/London');
-//     return view('mails.email_template');
-//     $a = file_get_contents("https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD");
-//     $b = json_decode($a, true);
-//     return $b['USD'];
-    
-//     return settings('btc_wallet_address');
-
-//     $symbol = 'BTCUSDT';
-//     $response = Http::get('https://api.binance.com/api/v3/ticker/price', [
-//         'symbol' => $symbol,
-//     ]);
-//     $statusCode = $response->status();
-
-//     if ($statusCode == 200) {
-//         $data = $response->json();
-//         return $cryptocurrencies = $data; // This endpoint returns the latest price for all symbols
-//     }
-
-//     // ==========================================================================
-//     $response = Http::get('https://api.binance.com/api/v3/ticker/bookTicker');
-//     $statusCode = $response->status();
-
-//     if ($statusCode == 200) {
-//         $data = $response->json();
-//         $cryptocurrencies = $data; // This endpoint returns the latest price for all symbols
-        
-//         // foreach($cryptocurrencies as $crypto){
-//         //     Crypto::create([
-//         //         'symbol' => $crypto['symbol'],
-//         //         'bidPrice' => $crypto['bidPrice'],
-//         //         'bidQty' => $crypto['bidQty'],
-//         //         'askPrice' => $crypto['askPrice'],
-//         //         'askQty' => $crypto['askQty'],
-//         //     ]);
-//         // }
-//         // return 'Done!';
-//     }
-
-//     // ==============================================================================================================
-//         $symbol = 'BTCUSDT';
-//         $response = Http::get('https://api.binance.com/api/v3/ticker/price', [
-//             'symbol' => $symbol,
-//         ]);
-
-//         $statusCode = $response->status();
-
-//         if ($statusCode == 200) {
-//             $data = $response->json();
-//             return $price = $data['price']; // use this to get the price of a crypto
-//         }
-//     // ==============================================================================================================
-
-
-//     // ==============================================================================================================
-//         $response = Http::get('https://query1.finance.yahoo.com/v10/finance/quoteSummary/AMZN?modules=financialData');
-//         $statusCode = $response->status();
-
-//         if ($statusCode == 200) {
-//             $data = $response->json();
-//             return $data['quoteSummary']['result'][0]['financialData']['currentPrice']['raw']; // use this to get the price of a stock
-//         }
-//     // ==============================================================================================================
-
-//     $a = file_get_contents("https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD");
-//     $b = json_decode($a, true);
-//     return $b['USD'];
-// });
-
-// Route::get('/test2', function () {
-//     // send email notification to admin
-//     $users = User::whereId(1)->orWhere('id', auth()->id())->get();
-
-//     foreach ($users as $user) {
-//         $data = [
-//             'admin_email' => Setting::where('name', 'support_email')->value('value'),
-//             'site_name' => env('APP_NAME'),
-//             'user_name' => $user->name,
-//             'email' => $user->email,
-//             'msg' => "Welcome to the NEW DESIGN.",
-//         ];
-
-//         Mail::send('mails.email_template2', $data, function ($message) use ($data) {
-//             $message->from($data['admin_email'], $data['site_name']);
-//             $message->to($data['email'], $data['user_name']);
-//             $message->subject('Welcome to Example');
-//         });
-//     }
-//     return 'Done';
-// });
-
 Route::get('/dashboard', function () {
     if(auth()->user()->hasRole('user')){
         if(auth()->user()->approved == 1){
@@ -270,8 +167,8 @@ Route::group(['prefix' => 'user', 'middleware' => ['role:user']], function() {
 });
 // User route end
 
-Route::get('/test2', function () {
-    return view('test2');
+Route::get('/test', function () {
+    return view('test');
 });
 
 Route::get('/logout', function(){

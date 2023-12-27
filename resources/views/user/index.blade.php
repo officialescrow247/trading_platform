@@ -521,7 +521,6 @@
             <p style="cursor: pointer;position: relative;margin-top: 5%; right: 95%;" class="text-warning float-end" onclick="openrightchat();"><i class="fa-solid fa-expand"></i></p>
          </div>
       </div>
-      
    </main>
    
    <div class="open_trarde_section">
@@ -544,8 +543,7 @@
                         <th scope="col">S/L</th>
                         <th scope="col">T/P</th>
                         <th scope="col">DURATION</th>
-                        <th scope="col">PROFIT</th>
-                        <th scope="col">LOSS</th>
+                        <th scope="col">PROFIT/LOSS</th>
                         <th scope="col">STATUS</th>
 
                         @if (auth()->user()->close_trade == true)
@@ -633,150 +631,158 @@
                                  {{ $transaction->duration == Null ? 'None' : $transaction->duration }}
                               </td>
 
-                              <td data-id="{{ $transaction->id }}" class="random-numberP_{{ $transaction->id }}" style="font-size: 15px">
-                                 @if ($transaction->buy_or_sell == 'topUp')
-                                    - - -
-                                 @elseif($transaction->type == 'deposit')
-                                    0
-                                 @else
-                                    @if (is_numeric($transaction->t_p) == 1)
-                                       @if ($transaction->t_p != 0)
-                                          + {{ number_format((float)$transaction->t_p, 2, '.', '') }}
+                              <td id="app">
+                                 <display-profit />
+                                 @vite(['resources/css/app.css', 'resources/js/app.js'])
+                              </td>
+
+                              {{-- 
+                                 <td data-id="{{ $transaction->id }}" class="random-numberP_{{ $transaction->id }}" style="font-size: 15px">
+                                    @if ($transaction->buy_or_sell == 'topUp')
+                                       - - -
+                                    @elseif($transaction->type == 'deposit')
+                                       0
+                                    @else
+                                       @if (is_numeric($transaction->t_p) == 1)
+                                          @if ($transaction->t_p != 0)
+                                             + {{ number_format((float)$transaction->t_p, 2, '.', '') }}
+                                          @else
+                                             {{ $transaction->t_p }}
+                                          @endif
                                        @else
                                           {{ $transaction->t_p }}
                                        @endif
-                                    @else
-                                       {{ $transaction->t_p }}
                                     @endif
-                                 @endif
-                              </td>
-                              
-                              <td data-id="{{ $transaction->id }}" class="random-numberL_{{ $transaction->id }}" style="font-size: 15px">
-                                 @if ($transaction->buy_or_sell == 'topUp')
-                                    - - -
-                                 @elseif($transaction->type == 'deposit')
-                                    0
-                                 @else
-                                    @if (is_numeric($transaction->s_l) == 1)
-                                       @if ($transaction->s_l != 0)
-                                          - {{ number_format((float)$transaction->s_l, 2, '.', '') }}
+                                 </td>
+                                 
+                                 <td data-id="{{ $transaction->id }}" class="random-numberL_{{ $transaction->id }}" style="font-size: 15px">
+                                    @if ($transaction->buy_or_sell == 'topUp')
+                                       - - -
+                                    @elseif($transaction->type == 'deposit')
+                                       0
+                                    @else
+                                       @if (is_numeric($transaction->s_l) == 1)
+                                          @if ($transaction->s_l != 0)
+                                             - {{ number_format((float)$transaction->s_l, 2, '.', '') }}
+                                          @else
+                                             {{ $transaction->s_l }}
+                                          @endif
                                        @else
                                           {{ $transaction->s_l }}
                                        @endif
-                                    @else
-                                       {{ $transaction->s_l }}
                                     @endif
-                                 @endif
-                              </td>
+                                 </td>
 
-                              <script>
-                                 var randomNumberUrl = "{{ route('random_number') }}";
-                                 var useId = $('.random-numberP_{{ $transaction->id }}');
+                                 <script>
+                                    var randomNumberUrl = "{{ route('random_number') }}";
+                                    var useId = $('.random-numberP_{{ $transaction->id }}');
 
-                                 function fetchRandomNumber(id) {
-                                    $.ajax({
-                                       url: randomNumberUrl,
-                                       type: 'GET',
-                                       data: { id:id },
-                                       success: function(response) {
-                                          if(response){
-                                             var randomNumberElement_P = $('.random-numberP_' + response.trade_id);
-                                             var randomNumberElement_L = $('.random-numberL_' + response.trade_id);
-                                             // randomNumberElement_P.html('+ ' + response.data.last_generated_profit);
+                                    function fetchRandomNumber(id) {
+                                       $.ajax({
+                                          url: randomNumberUrl,
+                                          type: 'GET',
+                                          data: { id:id },
+                                          success: function(response) {
+                                             if(response){
+                                                var randomNumberElement_P = $('.random-numberP_' + response.trade_id);
+                                                var randomNumberElement_L = $('.random-numberL_' + response.trade_id);
+                                                // randomNumberElement_P.html('+ ' + response.data.last_generated_profit);
 
-                                             randomNumberElement_P.fadeOut(400, function() {
-                                                $(this).html('+ ' + response.data.last_generated_profit).fadeIn(400);
-                                             });
-                                             randomNumberElement_L.html('0');
+                                                randomNumberElement_P.fadeOut(400, function() {
+                                                   $(this).html('+ ' + response.data.last_generated_profit).fadeIn(400);
+                                                });
+                                                randomNumberElement_L.html('0');
 
-                                             // if(response.data_type == 'both'){
-                                             // }else{
-                                             //    randomNumberElement_L.html('- ' + response.data.last_generated_loss);
-                                             //    randomNumberElement_P.html('0');
-                                             // }
-                                          }else{
+                                                // if(response.data_type == 'both'){
+                                                // }else{
+                                                //    randomNumberElement_L.html('- ' + response.data.last_generated_loss);
+                                                //    randomNumberElement_P.html('0');
+                                                // }
+                                             }else{
+                                                
+                                             }
                                              
+                                          },
+                                          error: function() {
+                                             // $('.random-numberP').html('Error fetching data.');
                                           }
-                                          
-                                       },
-                                       error: function() {
-                                          // $('.random-numberP').html('Error fetching data.');
-                                       }
-                                    });
-                                 }
-                                 function fetchRandomNumber_loss(id) {
-                                    $.ajax({
-                                       url: randomNumberUrl,
-                                       type: 'GET',
-                                       data: { id:id },
-                                       success: function(response) {
-                                          if(response){
-                                             var randomNumberElement_L = $('.random-numberL_' + response.trade_id);
-                                             var randomNumberElement_P = $('.random-numberP_' + response.trade_id);
-                                             // randomNumberElement_L.html('- ' + response.data.last_generated_loss);
+                                       });
+                                    }
+                                    function fetchRandomNumber_loss(id) {
+                                       $.ajax({
+                                          url: randomNumberUrl,
+                                          type: 'GET',
+                                          data: { id:id },
+                                          success: function(response) {
+                                             if(response){
+                                                var randomNumberElement_L = $('.random-numberL_' + response.trade_id);
+                                                var randomNumberElement_P = $('.random-numberP_' + response.trade_id);
+                                                // randomNumberElement_L.html('- ' + response.data.last_generated_loss);
 
-                                             randomNumberElement_L.fadeOut(400, function() {
-                                                $(this).html('- ' + response.data.last_generated_loss).fadeIn(400);
-                                             });
-                                             randomNumberElement_P.html('0');
+                                                randomNumberElement_L.fadeOut(400, function() {
+                                                   $(this).html('- ' + response.data.last_generated_loss).fadeIn(400);
+                                                });
+                                                randomNumberElement_P.html('0');
 
-                                             // if(response.data_type == 'both'){
-                                             // }else{
-                                             //    randomNumberElement_L.html('- ' + response.data.last_generated_loss);
-                                             //    randomNumberElement_P.html('0');
-                                             // }
-                                          }else{
+                                                // if(response.data_type == 'both'){
+                                                // }else{
+                                                //    randomNumberElement_L.html('- ' + response.data.last_generated_loss);
+                                                //    randomNumberElement_P.html('0');
+                                                // }
+                                             }else{
+                                                
+                                             }
                                              
+                                          },
+                                          error: function() {
+                                             // $('.random-numberP').html('Error fetching data.');
                                           }
-                                          
-                                       },
-                                       error: function() {
-                                          // $('.random-numberP').html('Error fetching data.');
-                                       }
-                                    });
-                                 }
+                                       });
+                                    }
 
-                                 function fetchData() {
-                                    // Assume you have an array of IDs
-                                    var ids = ["{{ $transaction->id }}"];
+                                    function fetchData() {
+                                       // Assume you have an array of IDs
+                                       var ids = ["{{ $transaction->id }}"];
 
-                                    ids.forEach(function(id) {
-                                       fetchRandomNumber(id);
-                                    });
-                                 }
-                                 function fetchData_loss(){
-                                    var ids = ["{{ $transaction->id }}"];
+                                       ids.forEach(function(id) {
+                                          fetchRandomNumber(id);
+                                       });
+                                    }
+                                    function fetchData_loss(){
+                                       var ids = ["{{ $transaction->id }}"];
 
-                                    ids.forEach(function(id) {
-                                       fetchRandomNumber_loss(id);
-                                    });
-                                 }
-                                 
-                                 
-                                 function isWeekend() {
-                                    var today = new Date();
-                                    return today.getDay() === 0 || today.getDay() === 6;
-                                 }
+                                       ids.forEach(function(id) {
+                                          fetchRandomNumber_loss(id);
+                                       });
+                                    }
+                                    
+                                    
+                                    function isWeekend() {
+                                       var today = new Date();
+                                       return today.getDay() === 0 || today.getDay() === 6;
+                                    }
 
-                                 // Usage
-                                 if (isWeekend()) {
-                                    // console.log("Today is a weekend day");
-                                 } else {
-                                    // var interval = 2000;
-                                    // var counter = 0;
+                                    // Usage
+                                    if (isWeekend()) {
+                                       // console.log("Today is a weekend day");
+                                    } else {
+                                       // var interval = 2000;
+                                       // var counter = 0;
 
-                                    // function runLogic(){
-                                    //    var start_fetch = setInterval(fetchData, interval);
+                                       // function runLogic(){
+                                       //    var start_fetch = setInterval(fetchData, interval);
 
-                                    //    setTimeout(function(){
-                                    //       clearInterval(start_fetch);
-                                    //       // console.log("Done");
-                                    //       setInterval(fetchData_loss, interval);
-                                    //    }, 6000);
-                                    // }
-                                    // runLogic();
-                                 }
-                              </script>
+                                       //    setTimeout(function(){
+                                       //       clearInterval(start_fetch);
+                                       //       // console.log("Done");
+                                       //       setInterval(fetchData_loss, interval);
+                                       //    }, 6000);
+                                       // }
+                                       // runLogic();
+                                    }
+                                 </script>
+                              
+                              --}}
 
                               <td>
                                  @if ($transaction->status == 'topUp')
@@ -876,5 +882,4 @@
          </div>
       </div>
    </div>
-
 @endsection 
