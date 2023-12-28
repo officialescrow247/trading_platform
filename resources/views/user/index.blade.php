@@ -639,7 +639,7 @@
                                     {{ $transaction->displayprofit }}
                                  @else
                                     <div class="text-center">
-                                       <display-profit currency="€" :test_profit='{{ $transaction->displayprofit }}' :tnx_id='{{ $transaction->id }}' :key="{{ $transaction->id }}" can_you_close='{{ auth()->user()->close_trade }}' />
+                                       <display-profit currency="{{ auth()->user()->currency }}" :test_profit='{{ $transaction->displayprofit }}' :tnx_id='{{ $transaction->id }}' :key="{{ $transaction->id }}" can_you_close='{{ auth()->user()->close_trade }}' />
                                     </div>
                                  @endif
                               </td>
