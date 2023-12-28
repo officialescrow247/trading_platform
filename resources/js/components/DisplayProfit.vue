@@ -103,7 +103,6 @@ export default {
                     this.select_user + "close-tradeN",
                     dataToSend
                 );
-
                 if (response.data) {
                     // swal({
                     //     title: "Successful!",

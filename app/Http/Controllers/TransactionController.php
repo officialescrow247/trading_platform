@@ -913,21 +913,12 @@ class TransactionController extends Controller
 
     public function closeTradeNew(Request $request)
     {
-        // $data = [
-        //     "profit" => $request->profit,
-        //     "Transaction ID" => $request->trans_id,
-        // ] ;
-        // return response()->json($data);
-        return $request->all();
-        
-
         $getTransaction = Transaction::whereId($request->trans_id)->first();
         $getUser = User::whereId($getTransaction->user_id)->first();
         $getUserBalance = $getUser->balance;
 
         // check if the displayprofit has a hyphen
         if(Str::contains($request->profit, '-')){
-            
             // // Remove the minus sign
             // $profitWithoutMinus = str_replace('-', '', $request->profit);
 
@@ -950,7 +941,7 @@ class TransactionController extends Controller
 
             // Plus to balance
             User::whereId(auth()->id())->update([
-                'balance' => $getUserBalance - $profitString,
+                'balance' => $getUserBalance + $profitString,
             ]);
             Transaction::whereId($request->trans_id)->update([
                 'displayprofit' => $request->profit,

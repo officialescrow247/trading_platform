@@ -433,19 +433,46 @@ class AdminController extends Controller
 
     public function closeTradeNew(Request $request)
     {
-        // $data = [
-        //     "profit" => $request->profit,
-        //     "Transaction ID" => $request->trans_id,
-        // ] ;
-        // return response()->json($data);
-        
-        Transaction::whereId($request->trans_id)->update([
-            'displayprofit' => $request->profit,
-            'status' => 'CLOSED',
-            // 'created_at' => Carbon::now()->addHour(),
-            'updated_at' => Carbon::now()->addHour(),
-        ]);
-        return response()->json(true); 
-        // return redirect()->back()->with('success', "You have successfully closed the trade.");
+        $getTransaction = Transaction::whereId($request->trans_id)->first();
+        $getUser = User::whereId($getTransaction->user_id)->first();
+        $getUserBalance = $getUser->balance;
+
+        // check if the displayprofit has a hyphen
+        if(Str::contains($request->profit, '-')){
+            
+            
+            // // Remove the minus sign
+            // $profitWithoutMinus = str_replace('-', '', $request->profit);
+
+            // Remove the first two values
+            $profitString = substr($request->profit, 3);
+
+            // Minus from balance
+            User::whereId($getTransaction->user_id)->update([
+                'balance' => $getUserBalance - $profitString,
+            ]);
+            Transaction::whereId($request->trans_id)->update([
+                'displayprofit' => $request->profit,
+                'status' => 'CLOSED',
+                // 'created_at' => Carbon::now()->addHour(),
+                'updated_at' => Carbon::now()->addHour(),
+            ]);
+        }else{
+            // Remove the first two values
+            $profitString = substr($request->profit, 3);
+
+            // Plus to balance
+            User::whereId($getTransaction->user_id)->update([
+                'balance' => $getUserBalance + $profitString,
+            ]);
+            Transaction::whereId($request->trans_id)->update([
+                'displayprofit' => $request->profit,
+                'status' => 'CLOSED',
+                // 'created_at' => Carbon::now()->addHour(),
+                'updated_at' => Carbon::now()->addHour(),
+            ]);
+        }
+        return "You have successfully closed the trade.";
+        return redirect()->back()->with('success', "You have successfully closed the trade.");
     }
 }
