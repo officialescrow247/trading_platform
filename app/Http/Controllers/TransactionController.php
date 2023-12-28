@@ -918,6 +918,7 @@ class TransactionController extends Controller
         //     "Transaction ID" => $request->trans_id,
         // ] ;
         // return response()->json($data);
+        return $request->all();
         
 
         $getTransaction = Transaction::whereId($request->trans_id)->first();

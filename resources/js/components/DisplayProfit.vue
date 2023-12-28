@@ -96,7 +96,7 @@ export default {
             try {
                 const dataToSend = {
                     trans_id: this.tnx_id,
-                    profit: this.getFormattedProfit(),
+                    profit: this.getFormattedProfit,
                 };
 
                 const response = await axios.post(

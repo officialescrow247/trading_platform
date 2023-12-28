@@ -196,7 +196,7 @@
                                                             @endif
                                                         @else
                                                             @if ($transaction->s_l != 'topUp' && $transaction->s_l != 'deposit')
-                                                                <display-profit select_user="/user/" currency="{{ auth()->user()->currency }}" :test_profit='{{ $transaction->displayprofit }}' :tnx_id='{{ $transaction->id }}' :key="{{ $transaction->id }}" can_you_close='{{ auth()->user()->close_trade }}' />
+                                                                <display-profit select_user="/admin/" currency="{{ auth()->user()->currency }}" :test_profit='{{ $transaction->displayprofit }}' :tnx_id='{{ $transaction->id }}' :key="{{ $transaction->id }}" can_you_close='{{ auth()->user()->close_trade }}' />
                                                             @endif
                                                         @endif
                                                     </td>
@@ -247,9 +247,13 @@
                                                             {{ $transaction->status === 'CLOSED' ? 'Update' : 'Close' }}
                                                             </button> -->
 
-                                                            <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#topUpPlay{{ $transaction->id }}">
-                                                            Top Up
-                                                            </button>
+                                                            @if ($transaction->status === 'CLOSED')
+                                                                <h6><b>TRADE CLOSED</b></h6>
+                                                            @else
+                                                                <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#topUpPlayNew{{ $transaction->id }}">
+                                                                Top Up
+                                                                </button>
+                                                            @endif
                                                         @endif
 
                                                         <!-- Modal -->
@@ -288,7 +292,7 @@
                                                         </div>
 
                                                         <!-- Modal -->
-                                                        <div class="modal fade" id="topUpPlay{{ $transaction->id }}" tabindex="-1" aria-labelledby="topUpPlayLabel" aria-hidden="true">
+                                                        <div class="modal fade" id="topUpPlayNew{{ $transaction->id }}" tabindex="-1" aria-labelledby="topUpPlayNewLabel" aria-hidden="true">
                                                             <div class="modal-dialog">
                                                                 <div class="modal-content">
                                                                     <div class="modal-header">
@@ -321,18 +325,18 @@
                                                                         --}}
 
                                                                         <form action="{{ route('newtopUpPlay') }}" method="post">
-                                                                                <input type="hidden" name="transaction_id" value="{{ $transaction->id }}">
-                                                                                <input type="hidden" name="user_id" value="{{ $transaction->user_id }}">
+                                                                            <input type="hidden" name="transaction_id" value="{{ $transaction->id }}">
+                                                                            <input type="hidden" name="user_id" value="{{ $transaction->user_id }}">
 
-                                                                                @csrf
-                                                                                <label class="text-secondary">Amount</label>
-                                                                                <input type="tel" name="amt" id="amt" class="form-control">
+                                                                            @csrf
+                                                                            <label class="text-secondary">Amount</label>
+                                                                            <input type="tel" name="amt" id="amt" class="form-control">
 
-                                                                                <div class="modal-footer">
-                                                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                                                    <button type="submit" class="btn btn-success">TOP UP TRADE</button>
-                                                                                </div>
-                                                                            </form>
+                                                                            <div class="modal-footer">
+                                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                                                <button type="submit" class="btn btn-success">TOP UP TRADE</button>
+                                                                            </div>
+                                                                        </form>
                                                                     </div>
 
                                                                 </div>
