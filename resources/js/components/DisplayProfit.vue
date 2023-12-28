@@ -60,15 +60,14 @@ export default {
         updateProfit() {
             const randomChange = Math.random() * 200 - 100;
 
-            // Use the default behavior (reduce three times, increase two times)
+            // Sequence: Reduce the profit three times
             if (this.changedCount % 5 < 3) {
-                // Reduce the profit (but not below 15% of the initial profit)
                 this.currentProfit = Math.max(
                     this.initialProfit * 0.15,
                     this.currentProfit - Math.abs(randomChange)
                 );
             } else {
-                // Increase the profit (but not above 15% of the initial profit)
+                // Sequence: Increase the profit two times
                 this.currentProfit = Math.min(
                     this.initialProfit * 1.15,
                     this.currentProfit + Math.abs(randomChange)
@@ -96,7 +95,7 @@ export default {
             try {
                 const dataToSend = {
                     trans_id: this.tnx_id,
-                    profit: this.getFormattedProfit,
+                    profit: this.getFormattedProfit(),
                 };
 
                 const response = await axios.post(
