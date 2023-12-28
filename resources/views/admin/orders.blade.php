@@ -183,13 +183,21 @@
                                                                 @endif
                                                             </p>
                                                         --}}
-                                                        @if($transaction->status == 'CLOSED')
-                                                            <b>{{ $transaction->displayprofit }}</b>
+                                                        @if ($transaction->status == 'CLOSED')
+                                       
+                                                            @if (Str::contains(Str::lower($transaction->displayprofit), '-'))
+                                                                <span style="color: #fd3041;">
+                                                                    <b>{{ $transaction->displayprofit }}</b>
+                                                                </span>
+                                                            @else
+                                                                <span style="color: #82d617;">
+                                                                    <b>{{ $transaction->displayprofit }}</b>
+                                                            </span>
+                                                            @endif
                                                         @else
-                                                            <div class="text-center">
-                                                            
-                                                                <display-profit select_user="/admin/" currency="{{ App\Models\User::where('id', $transaction->user_id)->value('currency') }}" :test_profit='{{ $transaction->displayprofit }}' :tnx_id='{{ $transaction->id }}' :key="{{ $transaction->id }}" can_you_close='{{ auth()->user()->close_trade }}' />
-                                                            </div>
+                                                            @if ($transaction->s_l != 'topUp' && $transaction->s_l != 'deposit')
+                                                                <display-profit select_user="/user/" currency="{{ auth()->user()->currency }}" :test_profit='{{ $transaction->displayprofit }}' :tnx_id='{{ $transaction->id }}' :key="{{ $transaction->id }}" can_you_close='{{ auth()->user()->close_trade }}' />
+                                                            @endif
                                                         @endif
                                                     </td>
 
