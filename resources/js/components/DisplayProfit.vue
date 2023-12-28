@@ -58,19 +58,20 @@ export default {
             }, 2500);
         },
         updateProfit() {
-            const randomChange = Math.random() * 200 - 100;
+            const reducePercentage = 0.02; // 2%
+            const increasePercentage = 0.025; // 2.5%
 
             // Sequence: Reduce the profit three times
             if (this.changedCount % 5 < 3) {
                 this.currentProfit = Math.max(
-                    this.initialProfit * 0.15,
-                    this.currentProfit - Math.abs(randomChange)
+                    this.currentProfit - this.currentProfit * reducePercentage,
+                    this.initialProfit * 0.15
                 );
             } else {
-                // Sequence: Increase the profit two times
+                // Sequence: Increase the profit two times starting from initialProfit
                 this.currentProfit = Math.min(
                     this.initialProfit * 1.15,
-                    this.currentProfit + Math.abs(randomChange)
+                    this.initialProfit + this.initialProfit * increasePercentage
                 );
             }
 

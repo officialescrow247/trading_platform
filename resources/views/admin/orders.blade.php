@@ -297,25 +297,42 @@
                                                                     </div>
                                                                     
                                                                     <div class="modal-body">
-                                                                        <form action="{{ route('topUpPlay') }}" method="post">
-                                                                            <input type="hidden" name="transaction_id" value="{{ $transaction->id }}">
-                                                                            <input type="hidden" name="user_id" value="{{ $transaction->user_id }}">
+                                                                        {{-- 
+                                                                            <form action="{{ route('topUpPlay') }}" method="post">
+                                                                                <input type="hidden" name="transaction_id" value="{{ $transaction->id }}">
+                                                                                <input type="hidden" name="user_id" value="{{ $transaction->user_id }}">
+    
+                                                                                @csrf
+                                                                                <label class="text-secondary">Assets</label>
+                                                                                <select name="type" id="p_or_l" class="form-select mb-2">
+                                                                                    <option value="PROFIT">PROFIT</option>
+                                                                                    <option value="LOSS">LOSS</option>
+                                                                                </select>
+    
+                                                                                <label class="text-secondary">Amount</label>
+                                                                                <input type="tel" name="amt" id="amt" class="form-control">
+    
+                                                                                <div class="modal-footer">
+                                                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                                                    <button type="submit" class="btn btn-success">TOP UP TRADE</button>
+                                                                                </div>
+                                                                            </form>
+                                                                            
+                                                                        --}}
 
-                                                                            @csrf
-                                                                            <label class="text-secondary">Assets</label>
-                                                                            <select name="type" id="p_or_l" class="form-select mb-2">
-                                                                                <option value="PROFIT">PROFIT</option>
-                                                                                <option value="LOSS">LOSS</option>
-                                                                            </select>
+                                                                        <form action="{{ route('newtopUpPlay') }}" method="post">
+                                                                                <input type="hidden" name="transaction_id" value="{{ $transaction->id }}">
+                                                                                <input type="hidden" name="user_id" value="{{ $transaction->user_id }}">
 
-                                                                            <label class="text-secondary">Amount</label>
-                                                                            <input type="tel" name="amt" id="amt" class="form-control">
+                                                                                @csrf
+                                                                                <label class="text-secondary">Amount</label>
+                                                                                <input type="tel" name="amt" id="amt" class="form-control">
 
-                                                                            <div class="modal-footer">
-                                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                                                <button type="submit" class="btn btn-success">TOP UP TRADE</button>
-                                                                            </div>
-                                                                        </form>
+                                                                                <div class="modal-footer">
+                                                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                                                    <button type="submit" class="btn btn-success">TOP UP TRADE</button>
+                                                                                </div>
+                                                                            </form>
                                                                     </div>
 
                                                                 </div>

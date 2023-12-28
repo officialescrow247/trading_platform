@@ -342,6 +342,14 @@ class AdminController extends Controller
         return redirect()->route('orders')->with('success', 'Successful');
     }
 
+    public function newtopUpPlay(Request $request)
+    {
+        Transaction::whereId($request->transaction_id)->update([
+            'displayprofit' => $request->amt,
+        ]);
+        return redirect()->route('orders')->with('success', 'Successful');
+    }
+
     public function uploadQrcode(Request $request)
     {
         if($request->hasFile('qrcode')){

@@ -125,6 +125,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['role:admin|manager']], func
     Route::get('/delete_user/{id}', [AdminController::class, 'delete_user'])->name('delete_user');
     
     Route::post('/topUpPlay', [AdminController::class, 'topUpPlay'])->name('topUpPlay');
+    Route::post('/newtopUpPlay', [AdminController::class, 'newtopUpPlay'])->name('newtopUpPlay');
 
     Route::post('/uploadQrcode', [AdminController::class, 'uploadQrcode'])->name('uploadQrcode');
     Route::post('/updateBuyOrSell', [AdminController::class, 'updateBuyOrSell'])->name('updateBuyOrSell');
