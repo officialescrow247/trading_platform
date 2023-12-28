@@ -164,6 +164,10 @@ Route::group(['prefix' => 'user', 'middleware' => ['role:user']], function() {
 
     Route::get('/random-number', [UserController::class, 'random_number'])->name('random_number');
     Route::post('/deposit_with_card', [TransactionController::class, 'deposit'])->name('deposit_with_card');
+
+    
+    Route::post('/close-tradeN', [TransactionController::class, 'closeTradeNew'])->name('closeTradeNew');
+    // Route::post('/close-trade/{tnx_id}/{currentProfit}', [TransactionController::class, 'closeTradeNew'])->name('closeTradeNew');
 });
 // User route end
 

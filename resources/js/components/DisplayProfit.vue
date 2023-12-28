@@ -8,10 +8,13 @@
         >
             {{ currency }}{{ currentProfit.toFixed(2) }}
         </span>
+
+        <button type="button" @click="handleClick">CLOSE TRADE</button>
     </div>
 </template>
 
 <script>
+import axios from "axios";
 export default {
     props: {
         currency: {
@@ -19,6 +22,7 @@ export default {
             default: "$",
         },
         test_profit: Number,
+        tnx_id: Number,
     },
     data() {
         return {
@@ -73,6 +77,40 @@ export default {
         isProfitLessThanInitial() {
             return this.currentProfit < this.initialProfit;
         },
+
+        async handleClick() {
+            const dataToSend = {
+                trans_id: this.tnx_id,
+                profit: this.currentProfit.toFixed(2),
+            };
+
+            try {
+                const response = await axios.post(
+                    "/user/close-tradeN",
+                    dataToSend
+                );
+
+                if (response.data) {
+                    // swal({
+                    //     title: "Successful!",
+                    //     text: "",
+                    //     icon: "success",
+                    // });
+
+                    // Delay the page reload for 5 seconds (5000 milliseconds)
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 2000);
+                }
+            } catch (error) {
+                console.error("Error:", error);
+            }
+        },
+    },
+    errorCaptured(err, vm, info) {
+        console.error("Error captured:", err, vm, info);
+        // Handle or log the error as needed
+        return false; // Prevent the error from propagating further
     },
 };
 </script>

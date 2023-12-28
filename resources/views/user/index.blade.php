@@ -631,9 +631,15 @@
                                  {{ $transaction->duration == Null ? 'None' : $transaction->duration }}
                               </td>
 
-                              <td id="app">
-                                 <display-profit currency="€" :test_profit='{{ $transaction->displayprofit }}' />
-                                 @vite(['resources/css/app.css', 'resources/js/app.js'])
+                              <td>
+                                 @if ($transaction->status == 'CLOSED')
+                                    {{ $transaction->displayprofit }}
+                                 @else
+                                 <div id="app">
+                                    <display-profit currency="€" :test_profit='{{ $transaction->displayprofit }}' :tnx_id='{{ $transaction->id }}' />
+                                    @vite(['resources/css/app.css', 'resources/js/app.js'])
+                                 </div>
+                                 @endif
                               </td>
 
                               {{-- 
@@ -818,9 +824,9 @@
                                           - - -
                                        @else
                                           <!-- Button trigger modal -->
-                                          <button type="button" class="btn btn-sm btn-info px-3" data-bs-toggle="modal" data-bs-target="#closeTrade{{ $transaction->id }}">
+                                          <!-- <button type="button" class="btn btn-sm btn-info px-3" data-bs-toggle="modal" data-bs-target="#closeTrade{{ $transaction->id }}">
                                           Close Trade
-                                          </button>
+                                          </button> -->
                                        @endif
 
                                        <!-- Modal -->
