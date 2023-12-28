@@ -123,7 +123,7 @@ export default {
     computed: {
         getFormattedProfit() {
             const formattedProfit = Math.abs(this.currentProfit).toFixed(2);
-            const sign = this.currentProfit >= this.initialProfit ? "+" : "-";
+            const sign = this.currentProfit > this.initialProfit ? "+" : "-";
             return `${sign} ${this.currency}${formattedProfit}`;
         },
     },
