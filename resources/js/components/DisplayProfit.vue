@@ -6,7 +6,7 @@
                 'text-red': isProfitLessThanInitial(),
             }"
         >
-            <b>{{ currency }}{{ currentProfit.toFixed(2) }}</b>
+            <b>{{ getFormattedProfit }}</b>
         </span>
 
         <br />
@@ -112,22 +112,30 @@ export default {
                     this.select_user + "close-tradeN",
                     dataToSend
                 );
+                console.log(response.data);
 
-                if (response.data) {
-                    // swal({
-                    //     title: "Successful!",
-                    //     text: "",
-                    //     icon: "success",
-                    // });
+                // if (response.data) {
+                //     // swal({
+                //     //     title: "Successful!",
+                //     //     text: "",
+                //     //     icon: "success",
+                //     // });
 
-                    // Delay the page reload for 5 seconds (5000 milliseconds)
-                    setTimeout(() => {
-                        window.location.reload();
-                    }, 2000);
-                }
+                //     // Delay the page reload for 5 seconds (5000 milliseconds)
+                //     setTimeout(() => {
+                //         window.location.reload();
+                //     }, 2000);
+                // }
             } catch (error) {
                 console.error("Error:", error);
             }
+        },
+    },
+    computed: {
+        getFormattedProfit() {
+            const formattedProfit = Math.abs(this.currentProfit).toFixed(2);
+            const sign = this.currentProfit >= 0 ? "+" : "-";
+            return `${sign} ${this.currency}${formattedProfit}`;
         },
     },
     errorCaptured(err, vm, info) {

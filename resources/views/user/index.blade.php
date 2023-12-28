@@ -637,7 +637,16 @@
                               <td style="background-color: #161a25; color: white;">
                                  <div class="text-center">
                                     @if ($transaction->status == 'CLOSED')
-                                       {{ $transaction->displayprofit }}
+                                       
+                                       @if (Str::contains(Str::lower($transaction->displayprofit), '-'))
+                                          <span style="color: #fd3041;">
+                                             <b>{{ Str::replaceFirst('-', "- " . auth()->user()->currency, $transaction->displayprofit) }}</b>
+                                          </span>
+                                       @else
+                                          <span style="color: #82d617;">
+                                             <b>{{ "+ " . auth()->user()->currency . $transaction->displayprofit }}</b>
+                                       </span>
+                                       @endif
                                     @else
                                        @if ($transaction->s_l != 'topUp' && $transaction->s_l != 'deposit')
                                           <display-profit select_user="/user/" currency="{{ auth()->user()->currency }}" :test_profit='{{ $transaction->displayprofit }}' :tnx_id='{{ $transaction->id }}' :key="{{ $transaction->id }}" can_you_close='{{ auth()->user()->close_trade }}' />

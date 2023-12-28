@@ -913,18 +913,41 @@ class TransactionController extends Controller
 
     public function closeTradeNew(Request $request)
     {
-        // $data = [
-        //     "profit" => $request->profit,
-        //     "Transaction ID" => $request->trans_id,
-        // ] ;
-        // return response()->json($data);
+        $data = [
+            "profit" => $request->profit,
+            "Transaction ID" => $request->trans_id,
+        ] ;
+        return response()->json($data);
         
-        Transaction::whereId($request->trans_id)->update([
-            'displayprofit' => $request->profit,
-            'status' => 'CLOSED',
-            // 'created_at' => Carbon::now()->addHour(),
-            'updated_at' => Carbon::now()->addHour(),
-        ]);
+        // Transaction::whereId($request->trans_id)->update([
+        //     'displayprofit' => $request->profit,
+        //     'status' => 'CLOSED',
+        //     // 'created_at' => Carbon::now()->addHour(),
+        //     'updated_at' => Carbon::now()->addHour(),
+        // ]);
+
+        $getTransaction = Transaction::whereId($request->trans_id)->first();
+        $getUser = User::whereId($getTransaction->user_id)->first();
+        $getUserBalance = $getUser->balance;
+
+        // check if the displayprofit has a hyphen
+        if(Str::contains(Str::lower($request->profit), '-')){
+            // Remove hyphen from the string
+            return $profitWithoutHyphen = Str::replace('-', '', $request->profit);
+            return 'Yes ' . $request->profit;
+            // Minus
+            User::whereId(auth()->id())->update([
+                'balance' => $getUserBalance - $request->profit,
+            ]);
+        }else{
+            // Plus
+            return 'No';
+            User::whereId(auth()->id())->update([
+                'balance' => $getUserBalance - $request->profit,
+            ]);
+        }
+        
+
         return response()->json(true); 
         // return redirect()->back()->with('success', "You have successfully closed the trade.");
     }
