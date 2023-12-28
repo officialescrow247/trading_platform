@@ -137,10 +137,10 @@ export default {
 
 <style scoped>
 .text-green {
-    color: green;
+    color: #04ff04;
 }
 
 .text-red {
-    color: red;
+    color: #fd3041;
 }
 </style>
