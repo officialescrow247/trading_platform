@@ -129,20 +129,50 @@ class UserController extends Controller
 
         if($request->asset_type == 'Stocks'){
             if($request->asset == 'SP500'){
-                $response = Http::get('https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?region=US&lang=en-US&includePrePost=false&interval=1h&useYfid=true&range=1d');
-                $data = $response->json();
-                $current_price = $data['chart']['result'][0]['meta']['regularMarketPrice'];
+                // $response = Http::get('https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?region=US&lang=en-US&includePrePost=false&interval=1h&useYfid=true&range=1d');
+                // $data = $response->json();
+                // $current_price = $data['chart']['result'][0]['meta']['regularMarketPrice'];
+
+                $client = new \GuzzleHttp\Client();
+                $response = $client->get(
+                    'https://devapi.ai/api/v1/markets/stock/quotes',
+                    [
+                        'headers' => [
+                            'Authorization' => 'Bearer 261|QdYGvF4WDz0Gslnb4gHnlUzvyyolSDBPpn10KiF4',
+                        ],
+                        'query' => [
+                            'ticker' => '^SP500-40',
+                        ],
+                    ]
+                );
+                $body = json_decode($response->getBody(), true);
+                $current_price = $body['body'][0]['regularMarketPrice'];
 
                 $t_p2 = $t_p / $current_price; // get the price
                 $profit = $t_p2 * $request->input('piont');
             }elseif($request->asset == 'VOO'){
-                $response = Http::get('https://query1.finance.yahoo.com/v8/finance/chart/VOO?region=US&lang=en-US&includePrePost=false&interval=1h&useYfid=true&range=1d');
-                $data = $response->json();
-                $current_price = $data['chart']['result'][0]['meta']['regularMarketPrice'];
+                // $response = Http::get('https://query1.finance.yahoo.com/v8/finance/chart/VOO?region=US&lang=en-US&includePrePost=false&interval=1h&useYfid=true&range=1d');
+                // $data = $response->json();
+                // $current_price = $data['chart']['result'][0]['meta']['regularMarketPrice'];
+                $client = new \GuzzleHttp\Client();
+                $response = $client->get(
+                    'https://devapi.ai/api/v1/markets/stock/quotes',
+                    [
+                        'headers' => [
+                            'Authorization' => 'Bearer 261|QdYGvF4WDz0Gslnb4gHnlUzvyyolSDBPpn10KiF4',
+                        ],
+                        'query' => [
+                            'ticker' => $asset,
+                        ],
+                    ]
+                );
+                $body = json_decode($response->getBody(), true);
+                $current_price = $body['body'][0]['regularMarketPrice'];
+
                 $t_p2 = $t_p / $current_price; // get the price
                 $profit = $t_p2 * $request->input('piont');
             }else{
-                $response = Http::get('https://query1.finance.yahoo.com/v10/finance/quoteSummary/' . $asset . '?modules=financialData');
+                // $response = Http::get('https://query1.finance.yahoo.com/v10/finance/quoteSummary/' . $asset . '?modules=financialData');
                 // new url
                 // $crumb = 'wrHySw1iPKv'; // https://query1.finance.yahoo.com/v1/test/getcrumb
                 // $a1Cookie = 'YahooCookieContainer';
@@ -152,10 +182,24 @@ class UserController extends Controller
                 // $response = Http::withHeaders([
                 //     'cookie' => 'A1=' . $a1Cookie,
                 // ])->get($url);
+                $client = new \GuzzleHttp\Client();
+                $response = $client->get(
+                    'https://devapi.ai/api/v1/markets/stock/quotes',
+                    [
+                        'headers' => [
+                            'Authorization' => 'Bearer 261|QdYGvF4WDz0Gslnb4gHnlUzvyyolSDBPpn10KiF4',
+                        ],
+                        'query' => [
+                            'ticker' => $asset,
+                        ],
+                    ]
+                );
+                $body = json_decode($response->getBody(), true);
+                $current_price = $body['body'][0]['regularMarketPrice'];
                 
                 
-                $data = $response->json();
-                $current_price = $data['quoteSummary']['result'][0]['financialData']['currentPrice']['raw'];
+                // $data = $response->json();
+                // $current_price = $data['quoteSummary']['result'][0]['financialData']['currentPrice']['raw'];
                 $t_p2 = $t_p / $current_price; // get the price
                 $profit = $t_p2 * $request->input('piont');
             }

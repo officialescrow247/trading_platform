@@ -172,7 +172,21 @@ Route::group(['prefix' => 'user', 'middleware' => ['role:user']], function() {
 // User route end
 
 Route::get('/test', function () {
-    return view('test');
+    $client = new \GuzzleHttp\Client();
+    $response = $client->get(
+        'https://devapi.ai/api/v1/markets/stock/quotes',
+        [
+            'headers' => [
+                'Authorization' => 'Bearer 261|QdYGvF4WDz0Gslnb4gHnlUzvyyolSDBPpn10KiF4',
+            ],
+            'query' => [
+                'ticker' => '^SP500-40',
+            ],
+        ]
+    );
+    $body = json_decode($response->getBody(), true);
+    return $body['body'][0]['regularMarketPrice'];
+    return $body;
 });
 
 Route::get('/logout', function(){
