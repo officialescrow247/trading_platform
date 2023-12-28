@@ -10,6 +10,7 @@
         </span>
 
         <button
+            v-if="can_you_close === 1"
             type="button"
             @click="handleClick"
             class="btn btn-secondary btn-sm px-4"
@@ -33,6 +34,7 @@ export default {
         },
         test_profit: Number,
         tnx_id: Number,
+        can_you_close: Number,
     },
     data() {
         return {
