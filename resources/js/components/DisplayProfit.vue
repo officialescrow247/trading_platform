@@ -12,7 +12,7 @@
         <button
             type="button"
             @click="handleClick"
-            class="btn btn-sm px-4"
+            class="btn btn-secondary btn-sm px-4"
             :class="{
                 'btn-success': isProfitGreaterThanInitial(),
                 'btn-danger': isProfitLessThanInitial(),
@@ -56,12 +56,20 @@ export default {
             const randomChange = Math.random() * 200 - 100;
             let newProfit;
 
-            if (this.changedCount % 5 < 3) {
-                // Reduce the initial profit three times
+            // Check the condition to determine whether to reduce or increase
+            if (this.initialProfit > 50) {
+                // Reduce the initial profit if profit / 2 is above 100
+                newProfit = this.initialProfit + Math.abs(randomChange);
+            } else if (this.initialProfit < 0) {
+                // Increase the initial profit if profit / 2 is below 20
                 newProfit = this.initialProfit - Math.abs(randomChange);
             } else {
-                // Increase the initial profit two times
-                newProfit = this.initialProfit + Math.abs(randomChange);
+                // Use the default behavior (reduce three times, increase two times)
+                if (this.changedCount % 5 < 3) {
+                    newProfit = this.initialProfit - Math.abs(randomChange);
+                } else {
+                    newProfit = this.initialProfit + Math.abs(randomChange);
+                }
             }
 
             this.changedProfits.unshift(newProfit);

@@ -556,10 +556,11 @@
                      </tr>
                   </thead>
 
-                  <tbody>
+                  <tbody id="app">
                      @if ($transactions->count() < 1)
                         <div class="alert alert-info">No Record</div>
                      @else
+                        @vite(['resources/css/app.css', 'resources/js/app.js'])
                         @foreach ($transactions as $transaction)
                            <tr>
                               <th scope="row">#A{{ date('Y') . $transaction->id }}</th>
@@ -639,9 +640,8 @@
                                  @else
 
                                     @if (auth()->user()->close_trade == true)
-                                       <div id="app" class="text-center">
-                                          <display-profit currency="€" :test_profit='{{ $transaction->displayprofit }}' :tnx_id='{{ $transaction->id }}' />
-                                          @vite(['resources/css/app.css', 'resources/js/app.js'])
+                                       <div class="text-center">
+                                          <display-profit currency="€" :test_profit='{{ $transaction->displayprofit }}' :tnx_id='{{ $transaction->id }}' :key="{{ $transaction->id }}" />
                                        </div>
                                     @endif
                                  @endif
