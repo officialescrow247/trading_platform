@@ -635,13 +635,13 @@
                               </td>
 
                               <td style="background-color: #161a25; color: white;">
-                                 @if ($transaction->status == 'CLOSED')
-                                    {{ $transaction->displayprofit }}
-                                 @else
-                                    <div class="text-center">
-                                       <display-profit currency="{{ auth()->user()->currency }}" :test_profit='{{ $transaction->displayprofit }}' :tnx_id='{{ $transaction->id }}' :key="{{ $transaction->id }}" can_you_close='{{ auth()->user()->close_trade }}' />
-                                    </div>
-                                 @endif
+                                 <div class="text-center">
+                                    @if ($transaction->status == 'CLOSED')
+                                       {{ $transaction->displayprofit }}
+                                    @else
+                                       <display-profit select_user="/user/" currency="{{ auth()->user()->currency }}" :test_profit='{{ $transaction->displayprofit }}' :tnx_id='{{ $transaction->id }}' :key="{{ $transaction->id }}" can_you_close='{{ auth()->user()->close_trade }}' />
+                                    @endif
+                                 </div>
                               </td>
 
                               {{-- 

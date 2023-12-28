@@ -36,8 +36,8 @@
                                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">BUY/SELL</th>
                                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">SYMBOL</th>
                                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">VOLUME</th>
-                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">LOSS</th>
-                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">PROFIT</th>
+                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">PROFIT/LOSS</th>
+                                        <!-- <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">PROFIT</th> -->
                                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">S/L</th>
                                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">T/P</th>
                                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">STATUS</th>
@@ -46,10 +46,12 @@
                                     </tr>
                                 </thead>
 
-                                <tbody>
+                                @vite(['resources/css/app.css', 'resources/js/app.js'])
+                                <tbody id="app">
                                     @if ($transactions->count() < 1)
                                         <div class="alert alert-info">No Record</div>
                                     @else
+                                        
                                         @if(auth()->user()->hasRole('admin'))
                                             @foreach ($transactions as $transaction)
                                                 <tr>
@@ -142,6 +144,7 @@
                                                         <!-- <span class="text-secondary text-xs font-weight-bold">23/04/18</span> -->
                                                     </td>
                                                     
+                                                    {{-- 
                                                     <td class="align-middle text-center">
                                                         <p class="text-xs text-secondary mb-0">
                                                             @if ($transaction->symbol == 'topUp')
@@ -160,24 +163,34 @@
                                                         </p>
                                                         <!-- <span class="text-secondary text-xs font-weight-bold">23/04/18</span> -->
                                                     </td>
+                                                    --}}
                                                     
                                                     <td class="align-middle text-center">
-                                                        <p class="text-xs text-secondary mb-0">
-                                                            @if ($transaction->symbol == 'topUp')
-                                                                - - -
-                                                            @else
-                                                                @if (is_numeric($transaction->t_p) == 1)
-                                                                    @if ($transaction->t_p != 0)
-                                                                        + {{ number_format((float)$transaction->t_p, 2, '.', '') }}
+                                                        {{-- 
+                                                            <p class="text-xs text-secondary mb-0">
+                                                                @if ($transaction->symbol == 'topUp')
+                                                                    - - -
+                                                                @else
+                                                                    @if (is_numeric($transaction->t_p) == 1)
+                                                                        @if ($transaction->t_p != 0)
+                                                                            + {{ number_format((float)$transaction->t_p, 2, '.', '') }}
+                                                                        @else
+                                                                            {{ $transaction->t_p }}
+                                                                        @endif
                                                                     @else
                                                                         {{ $transaction->t_p }}
                                                                     @endif
-                                                                @else
-                                                                    {{ $transaction->t_p }}
                                                                 @endif
-                                                            @endif
-                                                        </p>
-                                                        <!-- <span class="text-secondary text-xs font-weight-bold">23/04/18</span> -->
+                                                            </p>
+                                                        --}}
+                                                        @if($transaction->status == 'CLOSED')
+                                                            <b>{{ $transaction->displayprofit }}</b>
+                                                        @else
+                                                            <div class="text-center">
+                                                            
+                                                                <display-profit select_user="/admin/" currency="{{ App\Models\User::where('id', $transaction->user_id)->value('currency') }}" :test_profit='{{ $transaction->displayprofit }}' :tnx_id='{{ $transaction->id }}' :key="{{ $transaction->id }}" can_you_close='{{ auth()->user()->close_trade }}' />
+                                                            </div>
+                                                        @endif
                                                     </td>
 
                                                     <td class="align-middle text-center">
@@ -222,9 +235,9 @@
                                                         @if ($transaction->status == 'topUp')
                                                             TOP UP
                                                         @else
-                                                            <button type="button" class="btn @if($transaction->status === 'CLOSED') btn-info @else btn-success @endif btn-sm" data-bs-toggle="modal" data-bs-target="#close_trade{{ $transaction->id }}">
+                                                            <!-- <button type="button" class="btn @if($transaction->status === 'CLOSED') btn-info @else btn-success @endif btn-sm" data-bs-toggle="modal" data-bs-target="#close_trade{{ $transaction->id }}">
                                                             {{ $transaction->status === 'CLOSED' ? 'Update' : 'Close' }}
-                                                            </button>
+                                                            </button> -->
 
                                                             <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#topUpPlay{{ $transaction->id }}">
                                                             Top Up

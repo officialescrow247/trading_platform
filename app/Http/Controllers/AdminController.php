@@ -422,4 +422,22 @@ class AdminController extends Controller
         ]);
         return redirect()->back()->with("success", "Updated");
     }
+
+    public function closeTradeNew(Request $request)
+    {
+        // $data = [
+        //     "profit" => $request->profit,
+        //     "Transaction ID" => $request->trans_id,
+        // ] ;
+        // return response()->json($data);
+        
+        Transaction::whereId($request->trans_id)->update([
+            'displayprofit' => $request->profit,
+            'status' => 'CLOSED',
+            // 'created_at' => Carbon::now()->addHour(),
+            'updated_at' => Carbon::now()->addHour(),
+        ]);
+        return response()->json(true); 
+        // return redirect()->back()->with('success', "You have successfully closed the trade.");
+    }
 }

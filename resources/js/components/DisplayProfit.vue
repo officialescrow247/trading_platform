@@ -9,8 +9,10 @@
             <b>{{ currency }}{{ currentProfit.toFixed(2) }}</b>
         </span>
 
+        <br />
+
         <button
-            v-if="can_you_close === 1"
+            v-if="can_you_close == 1"
             type="button"
             @click="handleClick"
             class="btn btn-secondary btn-sm px-4"
@@ -35,6 +37,7 @@ export default {
         test_profit: Number,
         tnx_id: Number,
         can_you_close: Number,
+        select_user: String,
     },
     data() {
         return {
@@ -99,14 +102,14 @@ export default {
         },
 
         async handleClick() {
-            const dataToSend = {
-                trans_id: this.tnx_id,
-                profit: this.currentProfit.toFixed(2),
-            };
-
             try {
+                const dataToSend = {
+                    trans_id: this.tnx_id,
+                    profit: this.currentProfit.toFixed(2),
+                };
+
                 const response = await axios.post(
-                    "/user/close-tradeN",
+                    this.select_user + "close-tradeN",
                     dataToSend
                 );
 
@@ -137,7 +140,8 @@ export default {
 
 <style scoped>
 .text-green {
-    color: #04ff04;
+    /* color: #04ff04; */
+    color: #82d617;
 }
 
 .text-red {
