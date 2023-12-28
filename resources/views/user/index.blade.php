@@ -640,11 +640,11 @@
                                        
                                        @if (Str::contains(Str::lower($transaction->displayprofit), '-'))
                                           <span style="color: #fd3041;">
-                                             <b>{{ Str::replaceFirst('-', "- " . auth()->user()->currency, $transaction->displayprofit) }}</b>
+                                             <b>{{ $transaction->displayprofit }}</b>
                                           </span>
                                        @else
                                           <span style="color: #82d617;">
-                                             <b>{{ "+ " . auth()->user()->currency . $transaction->displayprofit }}</b>
+                                             <b>{{ $transaction->displayprofit }}</b>
                                        </span>
                                        @endif
                                     @else
