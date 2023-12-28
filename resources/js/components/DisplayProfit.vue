@@ -9,7 +9,17 @@
             {{ currency }}{{ currentProfit.toFixed(2) }}
         </span>
 
-        <button type="button" @click="handleClick">CLOSE TRADE</button>
+        <button
+            type="button"
+            @click="handleClick"
+            class="btn btn-sm px-4"
+            :class="{
+                'btn-success': isProfitGreaterThanInitial(),
+                'btn-danger': isProfitLessThanInitial(),
+            }"
+        >
+            CLOSE TRADE
+        </button>
     </div>
 </template>
 

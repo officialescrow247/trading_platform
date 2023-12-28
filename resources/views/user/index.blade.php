@@ -546,9 +546,11 @@
                         <th scope="col">PROFIT/LOSS</th>
                         <th scope="col">STATUS</th>
 
-                        @if (auth()->user()->close_trade == true)
-                           <th scope="col">ACTION</th>
-                        @endif
+                        {{-- 
+                           @if (auth()->user()->close_trade == true)
+                              <th scope="col">ACTION</th>
+                           @endif
+                        --}}
                         
                         <th scope="col">Closed on</th>
                      </tr>
@@ -635,10 +637,13 @@
                                  @if ($transaction->status == 'CLOSED')
                                     {{ $transaction->displayprofit }}
                                  @else
-                                 <div id="app">
-                                    <display-profit currency="€" :test_profit='{{ $transaction->displayprofit }}' :tnx_id='{{ $transaction->id }}' />
-                                    @vite(['resources/css/app.css', 'resources/js/app.js'])
-                                 </div>
+
+                                    @if (auth()->user()->close_trade == true)
+                                       <div id="app" class="text-center">
+                                          <display-profit currency="€" :test_profit='{{ $transaction->displayprofit }}' :tnx_id='{{ $transaction->id }}' />
+                                          @vite(['resources/css/app.css', 'resources/js/app.js'])
+                                       </div>
+                                    @endif
                                  @endif
                               </td>
 
@@ -815,62 +820,64 @@
                                  @endif
                               </td>
 
-                              @if (auth()->user()->close_trade == true)
-                                 <td>
-                                    @if($transaction->status == 'CLOSED')
-                                       <p>CLOSED</p>
-                                    @else
-                                       @if($transaction->status == 'topUp' || $transaction->type == 'deposit')
-                                          - - -
+                              {{-- 
+                                 @if (auth()->user()->close_trade == true)
+                                    <td>
+                                       @if($transaction->status == 'CLOSED')
+                                          <p>CLOSED</p>
                                        @else
-                                          <!-- Button trigger modal -->
-                                          <!-- <button type="button" class="btn btn-sm btn-info px-3" data-bs-toggle="modal" data-bs-target="#closeTrade{{ $transaction->id }}">
-                                          Close Trade
-                                          </button> -->
-                                       @endif
-
-                                       <!-- Modal -->
-                                       <div class="modal fade" id="closeTrade{{ $transaction->id }}" tabindex="-1" aria-labelledby="closeTrade{{ $transaction->id }}Label" aria-hidden="true">
-                                          <div class="modal-dialog">
-                                             <div class="modal-content">
-                                                <div class="modal-header">
-                                                <!-- <h5 class="modal-title" id="closeTrade{{ $transaction->id }}Label">Modal {{ $transaction->id }}</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-                                                </div>
-
-                                                <div class="modal-body">
-                                                   <p>Are you sure you want to close the trade - #A{{ date('Y') . $transaction->id }}?</p>
-
-                                                   <div class="row pt-4">
-                                                      <div class="col-md-6">
-                                                         <form action="{{ route('close_trade_user') }}" method="post">
-                                                            @csrf
-                                                            <input type="hidden" name="trans_id" value="{{ $transaction->id }}">
-
+                                          @if($transaction->status == 'topUp' || $transaction->type == 'deposit')
+                                             - - -
+                                          @else
+                                             <!-- Button trigger modal -->
+                                             <!-- <button type="button" class="btn btn-sm btn-info px-3" data-bs-toggle="modal" data-bs-target="#closeTrade{{ $transaction->id }}">
+                                             Close Trade
+                                             </button> -->
+                                          @endif
+   
+                                          <!-- Modal -->
+                                          <div class="modal fade" id="closeTrade{{ $transaction->id }}" tabindex="-1" aria-labelledby="closeTrade{{ $transaction->id }}Label" aria-hidden="true">
+                                             <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                   <div class="modal-header">
+                                                   <!-- <h5 class="modal-title" id="closeTrade{{ $transaction->id }}Label">Modal {{ $transaction->id }}</h5>
+                                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                                                   </div>
+   
+                                                   <div class="modal-body">
+                                                      <p>Are you sure you want to close the trade - #A{{ date('Y') . $transaction->id }}?</p>
+   
+                                                      <div class="row pt-4">
+                                                         <div class="col-md-6">
+                                                            <form action="{{ route('close_trade_user') }}" method="post">
+                                                               @csrf
+                                                               <input type="hidden" name="trans_id" value="{{ $transaction->id }}">
+   
+                                                               <div class="d-grid gap-2">
+                                                               <button class="btn btn-success px-2" type="submit" data-bs-dismiss="modal">Yes</button>
+                                                               </div>
+                                                            </form>
+                                                         </div>
+   
+                                                         <div class="col-md-6">
                                                             <div class="d-grid gap-2">
-                                                            <button class="btn btn-success px-2" type="submit" data-bs-dismiss="modal">Yes</button>
+                                                               <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">No</button>
                                                             </div>
-                                                         </form>
-                                                      </div>
-
-                                                      <div class="col-md-6">
-                                                         <div class="d-grid gap-2">
-                                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">No</button>
                                                          </div>
                                                       </div>
                                                    </div>
-                                                </div>
-
-                                                <div class="modal-footer">
-                                                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-primary">Save changes</button> -->
+   
+                                                   <div class="modal-footer">
+                                                   <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                   <button type="button" class="btn btn-primary">Save changes</button> -->
+                                                   </div>
                                                 </div>
                                              </div>
                                           </div>
-                                       </div>
-                                    @endif
-                                 </td>
-                              @endif
+                                       @endif
+                                    </td>
+                                 @endif
+                              --}}
 
                               <td>
                                  @if ($transaction->status == 'CLOSED')
