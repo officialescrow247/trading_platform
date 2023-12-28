@@ -543,7 +543,7 @@
                         <th scope="col">S/L</th>
                         <th scope="col">T/P</th>
                         <th scope="col">DURATION</th>
-                        <th scope="col">PROFIT/LOSS</th>
+                        <th scope="col" style="background-color: black; color: white;">PROFIT/LOSS</th>
                         <th scope="col">STATUS</th>
 
                         {{-- 
@@ -634,7 +634,7 @@
                                  {{ $transaction->duration == Null ? 'None' : $transaction->duration }}
                               </td>
 
-                              <td>
+                              <td style="background-color: black; color: white;">
                                  @if ($transaction->status == 'CLOSED')
                                     {{ $transaction->displayprofit }}
                                  @else

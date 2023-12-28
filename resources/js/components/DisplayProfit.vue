@@ -6,7 +6,7 @@
                 'text-red': isProfitLessThanInitial(),
             }"
         >
-            {{ currency }}{{ currentProfit.toFixed(2) }}
+            <b>{{ currency }}{{ currentProfit.toFixed(2) }}</b>
         </span>
 
         <button
