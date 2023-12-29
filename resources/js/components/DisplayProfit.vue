@@ -58,31 +58,29 @@ export default {
             }, 2500);
         },
         updateProfit() {
-            const reducePercentage = 0.02; // 2%
-            const increasePercentage = 0.025; // 2.5%
+            const integerPart = Math.floor(this.initialProfit);
+            const decimalPart = this.initialProfit % 1;
 
-            // Sequence: Reduce the profit three times
-            if (this.changedCount % 5 < 3) {
-                this.currentProfit = Math.max(
-                    this.currentProfit - this.currentProfit * reducePercentage,
-                    this.initialProfit * 0.15
-                );
-            } else {
-                // Sequence: Increase the profit two times starting from initialProfit
-                this.currentProfit = Math.min(
-                    this.initialProfit * 1.15,
-                    this.initialProfit + this.initialProfit * increasePercentage
-                );
-            }
+            const halfDecimalPart = decimalPart / 2;
+            const doubleDecimalPart = decimalPart * 2;
 
-            this.changedProfits.unshift(this.currentProfit);
-            this.changedCount++;
+            const randomDecimal = (
+                Math.random() *
+                    (doubleDecimalPart.toFixed(2) -
+                        halfDecimalPart.toFixed(2)) +
+                halfDecimalPart
+            ).toFixed(2);
 
-            // Check if the sequence has completed (5 times) and reset counters
-            if (this.changedCount === 5) {
-                this.changedCount = 0;
-                this.changedProfits = [];
-            }
+            // Convert the integer part to a number and add it to the random decimal
+            const result = Number(integerPart) + Number(randomDecimal);
+
+            this.currentProfit = result;
+
+            // Determine the sign based on the original number
+            const sign = this.currentProfit >= this.initialProfit ? "+" : "-";
+
+            // Return the formatted profit
+            return `${sign} ${this.currency}${this.currentProfit.toFixed(2)}`;
         },
 
         isProfitGreaterThanInitial() {
@@ -103,6 +101,7 @@ export default {
                     this.select_user + "close-tradeN",
                     dataToSend
                 );
+
                 if (response.data) {
                     // swal({
                     //     title: "Successful!",
@@ -123,7 +122,7 @@ export default {
     computed: {
         getFormattedProfit() {
             const formattedProfit = Math.abs(this.currentProfit).toFixed(2);
-            const sign = this.currentProfit > this.initialProfit ? "+" : "-";
+            const sign = this.currentProfit >= this.initialProfit ? "+" : "-";
             return `${sign} ${this.currency}${formattedProfit}`;
         },
     },

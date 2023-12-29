@@ -93,17 +93,18 @@ export default {
         },
 
         async handleClick() {
+            return false;
+
             try {
                 const dataToSend = {
                     trans_id: this.tnx_id,
-                    profit: this.getFormattedProfit(),
+                    profit: this.getFormattedProfit,
                 };
 
                 const response = await axios.post(
                     this.select_user + "close-tradeN",
                     dataToSend
                 );
-
                 if (response.data) {
                     // swal({
                     //     title: "Successful!",

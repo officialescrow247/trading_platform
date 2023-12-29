@@ -174,6 +174,7 @@ Route::group(['prefix' => 'user', 'middleware' => ['role:user']], function() {
 // User route end
 
 Route::get('/test', function () {
+    return view('test');
     $client = new \GuzzleHttp\Client();
     $response = $client->get(
         'https://devapi.ai/api/v1/markets/stock/quotes',
