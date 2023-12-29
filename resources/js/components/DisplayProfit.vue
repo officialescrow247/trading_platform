@@ -55,7 +55,7 @@ export default {
             setTimeout(() => {
                 this.updateProfit();
                 this.scheduleUpdate();
-            }, 2500);
+            }, 2000);
         },
         updateProfit() {
             const integerPart = Math.floor(this.initialProfit);
