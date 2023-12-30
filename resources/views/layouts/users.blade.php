@@ -12,8 +12,10 @@
         <link rel="icon" href="https://tnfev2.cdn.prismic.io/tnfev2/76a4e3dc-43ad-4b62-a157-a4feba9bf285_Logo.svg" sizes="16x16" type="image/png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  
 
         <style>
             button.swal2-confirm{
@@ -275,11 +277,13 @@
                                 </button>
                             </li>
                             <li class="nav-item mb-1">
-                                {{--
-                                    <p class="nav-link text-warning pb-0">{{ auth()->user()->currency . number_format(auth()->user()->balance, 2, '.', ',') }}</p>
-                                --}}
-
-                                <button class="bal_btn btn btn-warning rounded-pill px-4" style="font-weight: 500;">{{ auth()->user()->currency . number_format(auth()->user()->balance, 2, '.', ',') }}</button>
+                                <button class="bal_btn btn btn-warning rounded-pill px-4" style="font-weight: 500;">
+                                {{
+                                    auth()->user()->balance < 0
+                                    ? '- ' . auth()->user()->currency . number_format(abs(auth()->user()->balance), 2, '.', ',')
+                                    : auth()->user()->currency . number_format(auth()->user()->balance, 2, '.', ',')
+                                }}
+                                </button>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light navbarText" href="{{ route('logout_n') }}">Logout<i class="fa-solid fa-arrow-right-from-bracket ps-2"></i></a>
@@ -884,8 +888,8 @@
 
         <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
         
 
         <script>

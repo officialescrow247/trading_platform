@@ -11,23 +11,110 @@
 
         <br />
 
+        <!-- Button trigger modal -->
         <button
-            v-if="can_you_close == 1"
             type="button"
-            @click="handleClick"
-            class="btn btn-secondary btn-sm px-4"
+            class="btn btn-secondary btn-sm px-2 mt-2 mb-1"
             :class="{
                 'btn-success': isProfitGreaterThanInitial(),
                 'btn-danger': isProfitLessThanInitial(),
             }"
+            style="font-size: 12px"
+            @click="openModal"
         >
             CLOSE TRADE
         </button>
+
+        <!-- Modal -->
+        <div
+            class="modal fade"
+            :id="'close_trade_' + tnx_id"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="p-4 modal-content">
+                    <div class="modal-body">
+                        <p class="text-dark" v-if="loading">
+                            Loading, please don't close screen...
+                        </p>
+                        <p class="text-dark" v-else>
+                            Are you sure you want to close the trade - #A{{
+                                currentYear
+                            }}{{ tnx_id }}? <br />
+
+                            with a
+                            <b
+                                :class="{
+                                    'text-green': isProfitGreaterThanInitial(),
+                                    'text-red': isProfitLessThanInitial(),
+                                }"
+                                >{{
+                                    isProfitGreaterThanInitial()
+                                        ? "Profit"
+                                        : "Loss"
+                                }}</b
+                            >
+                            of
+                            <span
+                                :class="{
+                                    'text-green': isProfitGreaterThanInitial(),
+                                    'text-red': isProfitLessThanInitial(),
+                                }"
+                            >
+                                <b>{{ getFormattedProfit }}</b>
+                            </span>
+                        </p>
+
+                        <div class="row pt-4">
+                            <div class="col-md-6">
+                                <div class="d-grid gap-2">
+                                    <button
+                                        class="btn btn-success px-2"
+                                        type="button"
+                                        @click="handleYes"
+                                    >
+                                        <!-- Yes -->
+
+                                        <!-- Loading spinner -->
+                                        <div
+                                            v-if="loading"
+                                            class="spinner-border spinner-border-sm text-light"
+                                            role="status"
+                                        >
+                                            <span class="visually-hidden"
+                                                >Loading...</span
+                                            >
+                                        </div>
+                                        <div v-else>Yes</div>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="d-grid gap-2">
+                                    <button
+                                        type="button"
+                                        class="btn btn-danger"
+                                        data-bs-dismiss="modal"
+                                        aria-label="Close"
+                                    >
+                                        No
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
 import axios from "axios";
+
 export default {
     props: {
         currency: {
@@ -45,6 +132,8 @@ export default {
             currentProfit: this.test_profit,
             changedProfits: [],
             changedCount: 0,
+            currentYear: new Date().getFullYear(),
+            loading: false,
         };
     },
     mounted() {
@@ -82,16 +171,22 @@ export default {
             // Return the formatted profit
             return `${sign} ${this.currency}${this.currentProfit.toFixed(2)}`;
         },
-
         isProfitGreaterThanInitial() {
             return this.currentProfit > this.initialProfit;
         },
         isProfitLessThanInitial() {
             return this.currentProfit < this.initialProfit;
         },
-
-        async handleClick() {
+        openModal() {
+            const modal = new bootstrap.Modal(
+                document.getElementById("close_trade_" + this.tnx_id)
+            );
+            modal.show();
+        },
+        async handleYes() {
             try {
+                this.loading = true; // Show the loading spinner
+
                 const dataToSend = {
                     trans_id: this.tnx_id,
                     profit: this.getFormattedProfit,
@@ -103,13 +198,6 @@ export default {
                 );
 
                 if (response.data) {
-                    // swal({
-                    //     title: "Successful!",
-                    //     text: "",
-                    //     icon: "success",
-                    // });
-
-                    // Delay the page reload for 5 seconds (5000 milliseconds)
                     setTimeout(() => {
                         window.location.reload();
                     }, 2000);
@@ -126,18 +214,11 @@ export default {
             return `${sign} ${this.currency}${formattedProfit}`;
         },
     },
-
-    errorCaptured(err, vm, info) {
-        console.error("Error captured:", err, vm, info);
-        // Handle or log the error as needed
-        return false; // Prevent the error from propagating further
-    },
 };
 </script>
 
 <style scoped>
 .text-green {
-    /* color: #04ff04; */
     color: #82d617;
 }
 

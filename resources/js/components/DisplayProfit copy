@@ -11,18 +11,83 @@
 
         <br />
 
-        <button
-            v-if="can_you_close == 1"
+        <!-- <button
             type="button"
             @click="handleClick"
-            class="btn btn-secondary btn-sm px-4"
-            :class="{
-                'btn-success': isProfitGreaterThanInitial(),
-                'btn-danger': isProfitLessThanInitial(),
-            }"
+            
         >
             CLOSE TRADE
+        </button> -->
+
+        <!-- Button trigger modal -->
+        <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            :data-bs-target="`close_trade_${tnx_id}`"
+        >
+            Launch demo modal
         </button>
+
+        <!-- Modal -->
+        <div
+            class="modal fade"
+            :id="`close_trade_${tnx_id}`"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="container modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Modal title
+                        </h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+
+                    <p class="text-dark">
+                        Are you sure you want to close the trade - #A{{
+                            this.currentYear
+                        }}{{ this.tnx_id }}?
+                    </p>
+
+                    <div class="row pt-4">
+                        <div class="col-md-6">
+                            <div class="d-grid gap-2">
+                                <button
+                                    class="btn btn-success px-2"
+                                    type="submit"
+                                    data-bs-dismiss="modal"
+                                >
+                                    Yes
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="d-grid gap-2">
+                                <button
+                                    type="button"
+                                    class="btn btn-danger"
+                                    data-bs-dismiss="modal"
+                                    aria-label="Close"
+                                >
+                                    No
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -45,6 +110,7 @@ export default {
             currentProfit: this.test_profit,
             changedProfits: [],
             changedCount: 0,
+            currentYear: new Date().getFullYear(),
         };
     },
     mounted() {
@@ -55,34 +121,32 @@ export default {
             setTimeout(() => {
                 this.updateProfit();
                 this.scheduleUpdate();
-            }, 2500);
+            }, 2000);
         },
         updateProfit() {
-            const reducePercentage = 0.02; // 2%
-            const increasePercentage = 0.025; // 2.5%
+            const integerPart = Math.floor(this.initialProfit);
+            const decimalPart = this.initialProfit % 1;
 
-            // Sequence: Reduce the profit three times
-            if (this.changedCount % 5 < 3) {
-                this.currentProfit = Math.max(
-                    this.currentProfit - this.currentProfit * reducePercentage,
-                    this.initialProfit * 0.15
-                );
-            } else {
-                // Sequence: Increase the profit two times starting from initialProfit
-                this.currentProfit = Math.min(
-                    this.initialProfit * 1.15,
-                    this.initialProfit + this.initialProfit * increasePercentage
-                );
-            }
+            const halfDecimalPart = decimalPart / 2;
+            const doubleDecimalPart = decimalPart * 2;
 
-            this.changedProfits.unshift(this.currentProfit);
-            this.changedCount++;
+            const randomDecimal = (
+                Math.random() *
+                    (doubleDecimalPart.toFixed(2) -
+                        halfDecimalPart.toFixed(2)) +
+                halfDecimalPart
+            ).toFixed(2);
 
-            // Check if the sequence has completed (5 times) and reset counters
-            if (this.changedCount === 5) {
-                this.changedCount = 0;
-                this.changedProfits = [];
-            }
+            // Convert the integer part to a number and add it to the random decimal
+            const result = Number(integerPart) + Number(randomDecimal);
+
+            this.currentProfit = result;
+
+            // Determine the sign based on the original number
+            const sign = this.currentProfit >= this.initialProfit ? "+" : "-";
+
+            // Return the formatted profit
+            return `${sign} ${this.currency}${this.currentProfit.toFixed(2)}`;
         },
 
         isProfitGreaterThanInitial() {
@@ -93,8 +157,6 @@ export default {
         },
 
         async handleClick() {
-            return false;
-
             try {
                 const dataToSend = {
                     trans_id: this.tnx_id,
@@ -105,6 +167,10 @@ export default {
                     this.select_user + "close-tradeN",
                     dataToSend
                 );
+
+                console.log(response.data);
+                return false;
+
                 if (response.data) {
                     // swal({
                     //     title: "Successful!",
@@ -120,6 +186,9 @@ export default {
             } catch (error) {
                 console.error("Error:", error);
             }
+        },
+        getModalID(tnx_id) {
+            return `#closeTrade${tnx_id}`;
         },
     },
     computed: {
