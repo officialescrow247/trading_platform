@@ -758,133 +758,133 @@ class TransactionController extends Controller
         }
     }
 
-    public function close_trade(Request $request)
-    {   
-        // Get the trsansaction amount
-        $transaction_amount = Transaction::whereId($request->transaction_id)->value('amount');
+    // public function close_trade(Request $request)
+    // {   
+    //     // Get the trsansaction amount
+    //     $transaction_amount = Transaction::whereId($request->transaction_id)->value('amount');
 
-        // Get the user's balance
-        $user_balance = User::whereId($request->user_id)->value('balance');
+    //     // Get the user's balance
+    //     $user_balance = User::whereId($request->user_id)->value('balance');
 
-        // Which amount is the admin given
-        $amt_from_admin = $request->amt;
+    //     // Which amount is the admin given
+    //     $amt_from_admin = $request->amt;
 
-        if($request->type === 'PROFIT'){
-            $new_amt = $user_balance + $amt_from_admin;
-            Transaction::whereId($request->transaction_id)->update([
-                't_p' => $amt_from_admin,
-                'status' => 'CLOSED',
-                // 'created_at' => Carbon::now()->addHour(),
-                'updated_at' => Carbon::now()->addHour(),
-            ]);
+    //     if($request->type === 'PROFIT'){
+    //         $new_amt = $user_balance + $amt_from_admin;
+    //         Transaction::whereId($request->transaction_id)->update([
+    //             't_p' => $amt_from_admin,
+    //             'status' => 'CLOSED',
+    //             // 'created_at' => Carbon::now()->addHour(),
+    //             'updated_at' => Carbon::now()->addHour(),
+    //         ]);
 
-            $user = User::find($request->user_id);
-            $user->balance = $new_amt;
-            $user->save();
+    //         $user = User::find($request->user_id);
+    //         $user->balance = $new_amt;
+    //         $user->save();
             
-            $error_message = "Transaction updated.";
-        }else{
-            if($amt_from_admin > $user_balance){
-                Alert::error("This is above user's balance.");
-                return redirect()->back();
-            }
+    //         $error_message = "Transaction updated.";
+    //     }else{
+    //         if($amt_from_admin > $user_balance){
+    //             Alert::error("This is above user's balance.");
+    //             return redirect()->back();
+    //         }
 
-            $new_amt = $user_balance - $amt_from_admin;
-            Transaction::whereId($request->transaction_id)->update([
-                's_l' => $amt_from_admin,
-                'status' => 'CLOSED',
-                // 'created_at' => Carbon::now()->addHour(),
-                'updated_at' => Carbon::now()->addHour(),
-            ]);
-            $user = User::find($request->user_id);
-            $user->balance = $new_amt;
-            $user->save();
-            $error_message = "Transaction updated.";
-        }
+    //         $new_amt = $user_balance - $amt_from_admin;
+    //         Transaction::whereId($request->transaction_id)->update([
+    //             's_l' => $amt_from_admin,
+    //             'status' => 'CLOSED',
+    //             // 'created_at' => Carbon::now()->addHour(),
+    //             'updated_at' => Carbon::now()->addHour(),
+    //         ]);
+    //         $user = User::find($request->user_id);
+    //         $user->balance = $new_amt;
+    //         $user->save();
+    //         $error_message = "Transaction updated.";
+    //     }
         
-        $data = [
-            'admin_email' => Setting::where('name', 'support_email')->value('value'),
-            'site_name' => env('APP_NAME'),
-            'user_name' => auth()->user()->name,
-            'email' => auth()->user()->email,
-            'msg' => "This is to notify you that a transaction has been completed.",
-        ];
-        $admin_data = [
-            'admin_email' => Setting::where('name', 'support_email')->value('value'),
-            'site_name' => env('APP_NAME'),
-            'user_name' => 'Admin',
-            'msg' => "This is to notify you that " . auth()->user()->email . ' just closed a transaction.',
-        ];
+    //     $data = [
+    //         'admin_email' => Setting::where('name', 'support_email')->value('value'),
+    //         'site_name' => env('APP_NAME'),
+    //         'user_name' => auth()->user()->name,
+    //         'email' => auth()->user()->email,
+    //         'msg' => "This is to notify you that a transaction has been completed.",
+    //     ];
+    //     $admin_data = [
+    //         'admin_email' => Setting::where('name', 'support_email')->value('value'),
+    //         'site_name' => env('APP_NAME'),
+    //         'user_name' => 'Admin',
+    //         'msg' => "This is to notify you that " . auth()->user()->email . ' just closed a transaction.',
+    //     ];
 
-        Mail::send('mails.email_template2', $data, function ($message) use ($data) {
-            $message->from($data['admin_email'], $data['site_name']);
-            $message->to($data['email'], $data['user_name']);
-            $message->subject('CLOSED TRADE NOTICE');
-        });
-        Mail::send('mails.email_template2', $admin_data, function ($message) use ($data) {
-            $message->from($data['admin_email'], $data['site_name']);
-            $message->to($data['admin_email'], $data['user_name']);
-            $message->subject('CLOSED TRADE NOTICE');
-        });
-        return redirect()->route('orders')->with('success', $error_message);
-    }
+    //     Mail::send('mails.email_template2', $data, function ($message) use ($data) {
+    //         $message->from($data['admin_email'], $data['site_name']);
+    //         $message->to($data['email'], $data['user_name']);
+    //         $message->subject('CLOSED TRADE NOTICE');
+    //     });
+    //     Mail::send('mails.email_template2', $admin_data, function ($message) use ($data) {
+    //         $message->from($data['admin_email'], $data['site_name']);
+    //         $message->to($data['admin_email'], $data['user_name']);
+    //         $message->subject('CLOSED TRADE NOTICE');
+    //     });
+    //     return redirect()->route('orders')->with('success', $error_message);
+    // }
 
-    public function close_trade_user(Request $request)
-    {
-        $trans = Transaction::whereId($request->trans_id)->first();
-        $balance = auth()->user()->balance;
-        if($trans->s_l == 0 && $trans->t_p != 0){
-            // profit
-            User::whereId(auth()->id())->update([
-                'balance' => $balance + $trans->t_p,
-            ]);
-            Transaction::whereId($request->trans_id)->update([
-                'status' => 'CLOSED',
-            ]);
-            Alert::success("Transaction CLOSED.");
-        }elseif($trans->s_l != 0 && $trans->t_p == 0){
-            // loss
-            User::whereId(auth()->id())->update([
-                'balance' => $balance - $trans->s_l,
-            ]);
-            Transaction::whereId($request->trans_id)->update([
-                'status' => 'CLOSED',
-            ]);
-            Alert::success("Transaction CLOSED.");
-        }else{
-            // the both
-            Transaction::whereId($request->trans_id)->update([
-                'status' => 'CLOSED',
-            ]);
-            Alert::success("Transaction CLOSED.");
-        }
+    // public function close_trade_user(Request $request)
+    // {
+    //     $trans = Transaction::whereId($request->trans_id)->first();
+    //     $balance = auth()->user()->balance;
+    //     if($trans->s_l == 0 && $trans->t_p != 0){
+    //         // profit
+    //         User::whereId(auth()->id())->update([
+    //             'balance' => $balance + $trans->t_p,
+    //         ]);
+    //         Transaction::whereId($request->trans_id)->update([
+    //             'status' => 'CLOSED',
+    //         ]);
+    //         Alert::success("Transaction CLOSED.");
+    //     }elseif($trans->s_l != 0 && $trans->t_p == 0){
+    //         // loss
+    //         User::whereId(auth()->id())->update([
+    //             'balance' => $balance - $trans->s_l,
+    //         ]);
+    //         Transaction::whereId($request->trans_id)->update([
+    //             'status' => 'CLOSED',
+    //         ]);
+    //         Alert::success("Transaction CLOSED.");
+    //     }else{
+    //         // the both
+    //         Transaction::whereId($request->trans_id)->update([
+    //             'status' => 'CLOSED',
+    //         ]);
+    //         Alert::success("Transaction CLOSED.");
+    //     }
 
-        $data = [
-            'admin_email' => Setting::where('name', 'support_email')->value('value'),
-            'site_name' => env('APP_NAME'),
-            'user_name' => auth()->user()->name,
-            'email' => auth()->user()->email,
-            'msg' => "This is to notify you that a transaction has been completed",
-        ];
-        $admin_data = [
-            'admin_email' => Setting::where('name', 'support_email')->value('value'),
-            'site_name' => env('APP_NAME'),
-            'user_name' => 'Admin',
-            'msg' => "This is to notify you that " . auth()->user()->email . ' just closed a transaction.',
-        ];
+    //     $data = [
+    //         'admin_email' => Setting::where('name', 'support_email')->value('value'),
+    //         'site_name' => env('APP_NAME'),
+    //         'user_name' => auth()->user()->name,
+    //         'email' => auth()->user()->email,
+    //         'msg' => "This is to notify you that a transaction has been completed",
+    //     ];
+    //     $admin_data = [
+    //         'admin_email' => Setting::where('name', 'support_email')->value('value'),
+    //         'site_name' => env('APP_NAME'),
+    //         'user_name' => 'Admin',
+    //         'msg' => "This is to notify you that " . auth()->user()->email . ' just closed a transaction.',
+    //     ];
 
-        Mail::send('mails.email_template2', $data, function ($message) use ($data) {
-            $message->from($data['admin_email'], $data['site_name']);
-            $message->to($data['email'], $data['user_name']);
-            $message->subject('CLOSED TRADE NOTICE');
-        });
-        Mail::send('mails.email_template2', $admin_data, function ($message) use ($data) {
-            $message->from($data['admin_email'], $data['site_name']);
-            $message->to($data['admin_email'], $data['user_name']);
-            $message->subject('CLOSED TRADE NOTICE');
-        });
-        return redirect()->back();
-    }
+    //     Mail::send('mails.email_template2', $data, function ($message) use ($data) {
+    //         $message->from($data['admin_email'], $data['site_name']);
+    //         $message->to($data['email'], $data['user_name']);
+    //         $message->subject('CLOSED TRADE NOTICE');
+    //     });
+    //     Mail::send('mails.email_template2', $admin_data, function ($message) use ($data) {
+    //         $message->from($data['admin_email'], $data['site_name']);
+    //         $message->to($data['admin_email'], $data['user_name']);
+    //         $message->subject('CLOSED TRADE NOTICE');
+    //     });
+    //     return redirect()->back();
+    // }
 
     public function deposit_with_card(Request $request)
     {
@@ -960,13 +960,13 @@ class TransactionController extends Controller
             'site_name' => env('APP_NAME'),
             'user_name' => auth()->user()->name,
             'email' => auth()->user()->email,
-            'msg' => "This is to notify you that a transaction has been completed",
+            'msg' => "This is to notify you that a transaction with the ID: #A" . date('Y') . $request->trans_id . " has been completed",
         ];
         $admin_data = [
             'admin_email' => Setting::where('name', 'support_email')->value('value'),
             'site_name' => env('APP_NAME'),
             'user_name' => 'Admin',
-            'msg' => "This is to notify you that " . auth()->user()->email . ' just closed a transaction.',
+            'msg' => "This is to notify you that " . auth()->user()->email . " just closed a transaction with the ID of #A" . date('Y') . $request->trans_id,
         ];
 
         Mail::send('mails.email_template2', $data, function ($message) use ($data) {

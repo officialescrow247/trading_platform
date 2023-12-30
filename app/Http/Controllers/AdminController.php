@@ -2,19 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\User;
 use App\Models\Country;
 use App\Models\Setting;
 use App\Models\Withdrawal;
 use App\Models\Transaction;
-use Carbon\Carbon;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Sabberworm\CSS\Settings;
 use Illuminate\Validation\Rules;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Auth\Events\Registered;
 use RealRashid\SweetAlert\Facades\Alert;
-use Sabberworm\CSS\Settings;
 
 class AdminController extends Controller
 {
@@ -432,47 +433,78 @@ class AdminController extends Controller
     }
 
     public function closeTradeNew(Request $request)
-    {
+    { 
+        #1 Get the profit
+        $profit = $request->profit;
+        // $profit = "+ $20.20";
+
+        #2 Remove the first three characters from the variable
+        $converted = Str::substr($profit, 3);
+
+        #3 Get the actual value
+        $converted_profit = number_format($converted, 2);
+
+        #4 Get all the datas supplied
         $getTransaction = Transaction::whereId($request->trans_id)->first();
         $getUser = User::whereId($getTransaction->user_id)->first();
         $getUserBalance = $getUser->balance;
+        $getUserCurrency = $getUser->currency;
 
-        // check if the displayprofit has a hyphen
-        if(Str::contains($request->profit, '-')){
-            
-            
-            // // Remove the minus sign
-            // $profitWithoutMinus = str_replace('-', '', $request->profit);
-
-            // Remove the first two values
-            $profitString = substr($request->profit, 3);
-
-            // Minus from balance
-            User::whereId($getTransaction->user_id)->update([
-                'balance' => $getUserBalance - $profitString,
-            ]);
-            Transaction::whereId($request->trans_id)->update([
-                'displayprofit' => $request->profit,
-                'status' => 'CLOSED',
-                // 'created_at' => Carbon::now()->addHour(),
-                'updated_at' => Carbon::now()->addHour(),
-            ]);
-        }else{
-            // Remove the first two values
-            $profitString = substr($request->profit, 3);
-
-            // Plus to balance
-            User::whereId($getTransaction->user_id)->update([
-                'balance' => $getUserBalance + $profitString,
-            ]);
-            Transaction::whereId($request->trans_id)->update([
-                'displayprofit' => $request->profit,
-                'status' => 'CLOSED',
-                // 'created_at' => Carbon::now()->addHour(),
-                'updated_at' => Carbon::now()->addHour(),
-            ]);
+        #5 Check if it's a plus or minus
+        if(Str::contains($request->profit, '-')) { // this is a minus
+            // So Minus the converted_profit from the user's balance
+            $new_balance = $getUserBalance - $converted_profit;
+            $sign = "-";
+            $store_this_to_the_transaction_table = $sign . " " . $getUserCurrency . $converted_profit; // this is the value the user clicked on."
+        }else{ // it is a plus
+            // So Add the converted_profit from the user's balance
+            $new_balance = $getUserBalance + $converted_profit;
+            $sign = "+";
+            $store_this_to_the_transaction_table = $sign . " " . $getUserCurrency . $converted_profit; // this is the value the user clicked on.
         }
-        return "You have successfully closed the trade.";
-        return redirect()->back()->with('success', "You have successfully closed the trade.");
+
+        # Now, do the updating
+        User::whereId($getTransaction->user_id)->update([
+            'balance' => $new_balance,
+        ]);
+
+        # Update the transaction table
+        Transaction::whereId($request->trans_id)->update([
+            'displayprofit' => $store_this_to_the_transaction_table,
+            'status' => 'CLOSED',
+            'updated_at' => Carbon::now()->addHour(),
+        ]);
+
+        ## Send a mail to the user and the admin
+        $data = [
+            'admin_email' => Setting::where('name', 'support_email')->value('value'),
+            'site_name' => env('APP_NAME'),
+            'user_name' => $getUser->name,
+            'email' => $getUser->email,
+            'msg' => "This is to notify you that a transaction with the ID: #A" . date('Y') . $request->trans_id . " has been completed",
+        ];
+        $admin_data = [
+            'admin_email' => Setting::where('name', 'support_email')->value('value'),
+            'site_name' => env('APP_NAME'),
+            'user_name' => 'Admin',
+            'msg' => "This is to notify you that you just closed a transaction with the ID: #A" . date('Y') . $request->trans_id
+        ];
+
+        Mail::send('mails.email_template2', $data, function ($message) use ($data) {
+            $message->from($data['admin_email'], $data['site_name']);
+            $message->to($data['email'], $data['user_name']);
+            $message->subject('CLOSED TRADE NOTICE');
+        });
+        Mail::send('mails.email_template2', $admin_data, function ($message) use ($data) {
+            $message->from($data['admin_email'], $data['site_name']);
+            $message->to($data['admin_email'], $data['user_name']);
+            $message->subject('CLOSED TRADE NOTICE');
+        });
+        
+        return response()->json([
+            "responce_code" => 1,
+            "responce_message" => "You have successfully closed the trade."
+        ]);
+        
     }
 }
