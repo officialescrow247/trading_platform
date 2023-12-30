@@ -470,7 +470,7 @@
                                         <tr>
                                             <td class="content-cell" align="center">
                                                 <p class="f-fallback sub align-center">
-                                                © {{ date('Y') }}. {{ $site_name }} Limited. All Rights Reserved.
+                                                © {{ date('Y') }}. {{ $site_name }}. All Rights Reserved.
                                                 </p>
                                             </td>
                                         </tr>
