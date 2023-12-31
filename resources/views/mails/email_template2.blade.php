@@ -36,10 +36,10 @@
                     </h1>
                     <p>{{ $msg }}</p>
 
-                    <p style="padding-top: 40px;">
+                    <p style="padding-top: 40px; font-weight: 600;">
                         Cheers,
                         <br>
-                        The {{ $site_name }} team
+                        The {{ $site_name }} Team
                     </p>
                 </td>
             </tr>
@@ -84,8 +84,8 @@
 
             <tr align="center" width="570" cellpadding="0" cellspacing="0" role="presentation">
                 <td>
-                    <p style="padding: 20px 0px;">
-                    © {{ date('Y') }}. {{ $site_name }} Limited. All Rights Reserved.
+                    <p style="padding: 20px 0px; font-weight: 600;">
+                    © {{ date('Y') }}. {{ $site_name }}. All Rights Reserved.
                     </p>
                 </td>
             </tr>

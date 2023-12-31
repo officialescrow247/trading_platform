@@ -141,12 +141,25 @@ export default {
     },
     methods: {
         scheduleUpdate() {
-            setTimeout(() => {
-                this.updateProfit();
-                this.scheduleUpdate();
-            }, 2000);
+            let the_profit = this.initialProfit;
+            if (the_profit.startsWith("+")) {
+                setTimeout(() => {
+                    this.updateProfitPlus();
+                    this.scheduleUpdate();
+                }, 2000);
+            } else if (the_profit.startsWith("-")) {
+                setTimeout(() => {
+                    this.updateProfitMinus();
+                    this.scheduleUpdate();
+                }, 2000);
+            } else {
+                setTimeout(() => {
+                    this.updateProfitRandom();
+                    this.scheduleUpdate();
+                }, 2000);
+            }
         },
-        updateProfit() {
+        updateProfitRandom() {
             const integerPart = Math.floor(this.initialProfit);
             const decimalPart = this.initialProfit % 1;
 
@@ -171,6 +184,57 @@ export default {
             // Return the formatted profit
             return `${sign} ${this.currency}${this.currentProfit.toFixed(2)}`;
         },
+
+        updateProfitMinus() {
+            // Extract the decimal part of the initial profit
+            const decimalPart = this.initialProfit % 1;
+
+            // Generate a random decimal between 0 and the decimal part
+            const randomDecimal = Math.random() * decimalPart;
+
+            // Subtract the random decimal from the initial profit
+            const result = (this.initialProfit - randomDecimal).toFixed(2);
+
+            this.currentProfit = result;
+
+            // Determine the sign based on the original number
+            const sign = "-";
+
+            // Return the formatted profit
+            return `${sign} ${this.currency}${this.currentProfit}`;
+        },
+
+        updateProfitPlus() {
+            // Extract the decimal part of the initial profit
+            const decimalPart = parseFloat(this.initialProfit) % 1;
+
+            // Generate a random decimal between 0 and the decimal part
+            const randomDecimal = Math.random() * decimalPart;
+
+            // Ensure the generated random decimal is positive
+            const adjustedRandomDecimal = Math.max(randomDecimal, 0);
+
+            // Check if parseFloat(this.initialProfit) is a valid number
+            if (!isNaN(parseFloat(this.initialProfit))) {
+                // Add the adjusted random decimal to the initial profit
+                const result = (
+                    parseFloat(this.initialProfit) + adjustedRandomDecimal
+                ).toFixed(2);
+
+                this.currentProfit = result;
+
+                // Determine the sign based on the original number
+                const sign = "+";
+
+                // Return the formatted profit
+                return `${sign} ${this.currency}${this.currentProfit}`;
+            } else {
+                // Handle the case where parseFloat(this.initialProfit) is not a valid number
+                console.error("Invalid initialProfit value");
+                return ""; // or handle it according to your needs
+            }
+        },
+
         isProfitGreaterThanInitial() {
             return this.currentProfit > this.initialProfit;
         },
