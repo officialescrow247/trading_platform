@@ -911,35 +911,60 @@ class TransactionController extends Controller
         return redirect()->back();
     }
 
+    private function extractNumericValue($data)
+    {
+        // Remove non-numeric characters (including '+' and '-')
+        $numericString = preg_replace("/[^\d.-]/", '', $data);
+
+        // Extract the sign from the original data
+        $sign = $data[0] === '-' ? '-' : '+';
+
+        // Convert the numeric string to a float
+        $numericValue = floatval($numericString);
+
+        // Check if the conversion is successful
+        if (is_numeric($numericValue)) {
+            return [
+                'value' => $numericValue,
+                'sign' => $sign,
+            ];
+        } else {
+            // \Log::error("Invalid numeric value: $data");
+            return null;
+        }
+    }
+
+
     public function closeTradeNew(Request $request)
-    { 
+    {
         #1 Get the profit
         $profit = $request->profit;
         // $profit = "+ $20.20";
 
-        #2 Remove the first three characters from the variable
-        $converted = Str::substr($profit, 3);
+        #2 Extract the numeric value and sign
+        $result = $this->extractNumericValue($profit);
+        if ($result !== null) {
+            $extracted_profit = $result['value'];
 
-        #3 Get the actual value
-        $converted_profit = number_format($converted, 2);
+            #3 Get the sign that was used
+            $sign = $result['sign'];
 
-        #4 Get all the datas supplied
-        $getTransaction = Transaction::whereId($request->trans_id)->first();
-        $getUser = User::whereId($getTransaction->user_id)->first();
-        $getUserBalance = $getUser->balance;
-        $getUserCurrency = $getUser->currency;
+            #4 Get all the datas supplied
+            $getTransaction = Transaction::whereId($request->trans_id)->first();
+            $getUser = User::whereId($getTransaction->user_id)->first();
+            $getUserBalance = $getUser->balance;
+            $getUserCurrency = $getUser->currency;
 
-        #5 Check if it's a plus or minus
-        if(Str::contains($request->profit, '-')) { // this is a minus
-            // So Minus the converted_profit from the user's balance
-            $new_balance = $getUserBalance - $converted_profit;
-            $sign = "-";
-            $store_this_to_the_transaction_table = $sign . " " . $getUserCurrency . $converted_profit; // this is the value the user clicked on."
-        }else{ // it is a plus
-            // So Add the converted_profit from the user's balance
-            $new_balance = $getUserBalance + $converted_profit;
-            $sign = "+";
-            $store_this_to_the_transaction_table = $sign . " " . $getUserCurrency . $converted_profit; // this is the value the user clicked on.
+            if($sign == "-"){
+                $single_extracted_profit = Str::substr($extracted_profit, 1);
+                $new_balance = $getUserBalance - $single_extracted_profit;
+                // return $equation = $getUserBalance . " - " . $single_extracted_profit . " = " . $new_balance;
+                $store_this_to_the_transaction_table = $sign . " " . $getUserCurrency . $single_extracted_profit;
+            }else{
+                $new_balance = $getUserBalance + $extracted_profit;
+                // return $equation = $getUserBalance . " + " . $extracted_profit . " = " . $new_balance;
+                $store_this_to_the_transaction_table = $sign . " " . $getUserCurrency . $extracted_profit; // this is the value the user clicked on."
+            }
         }
 
         # Now, do the updating
