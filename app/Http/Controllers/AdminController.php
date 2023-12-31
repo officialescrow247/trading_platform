@@ -345,9 +345,19 @@ class AdminController extends Controller
 
     public function newtopUpPlay(Request $request)
     {
-        Transaction::whereId($request->transaction_id)->update([
-            'displayprofit' => $request->amt,
-        ]);
+        if($request->topup_type == 'increase'){
+            Transaction::whereId($request->transaction_id)->update([
+                'displayprofit' => '"+' . $request->amt . '"',
+            ]);
+        }elseif($request->topup_type == 'decrease'){
+            Transaction::whereId($request->transaction_id)->update([
+                'displayprofit' => '"-' . $request->amt . '"',
+            ]);
+        }else{
+            Transaction::whereId($request->transaction_id)->update([
+                'displayprofit' => '"' . $request->amt . '"',
+            ]);
+        }
         return redirect()->route('orders')->with('success', 'Successful');
     }
 

@@ -332,6 +332,12 @@
                                                                             <label class="text-secondary">Amount</label>
                                                                             <input type="tel" name="amt" id="amt" class="form-control">
 
+                                                                            <select name="topup_type" class="mt-3 form-select">
+                                                                                <option value="increase">INCREASE</option>
+                                                                                <option value="decrease">DECREASE</option>
+                                                                                <option value="random">RANDOM</option>
+                                                                            </select>
+
                                                                             <div class="modal-footer">
                                                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                                                                 <button type="submit" class="btn btn-success">TOP UP TRADE</button>
