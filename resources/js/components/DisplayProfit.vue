@@ -273,8 +273,12 @@ export default {
     },
     computed: {
         getFormattedProfit() {
-            const formattedProfit = Math.abs(this.currentProfit).toFixed(2);
+            const formattedProfit = Math.abs(this.currentProfit).toLocaleString(
+                undefined,
+                { minimumFractionDigits: 2, maximumFractionDigits: 2 }
+            );
             const sign = this.currentProfit >= this.initialProfit ? "+" : "-";
+
             return `${sign} ${this.currency}${formattedProfit}`;
         },
     },
