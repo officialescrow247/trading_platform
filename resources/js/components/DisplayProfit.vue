@@ -11,19 +11,22 @@
 
         <br />
 
-        <!-- Button trigger modal -->
-        <button
-            type="button"
-            class="btn btn-secondary btn-sm px-2 mt-2 mb-1"
-            :class="{
-                'btn-success': isProfitGreaterThanInitial(),
-                'btn-danger': isProfitLessThanInitial(),
-            }"
-            style="font-size: 12px"
-            @click="openModal"
-        >
-            CLOSE TRADE
-        </button>
+        <div>
+            <!-- Button trigger modal -->
+            <button
+                v-if="can_you_close == 1"
+                type="button"
+                class="btn btn-secondary btn-sm px-2 mt-2 mb-1"
+                :class="{
+                    'btn-success': isProfitGreaterThanInitial(),
+                    'btn-danger': isProfitLessThanInitial(),
+                }"
+                style="font-size: 12px"
+                @click="openModal"
+            >
+                CLOSE TRADE
+            </button>
+        </div>
 
         <!-- Modal -->
         <div
