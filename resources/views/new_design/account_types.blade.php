@@ -35,9 +35,9 @@
                <tbody>
                   <tr>
                      <th class="col-3">Minimum Deposit: € / $ / £</th>
-                     <td>€500</td>
-                     <td>€12,000</td>
-                     <td>€50,000</td>
+                     <td>€553</td>
+                     <td>€12,7320</td>
+                     <td>€50,325</td>
                      <td>€98,000</td>
                   </tr>
       
