@@ -238,20 +238,17 @@
                   <form action="{{ route('transaction.store') }}" method="post">
                      <div class="d-flex justify-content-around">
                         <div>
-                           <input type="radio" id="Crypto2" name="asset_type2" class="asset_type2" value="Crypto" >
+                           <input type="radio" id="Crypto2" name="asset_type2" class="asset_type2" value="Crypto">
                            <label class="text-light" for="Crypto2">Crypto</label>
                         </div>
-   
                         <div>
                            <input type="radio" id="Forex2" name="asset_type2" class="asset_type2" value="Forex">
                            <label class="text-light" for="Forex2">Forex</label>
                         </div>
-
                         <div>
                            <input type="radio" id="Stocks2" name="asset_type2" class="asset_type2" value="Stocks">
                            <label class="text-light" for="Stocks2">Stocks</label>
                         </div>
-                        
                         <div>
                            <input type="radio" id="Commodities2" name="asset_type2" class="asset_type2" value="Commodities">
                            <label class="text-light" for="Commodities2">Commodities</label>
@@ -260,11 +257,10 @@
 
                      @csrf
                      <input type="hidden" name="trade_type_select" value="a_t">
-                     <label class="text-secondary">Assets</label>
-                     <select name="type" id="my-select2" class="form-select mb-2" style="background-color: #171B26; color: #E1E4ED;" disabled>
-                        
-                        <option value="" selected>-- Select Asset --</option>
 
+                     <br>
+                     <select name="type2" id="assets"></select>
+                     <select id="hidden-assets" class="form-select mb-2 hidden" style="background-color: #171B26; color: #E1E4ED;">
                         @foreach ($assets as $asset)
                            <option class="asset_crypto" value="{{ $asset->symbol }}">{{ $asset->name }}</option>                        
                         @endforeach
@@ -352,6 +348,7 @@
                         <option class="asset_forex" value="EUR/NZD">EUR/NZD</option>
                         <option class="asset_forex" value="CAD/JPY">CAD/JPY</option>
                      </select>
+                     <br>
 
                      <label class="text-secondary pt-3">Select trade size</label>
                      <input type="number" name="volume" id="calc_volume2" class="form-control" step=".01" min="0" value="1" style="background-color: #171B26; color: #E1E4ED;">

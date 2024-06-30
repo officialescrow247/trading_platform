@@ -2,8 +2,10 @@
 
 use Carbon\Carbon;
 use App\Models\User;
+use App\Models\Crypto;
 use App\Models\Setting;
 use App\Models\Transaction;
+use GuzzleHttp\Psr7\Request;
 use Snowfire\Beautymail\Beautymail;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
@@ -14,7 +16,6 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TransactionController;
-use GuzzleHttp\Psr7\Request;
 
 Route::get('/', [HomeController::class, 'new_design']);
 Route::get('why-trade-with-us', [HomeController::class, 'why_trade_with_us'])->name('why_trade_with_us');
@@ -174,22 +175,12 @@ Route::group(['prefix' => 'user', 'middleware' => ['role:user']], function() {
 // User route end
 
 Route::get('/test', function () {
+    $assets = Crypto::latest()->get();
+    return view('test', [
+        'assets' => $assets->sortBy('name', SORT_ASC)
+    ]);
+        
     return view('test');
-    $client = new \GuzzleHttp\Client();
-    $response = $client->get(
-        'https://devapi.ai/api/v1/markets/stock/quotes',
-        [
-            'headers' => [
-                'Authorization' => 'Bearer 261|QdYGvF4WDz0Gslnb4gHnlUzvyyolSDBPpn10KiF4',
-            ],
-            'query' => [
-                'ticker' => '^SP500-40',
-            ],
-        ]
-    );
-    $body = json_decode($response->getBody(), true);
-    return $body['body'][0]['regularMarketPrice'];
-    return $body;
 });
 
 Route::get('/logout', function(){

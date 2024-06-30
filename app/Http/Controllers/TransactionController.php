@@ -70,8 +70,9 @@ class TransactionController extends Controller
             return "I didn't capture this.";
         }
         
-        $asset = $request->type;
+        $asset = $request->type2;
         if($request->trade_type_select === 'a_t'){
+
             if(($request->volume) > auth()->user()->balance){
                 Alert::info("Sorry, your account balance is too low to place this trade. Please deposit more funds to your account before attempting to place the trade again.");
             }else{
@@ -91,13 +92,13 @@ class TransactionController extends Controller
         
                 try {
                     if($request->asset_type2 == 'Stocks'){
-                        if($request->type == 'SP500'){
+                        if($request->type2 == 'SP500'){
                             $response = Http::get('https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?region=US&lang=en-US&includePrePost=false&interval=1h&useYfid=true&range=1d');
                             $data = $response->json();
                             $current_price = $data['chart']['result'][0]['meta']['regularMarketPrice'];
                             $t_p2 = $t_p / $current_price; // get the price
                             // $profit = $t_p2 * $request->input('piont');
-                        }elseif($request->type == 'VOO'){
+                        }elseif($request->type2 == 'VOO'){
                             $response = Http::get('https://query1.finance.yahoo.com/v8/finance/chart/VOO?region=US&lang=en-US&includePrePost=false&interval=1h&useYfid=true&range=1d');
                             $data = $response->json();
                             $current_price = $data['chart']['result'][0]['meta']['regularMarketPrice'];
@@ -147,7 +148,7 @@ class TransactionController extends Controller
                             'user_id' => auth()->id(),
                             'type' => 'ADVANCED TRADE',
                             'asset_type' => $request->asset_type2,
-                            'symbol' => $request->type,
+                            'symbol' => $request->type2,
                             'volume' => $request->volume,
                             'profit1' => round($profit1, 0) ?: 0, 
                             'profit2' => round($profit2, 0) ?: 0,
@@ -205,7 +206,7 @@ class TransactionController extends Controller
                             'user_id' => auth()->id(),
                             'type' => 'ADVANCED TRADE',
                             'asset_type' => $request->asset_type2,
-                            'symbol' => $request->type,
+                            'symbol' => $request->type2,
                             'volume' => $request->volume,
                             'profit1' => round($profit1, 0) ?: 0, 
                             'profit2' => round($profit2, 0) ?: 0,

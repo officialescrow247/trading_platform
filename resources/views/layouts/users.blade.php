@@ -18,6 +18,10 @@
   
 
         <style>
+            .hidden {
+                display: none;
+            }
+
             button.swal2-confirm{
                 display: none !important;
             }
@@ -1036,65 +1040,7 @@
                     }
                     $navbar.fadeIn();
                 });
-                    
-                // $(".asset_type, .asset_type2").on('change', function() { // check if the radiobox has been clicked
-                //     if(this.checked) {
-                //         var selectedValue = this.value;
-                //         // if(selectedValue === 'Crypto'){
-                //         //     $('.asset_crypto').show();
-                //         //     $('.asset_stocks').hide();
-                //         //     $('.asset_forex').hide();
-                //         //     $('.asset_commodities').hide();
-                //         // }else if(selectedValue === 'Stocks'){
-                //         //     $('.asset_stocks').show();
-                //         //     $('.asset_crypto').hide();
-                //         //     $('.asset_forex').hide();
-                //         //     $('.asset_commodities').hide();
-                //         // }else if(selectedValue === 'Forex'){
-                //         //     $('.asset_forex').show();
-                //         //     $('.asset_stocks').hide();
-                //         //     $('.asset_crypto').hide();
-                //         //     $('.asset_commodities').hide();
-                //         // }else if(selectedValue === 'Commodities'){
-                //         //     $('.asset_commodities').show();
-                //         //     $('.asset_forex').hide();
-                //         //     $('.asset_stocks').hide();
-                //         //     $('.asset_crypto').hide();
-                //         // }else{
-                //         //     $('.asset_crypto').hide();
-                //         //     $('.asset_stocks').hide();
-                //         //     $('.asset_forex').hide();
-                //         //     $('.asset_commodities').hide();
-                //         // }
-                //         $('.asset_crypto, .asset_stocks, .asset_forex, .asset_commodities').hide();
                 
-                //         if (selectedValue === 'Crypto') {
-                //             $('.asset_crypto').show();
-                //         } else if (selectedValue === 'Stocks') {
-                //             $('.asset_stocks').show();
-                //         } else if (selectedValue === 'Forex') {
-                //             $('.asset_forex').show();
-                //         } else if (selectedValue === 'Commodities') {
-                //             $('.asset_commodities').show();
-                //         }
-                //     }
-                // });
-    
-                // $(".asset_type").on('change', function() {
-                //     if(this.checked) {
-                //         $('#my-select').prop('disabled', false);
-                //     }else{
-                //         $('#my-select').prop('disabled', true);
-                //     }
-                // });
-    
-                // $(".asset_type2").on('change', function() {
-                //     if(this.checked) {
-                //         $('#my-select2').prop('disabled', false);
-                //     }else{
-                //         $('#my-select2').prop('disabled', true);
-                //     }
-                // });
     
                 $('#stoploss1').keyup(function(){
                     // Get the value of the input box
@@ -1105,7 +1051,7 @@
                         url: '{{ route("cal_pip") }}',
                         type: 'GET',
                         data: { 
-                            asset: $('#my-select2').val(),
+                            asset: $('#assets').val(),
                             trade_size: $('#calc_volume2').val(),
                             piont: piont,
                             asset_type: $(':radio[name=asset_type2]:checked').val(),
@@ -1138,7 +1084,7 @@
                         url: '{{ route("cal_pip") }}',
                         type: 'GET',
                         data: { 
-                            asset: $('#my-select2').val(),
+                            asset: $('#assets').val(),
                             trade_size: $('#calc_volume2').val(),
                             piont: piont,
                             asset_type: $(':radio[name=asset_type2]:checked').val(),
@@ -1170,33 +1116,46 @@
                     document.execCommand("copy");
                 });
             });
-        </script>
 
-        <script>
-            $(".asset_type, .asset_type2").on('change', function() {
-                if ($(this).is(':checked')) {
-                    var selectedValue = this.value;
-                    $('.asset_crypto, .asset_stocks, .asset_forex, .asset_commodities').hide();
-
+            // $(document).ready(function() {
+                function updateAssetOptions(selectedValue) {
+                    console.log('Selected value:', selectedValue);
+                    
+                    // Clear the visible select box
+                    $('#assets').empty();
+                    
+                    // Append the relevant options based on the selected value
                     if (selectedValue === 'Crypto') {
-                        $('.asset_crypto').show();
+                        $('#hidden-assets .asset_crypto').clone().appendTo('#assets');
+                        console.log('Showing Crypto options');
                     } else if (selectedValue === 'Stocks') {
-                        $('.asset_stocks').show();
+                        $('#hidden-assets .asset_stocks').clone().appendTo('#assets');
+                        console.log('Showing Stocks options');
                     } else if (selectedValue === 'Forex') {
-                        $('.asset_forex').show();
+                        $('#hidden-assets .asset_forex').clone().appendTo('#assets');
+                        console.log('Showing Forex options');
                     } else if (selectedValue === 'Commodities') {
-                        $('.asset_commodities').show();
+                        $('#hidden-assets .asset_commodities').clone().appendTo('#assets');
+                        console.log('Showing Commodities options');
                     }
                 }
-            });
 
-            $(".asset_type, .asset_type2").on('change', function() {
-                var selectId = $(this).hasClass('asset_type') ? '#my-select' : '#my-select2';
-                var isDisabled = !$(this).is(':checked');
-                $(selectId).prop('disabled', isDisabled);
-            });
+                // Bind change event to radio buttons
+                $(".asset_type2").on('change', function() {
+                    updateAssetOptions(this.value);
+                });
+
+                // Check the initially selected radio button and update the asset options
+                var initiallySelected = $('input[name="asset_type2"]:checked').val();
+                if (initiallySelected) {
+                    updateAssetOptions(initiallySelected);
+                } else {
+                    // If no radio button is selected initially, select the first one and update options
+                    $('input[name="asset_type2"]').first().prop('checked', true);
+                    updateAssetOptions($('input[name="asset_type2"]').first().val());
+                }
+            // });
         </script>
-
 
 
         <!-- <script src="{{ asset('js/script.js') }}"></script> -->
