@@ -286,7 +286,7 @@ class TransactionController extends Controller
                             'user_id' => auth()->id(),
                             'type' => 'ADVANCED TRADE',
                             'asset_type' => $request->asset_type2,
-                            'symbol' => $request->type,
+                            'symbol' => $request->type2,
                             'volume' => $request->volume,
                             'profit1' => round($profit1, 0) ?: 0, 
                             'profit2' => round($profit2, 0) ?: 0,
@@ -349,7 +349,7 @@ class TransactionController extends Controller
                                     'user_id' => auth()->id(),
                                     'type' => 'ADVANCED TRADE',
                                     'asset_type' => $request->asset_type2,
-                                    'symbol' => $request->type,
+                                    'symbol' => $request->type2,
                                     'volume' => $request->volume,
                                     'profit1' => round($profit1, 0) ?: 0, 
                                     'profit2' => round($profit2, 0) ?: 0,
@@ -364,9 +364,6 @@ class TransactionController extends Controller
                                     'created_at' => Carbon::now()->addHour(),
                                     'updated_at' => Carbon::now()->addHour(),
                                 ]);
-                                
-                                // Alert::success("You've successfully placed a trade.");
-                                // return redirect()->back();
                             }
                         }
                     }
@@ -399,7 +396,7 @@ class TransactionController extends Controller
                     Alert::success("You've successfully placed a trade.");
                     return redirect()->back();
                 } catch (\Exception $e) {
-                    Alert::info("Sorry, there was a network issue; please try again.");
+                    Alert::info("Sorry, there was a network issue; please try again - " . $e->getMessage());
                     return redirect()->back();
                 }
             }
