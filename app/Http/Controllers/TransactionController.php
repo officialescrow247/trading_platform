@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Deposit;
 use Stripe\Token;
 use Carbon\Carbon;
 use Stripe\Stripe;
 use App\Models\User;
 use GuzzleHttp\Client;
+use App\Models\Deposit;
 use App\Models\Setting;
 use App\Models\Withdrawal;
 use App\Models\Transaction;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
@@ -29,8 +30,9 @@ class TransactionController extends Controller
             return redirect()->back();
         }
         
-        $asset = $request->type1;
+        
         if($request->trade_type_select === 'a_t'){
+            $asset = $request->type2;
             $currentDate = Carbon::now()->addHour();
             
             if (str_contains($request->duration, 'minute') || str_contains($request->duration, 'minutes')){
@@ -86,12 +88,60 @@ class TransactionController extends Controller
                     $leverage = 200;
                 }
         
-                $trade_size = $request->volume;
                 
+                $trade_size = $request->volume;
                 $t_p = $trade_size * $leverage;
         
                 try {
                     if($request->asset_type2 == 'Stocks'){
+                        function getYahooFinanceCrumb($asset) {
+                            $url = 'https://finance.yahoo.com/quote/' . $asset;
+                            $response = Http::get($url);
+                        
+                            // Log response body for debugging
+                            Log::info($response->body());
+                        
+                            // Ensure the response body contains the crumb token and is captured correctly
+                            preg_match('/"CrumbStore":{"crumb":"(.*?)"}/', $response->body(), $matches);
+                        
+                            // Log the matches array for debugging
+                            Log::info('Matches: ' . print_r($matches, true));
+                        
+                            if (isset($matches[1])) {
+                                $crumb = $matches[1];
+                                $cookie = implode(';', $response->cookies());
+                                return [$crumb, $cookie];
+                            }
+                        
+                            // Log if crumb not found
+                            Log::error('Crumb not found');
+                            return [null, null];
+                        }
+
+                        function getYahooFinanceData($asset) {
+                            list($crumb, $cookie) = getYahooFinanceCrumb($asset);
+                            if ($crumb && $cookie) {
+                                $url = 'https://query1.finance.yahoo.com/v10/finance/quoteSummary/' . $asset . '?modules=financialData';
+                                $response = Http::withHeaders([
+                                    'Cookie' => $cookie,
+                                ])->get($url, [
+                                    'crumb' => $crumb
+                                ]);
+
+                                // Log the response for debugging
+                                Log::info($response->body());
+
+                                return $response->json();
+                            } else {
+                                Log::error('Unable to obtain crumb and cookie');
+                                return [
+                                    'error' => 'Unable to obtain crumb and cookie'
+                                ];
+                            }
+                        }
+                        $data = getYahooFinanceData('BTC-USD');
+                        return $data;
+
                         if($request->type2 == 'SP500'){
                             $response = Http::get('https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?region=US&lang=en-US&includePrePost=false&interval=1h&useYfid=true&range=1d');
                             $data = $response->json();
@@ -402,6 +452,7 @@ class TransactionController extends Controller
             }
             return redirect()->back();
         }else{
+            $asset = $request->type1;
             if(($request->volume) > auth()->user()->balance){
                 Alert::info("Sorry, your account balance is too low to place this trade. Please deposit more funds to your account before attempting to place the trade again.");
             }else{
@@ -499,7 +550,6 @@ class TransactionController extends Controller
                     return redirect()->back();
                 }
     
-                
                 Transaction::create([
                     'user_id' => auth()->id(),
                     'type' => 'MARKET EXECUTION',
