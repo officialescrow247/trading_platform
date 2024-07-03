@@ -487,7 +487,7 @@
                   var widget = new TradingView.widget(
                      {
                         "isTransparent": true,
-                        "symbol": "NASDAQ:AAPL",
+                        "symbol": "COINBASE:BTCUSD",
                         "container_id": "analytics-platform-chart-demo",
                         "width": "100%",
                         "autosize": true,

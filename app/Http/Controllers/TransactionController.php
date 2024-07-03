@@ -92,6 +92,7 @@ class TransactionController extends Controller
         
                 try {
                     if($request->asset_type2 == 'Stocks'){
+                        return 'stocks';
                         if($request->type2 == 'SP500'){
                             $response = Http::get('https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?region=US&lang=en-US&includePrePost=false&interval=1h&useYfid=true&range=1d');
                             $data = $response->json();
