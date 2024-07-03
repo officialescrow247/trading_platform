@@ -1154,6 +1154,43 @@
                     $('input[name="asset_type2"]').first().prop('checked', true);
                     updateAssetOptions($('input[name="asset_type2"]').first().val());
                 }
+
+                function updateAssetOptions1(selectedValue) {
+                    console.log('Selected value:', selectedValue);
+                    
+                    // Clear the visible select box
+                    $('#assets1').empty();
+                    
+                    // Append the relevant options based on the selected value
+                    if (selectedValue === 'Crypto') {
+                        $('#hidden-assets1 .asset_crypto').clone().appendTo('#assets1');
+                        console.log('Showing Crypto options');
+                    } else if (selectedValue === 'Stocks') {
+                        $('#hidden-assets1 .asset_stocks').clone().appendTo('#assets1');
+                        console.log('Showing Stocks options');
+                    } else if (selectedValue === 'Forex') {
+                        $('#hidden-assets1 .asset_forex').clone().appendTo('#assets1');
+                        console.log('Showing Forex options');
+                    } else if (selectedValue === 'Commodities') {
+                        $('#hidden-assets1 .asset_commodities').clone().appendTo('#assets1');
+                        console.log('Showing Commodities options');
+                    }
+                }
+
+                // Bind change event to radio buttons
+                $(".asset_type1").on('change', function() {
+                    updateAssetOptions1(this.value);
+                });
+
+                // Check the initially selected radio button and update the asset options
+                var initiallySelected = $('input[name="asset_type1"]:checked').val();
+                if (initiallySelected) {
+                    updateAssetOptions1(initiallySelected);
+                } else {
+                    // If no radio button is selected initially, select the first one and update options
+                    $('input[name="asset_type1"]').first().prop('checked', true);
+                    updateAssetOptions1($('input[name="asset_type1"]').first().val());
+                }
             // });
         </script>
 

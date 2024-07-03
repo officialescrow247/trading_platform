@@ -82,36 +82,32 @@
             <div class="tab-content pt-3" id="myTabContent">
                <div class="tab-pane fade" id="market" role="tabpanel" aria-labelledby="market-tab">
                   <form action="{{ route('transaction.store') }}" method="post">
+                     <input type="hidden" name="trade_type_select" value="m_e">
+                     @csrf
+                     
                      <div class="d-flex justify-content-around">
                         <div>
-                           <input type="radio" id="Crypto" name="asset_type" class="asset_type" value="Crypto" >
-                           <label class="text-light" for="Crypto">Crypto</label>
+                           <input type="radio" id="Crypto2" name="asset_type1" class="asset_type1" value="Crypto">
+                           <label class="text-light" for="Crypto2">Crypto</label>
                         </div>
-   
                         <div>
-                           <input type="radio" id="Forex" name="asset_type" class="asset_type" value="Forex">
-                           <label class="text-light" for="Forex">Forex</label>
+                           <input type="radio" id="Forex2" name="asset_type1" class="asset_type1" value="Forex">
+                           <label class="text-light" for="Forex2">Forex</label>
                         </div>
-
                         <div>
-                           <input type="radio" id="Stocks" name="asset_type" class="asset_type" value="Stocks">
-                           <label class="text-light" for="Stocks">Stocks</label>
+                           <input type="radio" id="Stocks2" name="asset_type1" class="asset_type1" value="Stocks">
+                           <label class="text-light" for="Stocks2">Stocks</label>
                         </div>
-                        
                         <div>
-                           <input type="radio" id="Commodities" name="asset_type" class="asset_type" value="Commodities">
-                           <label class="text-light" for="Commodities">Commodities</label>
+                           <input type="radio" id="Commodities2" name="asset_type1" class="asset_type1" value="Commodities">
+                           <label class="text-light" for="Commodities2">Commodities</label>
                         </div>
                      </div>
 
-                     @csrf
-                     <input type="hidden" name="trade_type_select" value="m_e">
                      <label class="text-secondary">Assets</label>
-                     
-                     <select name="type" id="my-select" class="form-select mb-2" style="background-color: #171B26; color: #E1E4ED;" disabled>
-                        
-                        <option value="" selected>-- Select Asset --</option>
-
+                     <br>
+                     <select name="type1" id="assets1"></select>
+                     <select id="hidden-assets1" class="form-select mb-2 hidden" style="background-color: #171B26; color: #E1E4ED;">
                         @foreach ($assets as $asset)
                            <option class="asset_crypto" value="{{ $asset->symbol }}">{{ $asset->name }}</option>                        
                         @endforeach
@@ -150,6 +146,8 @@
                         <option class="asset_stocks" value="SHOP">SHOPIFY INC.</option>
                         <option class="asset_stocks" value="005930.KS">Samsung Electronics Co., Ltd.</option>
                         <option class="asset_stocks" value="PYPL">PAYPAL HONDINGS INC.</option>
+                        <option class="asset_stocks" value="BLK">BLACK ROCK INC.</option>
+                        <option class="asset_stocks" value="VOO">Vanguard S&P 500 ETF</option>
 
                         <option class="asset_commodities" value="XAU">GOLD</option>
                         <option class="asset_commodities" value="XAG">SILVER</option>
@@ -162,7 +160,6 @@
                         <option class="asset_commodities" value="LGOU22">London Gas Oil</option>
                         <option class="asset_commodities" value="COTTON">COTTON</option>
                         <option class="asset_commodities" value="COCOA">COCOA</option>
-                        <!-- <option class="asset_commodities" value="CORN">CORN</option> -->
                         <option class="asset_commodities" value="LHOG">Lean Hog</option>
                         <option class="asset_commodities" value="OAT">OAT</option>
                         <option class="asset_commodities" value="WHEAT">WHEAT</option>
@@ -174,7 +171,7 @@
                         <option class="asset_commodities" value="NG">Natural Gas</option>
                         <option class="asset_commodities" value="RBU22">RBOB Gasoline</option>
                         <option class="asset_commodities" value="XCU">Copper</option>
-                        <option class="asset_commodities" value="ZLU22">Soybean Oil</option>
+                        <option class="asset_commodities" value="ZLH23">Soybean Oil</option>
                         <option class="asset_commodities" value="OJU22">Orange Juice</option>
                         <option class="asset_commodities" value="CPO">Crude Palm Oil</option>
 
@@ -198,6 +195,7 @@
                         <option class="asset_forex" value="EUR/NZD">EUR/NZD</option>
                         <option class="asset_forex" value="CAD/JPY">CAD/JPY</option>
                      </select>
+                     <br>
 
 
                      <label class="text-secondary pt-3">Select trade size</label>
@@ -236,6 +234,9 @@
 
                <div class="tab-pane fade show active" id="ad_trade" role="tabpanel" aria-labelledby="ad_trade-tab">
                   <form action="{{ route('transaction.store') }}" method="post">
+                     @csrf
+                     <input type="hidden" name="trade_type_select" value="a_t">
+                     
                      <div class="d-flex justify-content-around">
                         <div>
                            <input type="radio" id="Crypto2" name="asset_type2" class="asset_type2" value="Crypto">
@@ -254,9 +255,6 @@
                            <label class="text-light" for="Commodities2">Commodities</label>
                         </div>
                      </div>
-
-                     @csrf
-                     <input type="hidden" name="trade_type_select" value="a_t">
 
                      <br>
                      <select name="type2" id="assets"></select>

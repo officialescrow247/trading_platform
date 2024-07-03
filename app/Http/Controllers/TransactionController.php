@@ -28,50 +28,50 @@ class TransactionController extends Controller
             Alert::info("Insufficient balance."); 
             return redirect()->back();
         }
-
-        $currentDate = Carbon::now()->addHour();
         
-        if (str_contains($request->duration, 'minute') || str_contains($request->duration, 'minutes')){
-            $getValue = Str::before($request->duration, ' minute');
-            if($getValue == 1){
-                $duration = $currentDate->addMinute();
-            }else{
-                $duration = $currentDate->addMinutes($getValue);
-            }
-        }elseif(str_contains($request->duration, 'hour') || str_contains($request->duration, 'hours')){
-            $getValue = Str::before($request->duration, ' hour');
-            if($getValue == 1){
-                $duration = $currentDate->addHour();
-            }else{
-                $duration = $currentDate->addHours($getValue);
-            }
-        }elseif(str_contains($request->duration, 'day') || str_contains($request->duration, 'days')){
-            $getValue = Str::before($request->duration, ' day');
-            if($getValue == 1){
-                $duration = $currentDate->addDay();
-            }else{
-                $duration = $currentDate->addDays($getValue);
-            }
-        }elseif(str_contains($request->duration, 'week') || str_contains($request->duration, 'weeks')){
-            $getValue = Str::before($request->duration, ' week');
-            if($getValue == 1){
-                $duration = $currentDate->addWeek();
-            }else{
-                $duration = $currentDate->addWeeks($getValue);
-            }
-        }elseif(str_contains($request->duration, 'month') || str_contains($request->duration, 'months')){
-            $getValue = Str::before($request->duration, ' month');
-            if($getValue == 1){
-                $duration = $currentDate->addMonth();
-            }else{
-                $duration = $currentDate->addMonths($getValue);
-            }
-        }else{
-            return "I didn't capture this.";
-        }
-        
-        $asset = $request->type2;
+        $asset = $request->type1;
         if($request->trade_type_select === 'a_t'){
+            $currentDate = Carbon::now()->addHour();
+            
+            if (str_contains($request->duration, 'minute') || str_contains($request->duration, 'minutes')){
+                $getValue = Str::before($request->duration, ' minute');
+                if($getValue == 1){
+                    $duration = $currentDate->addMinute();
+                }else{
+                    $duration = $currentDate->addMinutes($getValue);
+                }
+            }elseif(str_contains($request->duration, 'hour') || str_contains($request->duration, 'hours')){
+                $getValue = Str::before($request->duration, ' hour');
+                if($getValue == 1){
+                    $duration = $currentDate->addHour();
+                }else{
+                    $duration = $currentDate->addHours($getValue);
+                }
+            }elseif(str_contains($request->duration, 'day') || str_contains($request->duration, 'days')){
+                $getValue = Str::before($request->duration, ' day');
+                if($getValue == 1){
+                    $duration = $currentDate->addDay();
+                }else{
+                    $duration = $currentDate->addDays($getValue);
+                }
+            }elseif(str_contains($request->duration, 'week') || str_contains($request->duration, 'weeks')){
+                $getValue = Str::before($request->duration, ' week');
+                if($getValue == 1){
+                    $duration = $currentDate->addWeek();
+                }else{
+                    $duration = $currentDate->addWeeks($getValue);
+                }
+            }elseif(str_contains($request->duration, 'month') || str_contains($request->duration, 'months')){
+                $getValue = Str::before($request->duration, ' month');
+                if($getValue == 1){
+                    $duration = $currentDate->addMonth();
+                }else{
+                    $duration = $currentDate->addMonths($getValue);
+                }
+            }else{
+                Alert::info("Duration not set, please try again.");
+                return redirect()->back();
+            }
 
             if(($request->volume) > auth()->user()->balance){
                 Alert::info("Sorry, your account balance is too low to place this trade. Please deposit more funds to your account before attempting to place the trade again.");
@@ -92,7 +92,6 @@ class TransactionController extends Controller
         
                 try {
                     if($request->asset_type2 == 'Stocks'){
-                        return 'stocks';
                         if($request->type2 == 'SP500'){
                             $response = Http::get('https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?region=US&lang=en-US&includePrePost=false&interval=1h&useYfid=true&range=1d');
                             $data = $response->json();
@@ -406,7 +405,7 @@ class TransactionController extends Controller
             if(($request->volume) > auth()->user()->balance){
                 Alert::info("Sorry, your account balance is too low to place this trade. Please deposit more funds to your account before attempting to place the trade again.");
             }else{
-                if($request->asset_type == 'Stocks'){
+                if($request->asset_type1 == 'Stocks'){
                     if($request->type == 'SP500'){
                         $response = Http::get('https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?region=US&lang=en-US&includePrePost=false&interval=1h&useYfid=true&range=1d');
                         $data = $response->json();
@@ -417,12 +416,12 @@ class TransactionController extends Controller
                         $current_price = $data['quoteSummary']['result'][0]['financialData']['currentPrice']['raw'];
                     }
                     
-                }elseif($request->asset_type == 'Commodities'){
+                }elseif($request->asset_type1 == 'Commodities'){
                     $response = Http::get('https://commodities-api.com/api/latest?access_key=ays6ok4lshrl5ptd3ip6q9855gwfztwupbdvcx5wab565tyds18wsgs149kh&base=USD&symbols=' . $asset);
                     $data = $response->json();
                     $current_price = 1 / $data['data']['rates'][$asset];
                     
-                }elseif($request->asset_type == 'Forex'){
+                }elseif($request->asset_type1 == 'Forex'){
                     $from = Str::before($asset, '/');
                     $to = Str::after($asset, '/');
     
@@ -459,8 +458,8 @@ class TransactionController extends Controller
                             Transaction::create([
                                 'user_id' => auth()->id(),
                                 'type' => 'MARKET EXECUTION',
-                                'asset_type' => $request->asset_type,
-                                'symbol' => $request->type,
+                                'asset_type' => $request->asset_type1,
+                                'symbol' => $request->type1,
                                 'volume' => $request->volume,
                                 'amount' => $crypto->current_price,
                                 's_l' => 0,
@@ -500,11 +499,12 @@ class TransactionController extends Controller
                     return redirect()->back();
                 }
     
+                
                 Transaction::create([
                     'user_id' => auth()->id(),
                     'type' => 'MARKET EXECUTION',
-                    'asset_type' => $request->asset_type,
-                    'symbol' => $request->type,
+                    'asset_type' => $request->asset_type1,
+                    'symbol' => $request->type1,
                     'volume' => $request->volume,
                     'amount' => $current_price,
                     's_l' => 0,
