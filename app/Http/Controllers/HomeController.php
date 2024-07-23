@@ -204,4 +204,10 @@ class HomeController extends Controller
     {
         return view('new_design.brokerage_fees');
     }
+
+
+    public function nd_welcome()
+    {
+        return view('new_design_2.index');
+    }
 }

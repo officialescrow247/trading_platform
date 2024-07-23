@@ -17,32 +17,35 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TransactionController;
 
-Route::get('/', [HomeController::class, 'new_design']);
-Route::get('why-trade-with-us', [HomeController::class, 'why_trade_with_us'])->name('why_trade_with_us');
-Route::get('trading-costs', [HomeController::class, 'trading_costs'])->name('trading_costs');
-Route::get('trading-tools', [HomeController::class, 'trading_tools'])->name('trading_tools');
-Route::get('trading-explained', [HomeController::class, 'trading_explained'])->name('trading_explained');
-Route::get('markets', [HomeController::class, 'markets'])->name('markets');
-Route::get('our-platforms', [HomeController::class, 'our_platforms'])->name('our_platforms');
-Route::get('market-information', [HomeController::class, 'market_information'])->name('market_information');
-Route::get('insights-hub', [HomeController::class, 'insights_hub'])->name('insights_hub');
-Route::get('about-us', [HomeController::class, 'about_us'])->name('about_us');
-Route::get('articles/day-trading', [HomeController::class, 'articles_day_trading'])->name('articles_day_trading');
-Route::get('articles/swing-trading', [HomeController::class, 'articles_swing_trading'])->name('articles_swing_trading');
-Route::get('articles/scalping-trading', [HomeController::class, 'articles_scalping_trading'])->name('articles_scalping_trading');
-Route::get('articles/swing-trading-vs-day-trading', [HomeController::class, 'articles_trading_vs_day_trading'])->name('articles_trading_vs_day_trading');
-Route::get('articles/technical-analysis', [HomeController::class, 'articles_technical_analysis'])->name('articles_technical_analysis');
-Route::get('articles/fundamental-analysis', [HomeController::class, 'articles_fundamental_analysis'])->name('articles_fundamental_analysis');
-Route::get('articles/what-time-does-forex-market-open', [HomeController::class, 'articles_what_time_does_forex_market_open'])->name('articles_what_time_does_forex_market_open');
-Route::get('articles/market-open-times', [HomeController::class, 'articles_market_open_times'])->name('articles_market_open_times');
-Route::get('faqs', [HomeController::class, 'faqs'])->name('faqs');
-Route::get('legals', [HomeController::class, 'legals_new'])->name('legals_new');
-Route::get('legals/{id}', [HomeController::class, 'legals_id'])->name('legals_id');
-Route::get('account_types', [HomeController::class, 'account_types_new'])->name('account_types_new');
-Route::get('our_ambassadors', [HomeController::class, 'our_ambassadors_new'])->name('our_ambassadors_new');
-Route::get('trading_stories', [HomeController::class, 'trading_stories_new'])->name('trading_stories_new');
-Route::get('brokerage_fees', [HomeController::class, 'brokerage_fees_new'])->name('brokerage_fees_new');
-
+## new design 1
+// Route::get('/', [HomeController::class, 'new_design']);
+// Route::get('why-trade-with-us', [HomeController::class, 'why_trade_with_us'])->name('why_trade_with_us');
+// Route::get('trading-costs', [HomeController::class, 'trading_costs'])->name('trading_costs');
+// Route::get('trading-tools', [HomeController::class, 'trading_tools'])->name('trading_tools');
+// Route::get('trading-explained', [HomeController::class, 'trading_explained'])->name('trading_explained');
+// Route::get('markets', [HomeController::class, 'markets'])->name('markets');
+// Route::get('our-platforms', [HomeController::class, 'our_platforms'])->name('our_platforms');
+// Route::get('market-information', [HomeController::class, 'market_information'])->name('market_information');
+// Route::get('insights-hub', [HomeController::class, 'insights_hub'])->name('insights_hub');
+// Route::get('about-us', [HomeController::class, 'about_us'])->name('about_us');
+// Route::get('articles/day-trading', [HomeController::class, 'articles_day_trading'])->name('articles_day_trading');
+// Route::get('articles/swing-trading', [HomeController::class, 'articles_swing_trading'])->name('articles_swing_trading');
+// Route::get('articles/scalping-trading', [HomeController::class, 'articles_scalping_trading'])->name('articles_scalping_trading');
+// Route::get('articles/swing-trading-vs-day-trading', [HomeController::class, 'articles_trading_vs_day_trading'])->name('articles_trading_vs_day_trading');
+// Route::get('articles/technical-analysis', [HomeController::class, 'articles_technical_analysis'])->name('articles_technical_analysis');
+// Route::get('articles/fundamental-analysis', [HomeController::class, 'articles_fundamental_analysis'])->name('articles_fundamental_analysis');
+// Route::get('articles/what-time-does-forex-market-open', [HomeController::class, 'articles_what_time_does_forex_market_open'])->name('articles_what_time_does_forex_market_open');
+// Route::get('articles/market-open-times', [HomeController::class, 'articles_market_open_times'])->name('articles_market_open_times');
+// Route::get('faqs', [HomeController::class, 'faqs'])->name('faqs');
+// Route::get('legals', [HomeController::class, 'legals_new'])->name('legals_new');
+// Route::get('legals/{id}', [HomeController::class, 'legals_id'])->name('legals_id');
+// Route::get('account_types', [HomeController::class, 'account_types_new'])->name('account_types_new');
+// Route::get('our_ambassadors', [HomeController::class, 'our_ambassadors_new'])->name('our_ambassadors_new');
+// Route::get('trading_stories', [HomeController::class, 'trading_stories_new'])->name('trading_stories_new');
+// Route::get('brokerage_fees', [HomeController::class, 'brokerage_fees_new'])->name('brokerage_fees_new');
+// ........... //
+// ........... //
+// ........... //
 // Route::get('/', [HomeController::class, 'index']);
 // Route::get('/our_market', [HomeController::class, 'our_market'])->name('our_market');
 // Route::get('/alternative_data', [HomeController::class, 'alternative_data'])->name('alternative_data');
@@ -174,14 +177,7 @@ Route::group(['prefix' => 'user', 'middleware' => ['role:user']], function() {
 });
 // User route end
 
-Route::get('/test', function () {
-    $assets = Crypto::latest()->get();
-    return view('test', [
-        'assets' => $assets->sortBy('name', SORT_ASC)
-    ]);
-        
-    return view('test');
-});
+
 
 Route::get('/logout', function(){
     Cache::forget('user-is-online-' . auth()->id());
@@ -194,5 +190,8 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+## new design 2
+Route::get('/', [HomeController::class, 'nd_welcome'])->name('welcome');
 
 require __DIR__.'/auth.php';
