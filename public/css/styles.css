@@ -1,5 +1,5 @@
 * {
-    font-family: "Inter", sans-serif;
+    /* font-family: "Inter", sans-serif; */
     /* font-size: 15px; */
 }
 
@@ -8,15 +8,15 @@ body {
 }
 
 .kanit_thin_font {
-    font-family: "Kanit", sans-serif;
+    font-family: "Kanit" !important;
 }
 
 .inter {
     font-family: "Inter", sans-serif;
 }
 
-.d_ {
-    font-size: 8px;
+.d_ p {
+    font-size: 12px;
 }
 
 .d_2 {
@@ -34,7 +34,7 @@ body {
     background-position: top;
     background-size: cover;
     height: 80vh;
-    margin-top: 20vh;
+    /* margin-top: 20vh; */
     background-color: #050f19;
 }
 
@@ -100,6 +100,35 @@ body {
     /* line-height: 15px; */
 }
 
+.dsq_ h3 {
+    font-size: 45px;
+}
+
+.hrr {
+    width: 90%;
+    height: 1px;
+    border: 2px solid #fc5000;
+}
+
+.ok_ h3 {
+    font-size: 50px;
+}
+
+.oks_ {
+    font-size: 40px;
+    padding-top: -20px;
+}
+
+.okF_ img {
+    width: 1200px;
+    margin-top: -200px !important;
+    margin-left: -100px !important;
+}
+
+.c_d img {
+    width: 75px !important;
+}
+
 @media only screen and (max-width: 800px) {
     .adv {
         width: 350px;
@@ -108,5 +137,17 @@ body {
     .ds_ww p {
         font-size: 15px;
         line-height: 15px;
+    }
+
+    .d_ {
+        width: 70% !important;
+    }
+
+    .d_ span {
+        width: 25% !important;
+    }
+
+    .d_ p {
+        font-size: 10px;
     }
 }
