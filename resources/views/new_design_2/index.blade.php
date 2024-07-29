@@ -198,6 +198,54 @@
                 </div>
             </div>
         </section>
+
+        <section class="container py-5">
+            <div class="row vf_">
+                <div class="col-md-8">
+                    <div>
+                        <h3 style="font-size: 45px;" class="inter"><b>Trade smarter,</b> your way</h3>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="pt-3 float-end">
+                        <a class="btn px-5 rounded-pill sign_in_login_btn text-dark" href="https://tradenation.com/our-platforms/"><b>Find out more</b><i class="fa fa-arrow-right ps-4"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pt-5">
+                <div class="col-md-6 mb-3">
+                    <div>
+                        <img src="https://images.prismic.io/tnfev2/Zmzyq5m069VX1xqS_TNTrader.png?auto=format%2Ccompress%3Fauto%3Dcompress%2Cformat&fit=max&w=384" class="w-100 img-fluid">
+
+                        <h6 class="pt-4"><b>TN TRADER</b></h6>
+                        <p style="font-size: 25px;" class="inter"><b>Your streamlined, powerful, low-cost way to trade global markets</b></p>
+                        <p class="inter">
+                            Harness TN Trader to smash your trading goals across desktop and mobile with smart tools like our daily report, chart features, and signal centre. <br><br>
+
+                            Plus, integrate TradingView with TN Trader, Trade Nation's award-winning platform, to get the best of both worlds - ultra low-cost fixed spreads + supercharged supercharts.
+                        </p>
+
+                        <img src="https://images.prismic.io/tnfev2/ZkX1vyol0Zci9M5-_home-tn-trader-footer-img.png?auto=format%2Ccompress&fit=max&w=1920" class="img-fluid w-50">
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <div>
+                        <img src="https://images.prismic.io/tnfev2/Zmzyu5m069VX1xqT_MT4.png?auto=format%2Ccompress%3Fauto%3Dcompress%2Cformat&fit=max&w=384" class="w-100 img-fluid">
+
+                        <h6 class="pt-4"><b>MT4</b></h6>
+                        <p style="font-size: 25px;" class="inter"><b>Trade global financial markets better with a simplified, seamless experience</b></p>
+                        <p class="inter">
+                            Trade across hundreds of global markets with the popular MetaTrader4, the platform traders around the world trust. <br><br>
+
+                            You can also copy the best strategies in real-time and learn from an expert community of global traders with our copy trading app, <a href="https://tradenation.com/tradecopier/" class="text-light">TradeCopier</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
     <script>
