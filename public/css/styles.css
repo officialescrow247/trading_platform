@@ -1,7 +1,18 @@
 * {
     font-family: "Inter", sans-serif;
-    font-size: 15px;
-    /* background-color: #050F19; */
+    /* font-size: 15px; */
+}
+
+body {
+    /* background-color: #050f19; */
+}
+
+.kanit_thin_font {
+    font-family: "Kanit", sans-serif;
+}
+
+.inter {
+    font-family: "Inter", sans-serif;
 }
 
 .d_ {
@@ -20,13 +31,82 @@
 .welcome_d {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
         url("./../imgs/jij_.png");
-    background-position: center;
+    background-position: top;
     background-size: cover;
     height: 80vh;
-    margin-top: 23vh;
+    margin-top: 20vh;
     background-color: #050f19;
 }
 
 .sign_in_login_btn {
     background-color: #46e2bb;
+}
+
+#harness_the_power {
+    padding-top: 15vh;
+    font-size: 40px;
+}
+
+._dess {
+    color: rgb(252, 80, 0);
+    font-size: 65px;
+    line-height: 38px;
+}
+
+._dessw {
+    font-size: 60px;
+}
+._dess_w {
+    font-size: 20px;
+}
+
+.adv {
+    width: 450px;
+}
+
+.so_ {
+    /* display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    justify-content: center;
+    align-items: center; */
+
+    height: 100%;
+    background: linear-gradient(0deg, #737373, #f5f6f7);
+}
+
+.adv {
+    margin-top: 20px;
+}
+
+.ds_ww {
+    cursor: pointer;
+}
+
+.ds_ww p {
+    padding: 20px;
+    font-size: 20px;
+    margin: 0;
+    /* line-height: 15px; */
+}
+
+@media only screen and (max-width: 800px) {
+    .adv {
+        width: 350px;
+    }
+
+    .ds_ww p {
+        font-size: 15px;
+        line-height: 15px;
+    }
 }
