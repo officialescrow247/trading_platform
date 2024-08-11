@@ -193,5 +193,6 @@ Route::middleware('auth')->group(function () {
 
 ## new design 2
 Route::get('/', [HomeController::class, 'nd_welcome'])->name('welcome');
+Route::get('/markets', [HomeController::class, 'nd_markets'])->name('nd_markets');
 
 require __DIR__.'/auth.php';

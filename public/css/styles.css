@@ -129,6 +129,75 @@ body {
     width: 75px !important;
 }
 
+#trade_like_a_boss {
+    background-image: url("./../trade_like.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    height: 60vh;
+    margin-top: 120px;
+}
+
+#unreal_t {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url("https://images.prismic.io/tnfev2/ZmwoQJm069VX1wRW_Homepage-Mobile-CTA-Background.png?auto=format,compress?auto=compress,format&rect=0,0,828,882&w=1000&h=1065");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+}
+
+#trade_like_a_boss img {
+    position: relative;
+    bottom: 200px;
+}
+
+#marketBanner {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("https://images.prismic.io/tnfev2/97e2b201-5ebe-477c-a4fe-47c7ca0a88ed_markets-hero.png?auto=compress,format");
+    background-position: top;
+    background-size: cover;
+    height: 70vh;
+    /* margin-top: 20vh; */
+    background-color: #050f19;
+}
+
+#jise__:hover {
+    border: 1px solid #fc5000 !important;
+    box-shadow: 0px 0px 15px 0px #fc5000;
+}
+
+.ng_s {
+    border-bottom: none !important;
+}
+
+.ng_s .nav-link {
+    color: rgb(5, 15, 25) !important;
+    opacity: 0.6;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    font-size: 18px !important;
+    text-align: left !important;
+    font-weight: 400 !important;
+}
+
+.ng_s .active {
+    color: rgb(5, 15, 25) !important;
+    opacity: 1 !important;
+    border-bottom: 1px solid rgb(5, 15, 25) !important;
+}
+
+.hyd_ {
+    font-size: 23px !important;
+    line-height: 30px !important;
+}
+
 @media only screen and (max-width: 800px) {
     .adv {
         width: 350px;

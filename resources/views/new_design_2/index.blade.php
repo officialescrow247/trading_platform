@@ -246,6 +246,76 @@
                 </div>
             </div>
         </section>
+
+        <section id="trade_like_a_boss">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="ps-5">
+                            <div class="ps-5 inter">
+                                <h1 class="" style="font-size: 45px;">Trade <strong>like a boss</strong></h1>
+                                <p class="inter" style="font-size: 20px;">
+                                    Sharpen your skills or learn brand new ones <br> with our detailed and easy-to-follow resources. 
+                                </p>
+    
+                                <a class="btn px-5 rounded-pill sign_in_login_btn text-dark mt-4" href="https://tradenation.com/our-platforms/"><b>Visit the Knowledge Base</b><i class="fa fa-arrow-right ps-4"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <img src="https://images.prismic.io/tnfev2/ZkXoiiol0Zci9Mv-_tn-trade-like-a-boss.png?auto=compress%2Cformat&fit=max&w=1920" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-7">
+                        <img src="{{ asset('_home-mobile-av-banner.avif') }}" alt="" class="img-fluid">
+                    </div>
+                    
+                    <div class="col-md-5 pt-5">
+                        <div class="text-center pe-5 pt-5">
+                            <div class="inter pe-5 pt-5">
+                                <h1 style="font-size: 44px;">The <strong>perfect</strong> <br> partnership</h1>
+
+                                <p class="inter" style="font-size: 18px;">
+                                    We align ourselves with others at the top of their <br> 
+                                    game. That's why we're proud to be Principal <br> 
+                                    Partners of Aston Villa Football Club.
+                                </p>
+    
+                                <a class="btn px-5 rounded-pill sign_in_login_btn text-dark mt-4" href="https://tradenation.com/our-platforms/"><b>Find out more</b><i class="fa fa-arrow-right ps-4"></i></a>
+                            </div>
+
+                            <div class="pt-5">
+                                <img src="https://images.prismic.io/tnfev2/ZmAv8Zm069VX1eJY_Group.png?auto=format%2Ccompress%3Fauto%3Dcompress%2Cformat&fit=max&w=1920" class="img-fluid" style="width: 150px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="unreal_t">
+            <div class="outer">
+                <div class="inner">
+                    <div class="inter text-center">
+                        <p class="kanit_thin_font" style="font-size: 50px; line-height: 50px;">
+                            Ready for an <b> unreal <br> trading experience? <br><br></b>
+                        </p>
+                        
+                        <p style="font-size: 20px;" class="p-0 m-0">
+                            Power up your trading with Trade Nation today.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="hrr w-100"></div>
     </div>
 
     <script>

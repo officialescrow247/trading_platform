@@ -210,4 +210,9 @@ class HomeController extends Controller
     {
         return view('new_design_2.index');
     }
+    
+    public function nd_markets()
+    {
+        return view('new_design_2.markets');
+    }
 }
