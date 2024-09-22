@@ -4,7 +4,7 @@
     <div style="background-color: #050F19;" class="kanit_thin_font pb-4">
         <section id="marketBanner"></section>
 
-        <section class="container">
+        <section class="container" style="position: relative; top: -250px; margin-bottom: -250px;">
             <h1 class="py-5" style="font-size: 50px;">Trade the markets <br><span style="color: #fc5000!important;">that move</span></h1>
 
             <div id="app">
