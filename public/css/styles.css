@@ -218,25 +218,7 @@ body {
 .more_on_markets img{
     border-bottom: 8px solid #fc5000 !important;
     margin-bottom: 20px;
-}
-.btn-color{
-    background-color: #D1D1D1;
-    color: #050f19;
-}
-
-.tB_c td, .tB_c th{
-    background-color: #0b1e33;
-    color: #fff;
-    border-top: 2px solid #050f19;
-    border-bottom: 2px solid #050f19;
-}
-
-.tB_c2 td, .tB_c2 th{
-    background-color: #121c25;
-    color: #fff;
-    border-top: 2px solid #050f19;
-    border-bottom: 2px solid #050f19;
-}                                                                                                                                                                               
+}                                                                                                                                                                           
 
 @media only screen and (max-width: 800px) {
     .adv {
