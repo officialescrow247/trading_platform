@@ -122,10 +122,12 @@ class HomeController extends Controller
     {
         return view('new_design.trading_explained');
     }
+
     public function markets()
     {
         return view('new_design.markets');
     }
+    
     public function our_platforms()
     {
         return view('new_design.our_platforms');

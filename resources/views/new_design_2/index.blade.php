@@ -69,10 +69,10 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6 c_d">
+                    <div class="col-md-6 c_d pt-5">
                         <div class="text-light">
                             <div class="row">
-                                <div class="col-md-6 mb-4">
+                                <div class="col-6 mb-4">
                                     <div>
                                         <img src="https://images.prismic.io/tnfev2/ZkX7biol0Zci9M_t_home-icon-1.png?auto=compress%2Cformat&fit=max&w=1920" alt="" class="img-fluid w-50">
     
@@ -83,7 +83,7 @@
                                     </div>
                                 </div>
                                 
-                                <div class="col-md-6 mb-4">
+                                <div class="col-6 mb-4">
                                     <div>
                                         <img src="https://images.prismic.io/tnfev2/ZkX7biol0Zci9M_u_home-icon-2.png?auto=compress%2Cformat&fit=max&w=1920" alt="" class="img-fluid w-50">
     
@@ -94,7 +94,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 mb-4">
+                                <div class="col-6 mb-4">
                                     <div>
                                         <img src="https://images.prismic.io/tnfev2/ZkX7VSol0Zci9M_o_home-icon-three.png?auto=compress%2Cformat&fit=max&w=1920" alt="" class="img-fluid w-50">
     
@@ -105,7 +105,7 @@
                                     </div>
                                 </div>
                                 
-                                <div class="col-md-6 mb-4">
+                                <div class="col-6 mb-4">
                                     <div>
                                         <img src="https://images.prismic.io/tnfev2/ZkX7VSol0Zci9M_n_home-icon-4.png?auto=compress%2Cformat&fit=max&w=1920" alt="" class="img-fluid w-50">
     
@@ -124,7 +124,7 @@
             <div class="okF_">
                 <div class="row">
                     <div class="col-lg-6 col-md-12">
-                        <img src="ZkxUjSol0Zci9TtX_Phone-hand-2-.avif">
+                        <img src="ZkxUjSol0Zci9TtX_Phone-hand-2-.avif" class="okF_img">
                     </div>
 
                     <div class="col-lg-6 col-md-12">
@@ -251,8 +251,8 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="ps-5">
-                            <div class="ps-5 inter">
+                        <div class="ps-5 remove-l-p">
+                            <div class="ps-5 inter remove-l-p">
                                 <h1 class="" style="font-size: 45px;">Trade <strong>like a boss</strong></h1>
                                 <p class="inter" style="font-size: 20px;">
                                     Sharpen your skills or learn brand new ones <br> with our detailed and easy-to-follow resources. 
@@ -278,7 +278,7 @@
                     </div>
                     
                     <div class="col-md-5 pt-5">
-                        <div class="text-center pe-5 pt-5">
+                        <div class="sg_ text-center pe-5 pt-5">
                             <div class="inter pe-5 pt-5">
                                 <h1 style="font-size: 44px;">The <strong>perfect</strong> <br> partnership</h1>
 

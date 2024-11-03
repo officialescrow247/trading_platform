@@ -29,8 +29,8 @@ class AppServiceProvider extends ServiceProvider
         date_default_timezone_set('UTC');
         
         Schema::defaultStringLength(191);
-        if($this->app->environment('production')) {
-            URL::forceScheme('https');
-        }
+        // if($this->app->environment('production')) {
+        //     URL::forceScheme('https');
+        // }
     }
 }

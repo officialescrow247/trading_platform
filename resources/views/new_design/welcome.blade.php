@@ -296,7 +296,7 @@
                     <p class="pb-4 pt-3">
                         We offer some of the tightest spreads around. Commission free. Fixed and transparent.
                     </p>
-                    <a href="{{ route('why_trade_with_us') }}" class="btn rund_h rounded-pill py-2 px-4" style="border: 2px solid #0A1E32; color: #0A1E32;"><b>Our differene</b></a>
+                    {{-- <a href="{{ route('why_trade_with_us') }}" class="btn rund_h rounded-pill py-2 px-4" style="border: 2px solid #0A1E32; color: #0A1E32;"><b>Our differene</b></a> --}}
                 </div>
 
                 <div class="col-md-4 mb-4">

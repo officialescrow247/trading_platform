@@ -537,8 +537,7 @@
 			}
 			
         </style>
-		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-
+		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 	</head>
 
 	<body>
@@ -1203,17 +1202,6 @@
 				<div>
 					© 2019 - {{ date('Y') }} Trade Nation. All Rights Reserved.
 				</div>
-
-				<!-- <div class="buttom_text container-fluid px-5 fixed-bottom d-none d-lg-block" style="background-color: #FFFFFF !important;">
-					<p class="pt-2" style="font-size: small;">
-						Financial Spread Bets and CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. 82.8% of retail investor accounts lose money when trading CFDs with this provider. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.
-					</p>
-				</div>
-				<div class="buttom_text container-fluid d-lg-none" style="background-color: #FFFFFF !important;">
-					<p class="pt-5" style="font-size: small;">
-						Financial Spread Bets and CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. 82.8% of retail investor accounts lose money when trading CFDs with this provider. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.
-					</p>
-				</div> -->
             </div>
         </footer>
 
@@ -1462,6 +1450,7 @@
 			// 	$("#yourid").slick('slickPrev');
 			// });
 		</script>
+		
 		<script>
 			// Get the URL parameters
 			const target = window.location.hash.substr(1);
