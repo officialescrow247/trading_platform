@@ -7,12 +7,7 @@
                 <div class="py-5 px-5">
                     <h1 style="font-size: 54px;"><span style="color: #ff5000; font-weight: 700;">Log In</span> to your account here</h1>
     
-                    <div class="pt-4">
-                        <span>Don't  have an account? </span>
-                        <a class="mt-4 text-sm cheange_this text-light" href="{{ route('register') }}">
-                            {{ __('Sign up') }}
-                        </a>
-                    </div>
+                    
 
                     <div class="pt-5">
                         <p class="MuiTypography-root MuiTypography-body1 css-ily8ch" textcolor="" field="[object Object]">Ready to trade with the <strong>G.O.A.T?</strong></p>

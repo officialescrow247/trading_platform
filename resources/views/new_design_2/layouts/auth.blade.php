@@ -140,10 +140,20 @@
     <body class="bg_c">
         <div class="mb-2 py-3 border border-top-0 border-start-0 border-end-0" style="background-color: #050f19;">
             <div class="d-flex container" style="justify-content: space-between; align-items: center;">
-                <div class="d_ d-flex">
+                <div class="d_">
                     <p class="p-0 m-0">
-                        Trading CFDs carries a high level of risk to your capital, and you should only trade with money you can afford to lose.
+                        Financial Spread Bets and CFDs are complex instruments and come with a high risk of losing 
+                        money rapidly due to leverage. 73.6% of retail investor accounts lose money when trading 
+                        CFDs with this provider. You should consider whether you understand how CFDs work and whether 
+                        you can afford to take the high risk of losing your money. Read our Risk Disclosure Notice here.
                     </p>
+                </div>
+    
+                <div style="width: 20%;">
+                    <span class="d_2">Trading in</span>
+                    <img src="{{ asset('imgs/en-sc.svg') }}" alt="" class="img-fluid" style="width: 17px;">
+                    {{-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/800px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" alt="" class="img-fluid" style="width: 17px;"> --}}
+                    <span class="d_2">SC</span>
                 </div>
             </div>
         </div>
