@@ -703,7 +703,7 @@
                     <div class="col-md-6">
                         <a href="#!" class="text-light pe-5">Legal Documents</a>
                         <a href="#!" class="text-light pe-5">Cookie Policy</a>
-                        <a href="#!" class="text-light pe-5">Privacy</a>
+                        <a href="https://tnfev2.cdn.prismic.io/tnfev2/Zlc3vaWtHYXtT5sN_UKPrivacyPolicy-240401TradeNationFinancialUKLtd.pdf" class="text-light pe-5">Privacy</a>
                     </div>
                     
                     <div class="col-md-6">
