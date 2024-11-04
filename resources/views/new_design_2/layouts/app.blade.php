@@ -150,6 +150,10 @@
                             <li class="nav-item">
                                 <a class="nav-link text-light" href="{{ route('about_us') }}">About us</a>
                             </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="{{ route('account_types_new') }}">Account Types</a>
+                            </li>
     
                             <li class="nav-item ms-3">
                                 <a class="nav-link rounded-pill sign_in_login_btn px-4 text-dark" href="{{ route('login') }}"><b>Sign up / Log in</b></a>

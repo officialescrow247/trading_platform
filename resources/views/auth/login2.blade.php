@@ -61,31 +61,6 @@
                         </div>
                     </form>
                 </div>
-
-                <div class="css-4bb56i">
-                    <div class="css-18er1h6">
-                        <p style="line-height: 24px;
-                            opacity: 1;
-                            font-size: 18px;
-                            text-transform: uppercase;
-                            margin: 0px;
-                            color: rgb(255, 80, 0) !important;
-                            font-weight: 700 !important;"
-                        >OR</p>
-                    </div>
-                </div>
-
-                <div>
-                    <button class="btn w-100 rounded-pill text-light auth_btn">
-                        <span><i class="fab fa-google pe-2"></i></span>Log in with Google
-                    </button>
-                    <button class="btn w-100 rounded-pill text-light auth_btn">
-                        <span><i class="fab fa-apple pe-2"></i></span>Log in with Apple
-                    </button>
-                    <button class="btn w-100 rounded-pill text-light auth_btn">
-                        <span><i class="fab fa-linkedin pe-2"></i></span>Log in with Linkedin
-                    </button>
-                </div>
             </div>
         </div>
     </div>
