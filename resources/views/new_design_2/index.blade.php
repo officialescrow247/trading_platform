@@ -77,7 +77,7 @@
                                         <img src="https://images.prismic.io/tnfev2/ZkX7biol0Zci9M_t_home-icon-1.png?auto=compress%2Cformat&fit=max&w=1920" alt="" class="img-fluid w-50">
     
                                         <div class="pt-4 inter">
-                                            <a href="#!" style="font-size: 25px;" class="text-light"><b>Forex</b></a>
+                                            <p style="font-size: 25px;" class="text-light"><b>Forex</b></p>
                                             <p>The buying and selling of global currencies</p>
                                         </div>
                                     </div>
@@ -88,7 +88,7 @@
                                         <img src="https://images.prismic.io/tnfev2/ZkX7biol0Zci9M_u_home-icon-2.png?auto=compress%2Cformat&fit=max&w=1920" alt="" class="img-fluid w-50">
     
                                         <div class="pt-4 inter">
-                                            <a href="#!" style="font-size: 25px;" class="text-light"><b>Commodities</b></a>
+                                            <p style="font-size: 25px;" class="text-light"><b>Commodities</b></p>
                                             <p>The exchange of raw goods that fuel the globe</p>
                                         </div>
                                     </div>
@@ -99,7 +99,7 @@
                                         <img src="https://images.prismic.io/tnfev2/ZkX7VSol0Zci9M_o_home-icon-three.png?auto=compress%2Cformat&fit=max&w=1920" alt="" class="img-fluid w-50">
     
                                         <div class="pt-4 inter">
-                                            <a href="#!" style="font-size: 25px;" class="text-light"><b>Indices</b></a>
+                                            <p style="font-size: 25px;" class="text-light"><b>Indices</b></p>
                                             <p>Tracking the financial world's market titans</p>
                                         </div>
                                     </div>
@@ -110,7 +110,7 @@
                                         <img src="https://images.prismic.io/tnfev2/ZkX7VSol0Zci9M_n_home-icon-4.png?auto=compress%2Cformat&fit=max&w=1920" alt="" class="img-fluid w-50">
     
                                         <div class="pt-4 inter">
-                                            <a href="#!" style="font-size: 25px;" class="text-light"><b>Shares</b></a>
+                                            <p style="font-size: 25px;" class="text-light"><b>Shares</b></p>
                                             <p>Bite-sized pieces of companies</p>
                                         </div>
                                     </div>
@@ -141,57 +141,6 @@
                                 <p class="inter pb-3">
                                     Smash your trading goals on desktop or mobile with powerful <br> tools like our daily report, chart features, and signal centre.
                                 </p>
-
-                                <p class="pb-1"><b>Trade now on:</b></p>
-                                <div class="d-none d-lg-block">
-                                    <div class="row">
-                                        <div class="col-lg-4 mb-3">
-                                            <a href="#!" class="d-flex justify-content-center text-light border rounded-pill py-1 px-3" style="text-decoration: none; align-items: end; display: none;">
-                                                <div><i style="font-size: 20px;" class="fa fa-desktop pe-2"></i></div>
-                                                <div class="inter" style="font-size: 16px;">Desktop</div>
-                                            </a>
-                                        </div>
-    
-                                        <div class="col-lg-4 mb-3">
-                                            <a href="#!" class="d-flex justify-content-center text-light border rounded-pill py-1 px-3" style="text-decoration: none; align-items: end; display: none;">
-                                                <div><i style="font-size: 20px;" class="fa fa-tablet pe-2"></i></div>
-                                                <div class="inter" style="font-size: 16px;">Google Play</div>
-                                            </a>
-                                        </div>
-    
-                                        <div class="col-lg-4 mb-3">
-                                            <a href="#!" class="d-flex justify-content-center text-light border rounded-pill py-1 px-3" style="text-decoration: none; align-items: end; display: none;">
-                                                <div><i style="font-size: 20px;" class="fa fa-tablet pe-2"></i></div>
-                                                <div class="pt-1 inter" style="font-size: 16px;">App Store</div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="d-lg-none">
-                                    <div class="d-flex justify-content-around">
-                                        <div class="mb-3">
-                                            <a href="#!" class="d-flex justify-content-center text-light border rounded-pill py-1 px-3" style="text-decoration: none; align-items: flex-start; display: none;">
-                                                <div><i style="font-size: 20px;" class="fa fa-desktop pe-2"></i></div>
-                                                <div class="inter" style="font-size: 14px;">Desktop</div>
-                                            </a>
-                                        </div>
-    
-                                        <div class="mb-3">
-                                            <a href="#!" class="d-flex justify-content-center text-light border rounded-pill py-1 px-3" style="text-decoration: none; align-items: flex-start; display: none;">
-                                                <div><i style="font-size: 20px;" class="fa fa-tablet pe-2"></i></div>
-                                                <div class="inter" style="font-size: 14px;">Google Play</div>
-                                            </a>
-                                        </div>
-    
-                                        <div class="mb-3">
-                                            <a href="#!" class="d-flex justify-content-center text-light border rounded-pill py-1 px-3" style="text-decoration: none; align-items: flex-start; display: none;">
-                                                <div><i style="font-size: 20px;" class="fa fa-tablet pe-2"></i></div>
-                                                <div class="inter" style="font-size: 14px;">App Store</div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -208,9 +157,6 @@
                 </div>
 
                 <div class="col-md-4">
-                    <div class="pt-3 float-end">
-                        <a class="btn px-5 rounded-pill sign_in_login_btn text-dark" href="https://tradenation.com/our-platforms/"><b>Find out more</b><i class="fa fa-arrow-right ps-4"></i></a>
-                    </div>
                 </div>
             </div>
 
@@ -257,8 +203,6 @@
                                 <p class="inter" style="font-size: 20px;">
                                     Sharpen your skills or learn brand new ones <br> with our detailed and easy-to-follow resources. 
                                 </p>
-    
-                                <a class="btn px-5 rounded-pill sign_in_login_btn text-dark mt-4" href="https://tradenation.com/our-platforms/"><b>Visit the Knowledge Base</b><i class="fa fa-arrow-right ps-4"></i></a>
                             </div>
                         </div>
                     </div>
@@ -287,8 +231,6 @@
                                     game. That's why we're proud to be Principal <br> 
                                     Partners of Aston Villa Football Club.
                                 </p>
-    
-                                <a class="btn px-5 rounded-pill sign_in_login_btn text-dark mt-4" href="https://tradenation.com/our-platforms/"><b>Find out more</b><i class="fa fa-arrow-right ps-4"></i></a>
                             </div>
 
                             <div class="pt-5">

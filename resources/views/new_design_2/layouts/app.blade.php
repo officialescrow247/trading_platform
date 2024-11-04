@@ -144,10 +144,6 @@
                             </li>
     
                             <li class="nav-item">
-                                <a class="nav-link text-light" href="#">Partners</a>
-                            </li>
-    
-                            <li class="nav-item">
                                 <a class="nav-link text-light" href="{{ route('about_us') }}">About us</a>
                             </li>
 
@@ -615,19 +611,15 @@
                 <hr>
                 <div class="row">
                     <div class="col-6 col-md-3">
-                        <a href="#!" class="text-light"><b>Platforms</b></a>
+                        <a href="{{ route('legals_new') }}" class="text-light"><b>Platforms</b></a>
                     </div>
                     <div class="col-6 col-md-3">
-                        <a href="#!" class="text-light"><b>Knowledge Base</b></a>
+                        <a href="{{ route('legals_new') }}" class="text-light"><b>Knowledge Base</b></a>
                     </div>
                     <div class="col-6 col-md-3">
-                        <a href="#!" class="text-light"><b>About us</b></a>
+                        <a href="{{ route('about_us') }}" class="text-light"><b>About us</b></a>
                     </div>
                     <div class="col-6 col-md-3 d-flex">
-                        <a href="#!" class="d-flex justify-content-around text-light">
-                            <b> Partners </b>
-                        </a>
-
                         <div class="ps-5">
                             <span style="font-size: 13px;">Trading in</span>
                             <img src="{{ asset('imgs/en-sc.svg') }}" alt="" class="img-fluid" style="width: 17px;">
@@ -638,60 +630,25 @@
                 <hr>
 
                 <div class="row pt-4">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <h6><b>Payment methods</b></h6>
 
                         <div>
-                            <img src="https://images.prismic.io/tnfev2/Zlm1k6WtHYXtT91I_Visa_Brandmark_White_RGB_2021.png?auto=format%2Ccompress%3Fauto%3Dcompress%2Cformat&fit=max&w=1920" alt="" class="img-fluid" style="width: 50px; margin: 0 20px;">
-
+                            <img src="https://seeklogo.com/images/V/visa-logo-121ECA05B2-seeklogo.com.png" alt="" class="img-fluid" style="width: 50px; margin: 0 20px;">
                             <img src="https://images.prismic.io/tnfev2/0f76eaa5-c6f6-4b06-8aad-62d978a2d969_mc_symbol_opt_45_3x.png?auto=compress%2Cformat&fit=max&w=1920" alt="" class="img-fluid" style="width: 50px; margin: 0 20px;">
-
-                            <img src="https://images.prismic.io/tnfev2/Zlm1_6WtHYXtT91e_skrill-logo-gradient.png?auto=format%2Ccompress%3Fauto%3Dcompress%2Cformat&fit=max&w=1920" alt="" class="img-fluid" style="width: 50px; margin: 0 20px;">
-
-                            <img src="https://images.prismic.io/tnfev2/Zlm2MaWtHYXtT91t_Neteller_logo_logotype.png?auto=format%2Ccompress%3Fauto%3Dcompress%2Cformat&fit=max&w=1920" alt="" class="img-fluid" style="width: 50px; margin: 0 20px;">
-
-                            <img src="https://images.prismic.io/tnfev2/a579ea80-fb84-43b2-8309-3a6d52761d88_payment-hero-two-one.png?auto=format%2Ccompress%3Fauto%3Dcompress%2Cformat&fit=max&w=1920" alt="" class="img-fluid" style="width: 50px; margin: 0 20px;">
-
-                            <img src="https://images.prismic.io/tnfev2/ZmwNL5m069VX1v7w_NganLuongLogo.png?auto=format%2Ccompress%3Fauto%3Dcompress%2Cformat&fit=max&w=1920" alt="" class="img-fluid" style="width: 50px; margin: 0 20px;">
-                        </div>
-
-                        <h6 class="pt-5">Customer support</h6>
-                        <div>
-                            <a href="#!" class="text-light pe-5">
-                                <i class="fa fa-message pe-2"></i>
-                                Chat
-                            </a>
-                            
-                            <a href="#!" class="text-light pe-5">
-                                <i class="fa fa-envelope pe-2"></i>
-                                Email
-                            </a>
-
-                            <a href="#!" class="text-light pe-5">
-                                <i class="fa fa-question pe-2"></i>
-                                FAQ
-                            </a>
-
-                            <a href="#!" class="text-light pe-3">
-                                <i class="fa fa-phone pe-2"></i>
-                                +248 4671996
-                            </a>
+                            <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="" class="img-fluid" style="width: 50px; margin: 0 20px;">
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <h6><b>Trade on</b></h6>
 
                         <div>
                             <img src="https://images.prismic.io/tnfev2/Zp4Erx5LeNNTxViW_TradeOnbutton-Lighttheme-.png?auto=format%2Ccompress&fit=max&w=1920" alt="" class="img-fluid" style="width: 180px; margin-bottom: 10px;">
-
-                            <img src="https://tnfev2.cdn.prismic.io/tnfev2/4eb4d5dd-ef1f-49bf-87f7-b35febe70bf3_Download_on_the_App_Store_Badge.svg?fit=max&w=1920" alt="" class="img-fluid" style="width: 180px; margin-bottom: 10px;">
-
-                            <img src="https://tnfev2.cdn.prismic.io/tnfev2/c228631f-8731-46d6-8d0e-a1586dacf56d_Google_Play_Store_badge_EN.svg?fit=max&w=1920" alt="" class="img-fluid" style="width: 180px; margin-bottom: 10px;">
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <h6><b>Regulatory bodies</b></h6>
 
                         <ul>
@@ -701,8 +658,10 @@
                             <li>Bahamas - SCB</li>
                             <li>South Africa - FSCA</li>
                         </ul>
+                    </div>
 
-                        <p class="pt-5">Sponsors of your favourite teams</p>
+                    <div class="col-md-3">
+                        <h6><p>Sponsors of your favourite teams</p></h6>
                         <div>
                             <img src="https://images.prismic.io/tnfev2/ZmGYk5m069VX1goj_AstonVilla-Crest-RGB-White.png?auto=format,compress" alt="" class="img-fluid mx-2" style="width: 50px;">
 
@@ -717,7 +676,7 @@
                     <div class="row pt-2">
                         <div class="col-md-6">
                             <article style="font-size: 13px;">
-                                Trading CFDs carries a high level of risk to your capital, and you should only trade with money you can afford to lose. Refer to our legal documents. <br><br>
+                                Trading CFDs carries a high level of risk to your capital, and you should only trade with money you can afford to lose. Refer to our <a href="{{ route('legals_new') }}" class="text-light">legal documents.</a> <br><br>
     
                                 Trade Nation is a trading name of Trade Nation Financial UK Ltd, a financial services company registered in England & Wales under company number 07073413, is authorised and regulated by the Financial Conduct Authority under firm reference number 525164. Our registered office is 14 Bonhill Street, London, EC2A 4BX, United Kingdom. <br><br>
     
@@ -739,6 +698,7 @@
                     </div>
                 </div>
                 <hr>
+                
                 <div class="row">
                     <div class="col-md-6">
                         <a href="#!" class="text-light pe-5">Legal Documents</a>
