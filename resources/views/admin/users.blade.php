@@ -283,6 +283,35 @@
                                                             </div>
                                                         </div>
                                                     </div>
+
+                                                    <div class="form-check form-switch px-4 pb-2">
+                                                        <input id="checkboxSecurity_{{ $user->id }}" class="form-check-input checkboxSecurity" type="checkbox" role="switch" {{ $user->security_on_or_off == 1 ? 'checked' : '' }}>
+    
+                                                        <label class="form-check-label" for="checkboxSecurity_{{ $user->id }}">Security code <b>{{ $user->security_on_or_off == 1 ? 'ON' : 'OFF' }}</b></label>
+                                                    </div>
+
+                                                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                                                    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+                                                    <script>
+                                                        $(document).on('change', '.checkboxSecurity', function() {
+                                                            let userId = this.id.split('_')[1];
+                                                            let isChecked = event.target.checked;
+
+                                                            let dataToSend = {
+                                                                userId: userId,
+                                                                isChecked: isChecked
+                                                            };
+
+                                                            axios.post('/admin/update-security', dataToSend)
+                                                                .then(response => {
+                                                                    alert('Updated successfully');
+                                                                    location.reload();
+                                                                })
+                                                                .catch(error => {
+                                                                    console.error('Error updating state:', error);
+                                                                });
+                                                        });
+                                                    </script>
                                                 </td>
 
                                                 <td>

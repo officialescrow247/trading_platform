@@ -140,6 +140,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['role:admin|manager']], func
 
     Route::post('/update_online_user', [AdminController::class, 'update_online_user'])->name('update_online_user');
     Route::post('/close-tradeN', [AdminController::class, 'closeTradeNew']);
+
+    Route::post('update-security', [AdminController::class, 'checkboxSecurity_']);
 });
 // Admin route end
 

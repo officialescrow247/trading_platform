@@ -517,4 +517,16 @@ class AdminController extends Controller
         ]);
         
     }
+
+    public function checkboxSecurity_(Request $request)
+    {
+        $userId = $request->input('userId');
+        $isChecked = $request->input('isChecked');
+
+        // Update your database based on the $userId and $isChecked values
+        $user = User::find($userId);
+        $user->security_on_or_off = $isChecked ? 1 : 0; // Assuming 'error' is a boolean field in your database
+        $user->save();
+        return redirect()->back()->with("success", "Updated");
+    }
 }
