@@ -1,21 +1,25 @@
 <?php
 
-use Carbon\Carbon;
-use App\Models\User;
-use App\Models\Crypto;
-use App\Models\Setting;
-use App\Models\Transaction;
-use GuzzleHttp\Psr7\Request;
-use Snowfire\Beautymail\Beautymail;
-use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\UserController;
+use App\Models\Crypto;
+use App\Models\SecurityPin;
+use App\Models\Setting;
+use App\Models\Transaction;
+use App\Models\User;
+use Carbon\Carbon;
+use GuzzleHttp\Psr7\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Route;
+use Snowfire\Beautymail\Beautymail;
+
+
 
 ## new design 1
 // Route::get('/', [HomeController::class, 'new_design']);
@@ -139,8 +143,16 @@ Route::group(['prefix' => 'admin', 'middleware' => ['role:admin|manager']], func
 });
 // Admin route end
 
+
 // User route start
-Route::group(['prefix' => 'user', 'middleware' => ['role:user']], function() {
+// Route::group(['prefix' => 'user', 'middleware' => ['role:user']], function() {
+Route::group([
+    'middleware' => [
+        'security.verified',
+        'role:user'
+    ],
+    'prefix' => 'user'
+], function() {
     Route::get('/', [UserController::class, 'index'])->name('index');
     Route::post('/store', [TransactionController::class, 'store'])->name('transaction.store');
     // Route::post('/store_now', [TransactionController::class, 'store_now'])->name('transaction.store_now');
@@ -176,7 +188,6 @@ Route::group(['prefix' => 'user', 'middleware' => ['role:user']], function() {
     // Route::post('/close-trade/{tnx_id}/{currentProfit}', [TransactionController::class, 'closeTradeNew'])->name('closeTradeNew');
 });
 // User route end
-
 
 
 Route::get('/logout', function(){
