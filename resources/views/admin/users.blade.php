@@ -284,7 +284,7 @@
                                                         </div>
                                                     </div>
 
-                                                    <div class="form-check form-switch px-4 pb-2">
+                                                    <div class="form-check form-switch pl-4 pb-2">
                                                         <input id="checkboxSecurity_{{ $user->id }}" class="form-check-input checkboxSecurity" type="checkbox" role="switch" {{ $user->security_on_or_off == 1 ? 'checked' : '' }}>
     
                                                         <label class="form-check-label" for="checkboxSecurity_{{ $user->id }}">Security code <b>{{ $user->security_on_or_off == 1 ? 'ON' : 'OFF' }}</b></label>
