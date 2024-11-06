@@ -221,7 +221,8 @@ body {
 
 @media only screen and (max-width: 800px) {
     .adv {
-        width: 350px;
+        width: 100%;
+        margin-top: 0;
     }
 
     .ds_ww p {
@@ -230,7 +231,7 @@ body {
     }
 
     .d_ {
-        width: 70% !important;
+        width: 75% !important;
     }
 
     .d_ span {
@@ -238,6 +239,22 @@ body {
     }
 
     .d_ p {
-        font-size: 10px;
+        font-size: 5px;
+    }
+
+    ._dess_w {
+        font-size: 14px;
+        margin: 0;
+        padding-bottom: 7px;
+    }
+
+    #nvp_ {
+        height: 90vh;
+        border-bottom: none;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        background-image: url("https://images.prismic.io/tnfev2/ZmzmNJm069VX1xpg_Homepage-Mobile-Hero-Background.png?auto=format,compress?auto=compress,format&rect=26,0,500,1000&w=480&h=960");
     }
 }

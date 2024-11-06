@@ -89,7 +89,7 @@ Route::middleware('guest')->group(function () {
             $data = [
                 'admin_email' => env('MAIL_FROM_ADDRESS'),
                 'site_name' => env('APP_NAME'),
-                'user_name' => 'Admin',
+                'user_name' => Auth::user()->first_name,
                 'msg' => "On " . Carbon::now() . " you attempted to login to your dashboard. 
                 If this was you, please use the code below to proceed with the login: " . $code
             ];

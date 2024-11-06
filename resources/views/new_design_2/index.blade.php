@@ -1,7 +1,7 @@
 @extends('new_design_2.layouts.app')
 @section('content')
     <div style="background-color: #050F19;">
-        <section class="welcome_d">
+        <section class="welcome_d d-none d-lg-block">
             <div class="container" id="harness_the_power">
                 <h1 class="_dess kanit_thin_font">Harness the power</h1>
                 <p class="text-light _dessw kanit_thin_font">of unreal spreads</p>
@@ -11,6 +11,20 @@
                 </p>
                 <img src="{{ asset('adv.avif') }}" class="adv">
             </div>
+        </section>
+
+        <section id="nvp_">
+            {{-- for mobile start --}}
+            <div class="container" id="harness_the_power">
+                <h1 class="kanit_thin_font" style="font-size: 40px;"><span style="color: rgb(252, 80, 0);">Harness the power</span> <br /> of unreal spreads </h1>
+                
+                <p class="text-light _dess_w kanit_thin_font">
+                    Get low-cost fixed spreads when you trade with Trade Nation. 
+                    That means when the markets move, your spreads won't.
+                </p>
+                <img src="{{ asset('adv.avif') }}" class="adv">
+            </div>
+            {{-- for mobile end --}}
         </section>
 
         <section class="so_ text-center">

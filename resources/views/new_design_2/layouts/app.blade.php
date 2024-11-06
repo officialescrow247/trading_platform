@@ -77,22 +77,23 @@
 
                 .header_qq{
                     position: fixed;
+                    z-index: 2;
                 }
 
                 .welcome_d {
                     padding-top: 12rem;
                 }
 
-                .so_{
+                /* .so_{
                     margin-top: 10rem;
-                }
+                } */
             }
         </style>		
     </head>
 
     <body class="bg_c">
         <header class="header_qq">
-            <div class="py-3 border border-top-0 border-start-0 border-end-0" style="background-color: #050f19;">
+            <div class="py-3 border border-top-0 border-start-0 border-end-0 d-none d-lg-block" style="background-color: #050f19;">
                 <div class="d-flex container" style="justify-content: space-between; align-items: center;">
                     <div class="d_">
                         <p class="p-0 m-0">
@@ -112,7 +113,7 @@
                 </div>
             </div>
     
-            <nav class="d-none d-lg-block navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #050f19;">
+            <nav class="d-none d-lg-block navbar navbar-expand-lg navbar-light" style="background-color: #050f19;">
                 <div class="container pb-3">
                     <a class="navbar-brand text-white" href="{{ url('/') }}">
                         <img src="{{ asset('imgs/logo.avif') }}" alt="{{ env('APP_NAME') }} logo" style="width: 300px;">    
@@ -165,9 +166,23 @@
     
             <!-- Mobile view nav -->
             <nav class="navbar navbar-expand-lg navbar-dark header_bg d-lg-none">
-                <span class="pb-2 container text-light pt-1 d-flex" style="font-size: 12px;">
-                    Financial Spread Bets and CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. 82.8% of retail investor accounts lose money when trading CFDs with this provider. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.
-                </span>
+                <div class="d-flex container" style="justify-content: space-between; align-items: center;">
+                    <div class="d_">
+                        <p class="p-0 m-0">
+                            Financial Spread Bets and CFDs are complex instruments and come with a high risk of losing 
+                            money rapidly due to leverage. 73.6% of retail investor accounts lose money when trading 
+                            CFDs with this provider. You should consider whether you understand how CFDs work and whether 
+                            you can afford to take the high risk of losing your money. Read our Risk Disclosure Notice here.
+                        </p>
+                    </div>
+        
+                    <div style="width: 20%;">
+                        <span class="d_2">Trading in</span>
+                        <img src="{{ asset('imgs/en-sc.svg') }}" alt="" class="img-fluid" style="width: 17px;">
+                        {{-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/800px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" alt="" class="img-fluid" style="width: 17px;"> --}}
+                        <span class="d_2">SC</span>
+                    </div>
+                </div>
     
                 <div class="container-fluid py-2">
                     <a href="{{ url('/') }}" class="text-dark" style="display: flex; text-decoration: none; align-items: center; color: white; justify-content: center;">
