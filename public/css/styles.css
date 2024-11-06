@@ -139,7 +139,7 @@ body {
 }
 
 #unreal_t {
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url("https://images.prismic.io/tnfev2/ZmwoQJm069VX1wRW_Homepage-Mobile-CTA-Background.png?auto=format,compress?auto=compress,format&rect=0,0,828,882&w=1000&h=1065");
     background-size: cover;
     background-repeat: no-repeat;
@@ -256,5 +256,65 @@ body {
         background-position: center center;
         display: flex;
         background-image: url("https://images.prismic.io/tnfev2/ZmzmNJm069VX1xpg_Homepage-Mobile-Hero-Background.png?auto=format,compress?auto=compress,format&rect=26,0,500,1000&w=480&h=960");
+    }
+
+    .dsq_ h3 {
+        font-size: 30px;
+        padding-top: 0rem !important;
+    }
+
+    .ok_ h3 {
+        font-size: 33px;
+    }
+
+    .ok_ .oks_ {
+        font-size: 33px;
+    }
+
+    #trade_like_a_boss {
+        margin-top: 0;
+    }
+
+    #trade_like_a_boss h1 {
+        font-size: 27px !important;
+    }
+
+    #trade_like_a_boss p {
+        font-size: 15px !important;
+    }
+
+    #unreal_t .kanit_thin_font {
+        font-size: 30px !important;
+        line-height: 1 !important;
+        margin-bottom: -1rem;
+    }
+
+    .js_ {
+        font-size: 15px !important;
+    }
+
+    .outer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        margin-top: 20px;
+    }
+
+    .p_w {
+        font-size: 30px !important;
+    }
+
+    .p_ss {
+        padding-bottom: 25px;
+    }
+
+    .dl_sd {
+        font-size: 10px !important;
+    }
+
+    .ls_z {
+        text-align: center !important;
+        padding-top: 20px;
     }
 }

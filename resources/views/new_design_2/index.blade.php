@@ -41,10 +41,10 @@
         </section>
 
         <section>
-            <div class="container py-5 text-center text-light dsq_">
+            <div class="container pt-5 text-center text-light dsq_">
                 <h3 class="pt-5">Meet the <b class="kanit_thin_font">game changers</b></h3>
 
-                <div class="pt-3">
+                <div class="pt-3 d-none d-lg-block">
                     <p>
                         Other brokers offer variable spreads but with Trade Nation's low-cost fixed <br>
                         spreads, when the markets move, your costs don't.
@@ -62,6 +62,18 @@
 
                     <div style="display: flex;" class="justify-content-center pt-5"><div class="hrr"></div></div>
                 </div>
+
+                <div class="pt-3 d-lg-none">
+                    <p class="px-1">
+                        Other brokers offer variable spreads but with Trade Nation's low-cost fixed
+                        spreads, when the markets move, your costs don't.
+                        
+                        It's no wonder we're the pioneers of trust, value and transparency in trading.
+                        So, no matter how experienced you are at trading, you can thrive at Trade Nation.
+                    </p>
+
+                    <p style="font-size: 25px; color: #fc5000;"><b>And that's what makes us unreal.</b></p>
+                </div>
             </div>
         </section>
 
@@ -78,7 +90,9 @@
                             </p>
                             
                             <p class="inter">
-                                We have unparalleled spread trading and CFD trading <br> expertise and 1000's of markets are waiting for you - so we <br> help you trade your way.
+                                We have unparalleled spread trading and CFD trading <br class="d-none d-lg-none"> 
+                                expertise and 1000's of markets are waiting for you - so we <br class="d-none d-lg-none"> 
+                                help you trade your way.
                             </p>
                         </div>
                     </div>
@@ -213,7 +227,8 @@
                     <div class="col-md-6">
                         <div class="ps-5 remove-l-p">
                             <div class="ps-5 inter remove-l-p">
-                                <h1 class="" style="font-size: 45px;">Trade <strong>like a boss</strong></h1>
+                                <h1 style="font-size: 45px;">Trade <strong>like a boss</strong></h1>
+
                                 <p class="inter" style="font-size: 20px;">
                                     Sharpen your skills or learn brand new ones <br> with our detailed and easy-to-follow resources. 
                                 </p>
@@ -264,7 +279,7 @@
                             Ready for an <b> unreal <br> trading experience? <br><br></b>
                         </p>
                         
-                        <p style="font-size: 20px;" class="p-0 m-0">
+                        <p style="font-size: 20px;" class="p-0 m-0 js_">
                             Power up your trading with Trade Nation today.
                         </p>
                     </div>

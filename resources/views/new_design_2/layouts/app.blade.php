@@ -589,7 +589,7 @@
             <div class="container py-5">
                 <div class="row">
                     <div class="col-md-5">
-                        <h1 class="inter" style="font-size: 40px;">
+                        <h1 class="inter p_w" style="font-size: 40px;">
                             <b>
                                 Trade on our <br>
                                 <span style="color: #fc5000!important;"><strong>award-winning</strong></span> <br>
@@ -629,16 +629,16 @@
 
                 <hr>
                 <div class="row">
-                    <div class="col-6 col-md-3">
+                    <div class="mb-3 col-6 col-md-3">
                         <a href="{{ route('legals_new') }}" class="text-light"><b>Platforms</b></a>
                     </div>
-                    <div class="col-6 col-md-3">
+                    <div class="mb-3 col-6 col-md-3">
                         <a href="{{ route('legals_new') }}" class="text-light"><b>Knowledge Base</b></a>
                     </div>
-                    <div class="col-6 col-md-3">
+                    <div class="mb-3 col-6 col-md-3">
                         <a href="{{ route('about_us') }}" class="text-light"><b>About us</b></a>
                     </div>
-                    <div class="col-6 col-md-3 d-flex">
+                    <div class="mb-3 col-6 col-md-3 d-flex">
                         <div class="ps-5">
                             <span style="font-size: 13px;">Trading in</span>
                             <img src="{{ asset('imgs/en-sc.svg') }}" alt="" class="img-fluid" style="width: 17px;">
@@ -649,7 +649,7 @@
                 <hr>
 
                 <div class="row pt-4">
-                    <div class="col-md-3">
+                    <div class="col-md-3 mb-4">
                         <h6><b>Payment methods</b></h6>
 
                         <div>
@@ -659,7 +659,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-3">
+                    <div class="col-md-3 mb-4">
                         <h6><b>Trade on</b></h6>
 
                         <div>
@@ -667,7 +667,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-3">
+                    <div class="col-md-3 mb-4">
                         <h6><b>Regulatory bodies</b></h6>
 
                         <ul>
@@ -679,7 +679,7 @@
                         </ul>
                     </div>
 
-                    <div class="col-md-3">
+                    <div class="col-md-3 mb-4">
                         <h6><p>Sponsors of your favourite teams</p></h6>
                         <div>
                             <img src="https://images.prismic.io/tnfev2/ZmGYk5m069VX1goj_AstonVilla-Crest-RGB-White.png?auto=format,compress" alt="" class="img-fluid mx-2" style="width: 50px;">
@@ -694,7 +694,7 @@
                     <h5>The legal stuff</h5>
                     <div class="row pt-2">
                         <div class="col-md-6">
-                            <article style="font-size: 13px;">
+                            <article style="font-size: 13px;" class="dl_sd">
                                 Trading CFDs carries a high level of risk to your capital, and you should only trade with money you can afford to lose. Refer to our <a href="{{ route('legals_new') }}" class="text-light">legal documents.</a> <br><br>
     
                                 Trade Nation is a trading name of Trade Nation Financial UK Ltd, a financial services company registered in England & Wales under company number 07073413, is authorised and regulated by the Financial Conduct Authority under firm reference number 525164. Our registered office is 14 Bonhill Street, London, EC2A 4BX, United Kingdom. <br><br>
@@ -726,7 +726,7 @@
                     </div>
                     
                     <div class="col-md-6">
-                        <p class="text-end">© 2019-2024 Trade Nation. All Rights Reserved</p>
+                        <p class="text-end ls_z">© 2019-2024 Trade Nation. All Rights Reserved</p>
                     </div>
                 </div>
             </div>
