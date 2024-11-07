@@ -254,7 +254,7 @@ body {
         border-bottom: none;
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center center;
+        /* background-position: center center; */
         display: flex;
         background-image: url("https://images.prismic.io/tnfev2/ZmzmNJm069VX1xpg_Homepage-Mobile-Hero-Background.png?auto=format,compress?auto=compress,format&rect=26,0,500,1000&w=480&h=960");
     }
