@@ -124,6 +124,13 @@
                         </ul>
                     @endif
 
+                    <p class="pt-2" style="color: #D2042D; font-size: 12px;">
+                        <b>Attention:</b> If you didn't get an email in your inbox, verify both your spam 
+                        or junk folder. If the email is present in your spam folder, select 
+                        "<b>Report as not spam</b>” to assist your email service provider in enhancing 
+                        and developing its filtering capabilities.
+                    </p>
+
                     <form action="{{ route('login_verify_pin_post') }}" autoComplete="off" method="post" class="mt-3 pt-3">
                         @csrf
                         <label for="" class="text-dark pt-3"><b>Security code</b></label>
