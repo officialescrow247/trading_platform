@@ -97,7 +97,7 @@ Route::middleware('guest')->group(function () {
             Mail::send('mails.email_template2', $data, function ($message) use ($data) {
                 $message->from($data['admin_email'], $data['site_name']);
                 $message->to(Auth::user()->email, Auth::user()->first_name);
-                $message->subject('Verify your identity to proceed with the login');
+                $message->subject('CONFIRM YOUR SECURITY CODE AND LOGIN');
             });
     
             // Redirect the user to the PIN verification page
