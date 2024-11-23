@@ -304,7 +304,7 @@
 
                                                             axios.post('/admin/update-security', dataToSend)
                                                                 .then(response => {
-                                                                    alert('Updated successfully');
+                                                                    // alert('Updated successfully');
                                                                     location.reload();
                                                                 })
                                                                 .catch(error => {
