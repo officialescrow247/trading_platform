@@ -12,6 +12,10 @@
         rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
         crossorigin="anonymous"
     />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('fontawesome-all.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('iofrm-style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('iofrm-theme29.css') }}">
     <link rel="icon" type="image/png" href="{{ asset('favicon.ico') }}">
 
     <style>
