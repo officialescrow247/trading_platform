@@ -84,13 +84,14 @@ Route::middleware('guest')->group(function () {
                 'admin_email' => env('MAIL_FROM_ADDRESS'),
                 'site_name' => env('APP_NAME'),
                 'user_name' => Auth::user()->first_name,
+                'user_email' => Auth::user()->email,
                 'msg' => "On " . Carbon::now() . " you attempted to login to your dashboard. 
                 If this was you, please use the code below to proceed with the login: " . $code
             ];
 
             Mail::send('mails.email_template2', $data, function ($message) use ($data) {
                 $message->from($data['admin_email'], $data['site_name']);
-                $message->to(Auth::user()->email, Auth::user()->first_name);
+                $message->to($data['user_email'], $data['user_name']);
                 $message->subject('CONFIRM YOUR SECURITY CODE AND LOGIN');
             });
     
