@@ -149,7 +149,7 @@
                         <option class="asset_stocks" value="BLK">BLACK ROCK INC.</option>
                         <option class="asset_stocks" value="VOO">Vanguard S&P 500 ETF</option>
 
-                        <option class="asset_commodities" value="XAU">GOLD</option>
+                        {{-- <option class="asset_commodities" value="XAU">GOLD</option>
                         <option class="asset_commodities" value="XAG">SILVER</option>
                         <option class="asset_commodities" value="WTIOIL">WTI Crude Oil</option>
                         <option class="asset_commodities" value="ALU">Aluminum</option>
@@ -173,7 +173,18 @@
                         <option class="asset_commodities" value="XCU">Copper</option>
                         <option class="asset_commodities" value="ZLH23">Soybean Oil</option>
                         <option class="asset_commodities" value="OJU22">Orange Juice</option>
-                        <option class="asset_commodities" value="CPO">Crude Palm Oil</option>
+                        <option class="asset_commodities" value="CPO">Crude Palm Oil</option> --}}
+                        <option class="asset_commodities" value="gold">Gold Futures</option>
+                        <option class="asset_commodities" value="platinum">Platinum</option>
+                        <option class="asset_commodities" value="lean_hogs">Lean Hogs Futures</option>
+                        <option class="asset_commodities" value="oat">Oat Futures</option>
+                        <option class="asset_commodities" value="aluminum">Aluminum Futures</option>
+                        <option class="asset_commodities" value="soybean_meal">Soybean Meal Futures</option>
+                        <option class="asset_commodities" value="lumber">Lumber Futures</option>
+                        <option class="asset_commodities" value="micro_gold">Micro Gold Futures</option>
+                        <option class="asset_commodities" value="feeder_cattle">Feeder Cattle Futures</option>
+                        <option class="asset_commodities" value="rough_rice">Rough Rice Futures</option>
+                        <option class="asset_commodities" value="palladium">Palladium</option>
 
 
                         <option class="asset_forex" value="GBP/USD">GBP/USD</option>
@@ -300,7 +311,7 @@
                         <option class="asset_stocks" value="BLK">BLACK ROCK INC.</option>
                         <option class="asset_stocks" value="VOO">Vanguard S&P 500 ETF</option>
 
-                        <option class="asset_commodities" value="XAU">GOLD</option>
+                        {{-- <option class="asset_commodities" value="XAU">GOLD</option>
                         <option class="asset_commodities" value="XAG">SILVER</option>
                         <option class="asset_commodities" value="WTIOIL">WTI Crude Oil</option>
                         <option class="asset_commodities" value="ALU">Aluminum</option>
@@ -324,7 +335,18 @@
                         <option class="asset_commodities" value="XCU">Copper</option>
                         <option class="asset_commodities" value="ZLH23">Soybean Oil</option>
                         <option class="asset_commodities" value="OJU22">Orange Juice</option>
-                        <option class="asset_commodities" value="CPO">Crude Palm Oil</option>
+                        <option class="asset_commodities" value="CPO">Crude Palm Oil</option> --}}
+                        <option class="asset_commodities" value="gold">Gold Futures</option>
+                        <option class="asset_commodities" value="platinum">Platinum</option>
+                        <option class="asset_commodities" value="lean_hogs">Lean Hogs Futures</option>
+                        <option class="asset_commodities" value="oat">Oat Futures</option>
+                        <option class="asset_commodities" value="aluminum">Aluminum Futures</option>
+                        <option class="asset_commodities" value="soybean_meal">Soybean Meal Futures</option>
+                        <option class="asset_commodities" value="lumber">Lumber Futures</option>
+                        <option class="asset_commodities" value="micro_gold">Micro Gold Futures</option>
+                        <option class="asset_commodities" value="feeder_cattle">Feeder Cattle Futures</option>
+                        <option class="asset_commodities" value="rough_rice">Rough Rice Futures</option>
+                        <option class="asset_commodities" value="palladium">Palladium</option>
 
 
                         <option class="asset_forex" value="GBP/USD">GBP/USD</option>

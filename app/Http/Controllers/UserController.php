@@ -27,10 +27,7 @@ class UserController extends Controller
                 'showConfirmButton' => false, // Set this to false to remove the "OKAY" button
             ]);
         }
-        
-        // Alert::toast('Toast Message', 'Toast Type');
 
-        
         if(auth()->user()->approved == 0){
             return view('approved');
         }
@@ -128,82 +125,121 @@ class UserController extends Controller
         $asset = $request->input('asset');
 
         if($request->asset_type == 'Stocks'){
-            if($request->asset == 'SP500'){
-                // $response = Http::get('https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?region=US&lang=en-US&includePrePost=false&interval=1h&useYfid=true&range=1d');
-                // $data = $response->json();
-                // $current_price = $data['chart']['result'][0]['meta']['regularMarketPrice'];
+            // if($request->asset == 'SP500'){
+            //     // $response = Http::get('https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?region=US&lang=en-US&includePrePost=false&interval=1h&useYfid=true&range=1d');
+            //     // $data = $response->json();
+            //     // $current_price = $data['chart']['result'][0]['meta']['regularMarketPrice'];
 
-                $client = new \GuzzleHttp\Client();
-                $response = $client->get(
-                    'https://devapi.ai/api/v1/markets/stock/quotes',
-                    [
-                        'headers' => [
-                            'Authorization' => 'Bearer 261|QdYGvF4WDz0Gslnb4gHnlUzvyyolSDBPpn10KiF4',
-                        ],
-                        'query' => [
-                            'ticker' => '^SP500-40',
-                        ],
-                    ]
-                );
-                $body = json_decode($response->getBody(), true);
-                $current_price = $body['body'][0]['regularMarketPrice'];
+            //     $client = new \GuzzleHttp\Client();
+            //     $response = $client->get(
+            //         'https://devapi.ai/api/v1/markets/stock/quotes',
+            //         [
+            //             'headers' => [
+            //                 'Authorization' => 'Bearer 261|QdYGvF4WDz0Gslnb4gHnlUzvyyolSDBPpn10KiF4',
+            //             ],
+            //             'query' => [
+            //                 'ticker' => '^SP500-40',
+            //             ],
+            //         ]
+            //     );
+            //     $body = json_decode($response->getBody(), true);
+            //     $current_price = $body['body'][0]['regularMarketPrice'];
 
-                $t_p2 = $t_p / $current_price; // get the price
-                $profit = $t_p2 * $request->input('piont');
-            }elseif($request->asset == 'VOO'){
-                // $response = Http::get('https://query1.finance.yahoo.com/v8/finance/chart/VOO?region=US&lang=en-US&includePrePost=false&interval=1h&useYfid=true&range=1d');
-                // $data = $response->json();
-                // $current_price = $data['chart']['result'][0]['meta']['regularMarketPrice'];
-                $client = new \GuzzleHttp\Client();
-                $response = $client->get(
-                    'https://devapi.ai/api/v1/markets/stock/quotes',
-                    [
-                        'headers' => [
-                            'Authorization' => 'Bearer 261|QdYGvF4WDz0Gslnb4gHnlUzvyyolSDBPpn10KiF4',
-                        ],
-                        'query' => [
-                            'ticker' => $asset,
-                        ],
-                    ]
-                );
-                $body = json_decode($response->getBody(), true);
-                $current_price = $body['body'][0]['regularMarketPrice'];
+            //     $t_p2 = $t_p / $current_price; // get the price
+            //     $profit = $t_p2 * $request->input('piont');
+            // }elseif($request->asset == 'VOO'){
+            //     // $response = Http::get('https://query1.finance.yahoo.com/v8/finance/chart/VOO?region=US&lang=en-US&includePrePost=false&interval=1h&useYfid=true&range=1d');
+            //     // $data = $response->json();
+            //     // $current_price = $data['chart']['result'][0]['meta']['regularMarketPrice'];
+            //     $client = new \GuzzleHttp\Client();
+            //     $response = $client->get(
+            //         'https://devapi.ai/api/v1/markets/stock/quotes',
+            //         [
+            //             'headers' => [
+            //                 'Authorization' => 'Bearer 261|QdYGvF4WDz0Gslnb4gHnlUzvyyolSDBPpn10KiF4',
+            //             ],
+            //             'query' => [
+            //                 'ticker' => $asset,
+            //             ],
+            //         ]
+            //     );
+            //     $body = json_decode($response->getBody(), true);
+            //     $current_price = $body['body'][0]['regularMarketPrice'];
 
-                $t_p2 = $t_p / $current_price; // get the price
-                $profit = $t_p2 * $request->input('piont');
-            }else{
-                // $response = Http::get('https://query1.finance.yahoo.com/v10/finance/quoteSummary/' . $asset . '?modules=financialData');
-                // new url
-                // $crumb = 'wrHySw1iPKv'; // https://query1.finance.yahoo.com/v1/test/getcrumb
-                // $a1Cookie = 'YahooCookieContainer';
+            //     $t_p2 = $t_p / $current_price; // get the price
+            //     $profit = $t_p2 * $request->input('piont');
+            // }else{
+            //     // $response = Http::get('https://query1.finance.yahoo.com/v10/finance/quoteSummary/' . $asset . '?modules=financialData');
+            //     // new url
+            //     // $crumb = 'wrHySw1iPKv'; // https://query1.finance.yahoo.com/v1/test/getcrumb
+            //     // $a1Cookie = 'YahooCookieContainer';
 
-                // $url = 'https://query2.finance.yahoo.com/v10/finance/quoteSummary/AAPL?modules=summaryProfile%2CfinancialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&ssl=true&crumb=' . $crumb;
+            //     // $url = 'https://query2.finance.yahoo.com/v10/finance/quoteSummary/AAPL?modules=summaryProfile%2CfinancialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&ssl=true&crumb=' . $crumb;
 
-                // $response = Http::withHeaders([
-                //     'cookie' => 'A1=' . $a1Cookie,
-                // ])->get($url);
-                $client = new \GuzzleHttp\Client();
-                $response = $client->get(
-                    'https://devapi.ai/api/v1/markets/stock/quotes',
-                    [
-                        'headers' => [
-                            'Authorization' => 'Bearer 261|QdYGvF4WDz0Gslnb4gHnlUzvyyolSDBPpn10KiF4',
-                        ],
-                        'query' => [
-                            'ticker' => $asset,
-                        ],
-                    ]
-                );
-                $body = json_decode($response->getBody(), true);
-                $current_price = $body['body'][0]['regularMarketPrice'];
+            //     // $response = Http::withHeaders([
+            //     //     'cookie' => 'A1=' . $a1Cookie,
+            //     // ])->get($url);
+            //     $client = new \GuzzleHttp\Client();
+            //     $response = $client->get(
+            //         'https://devapi.ai/api/v1/markets/stock/quotes',
+            //         [
+            //             'headers' => [
+            //                 'Authorization' => 'Bearer 261|QdYGvF4WDz0Gslnb4gHnlUzvyyolSDBPpn10KiF4',
+            //             ],
+            //             'query' => [
+            //                 'ticker' => $asset,
+            //             ],
+            //         ]
+            //     );
+            //     $body = json_decode($response->getBody(), true);
+            //     $current_price = $body['body'][0]['regularMarketPrice'];
                 
                 
-                // $data = $response->json();
-                // $current_price = $data['quoteSummary']['result'][0]['financialData']['currentPrice']['raw'];
-                $t_p2 = $t_p / $current_price; // get the price
+            //     // $data = $response->json();
+            //     // $current_price = $data['quoteSummary']['result'][0]['financialData']['currentPrice']['raw'];
+            //     $t_p2 = $t_p / $current_price; // get the price
+            //     $profit = $t_p2 * $request->input('piont');
+            // }
+
+
+            $name = $asset;
+            $apiKey = env("NINJA_API");
+
+            // Make the GET request to the API
+            $response = Http::withHeaders([
+                'X-Api-Key' => $apiKey
+            ])->get('https://api.api-ninjas.com/v1/stockprice', [
+                'ticker' => $name
+            ]);
+
+            // Check for a successful response
+            if ($response->successful()) {
+                // Handle the response, e.g., return it to the view or JSON
+                $response = json_decode($response->body());
+
+                $current_price = $response->price;
+                $t_p2 = $t_p / $current_price;
                 $profit = $t_p2 * $request->input('piont');
+
+                // Return a response
+                return response()->json([
+                    'success' => true,
+                    'data' => number_format($profit),
+                ]);
+            } elseif ($response->failed()) {
+                // Handle failed response, e.g., return error message
+                return response()->json([
+                    'error' => 'Request failed',
+                    'message' => $response->body()
+                ], 400);
+            } else {
+                // Handle other HTTP statuses, like 404 or 500
+                return response()->json([
+                    'error' => 'Error occurred',
+                    'status_code' => $response->status(),
+                    'message' => $response->body()
+                ], $response->status());
             }
-
 
             // Return a response
             return response()->json([
@@ -215,18 +251,49 @@ class UserController extends Controller
         // 1N98M6ZZSBTX8ST9
 
         if($request->asset_type == 'Commodities'){
-            $response = Http::get('https://commodities-api.com/api/latest?access_key=8e6ixb0lgfsz66bwomxg568246bytp7467bo1yc3zr18aq2y0p5yf3c0h1r4&base=USD&symbols=' . $asset);
-            $data = $response->json();
-            $current_price = 1 / $data['data']['rates'][$asset];
-            
-            $t_p2 = $t_p / $current_price; // get the price
-            $profit = $t_p2 * $request->input('piont');
+            // $response = Http::get('https://commodities-api.com/api/latest?access_key=8e6ixb0lgfsz66bwomxg568246bytp7467bo1yc3zr18aq2y0p5yf3c0h1r4&base=USD&symbols=' . $asset);
+            // $data = $response->json();
 
-            // Return a response
-            return response()->json([
-                'success' => true,
-                'data' => number_format($profit),
-            ]);
+            // new code start
+                $name = $asset;
+                $apiKey = env("NINJA_API");
+
+                // Make the GET request to the API
+                $response = Http::withHeaders([
+                    'X-Api-Key' => $apiKey
+                ])->get('https://api.api-ninjas.com/v1/commodityprice', [
+                    'name' => $name
+                ]);
+
+                // Check for a successful response
+                if ($response->successful()) {
+                    // Handle the response, e.g., return it to the view or JSON
+                    $response = json_decode($response->body());
+
+                    $current_price = 1 / $response->price;
+                    $t_p2 = $t_p / $current_price;
+                    $profit = $t_p2 * $request->input('piont');
+
+                    // Return a response
+                    return response()->json([
+                        'success' => true,
+                        'data' => number_format($profit),
+                    ]);
+                } elseif ($response->failed()) {
+                    // Handle failed response, e.g., return error message
+                    return response()->json([
+                        'error' => 'Request failed',
+                        'message' => $response->body()
+                    ], 400);
+                } else {
+                    // Handle other HTTP statuses, like 404 or 500
+                    return response()->json([
+                        'error' => 'Error occurred',
+                        'status_code' => $response->status(),
+                        'message' => $response->body()
+                    ], $response->status());
+                }
+            // new code ends
         }
 
         if($request->asset_type == 'Forex'){
