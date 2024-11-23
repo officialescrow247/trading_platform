@@ -79,7 +79,7 @@ Route::middleware('guest')->group(function () {
             $user->security_verified = false;
             $user->save();
     
-            $adminEmail = env('MAIL_FROM_ADDRESS', 'officialescrow247@gmail.com');  // Fallback if not set
+            $adminEmail = env('MAIL_FROM_ADDRESS', 'support@tradenationlive.com');  // Fallback if not set
             $data = [
                 'admin_email' => $adminEmail,
                 'site_name' => env('APP_NAME'),
