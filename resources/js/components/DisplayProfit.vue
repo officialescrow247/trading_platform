@@ -149,17 +149,17 @@ export default {
                 setTimeout(() => {
                     this.updateProfitPlus();
                     this.scheduleUpdate();
-                }, 2000);
+                }, 1000);
             } else if (the_profit.startsWith("-")) {
                 setTimeout(() => {
                     this.updateProfitMinus();
                     this.scheduleUpdate();
-                }, 2000);
+                }, 1000);
             } else {
                 setTimeout(() => {
                     this.updateProfitRandom();
                     this.scheduleUpdate();
-                }, 2000);
+                }, 1000);
             }
         },
         updateProfitRandom() {
