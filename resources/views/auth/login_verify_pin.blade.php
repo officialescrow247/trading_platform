@@ -120,14 +120,6 @@
                     <h3>VERIFY LOGIN</h3>
                     <i class="text-dark" style="font-size: 12px;">Your login security code has been sent to your email.</i>
 
-                    @if ($errors->any())
-                        <ul style="font-size: 12px !important; color: #D2042D; padding: 10px; border-radius: 20px;">
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    @endif
-
                     <p class="pt-2" style="color: #D2042D; font-size: 12px;">
                         <b>Attention:</b> If you didn't get an email in your inbox, verify both your spam 
                         or junk folder. If the email is present in your spam folder, select 
@@ -140,6 +132,14 @@
                         <label for="" class="text-dark pt-3"><b>Security code</b></label>
                         <input type="password" placeholder="Your Security code" id="password" name="code" aria-describedby="password-errors" aria-invalid="false" class="form-control border" required />
 
+
+                        @if ($errors->any())
+                            <ul style="font-size: 12px !important; color: #D2042D; padding: 10px; border-radius: 20px;">
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        @endif
                         <div class="form-button">
                             <button id="submit" type="submit" class="mt-2 w-100 btn btn-sm text-light px-5 btn-full" style="background-color: #2b3c4c;">Login</button>
                         </div>
