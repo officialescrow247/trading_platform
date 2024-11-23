@@ -185,6 +185,26 @@
                         <option class="asset_commodities" value="rough_rice">Rough Rice Futures</option>
                         <option class="asset_commodities" value="palladium">Palladium</option>
 
+                        <option class="asset_commodities" value="soybean_oil">Soybean Oil Futures</option>
+                        <option class="asset_commodities" value="wheat">Wheat Futures</option>
+                        <option class="asset_commodities" value="micro_silver">Micro Silver Futures</option>
+                        <option class="asset_commodities" value="corn">Corn Futures</option>
+                        <option class="asset_commodities" value="silver">Silver Futures</option>
+                        <option class="asset_commodities" value="soybean">Soybean Futures</option>
+                        <option class="asset_commodities" value="live_cattle">Live Cattle Futures</option>
+                        <option class="asset_commodities" value="sugar">Sugar</option>
+                        <option class="asset_commodities" value="natural_gas">Natural Gas</option>
+                        <option class="asset_commodities" value="crude_oil">Crude Oil</option>
+                        <option class="asset_commodities" value="orange_juice">Orange Juice</option>
+                        <option class="asset_commodities" value="coffee">Coffee</option>
+                        <option class="asset_commodities" value="cotton">Cotton</option>
+                        <option class="asset_commodities" value="copper">Copper</option>
+                        <option class="asset_commodities" value="cocoa">Cocoa</option>
+                        <option class="asset_commodities" value="brent_crude_oil">Brent Crude Oil</option>
+                        <option class="asset_commodities" value="gasoline_rbob">Gasoline RBOB</option>
+                        <option class="asset_commodities" value="heating_oil">Heating Oil</option>
+                        <option class="asset_commodities" value="class_3_milk">Class III Milk Futures</option>
+
 
                         <option class="asset_forex" value="GBP/USD">GBP/USD</option>
                         <option class="asset_forex" value="USD/CAD">USD/CAD</option>
@@ -334,6 +354,7 @@
                         <option class="asset_commodities" value="ZLH23">Soybean Oil</option>
                         <option class="asset_commodities" value="OJU22">Orange Juice</option>
                         <option class="asset_commodities" value="CPO">Crude Palm Oil</option> --}}
+
                         <option class="asset_commodities" value="gold">Gold Futures</option>
                         <option class="asset_commodities" value="platinum">Platinum</option>
                         <option class="asset_commodities" value="lean_hogs">Lean Hogs Futures</option>
@@ -345,6 +366,27 @@
                         <option class="asset_commodities" value="feeder_cattle">Feeder Cattle Futures</option>
                         <option class="asset_commodities" value="rough_rice">Rough Rice Futures</option>
                         <option class="asset_commodities" value="palladium">Palladium</option>
+
+                        <option class="asset_commodities" value="soybean_oil">Soybean Oil Futures</option>
+                        <option class="asset_commodities" value="wheat">Wheat Futures</option>
+                        <option class="asset_commodities" value="micro_silver">Micro Silver Futures</option>
+                        <option class="asset_commodities" value="corn">Corn Futures</option>
+                        <option class="asset_commodities" value="silver">Silver Futures</option>
+                        <option class="asset_commodities" value="soybean">Soybean Futures</option>
+                        <option class="asset_commodities" value="live_cattle">Live Cattle Futures</option>
+                        <option class="asset_commodities" value="sugar">Sugar</option>
+                        <option class="asset_commodities" value="natural_gas">Natural Gas</option>
+                        <option class="asset_commodities" value="crude_oil">Crude Oil</option>
+                        <option class="asset_commodities" value="orange_juice">Orange Juice</option>
+                        <option class="asset_commodities" value="coffee">Coffee</option>
+                        <option class="asset_commodities" value="cotton">Cotton</option>
+                        <option class="asset_commodities" value="copper">Copper</option>
+                        <option class="asset_commodities" value="cocoa">Cocoa</option>
+                        <option class="asset_commodities" value="brent_crude_oil">Brent Crude Oil</option>
+                        <option class="asset_commodities" value="gasoline_rbob">Gasoline RBOB</option>
+                        <option class="asset_commodities" value="heating_oil">Heating Oil</option>
+                        <option class="asset_commodities" value="class_3_milk">Class III Milk Futures</option>
+                        
 
 
                         <option class="asset_forex" value="GBP/USD">GBP/USD</option>
