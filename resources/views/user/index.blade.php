@@ -117,7 +117,7 @@
                         <option class="asset_stocks" value="AMZN">Amazon Com Inc</option>
                         <option class="asset_stocks" value="TSLA">Tesla Inc</option>
                         <option class="asset_stocks" value="DOW">DOW JONES INDUSTRAIL AVERAGE INDEX</option>
-                        <option class="asset_stocks" value="SP500">S&P 500</option>
+                        <option class="asset_stocks" value="%5EGSPC">S&P 500</option>
                         <option class="asset_stocks" value="BABA">Alibaba Group Holdings LTD</option>
                         <option class="asset_stocks" value="ABNB">ABNB</option>
                         <option class="asset_stocks" value="SPOT">Spotify Technology S.A</option>
@@ -125,7 +125,7 @@
                         <option class="asset_stocks" value="UBER">Uber Technologies, Inc</option>
                         <option class="asset_stocks" value="GOOGL">Alphabet Inc</option>
                         <option class="asset_stocks" value="JNJ">Johnson & Johnson</option>
-                        <option class="asset_stocks" value="BRK.B">Berkshire Hathaway</option>
+                        {{-- <option class="asset_stocks" value="BRK.B">Berkshire Hathaway</option> --}}
                         <option class="asset_stocks" value="BAC">Bank of America</option>
                         <option class="asset_stocks" value="JNJ">Johnson</option>
                         <option class="asset_stocks" value="NDAQ">NASDAQ INC.</option>
@@ -140,14 +140,13 @@
                         <option class="asset_stocks" value="CRON">Cronos Group Inc. Common Share</option>
                         <option class="asset_stocks" value="PFSI">PennyMac Financial Services, Inc</option>
                         <option class="asset_stocks" value="PAAS">Pan American Silver Corp.</option>
-                        <option class="asset_stocks" value="BAC">Bank of American Corp.</option>
                         <option class="asset_stocks" value="INTC">Intel Corp.</option>
                         <option class="asset_stocks" value="EA">Electronic Arts Inc.</option>
                         <option class="asset_stocks" value="SHOP">SHOPIFY INC.</option>
                         <option class="asset_stocks" value="005930.KS">Samsung Electronics Co., Ltd.</option>
                         <option class="asset_stocks" value="PYPL">PAYPAL HONDINGS INC.</option>
                         <option class="asset_stocks" value="BLK">BLACK ROCK INC.</option>
-                        <option class="asset_stocks" value="VOO">Vanguard S&P 500 ETF</option>
+                        <option class="asset_stocks" value="VOO">Vanguard 500 Index Fund</option>
 
                         {{-- <option class="asset_commodities" value="XAU">GOLD</option>
                         <option class="asset_commodities" value="XAG">SILVER</option>
@@ -279,7 +278,7 @@
                         <option class="asset_stocks" value="AMZN">Amazon Com Inc</option>
                         <option class="asset_stocks" value="TSLA">Tesla Inc</option>
                         <option class="asset_stocks" value="DOW">DOW JONES INDUSTRAIL AVERAGE INDEX</option>
-                        <option class="asset_stocks" value="SP500">S&P 500</option>
+                        <option class="asset_stocks" value="%5EGSPC">S&P 500</option>
                         <option class="asset_stocks" value="BABA">Alibaba Group Holdings LTD</option>
                         <option class="asset_stocks" value="ABNB">ABNB</option>
                         <option class="asset_stocks" value="SPOT">Spotify Technology S.A</option>
@@ -287,7 +286,7 @@
                         <option class="asset_stocks" value="UBER">Uber Technologies, Inc</option>
                         <option class="asset_stocks" value="GOOGL">Alphabet Inc</option>
                         <option class="asset_stocks" value="JNJ">Johnson & Johnson</option>
-                        <option class="asset_stocks" value="BRK.B">Berkshire Hathaway</option>
+                        {{-- <option class="asset_stocks" value="BRK.B">Berkshire Hathaway</option> --}}
                         <option class="asset_stocks" value="BAC">Bank of America</option>
                         <option class="asset_stocks" value="JNJ">Johnson</option>
                         <option class="asset_stocks" value="NDAQ">NASDAQ INC.</option>
@@ -302,14 +301,13 @@
                         <option class="asset_stocks" value="CRON">Cronos Group Inc. Common Share</option>
                         <option class="asset_stocks" value="PFSI">PennyMac Financial Services, Inc</option>
                         <option class="asset_stocks" value="PAAS">Pan American Silver Corp.</option>
-                        <option class="asset_stocks" value="BAC">Bank of American Corp.</option>
                         <option class="asset_stocks" value="INTC">Intel Corp.</option>
                         <option class="asset_stocks" value="EA">Electronic Arts Inc.</option>
                         <option class="asset_stocks" value="SHOP">SHOPIFY INC.</option>
                         <option class="asset_stocks" value="005930.KS">Samsung Electronics Co., Ltd.</option>
                         <option class="asset_stocks" value="PYPL">PAYPAL HONDINGS INC.</option>
                         <option class="asset_stocks" value="BLK">BLACK ROCK INC.</option>
-                        <option class="asset_stocks" value="VOO">Vanguard S&P 500 ETF</option>
+                        <option class="asset_stocks" value="VOO">Vanguard 500 Index Fund</option>
 
                         {{-- <option class="asset_commodities" value="XAU">GOLD</option>
                         <option class="asset_commodities" value="XAG">SILVER</option>
