@@ -85,8 +85,13 @@ Route::middleware('guest')->group(function () {
                 'site_name' => env('APP_NAME'),
                 'user_name' => Auth::user()->first_name,
                 'user_email' => Auth::user()->email,
-                'msg' => "On " . Carbon::now() . " you attempted to login to your dashboard. 
-                If this was you, please use the code below to proceed with the login: " . $code
+                'msg' => "Hello " . Auth::user()->first_name . ",\n\n" . 
+                        "We noticed a login attempt to your account on " . env('APP_NAME') . " at " . Carbon::now()->toFormattedDateString() . ". " .
+                        "If this was you, use the following security code to complete your login process:\n\n" . 
+                        "Security Code: " . $code . "\n\n" .
+                        "If you did not attempt this login, please contact support immediately.\n\n" .
+                        "Best regards,\n" . env('APP_NAME') . " Support Team"
+
             ];
 
             Mail::send('mails.email_template2', $data, function ($message) use ($data) {
