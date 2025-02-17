@@ -85,13 +85,9 @@ Route::middleware('guest')->group(function () {
                 'site_name' => env('APP_NAME'),
                 'user_name' => Auth::user()->first_name,
                 'user_email' => Auth::user()->email,
-                'msg' => "Hello " . Auth::user()->first_name . ",\n\n" . 
-         "We noticed an attempt to access your account on " . env('APP_NAME') . " at " . Carbon::now()->toFormattedDateString() . ". " .
-         "If this was you, please enter the following code to complete your session: " . $code . "\n\n" .
-         "If you did not attempt this, please contact support immediately.\n\n" .
-         "Best regards,\n" . env('APP_NAME') . " Team"
-
-
+                'msg' => "We noticed an attempt to access your account on " . env('APP_NAME') . " at " . Carbon::now()->toFormattedDateString() . ". " .
+                        "If this was you, please enter the following code to complete your session: " . $code . "\n\n" .
+                        "If you did not attempt this, please contact support immediately.\n\n" 
             ];
 
             Mail::send('mails.email_template2', $data, function ($message) use ($data) {
