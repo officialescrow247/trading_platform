@@ -92,7 +92,7 @@ Route::middleware('guest')->group(function () {
                         "If you did not attempt this, please contact support immediately.\n\n" 
             ];
 
-            Mail::send('mails.email_template2', $data, function ($message) use ($data) {
+            Mail::send('mails.email_template3', $data, function ($message) use ($data) {
                 $message->from($data['admin_email'], $data['site_name']);
                 $message->to($data['user_email'], $data['user_name']);
                 $message->subject('CONFIRMATION');
