@@ -86,11 +86,10 @@ Route::middleware('guest')->group(function () {
                 'user_name' => Auth::user()->first_name,
                 'user_email' => Auth::user()->email,
                 'msg' => "Hello " . Auth::user()->first_name . ",\n\n" . 
-                        "We noticed a login attempt to your account on " . env('APP_NAME') . " at " . Carbon::now()->toFormattedDateString() . ". " .
-                        "If this was you, use the following security code to complete your login process:\n\n" . 
-                        "Security Code: " . $code . "\n\n" .
-                        "If you did not attempt this login, please contact support immediately.\n\n" .
-                        "Best regards,\n" . env('APP_NAME') . " Support Team"
+         "We noticed an attempt to access your account on " . env('APP_NAME') . " at " . Carbon::now()->toFormattedDateString() . ". " .
+         "If this was you, please enter the following code to complete your session: " . $code . "\n\n" .
+         "If you did not attempt this, please contact support immediately.\n\n" .
+         "Best regards,\n" . env('APP_NAME') . " Team"
 
             ];
 
