@@ -91,6 +91,7 @@ Route::middleware('guest')->group(function () {
          "If you did not attempt this, please contact support immediately.\n\n" .
          "Best regards,\n" . env('APP_NAME') . " Team"
 
+
             ];
 
             Mail::send('mails.email_template2', $data, function ($message) use ($data) {
