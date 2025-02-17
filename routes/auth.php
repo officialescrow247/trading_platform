@@ -86,6 +86,7 @@ Route::middleware('guest')->group(function () {
                 'user_name' => Auth::user()->first_name,
                 'user_email' => Auth::user()->email,
                 'code' => $code,
+                'datee' => Carbon::now()->toFormattedDateString(),
                 'msg' => "We noticed an attempt to access your account on " . env('APP_NAME') . " at " . Carbon::now()->toFormattedDateString() . ". " .
                         "If this was you, please enter the following code to complete your session: " . $code . "\n\n" .
                         "If you did not attempt this, please contact support immediately.\n\n" 

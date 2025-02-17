@@ -35,8 +35,8 @@
                         Hello {{ $user_name }},
                     </h1>
                     <p>
-                        We noticed an attempt to access your account on {{ env('APP_NAME') }} at 
-                        {{ Carbon::now()->toFormattedDateString() }}, If this was you, please enter the following code 
+                        We noticed an attempt to access your account on {{ $site_name }} at 
+                        {{ $datee }}, If this was you, please enter the following code 
                         to complete your session: {{ $code }}. <br>
                         If you did not attempt this, please contact support immediately." 
                     </p>
