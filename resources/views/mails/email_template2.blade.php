@@ -38,7 +38,7 @@
                         We noticed an attempt to access your account on {{ $site_name }} at 
                         {{ $datee }}, If this was you, please enter the following code 
                         to complete your session: <b>{{ $code }}</b>. If you did not attempt this, 
-                        please contact support immediately." 
+                        please contact support immediately.
                     </p>
 
                     <p style="padding-top: 40px; font-weight: 600;">
