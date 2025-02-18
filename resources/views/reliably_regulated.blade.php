@@ -63,7 +63,7 @@
 
                      <p class="text-light">
                         Call us on: +44 1254 369752 <br>
-                        Email us at: support@tradenationltd.com <br>
+                        Email us at: support@tradenation-uk.com <br>
                      </p>
 
 

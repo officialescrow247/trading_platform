@@ -1146,7 +1146,7 @@
 								<img src="https://tradenation.com/_next/image/?url=%2Ficons%2Fchat.png&w=32&q=75" alt="" class="pe-2">  Chat
 							</p>
 							<p class="px-3">
-								<img src="https://tradenation.com/_next/image/?url=%2Ficons%2Femail.png&w=32&q=75" alt="" class="pe-2">  <a href="mailto:support@tradenationltd.com" class="text-dark">Email</a>
+								<img src="https://tradenation.com/_next/image/?url=%2Ficons%2Femail.png&w=32&q=75" alt="" class="pe-2">  <a href="mailto:support@tradenation-uk.com" class="text-dark">Email</a>
 							</p>
 							<p class="px-3">
 								<img src="https://tradenation.com/_next/image/?url=%2Ficons%2Ffaq.png&w=32&q=75" alt="" class="pe-2">  <a href="{{ route('faqs') }}" class="text-dark">FAQ</a>

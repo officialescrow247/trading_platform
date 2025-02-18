@@ -17,7 +17,7 @@
             </p>
             
             <p class="pt-4" style="color: #EE4E08;">
-               <b>support@tradenationltd.com</b>
+               <b>support@tradenation-uk.com</b>
             </p>
 
             <p class="mb-5" style="color: #EE4E08;">

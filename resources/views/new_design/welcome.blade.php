@@ -287,7 +287,7 @@
                     <p class="pb-4 pt-3">
                         Our Customer Success Team helps you run things smoothly. We’re available 24 hours, Monday to Friday by chat, email or phone.    
                     </p>
-                    <a href="mailto:support@tradenationltd.com" class="btn rund_h rounded-pill py-2 px-4" style="border: 2px solid #0A1E32; color: #0A1E32;"><b>Contact us</b></a>
+                    <a href="mailto:support@tradenation-uk.com" class="btn rund_h rounded-pill py-2 px-4" style="border: 2px solid #0A1E32; color: #0A1E32;"><b>Contact us</b></a>
                 </div>
 
                 <div class="col-md-4 mb-4">

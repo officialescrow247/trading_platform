@@ -14,7 +14,7 @@
 
                         <img src="https://tradenation.com/diamond.png" alt="" class="pe-2">
                         Last updated January 2023<br>
-                        If you have difficulty viewing this document please contact support@tradenationltd.com for assistance. <br><br>
+                        If you have difficulty viewing this document please contact support@tradenation-uk.com for assistance. <br><br>
 
                         <b>All legals can be found at: <a href="{{ route('legals_new') }}" style="color: #0A1E32;">Legals</a></b>
                     </p>
@@ -31,7 +31,7 @@
 
                         <img src="https://tradenation.com/diamond.png" alt="" class="pe-2">
                         Last updated January 2023<br>
-                        If you have difficulty viewing this document please contact support@tradenationltd.com for assistance. <br><br>
+                        If you have difficulty viewing this document please contact support@tradenation-uk.com for assistance. <br><br>
 
                         <b>All legals can be found at: <a href="{{ route('legals_new') }}" style="color: #0A1E32;">Legals</a></b>
                     </p>
@@ -89,7 +89,7 @@
 
                         <img src="https://tradenation.com/diamond.png" alt="" class="pe-2">
                         Last updated January 2023<br>
-                        If you have difficulty viewing this document please contact support@tradenationltd.com for assistance. <br><br>
+                        If you have difficulty viewing this document please contact support@tradenation-uk.com for assistance. <br><br>
 
                         <b>All legals can be found at: <a href="{{ route('legals_new') }}" style="color: #0A1E32;">Legals</a></b>
                     </p>
@@ -106,7 +106,7 @@
 
                         <img src="https://tradenation.com/diamond.png" alt="" class="pe-2">
                         Last updated January 2023<br>
-                        If you have difficulty viewing this document please contact support@tradenationltd.com for assistance. <br><br>
+                        If you have difficulty viewing this document please contact support@tradenation-uk.com for assistance. <br><br>
 
                         <b>All legals can be found at: <a href="{{ route('legals_new') }}" style="color: #0A1E32;">Legals</a></b>
                     </p>
@@ -123,7 +123,7 @@
 
                         <img src="https://tradenation.com/diamond.png" alt="" class="pe-2">
                         Last updated January 2023<br>
-                        If you have difficulty viewing this document please contact support@tradenationltd.com for assistance. <br><br>
+                        If you have difficulty viewing this document please contact support@tradenation-uk.com for assistance. <br><br>
 
                         <b>All legals can be found at: <a href="{{ route('legals_new') }}" style="color: #0A1E32;">Legals</a></b>
                     </p>
@@ -140,7 +140,7 @@
 
                         <img src="https://tradenation.com/diamond.png" alt="" class="pe-2">
                         Last updated January 2023<br>
-                        If you have difficulty viewing this document please contact support@tradenationltd.com for assistance. <br><br>
+                        If you have difficulty viewing this document please contact support@tradenation-uk.com for assistance. <br><br>
 
                         <b>All legals can be found at: <a href="{{ route('legals_new') }}" style="color: #0A1E32;">Legals</a></b>
                     </p>
@@ -157,7 +157,7 @@
 
                         <img src="https://tradenation.com/diamond.png" alt="" class="pe-2">
                         Last updated January 2023<br>
-                        If you have difficulty viewing this document please contact support@tradenationltd.com for assistance. <br><br>
+                        If you have difficulty viewing this document please contact support@tradenation-uk.com for assistance. <br><br>
 
                         <b>All legals can be found at: <a href="{{ route('legals_new') }}" style="color: #0A1E32;">Legals</a></b>
                     </p>
@@ -174,7 +174,7 @@
 
                         <img src="https://tradenation.com/diamond.png" alt="" class="pe-2">
                         Last updated January 2023<br>
-                        If you have difficulty viewing this document please contact support@tradenationltd.com for assistance. <br><br>
+                        If you have difficulty viewing this document please contact support@tradenation-uk.com for assistance. <br><br>
 
                         <b>All legals can be found at: <a href="{{ route('legals_new') }}" style="color: #0A1E32;">Legals</a></b>
                     </p>
@@ -191,7 +191,7 @@
 
                         <img src="https://tradenation.com/diamond.png" alt="" class="pe-2">
                         Last updated January 2023<br>
-                        If you have difficulty viewing this document please contact support@tradenationltd.com for assistance. <br><br>
+                        If you have difficulty viewing this document please contact support@tradenation-uk.com for assistance. <br><br>
 
                         <b>All legals can be found at: <a href="{{ route('legals_new') }}" style="color: #0A1E32;">Legals</a></b>
                     </p>
@@ -208,7 +208,7 @@
 
                         <img src="https://tradenation.com/diamond.png" alt="" class="pe-2">
                         Last updated January 2023<br>
-                        If you have difficulty viewing this document please contact support@tradenationltd.com for assistance. <br><br>
+                        If you have difficulty viewing this document please contact support@tradenation-uk.com for assistance. <br><br>
 
                         <b>All legals can be found at: <a href="{{ route('legals_new') }}" style="color: #0A1E32;">Legals</a></b>
                     </p>

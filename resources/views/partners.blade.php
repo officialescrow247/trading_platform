@@ -187,7 +187,7 @@
         </div>
 
         <div class="text-center py-5">
-            <a href="mailto:support@tradenationltd.com" class="btn btnsm rounded-pill text-light px-4" style="background-color: #EE4E08;">Email us</a>
+            <a href="mailto:support@tradenation-uk.com" class="btn btnsm rounded-pill text-light px-4" style="background-color: #EE4E08;">Email us</a>
         </div>
     </section>
 @endsection

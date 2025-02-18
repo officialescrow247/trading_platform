@@ -58,7 +58,7 @@ class AssetTableSeeder extends Seeder
             ],
             [
                 'name' => 'support_email',
-                'value' => 'support@tradenationltd.com',
+                'value' => 'support@tradenation-uk.com',
             ],
             [
                 'name' => 'online_users',

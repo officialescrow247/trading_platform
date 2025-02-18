@@ -211,7 +211,7 @@
             </h3>
    
             <div class="py-5">
-               <a href="mailto:support@tradenationltd.com" style="background-color: #fc5000;" class="btn px-4 text-light mt-4 rounded-pill">Email Us</a>
+               <a href="mailto:support@tradenation-uk.com" style="background-color: #fc5000;" class="btn px-4 text-light mt-4 rounded-pill">Email Us</a>
             </div>
          </div>
       </div>
