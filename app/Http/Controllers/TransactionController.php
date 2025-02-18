@@ -835,9 +835,9 @@ class TransactionController extends Controller
                 Alert::success("Please kind cross-check this transactions.");
                 return redirect()->back();
             }else{
-                if(!empty($withdrawal->btc_amount) && empty($withdrawal->wireT_amount)){
+                if($withdrawal->wallet_type == "BTC"){
                     // btc
-                    $amount = $withdrawal->btc_amount;
+                    $amount = $withdrawal->wallet_amount;
                 }else{
                     // wire
                     $amount = $withdrawal->wireT_amount;
@@ -849,7 +849,7 @@ class TransactionController extends Controller
                 Alert::success("Insufficient funds.");
                 return redirect()->back();
             }
-    
+            
             $new_balance = $old_balance - $amount;
             User::whereId($request->user_id)->update([
                 'balance' => $new_balance,
