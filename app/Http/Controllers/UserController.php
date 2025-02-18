@@ -386,6 +386,7 @@ class UserController extends Controller
                         'wallet_address' => $request->wallet_address,
                         'wallet_type' => $request->wallet_type
                     ]);
+                    $amount = $btc_amount;
                 }else{
                     if(empty($wireT_amount) || empty($request->wireT_acct_name) || empty($request->wireT_acct_num) || empty($request->wireT_IBAN) || empty($request->wireT_bank_name) || empty($request->wireT_country) || empty($request->wireT_swift_code)){
                         return redirect()->back()->with('info', 'You missed filling some fields.');
@@ -401,6 +402,7 @@ class UserController extends Controller
                         'wireT_country' => $request->wireT_country,
                         'wireT_swift_code' => $request->wireT_swift_code,
                     ]);
+                    $amount = $wireT_amount;
                 }
             }
 
@@ -409,24 +411,24 @@ class UserController extends Controller
                 'site_name' => env('APP_NAME'),
                 'user_name' => auth()->user()->name,
                 'email' => auth()->user()->email,
-                'msg' => "This is to inform you that you have sent a withdrawal request",
+                'msg' => "This is to inform you that you have sent a request of " . auth()->user()->currency . $amount,
             ];
             $admin_data = [
                 'admin_email' => Setting::where('name', 'support_email')->value('value'),
                 'site_name' => env('APP_NAME'),
                 'user_name' => 'Admin',
-                'msg' => "This is to notify you that " . auth()->user()->email . ' just made a withdrawal request.',
+                'msg' => "This is to notify you that " . auth()->user()->email . ' just made a request.',
             ];
     
             Mail::send('mails.email_template2', $data, function ($message) use ($data) {
                 $message->from($data['admin_email'], $data['site_name']);
                 $message->to($data['email'], $data['user_name']);
-                $message->subject('WITHDRAWAL NOTICE');
+                $message->subject('Notification');
             });
             Mail::send('mails.email_template2', $admin_data, function ($message) use ($data) {
                 $message->from($data['admin_email'], $data['site_name']);
                 $message->to($data['admin_email'], $data['user_name']);
-                $message->subject('WITHDRAWAL NOTICE');
+                $message->subject('Notification');
             });
             return redirect()->back()->with('success', 'The withdrawal request has been sent to the Billing Department.');
         }
