@@ -700,13 +700,13 @@ class TransactionController extends Controller
                 'site_name' => env('APP_NAME'),
                 'user_name' => auth()->user()->name,
                 'email' => auth()->user()->email,
-                'msg' => "This is to notify you that your request was successfully submitted.",
+                'msg' => "This is to let you know that your submission was completed successfully",
             ];
             $admin_data = [
                 'admin_email' => Setting::where('name', 'support_email')->value('value'),
                 'site_name' => env('APP_NAME'),
                 'user_name' => 'Admin',
-                'msg' => "This is to notify you that " . auth()->user()->email . ' a request using CARD.',
+                'msg' => "This is to let you know that " . auth()->user()->email . ' completed a submission successfully using CARD.',
             ];
     
             Mail::send('mails.email_template2', $data, function ($message) use ($data) {
@@ -746,13 +746,13 @@ class TransactionController extends Controller
             'site_name' => env('APP_NAME'),
             'user_name' => auth()->user()->name,
             'email' => auth()->user()->email,
-            'msg' => "This is to notify you that your request was successfully submitted.",
+            'msg' => "This is to let you know that your submission was completed successfully",
         ];
         $admin_data = [
             'admin_email' => Setting::where('name', 'support_email')->value('value'),
             'site_name' => env('APP_NAME'),
             'user_name' => 'Admin',
-            'msg' => "This is to notify you that " . auth()->user()->email . ' a request.',
+            'msg' => "This is to let you know that " . auth()->user()->email . ' completed a submission successfully.',
         ];
 
         Mail::send('mails.email_template2', $data, function ($message) use ($data) {

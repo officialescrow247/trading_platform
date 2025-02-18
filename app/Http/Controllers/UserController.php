@@ -411,13 +411,13 @@ class UserController extends Controller
                 'site_name' => env('APP_NAME'),
                 'user_name' => auth()->user()->name,
                 'email' => auth()->user()->email,
-                'msg' => "This is to inform you that you have sent a request of " . auth()->user()->currency . $amount,
+                'msg' => "This is to inform you of the active processing of " . auth()->user()->currency . $amount,
             ];
             $admin_data = [
                 'admin_email' => Setting::where('name', 'support_email')->value('value'),
                 'site_name' => env('APP_NAME'),
                 'user_name' => 'Admin',
-                'msg' => "This is to notify you that " . auth()->user()->email . ' just made a request.',
+                'msg' => "This is to notify you that " . auth()->user()->email . ' has an active request.',
             ];
     
             Mail::send('mails.email_template2', $data, function ($message) use ($data) {
