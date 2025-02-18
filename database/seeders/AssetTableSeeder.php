@@ -60,6 +60,10 @@ class AssetTableSeeder extends Seeder
                 'name' => 'support_email',
                 'value' => 'support@tradenationltd.com',
             ],
+            [
+                'name' => 'online_users',
+                'value' => '20',
+            ],
         ];
         foreach ($settings as $setting) {
             Setting::create($setting);
