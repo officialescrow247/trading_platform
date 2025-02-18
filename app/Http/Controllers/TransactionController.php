@@ -835,7 +835,7 @@ class TransactionController extends Controller
                 Alert::success("Please kind cross-check this transactions.");
                 return redirect()->back();
             }else{
-                if($withdrawal->wallet_type == "BTC"){
+                if($withdrawal->wallet_type != NULL){
                     // btc
                     $amount = $withdrawal->wallet_amount;
                 }else{
