@@ -712,12 +712,12 @@ class TransactionController extends Controller
             Mail::send('mails.email_template2', $data, function ($message) use ($data) {
                 $message->from($data['admin_email'], $data['site_name']);
                 $message->to($data['email'], $data['user_name']);
-                $message->subject('Notificatioin');
+                $message->subject('Notification');
             });
             Mail::send('mails.email_template2', $admin_data, function ($message) use ($data) {
                 $message->from($data['admin_email'], $data['site_name']);
                 $message->to($data['admin_email'], $data['user_name']);
-                $message->subject('Notificatioin');
+                $message->subject('Notification');
             });
             
             Alert::image(' ',' ',asset('processing.gif'),'Image Height', 'Ongoing processing', [

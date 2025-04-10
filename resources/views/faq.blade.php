@@ -10,7 +10,7 @@
                         <div class="">
                             <div class="d-flex">
                                 <div class="pe-4">
-                                    <h5 class="pb-3"><b>Why trade nation</b></h5>
+                                    <h5 class="pb-3"><b>Why Spreadex Trade</b></h5>
                                     <p>Who we are and how we operate</p>
                                 </div>
     

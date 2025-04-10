@@ -40,7 +40,7 @@
                 background-size: cover;
             }
 			.header_bg{
-				background-color: #0A1E32;
+				background-color: #02070b;
 			}
 			/* .dropdown:hover .dropdown-menu{
 				display: block;
@@ -68,7 +68,7 @@
 				border-radius: 40px;
 			}
 			.rund_h:hover{
-				background-color: #0A1E32;
+				background-color: #02070b;
 				color: #FFFFFF !important;
 				font-weight: 400;
 			}
@@ -85,7 +85,7 @@
 				justify-content: center;
 				-webkit-box-align: center;
 				align-items: center;
-				background: rgb(252, 80, 0);
+				background: rgb(4, 227, 216);
 				position: relative;
 				overflow: hidden;
 				margin: 60px 0px;
@@ -168,7 +168,7 @@
 				line-height: 48px;
 				font-weight: 700;
 				font-family: '__Montserrat_31f3fd',Helvetica,Arial,sans-serif,'__Montserrat_Fallback_31f3fd';
-				color: #0A1E32;
+				color: #02070b;
 			}
 			.css-amhq3n {
 				margin: 0;
@@ -176,7 +176,7 @@
 				line-height: 48px;
 				font-weight: 700;
 				font-family: '__Montserrat_31f3fd',Helvetica,Arial,sans-serif,'__Montserrat_Fallback_31f3fd';
-				color: #0A1E32;
+				color: #02070b;
 			}
 			.css-zq2esq {
 				display: -webkit-inline-box;
@@ -237,7 +237,7 @@
 			}
 			section.Trading, section.Markets, section.Insights, section.About{
 				display: none;
-				background-color: #0A1E32;
+				background-color: #02070b;
 			}
 			div.show_nav a{
 				display: block;
@@ -267,24 +267,24 @@
 				width: 70%;
 			}
 			.trade_now_btn{
-				border: 2px solid #0A1E32;
-				color: #0A1E32;
+				border: 2px solid #02070b;
+				color: #02070b;
 			}
 			.trade_now_btn:hover{
-				background-color: #0A1E32;
+				background-color: #02070b;
 				color: #fff;
 			}
 			.maxi_max{
-				border: 2px solid #0A1E32;
+				border: 2px solid #02070b;
 				background-color: #fff;
 				padding: 20px 40px;
 			}
 			.maxi_max:hover{
-				background-color: #0A1E32;
+				background-color: #02070b;
 			}
 			.share_btn:hover{
 				color: #fff;
-				background-color: #0A1E32;
+				background-color: #02070b;
 			}
 			.article_collapse a {
 				display: block;
@@ -303,12 +303,12 @@
 				display: none !important;
 			}
 			.cookie_btn{
-				background-color: #0A1E32;
+				background-color: #02070b;
 				color: #fff;
 			}
 			.cookie_btn:hover{
 				background-color: #fff;
-				color: #0A1E32;
+				color: #02070b;
 			}
 			#account_types_banner{
                 height: 50vh;
@@ -330,7 +330,7 @@
             }
             #our_ambassadors h1:first-child{
                 background: #fff;
-                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
+                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
                 /* color: #fff; */
                 font-size: 4rem;
                 width: fit-content;
@@ -340,7 +340,7 @@
             }
             #our_ambassadors h1:last-child{
                 background: #333333;
-                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
+                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
                 color: #fff;
                 font-size: 4rem;
                 width: fit-content;
@@ -358,7 +358,7 @@
                 margin-bottom: 150px;
             }
             #brokerage_fees h1:first-child{
-                background: #EE4E08;
+                background: #04e3d8;
                 color: #fff;
                 font-size: 3rem;
                 width: fit-content;
@@ -410,7 +410,7 @@
                 height: 250px !important;
             }
 			.aa, .bb{
-				border: 2px solid #0A1E32;
+				border: 2px solid #02070b;
 				border-radius: 50%;
 				height: 60px;
 				width: 60px;
@@ -535,13 +535,15 @@
 				background-color: #EB4B08;
 				border-radius: 50rem !important;
 			}
-			
+			a.a_Trading, a.a_Markets, a.a_Insights, a.a_About{
+                cursor: default;
+            }
         </style>
 		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 	</head>
 
 	<body>
-		<header class="my-bg-color"  style="margin-bottom: 110px;">
+		<header class="my-bg-color"  style="margin-bottom: 200px;">
 			<nav class="d-none d-lg-block navbar navbar-expand-lg navbar-dark header_bg border border-top-0 border-start-0 border-end-0 fixed-top pb-3">
 				<span class="pb-2 container text-light pt-1 d-flex" style="font-size: 12px;">
 					Financial Spread Bets and CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. 82.8% of retail investor accounts lose money when trading CFDs with this provider. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.
@@ -549,7 +551,7 @@
 				
 				<div class="container-fluid px-5">
                     <a href="{{ url('/') }}" class="text-dark" style="display: flex; text-decoration: none; align-items: center; color: white; justify-content: center;">
-                        <img src="https://tnfev2.cdn.prismic.io/tnfev2/76a4e3dc-43ad-4b62-a157-a4feba9bf285_Logo.svg" alt="site-logo" style="height: 70px;">
+                        <img src="{{ asset('imgs/logo_main.png') }}" alt="{{ env('APP_NAME') }} logo" style="width: 200px;">
                     </a>
 
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -559,19 +561,19 @@
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="rm_p navbar-nav me-auto mb-2 mb-lg-0 ps-5">
                             <li class="nav-item px-3">
-								<a class="nav-link text-white a_Trading" href="#!"><b>Trading</b></a>
+								<a class="nav-link text-white a_Trading"><b>Trading</b></a>
 							</li>
 
                             <li class="nav-item px-3">
-								<a class="nav-link text-white a_Markets" href="#!"><b>Markets</b></a>
+								<a class="nav-link text-white a_Markets"><b>Markets</b></a>
 							</li>
 
                             <li class="nav-item px-3">
-								<a class="nav-link text-white a_Insights" href="#!"><b>Insights</b></a>
+								<a class="nav-link text-white a_Insights"><b>Insights</b></a>
 							</li>
 
                             <li class="nav-item px-3">
-								<a class="nav-link text-white a_About" href="#!"><b>About Us</b></a>
+								<a class="nav-link text-white a_About"><b>About Us</b></a>
 							</li>
 
 							<li class="nav-item px-3">
@@ -586,7 +588,7 @@
                                     <a class="nav-link text-white login_btn rounded-pill px-5" href="{{ route('login') }}">Login</a>
                                 </li>
                                 <li class="nav-item ps-4">
-                                    <a class="t_now nav-link text-white rounded-pill px-4" href="{{ route('register') }}" style="background-color: #EE4E08; border: 2px solid #EE4E08;">Trade Now</a>
+                                    <a class="t_now nav-link text-white rounded-pill px-4" href="{{ route('register') }}" style="color: #02070b !important; background-color: #04e3d8; border: 2px solid #04e3d8;">Trade Now</a>
                                 </li>
                             @else
                                 <li class="nav-item">
@@ -625,14 +627,14 @@
 								</a>
 
 								<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">Trade Nation</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Spreadex Trade</span></li>
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('why_trade_with_us') }}">Why Trade with Us?</a></li>
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('why_trade_with_us') }}#fixed-spread-trading">Fixed Spread Trading</a></li>
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('why_trade_with_us') }}#cfd-trading">CFD Trading</a></li>
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('why_trade_with_us') }}#negative-balance-protection">Negative Balance Protection</a></li>
 
 
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">Trading Cost</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Trading Cost</span></li>
 									<li>
 										<a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_costs') }}">Our Costs</a>
 									</li>
@@ -644,7 +646,7 @@
 									</li>
 
 
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">Trading Tools</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Trading Tools</span></li>
 									<li>
 										<a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_tools') }}">Our Tools</a>
 									</li>
@@ -659,7 +661,7 @@
 									</li>
 
 
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">Trading Explained</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Trading Explained</span></li>
 									<li>
 										<a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_explained') }}">Level up Your Trading</a>
 									</li>
@@ -684,7 +686,7 @@
 								</a>
 
 								<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">Discover Markets</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Discover Markets</span></li>
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('markets') }}#">Trade Popular Markets</a></li>
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('markets') }}#indices">Indices</a></li>
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('markets') }}#forex">Forex</a></li>
@@ -692,7 +694,7 @@
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('markets') }}#all-instruments">All Instruments</a></li>
 						
 
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">Our Platforms</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Our Platforms</span></li>
 									<li>
 										<a class="dropdown-item" style="text-decoration: none;" href="{{ route('our_platforms') }}#">TMade to Trade</a>
 									</li>
@@ -701,7 +703,7 @@
 									</li>
 
 
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">Market Information</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Market Information</span></li>
 									<li>
 										<a class="dropdown-item" style="text-decoration: none;" href="{{ route('market_information') }}">Market Information Sheet</a>
 									</li>
@@ -719,7 +721,7 @@
 									</li>
 
 
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">Trading Explained</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Trading Explained</span></li>
 									<li>
 										<a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_explained') }}">Level up Your Trading</a>
 									</li>
@@ -744,14 +746,14 @@
 								</a>
 
 								<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">Insights Hub</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Insights Hub</span></li>
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('insights_hub') }}">Gain Insights</a></li>
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('insights_hub') }}#trading-tools">Trading Tools</a></li>
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('insights_hub') }}#part-time-to-pro">Part-time to Pro</a></li>
 									<!-- <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('insights_hub') }}#demo">Try Our Demo</a></li> -->
 
 
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">Types of Trading</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Types of Trading</span></li>
 									<li>
 										<a class="dropdown-item" style="text-decoration: none;" href="{{ route('articles_day_trading') }}">Day Trading</a>
 									</li>
@@ -766,7 +768,7 @@
 									</li>
 
 
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">Analysis</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Analysis</span></li>
 									<li>
 										<a class="dropdown-item" style="text-decoration: none;" href="{{ route('articles_technical_analysis') }}">Technical Analysis</a>
 									</li>
@@ -775,7 +777,7 @@
 									</li>
 
 
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">Trading Times</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Trading Times</span></li>
 									<li>
 										<a class="dropdown-item" style="text-decoration: none;" href="{{ route('articles_what_time_does_forex_market_open') }}">Forex Opening Times</a>
 									</li>
@@ -791,12 +793,12 @@
 								</a>
 
 								<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">About Us</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">About Us</span></li>
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('about_us') }}">Who We Are</a></li>
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('about_us') }}#regulations_">Regulations</a></li>
 
 
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">Our Community</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Our Community</span></li>
 									<li>
 										<a class="dropdown-item" style="text-decoration: none;" href="{{ route('about_us') }}#our-sponsorships">Sponsorship</a>
 									</li>
@@ -809,13 +811,13 @@
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_stories_new') }}">Customers Reviews</a></li>
 
 
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">Careers</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Careers</span></li>
 									<li>
 										<a class="dropdown-item" style="text-decoration: none;" href="{{ route('about_us') }}#careers">Join Us</a>
 									</li>
 
 
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">Follow Us</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Follow Us</span></li>
 									<li>
 										<a class="dropdown-item" style="text-decoration: none;" href="#!">Twitter</a>
 									</li>
@@ -854,7 +856,7 @@
 				<div class="container show_nav">
 					<div class="row">
 						<div class="col-md-3">
-							<p class="text-light"><b>Trade Nation</b></p>
+							<p class="text-light"><b>Spreadex Trade</b></p>
 
 							<a href="{{ route('why_trade_with_us') }}">Why Trade with Us?</a>
 							<a href="{{ route('why_trade_with_us') }}#fixed-spread-trading">Fixed Spread Trading</a>
@@ -1011,31 +1013,31 @@
 			<svg width="710" height="710" fill="#fc6f2c" class="sc-915eeb0c-2 yzosE">
 				<polygon points="0,355, 355,0, 710,355, 355,710 "></polygon>
 			</svg>
-			<svg width="710" height="710" fill="#fc5000" class="sc-915eeb0c-2 yzotp">
+			<svg width="710" height="710" fill="#04e3d8" class="sc-915eeb0c-2 yzotp">
 				<polygon points="0,355, 355,0, 710,355, 355,710 "></polygon>
 			</svg>
 			<svg width="710" height="710" fill="#fc6f2c" class="sc-915eeb0c-2 yzovR">
 				<polygon points="0,355, 355,0, 710,355, 355,710 "></polygon>
 			</svg>
-			<svg width="710" height="710" fill="#fc5000" class="sc-915eeb0c-2 ilXGCg">
+			<svg width="710" height="710" fill="#04e3d8" class="sc-915eeb0c-2 ilXGCg">
 				<polygon points="0,355, 355,0, 710,355, 355,710 "></polygon>
 			</svg>
 			<svg width="710" height="710" fill="#fc6f2c" class="sc-915eeb0c-2 ilXGCj">
 				<polygon points="0,355, 355,0, 710,355, 355,710 "></polygon>
 			</svg>
-			<svg width="710" height="710" fill="#fc5000" class="sc-915eeb0c-2 ilXGxY">
+			<svg width="710" height="710" fill="#04e3d8" class="sc-915eeb0c-2 ilXGxY">
 				<polygon points="0,355, 355,0, 710,355, 355,710 "></polygon>
 			</svg>
 			<svg width="710" height="710" fill="#fc6f2c" class="sc-915eeb0c-2 ilXGCn">
 				<polygon points="0,355, 355,0, 710,355, 355,710 "></polygon>
 			</svg>
-			<svg width="710" height="710" fill="#fc5000" class="sc-915eeb0c-2 ilXGzV">
+			<svg width="710" height="710" fill="#04e3d8" class="sc-915eeb0c-2 ilXGzV">
 				<polygon points="0,355, 355,0, 710,355, 355,710 "></polygon>
 			</svg>
 			<svg width="710" height="710" fill="#fc6f2c" class="sc-915eeb0c-2 yzkTZ">
 				<polygon points="0,355, 355,0, 710,355, 355,710 "></polygon>
 			</svg>
-			<svg width="710" height="710" fill="#fc5000" class="sc-915eeb0c-2 yznlk">
+			<svg width="710" height="710" fill="#04e3d8" class="sc-915eeb0c-2 yznlk">
 				<polygon points="0,355, 355,0, 710,355, 355,710 "></polygon>
 			</svg>
 			<svg width="710" height="710" fill="#fc6f2c" class="sc-915eeb0c-2 yzmfU">
@@ -1048,14 +1050,6 @@
 		
 		<footer class="pb-5">
             <div class="p-5 rm_p_2 container-fluid vedx">
-				<div class="text-center pb-5 vedx">
-					<a href="{{ url('/') }}" class="pb-3" style="display: flex; text-decoration: none; align-items: center; color: white; justify-content: center;">
-                        <img src="https://images.prismic.io/tnfev2/44587b9b-c476-4a96-a39e-788e0f04f5e5_HeaderLogoAnimated.gif" alt="site-logo" style="height: 40px;"> <h2 class="text-dark" style="padding-left: 10px; padding-top: 10px;">Trade Nation</h2>
-                    </a>
-				</div>
-
-				<hr>
-
 				<div class="pb-4 pt-3">
 					<div class="row">
 						<div class="col-md-4 mb-5">
@@ -1119,15 +1113,9 @@
 						</div>
 
 						<div class="col-md-4">
-							<h4 class="pb-3"><b>Regulatory Bodies</b></h4>
+							<h4 class="pb-3"><b>Regulatory Body</b></h4>
 							<p>
 								<img src="https://tradenation.com/diamond.png" alt="" class="pe-2"> Financial Conduct Authority
-							</p>
-							<p>
-								<img src="https://tradenation.com/diamond.png" alt="" class="pe-2"> Australian Securities and Investment Commission
-							</p>
-							<p>
-								<img src="https://tradenation.com/diamond.png" alt="" class="pe-2"> Securities Commission of the Bahamas
 							</p>
 						</div>
 					</div>
@@ -1163,44 +1151,14 @@
 
 				<hr>
 
-				<div class="py-4">
-					<h5 class="pb-3"><b>The legal stuff</b></h5>
-					<div class="row" style="font-size: small;">
-						<div class="col-md-6">
-							<p>
-								Financial spread trading comes with a high risk of losing money rapidly due to leverage. 82.8% of retail investor accounts lose money when trading CFDs with this provider. You should consider whether you understand how spread trading works and whether you can afford to take the high risk of losing your money.
-							</p>
-							<p>
-								Trade Nation is a trading name of Trade Nation Financial UK Ltd, a financial services company authorised and regulated by the Financial Conduct Authority under firm reference number 525164. Our registered office is 14 Bonhill Street, London, EC2A 4BX, United Kingdom.
-							</p>
-							<p>
-								Trade Nation is a trading name of Trade Nation Australia Pty Ltd, a financial services company authorised and regulated by the Australian Securities and Investments Commission, ACN 158 065 635, AFSL No. 4226
-							</p>
-						</div>
-
-						<div class="col-md-6">
-							<p>
-								Trade Nation Ltd, registration Number 203493 B, is authorised and regulated by the Securities Commission of the Bahamas, SIA-F216
-							</p>
-							<p>
-								The information on this site is not directed at residents of the United States or any particular country outside the UK, Australia, South Africa or The Bahamas and is not intended for distribution to, or use by, any person in any country or jurisdiction where such distribution or use would be contrary to local law or regulation.
-							</p>
-							<a href="{{ route('legals_new') }}">Full Legal notices</a>
-							<p class="pt-2">
-								* The Loyalty Bonus is offered with Trade Nation UK and Trade Nation Australia account.
-							</p>
-						</div>
-					</div>
-				</div>
-
 				<div class="pb-3 pt-4">
-					<a href="{{ route('legals_new') }}" class="px-2 text-dark" style="text-decoration: none;"><b>Terms</b></a> | <a href="{{ route('legals_id', 'privacy-policies') }}" class="px-2 text-dark" style="text-decoration: none;"><b>Privacy</b></a> | <a href="{{ route('legals_id', 'cookie-policy') }}" class="px-2 text-dark" style="text-decoration: none;"><b>Cookies</b></a> | <a href="{{ route('legals_new') }}" class="px-2 text-dark" style="text-decoration: none;"><b>Legals</b></a>
+					<a href="{{ route('legals_id', 'cookie-policy') }}" class="px-2 text-dark" style="text-decoration: none;"><b>Cookies</b></a>
 				</div>
 
 				<hr>
 
-				<div>
-					© 2019 - {{ date('Y') }} Trade Nation. All Rights Reserved.
+				<div class="text-center">
+					© 2019 - {{ date('Y') }} Spreadex Trade. All Rights Reserved.
 				</div>
             </div>
         </footer>

@@ -39,7 +39,12 @@
 				display: block;
 				color: red;
 			}
-			div.show_nav p.text-light{
+            
+            a.a_Trading, section.Trading, a.a_Markets, section.Markets, a.a_Insights, section.Insights, a.a_About, section.About{
+                cursor: default;
+            }
+			
+            div.show_nav p.text-light{
 				font-size: 25px;
 			}
 			div.show_nav a:hover{
@@ -106,9 +111,8 @@
         
                     <div style="width: 20%;">
                         <span class="d_2">Trading in</span>
-                        <img src="{{ asset('imgs/en-sc.svg') }}" alt="" class="img-fluid" style="width: 17px;">
-                        {{-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/800px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" alt="" class="img-fluid" style="width: 17px;"> --}}
-                        <span class="d_2">SC</span>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/800px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" alt="" class="img-fluid" style="width: 17px;">
+                        <span class="d_2">UK</span>
                     </div>
                 </div>
             </div>
@@ -116,7 +120,7 @@
             <nav class="d-none d-lg-block navbar navbar-expand-lg navbar-light" style="background-color: #050f19;">
                 <div class="container pb-3">
                     <a class="navbar-brand text-white" href="{{ url('/') }}">
-                        <img src="{{ asset('imgs/logo.avif') }}" alt="{{ env('APP_NAME') }} logo" style="width: 300px;">    
+                        <img src="{{ asset('imgs/logo_main.png') }}" alt="{{ env('APP_NAME') }} logo" style="width: 200px;">    
                     </a>
     
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
@@ -137,15 +141,15 @@
                             </li>
                             
                             <li class="nav-item">
-                                <a class="nav-link active text-light a_Trading" aria-current="page" href="#">Trading</a>
+                                <a class="nav-link active text-light a_Trading" aria-current="page">Trading</a>
                             </li>
     
                             <li class="nav-item">
-                                <a class="nav-link text-light a_Markets" href="#">Platform</a>
+                                <a class="nav-link text-light a_Markets">Platform</a>
                             </li>
     
                             <li class="nav-item">
-                                <a class="nav-link text-light a_Insights" href="#">Learn</a>
+                                <a class="nav-link text-light a_Insights">Learn</a>
                             </li>
     
                             <li class="nav-item">
@@ -178,9 +182,8 @@
         
                     <div style="width: 20%;">
                         <span class="d_2">Trading in</span>
-                        <img src="{{ asset('imgs/en-sc.svg') }}" alt="" class="img-fluid" style="width: 17px;">
-                        {{-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/800px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" alt="" class="img-fluid" style="width: 17px;"> --}}
-                        <span class="d_2">SC</span>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/800px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" alt="" class="img-fluid" style="width: 17px;">
+                        <span class="d_2">UK</span>
                     </div>
                 </div>
     
@@ -205,14 +208,14 @@
                                 </a>
     
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">Trade Nation</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Spreadex Trade</span></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('why_trade_with_us') }}">Why Trade with Us?</a></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('why_trade_with_us') }}#fixed-spread-trading">Fixed Spread Trading</a></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('why_trade_with_us') }}#cfd-trading">CFD Trading</a></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('why_trade_with_us') }}#negative-balance-protection">Negative Balance Protection</a></li>
     
     
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">Trading Cost</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Trading Cost</span></li>
                                     <li>
                                         <a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_costs') }}">Our Costs</a>
                                     </li>
@@ -224,7 +227,7 @@
                                     </li>
     
     
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">Trading Tools</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Trading Tools</span></li>
                                     <li>
                                         <a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_tools') }}">Our Tools</a>
                                     </li>
@@ -239,7 +242,7 @@
                                     </li>
     
     
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">Trading Explained</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Trading Explained</span></li>
                                     <li>
                                         <a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_explained') }}">Level up Your Trading</a>
                                     </li>
@@ -264,7 +267,7 @@
                                 </a>
     
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">Discover Markets</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Discover Markets</span></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('markets') }}#">Trade Popular Markets</a></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('markets') }}#indices">Indices</a></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('markets') }}#forex">Forex</a></li>
@@ -272,7 +275,7 @@
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('markets') }}#all-instruments">All Instruments</a></li>
                         
     
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">Our Platforms</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Our Platforms</span></li>
                                     <li>
                                         <a class="dropdown-item" style="text-decoration: none;" href="{{ route('our_platforms') }}#">TMade to Trade</a>
                                     </li>
@@ -281,7 +284,7 @@
                                     </li>
     
     
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">Market Information</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Market Information</span></li>
                                     <li>
                                         <a class="dropdown-item" style="text-decoration: none;" href="{{ route('market_information') }}">Market Information Sheet</a>
                                     </li>
@@ -299,7 +302,7 @@
                                     </li>
     
     
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">Trading Explained</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Trading Explained</span></li>
                                     <li>
                                         <a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_explained') }}">Level up Your Trading</a>
                                     </li>
@@ -324,14 +327,14 @@
                                 </a>
     
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">Insights Hub</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Insights Hub</span></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('insights_hub') }}">Gain Insights</a></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('insights_hub') }}#trading-tools">Trading Tools</a></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('insights_hub') }}#part-time-to-pro">Part-time to Pro</a></li>
                                     <!-- <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('insights_hub') }}#demo">Try Our Demo</a></li> -->
     
     
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">Types of Trading</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Types of Trading</span></li>
                                     <li>
                                         <a class="dropdown-item" style="text-decoration: none;" href="{{ route('articles_day_trading') }}">Day Trading</a>
                                     </li>
@@ -346,7 +349,7 @@
                                     </li>
     
     
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">Analysis</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Analysis</span></li>
                                     <li>
                                         <a class="dropdown-item" style="text-decoration: none;" href="{{ route('articles_technical_analysis') }}">Technical Analysis</a>
                                     </li>
@@ -355,7 +358,7 @@
                                     </li>
     
     
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">Trading Times</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Trading Times</span></li>
                                     <li>
                                         <a class="dropdown-item" style="text-decoration: none;" href="{{ route('articles_what_time_does_forex_market_open') }}">Forex Opening Times</a>
                                     </li>
@@ -371,12 +374,12 @@
                                 </a>
     
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">About Us</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">About Us</span></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('about_us') }}">Who We Are</a></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('about_us') }}#regulations_">Regulations</a></li>
     
     
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">Our Community</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Our Community</span></li>
                                     <li>
                                         <a class="dropdown-item" style="text-decoration: none;" href="{{ route('about_us') }}#our-sponsorships">Sponsorship</a>
                                     </li>
@@ -389,13 +392,13 @@
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_stories_new') }}">Customers Reviews</a></li>
     
     
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">Careers</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Careers</span></li>
                                     <li>
                                         <a class="dropdown-item" style="text-decoration: none;" href="{{ route('about_us') }}#careers">Join Us</a>
                                     </li>
     
     
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #EE4E08;">Follow Us</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Follow Us</span></li>
                                     <li>
                                         <a class="dropdown-item" style="text-decoration: none;" href="#!">Twitter</a>
                                     </li>
@@ -435,7 +438,7 @@
             <div class="container show_nav">
                 <div class="row">
                     <div class="col-md-3">
-                        <p class="text-light"><b>Trade Nation</b></p>
+                        <p class="text-light"><b>Spreadex Trade</b></p>
 
                         <a href="{{ route('why_trade_with_us') }}">Why Trade with Us?</a>
                         <a href="{{ route('why_trade_with_us') }}#fixed-spread-trading">Fixed Spread Trading</a>
@@ -592,7 +595,7 @@
                         <h1 class="inter p_w" style="font-size: 40px;">
                             <b>
                                 Trade on our <br>
-                                <span style="color: #fc5000!important;"><strong>award-winning</strong></span> <br>
+                                <span style="color: #04e3d8!important;"><strong>award-winning</strong></span> <br>
                                 platform
                             </b>
                         </h1>
@@ -641,8 +644,8 @@
                     <div class="mb-3 col-6 col-md-3 d-flex">
                         <div class="ps-5">
                             <span style="font-size: 13px;">Trading in</span>
-                            <img src="{{ asset('imgs/en-sc.svg') }}" alt="" class="img-fluid" style="width: 17px;">
-                            <span style="font-size: 13px;">SC</span>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/800px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" alt="" class="img-fluid" style="width: 17px;">
+                            <span style="font-size: 13px;">UK</span>
                         </div>
                     </div>
                 </div>
@@ -655,7 +658,7 @@
                         <div>
                             <img src="https://seeklogo.com/images/V/visa-logo-121ECA05B2-seeklogo.com.png" alt="" class="img-fluid" style="width: 50px; margin: 0 20px;">
                             <img src="https://images.prismic.io/tnfev2/0f76eaa5-c6f6-4b06-8aad-62d978a2d969_mc_symbol_opt_45_3x.png?auto=compress%2Cformat&fit=max&w=1920" alt="" class="img-fluid" style="width: 50px; margin: 0 20px;">
-                            <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="" class="img-fluid" style="width: 50px; margin: 0 20px;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1200px-Bitcoin.svg.png" alt="" class="img-fluid mx-2" style="width: 40px; height: 40px;">
                         </div>
                     </div>
 
@@ -668,65 +671,23 @@
                     </div>
 
                     <div class="col-md-3 mb-4">
-                        <h6><b>Regulatory bodies</b></h6>
+                        <h6><b>Regulatory body</b></h6>
 
                         <ul>
                             <li>UK - FCA</li>
-                            <li>Australia - ASIC</li>
-                            <li>Seychelles - FSA</li>
-                            <li>Bahamas - SCB</li>
-                            <li>South Africa - FSCA</li>
                         </ul>
                     </div>
-
-                    <div class="col-md-3 mb-4">
-                        <h6><p>Sponsors of your favourite teams</p></h6>
-                        <div>
-                            <img src="https://images.prismic.io/tnfev2/ZmGYk5m069VX1goj_AstonVilla-Crest-RGB-White.png?auto=format,compress" alt="" class="img-fluid mx-2" style="width: 50px;">
-
-                            <img src="https://images.prismic.io/tnfev2/Zl3K3KWtHYXtUB7E_Wyvern_SomersetCountyCricketClub_RGB_WO.png?auto=format,compress" alt="" class="img-fluid mx-2" style="width: 50px;">
-                        </div>
-                    </div>
                 </div>
 
-                <hr>
-                <div>
-                    <h5>The legal stuff</h5>
-                    <div class="row pt-2">
-                        <div class="col-md-6">
-                            <article style="font-size: 13px;" class="dl_sd">
-                                Trading CFDs carries a high level of risk to your capital, and you should only trade with money you can afford to lose. Refer to our <a href="{{ route('legals_new') }}" class="text-light">legal documents.</a> <br><br>
-    
-                                Trade Nation is a trading name of Trade Nation Financial UK Ltd, a financial services company registered in England & Wales under company number 07073413, is authorised and regulated by the Financial Conduct Authority under firm reference number 525164. Our registered office is 14 Bonhill Street, London, EC2A 4BX, United Kingdom. <br><br>
-    
-                                Trade Nation is a trading name of Trade Nation Australia Pty Ltd, a financial services company registered in Australia under number ACN 158 065 635, is authorised and regulated by the Australian Securities and Investments Commission (ASIC), with licence number AFSL 422661. Our registered office is Level 17, 123 Pitt Street, Sydney, NSW 2000, Australia. <br><br>
-    
-                                Trade Nation is a trading name of Trade Nation Ltd., a financial services company registered in the Bahamas under number 203493 B, is authorised and regulated by the Securities Commission of the Bahamas (SCB), with licence number SIA-F216. Our registered office is No. 3 Bayside Executive Park, West Bay Street & Blake Road, Nassau, New Providence, The Bahamas.
-                            </article>
-                        </div>
-    
-                        <div class="col-md-6">
-                            <article style="font-size: 13px;">
-                                Trade Nation is a trading name of Trade Nation Financial Markets Ltd, a financial services company registered in the Seychelles under number 810589-1, is authorised and regulated by the Financial Services Authority of Seychelles (FSA) with licence number SD150. Our registered office is CT House, Office 6B, Providence, Mahe, Seychelles. <br><br>
-    
-                                Trade Nation is a trading name of Trade Nation Financial (Pty) Ltd, a financial services company registered in South Africa under number 2018 / 418755 / 07, is authorised and regulated by the Financial Sector Conduct Authority (FSCA), with licence number 49846. Our registered office is 19 9th Street, Houghton Estate, Johannesburg, Gauteng, 2198 South Africa. <br><br>
-    
-                                The information on this site is not directed at residents of the United States or any particular country outside the UK, Australia, South Africa, The Bahamas or Seychelles and is not intended for distribution to, or use by, any person in any country or jurisdiction where such distribution or use would be contrary to local law or regulation.
-                            </article>
-                        </div>
-                    </div>
-                </div>
                 <hr>
                 
                 <div class="row">
                     <div class="col-md-6">
-                        <a href="{{ route('legals_new') }}" class="text-light pe-5">Legal Documents</a>
                         <a href="{{ route('legals_id', 'cookie-policy') }}" class="text-light pe-5">Cookie Policy</a>
-                        <a href="https://tnfev2.cdn.prismic.io/tnfev2/Zlc3vaWtHYXtT5sN_UKPrivacyPolicy-240401TradeNationFinancialUKLtd.pdf" class="text-light pe-5">Privacy</a>
                     </div>
                     
                     <div class="col-md-6">
-                        <p class="text-end ls_z">© 2019-2024 Trade Nation. All Rights Reserved</p>
+                        <p class="text-end ls_z">© {{ date("Y") }} Spreadex Trade. All Rights Reserved</p>
                     </div>
                 </div>
             </div>
@@ -867,7 +828,7 @@
 					$('section.Trading').hide();
 					$('section.Markets').hide();
 					$('section.Insights').hide();
-				},
+				}
 			);
         </script>
     </body>

@@ -209,7 +209,7 @@
             /* left: 0; */
             width: 100%;
             height: 10px;
-            background-color: #fc5000;
+            background-color: #04e3d8;
             z-index: 2;
         }
 

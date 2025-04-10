@@ -2,7 +2,7 @@
 @section('content')
     <!-- <div class="container py-5">
         <div class="d-flex justify-content-center">
-            <div class="col-lg-5 col-md-12 p-5 shadow-md" style="background-color: #252525 !important; border-top: 2px solid #EE4E08;">
+            <div class="col-lg-5 col-md-12 p-5 shadow-md" style="background-color: #252525 !important; border-top: 2px solid #04e3d8;">
     
                 <h2 class="pb-5 text-light text-center">Login to continue</h2>
                 <form method="POST" action="{{ route('login') }}">
@@ -39,7 +39,7 @@
                             </a>
                         @endif
     
-                        <button class="btn btn-sm px-4 ms-3 text-light" style="background-color: #EE4E08;">
+                        <button class="btn btn-sm px-4 ms-3 text-light" style="background-color: #04e3d8;">
                             Log in
                         </button>
                     </div>
@@ -59,7 +59,7 @@
         <div class="row">
             <div class="col-md-7 mb-5 login_1">
                 <h2>Welcome to</h2>
-                <h3>Trade Nation</h3>
+                <h3>Spreadex Trade</h3>
             </div>
             
             <div class="col-md-5 p-3">
@@ -98,12 +98,12 @@
                         </div> -->
                         
                         <div class="d-flex justify-content-between pt-5">
-                            <button class="btn btn-sm login_btn ms-3 rounded-pill text-light" style="background-color: #EE4E08;">
+                            <button class="btn btn-sm login_btn ms-3 rounded-pill text-light" style="background-color: #04e3d8;">
                                 <b>Log in</b>
                             </button>
     
                             @if (Route::has('password.request'))
-                                <a class="text-sm cheange_this rounded-md" style="color: #EE4E08; align-self: center;" href="{{ route('password.request') }}">
+                                <a class="text-sm cheange_this rounded-md" style="color: #04e3d8; align-self: center;" href="{{ route('password.request') }}">
                                     {{ __('Forgot password') }}
                                 </a>
                             @endif

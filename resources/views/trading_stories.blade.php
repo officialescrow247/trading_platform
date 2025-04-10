@@ -15,7 +15,7 @@
 	
 					<div data-aos="fade-up" data-aos-duration="2000">
 						<div class="pt-5 text-light pb-4">
-                  Every trader has a story to tell. Find out how our customers rate the Trade Nation experience to see if we could be the right fit for you.
+                  Every trader has a story to tell. Find out how our customers rate the Spreadex Trade experience to see if we could be the right fit for you.
 						</div>
 		
 						<div class="pt-3">
@@ -67,7 +67,7 @@
 				<div class="col-md-6">
 					<h1>”Very clean, very clear”</h1>
 					<p class="pt-5">
-               Our customers have found the Trade Nation platform meets their needs without unnecessary complexity.
+               Our customers have found the Spreadex Trade platform meets their needs without unnecessary complexity.
 					</p>
 				</div>
 			</div>
@@ -80,7 +80,7 @@
             <div class="col-md-6">
 					<h1>”Really easy to navigate, really simple to use”</h1>
 					<p class="pt-5">
-               A lot of our customers are first-time traders who have found Trade Nation is the perfect match for them.
+               A lot of our customers are first-time traders who have found Spreadex Trade is the perfect match for them.
 					</p>
 				</div>
 
@@ -99,7 +99,7 @@
             <div class="col-md-6">
 					<h1>”Clear. Simple. Fun.”</h1>
 					<p class="pt-5">
-               Trading is challenging, but we’re here to make it easier. We challenged our customers to summarise Trade Nation in 3 words that might encourage you to try us out.
+               Trading is challenging, but we’re here to make it easier. We challenged our customers to summarise Spreadex Trade in 3 words that might encourage you to try us out.
 					</p>
 				</div>
 			</div>
@@ -236,7 +236,7 @@
    <section>
       <div class="text-center py-5">
          <h1>Be part of our community</h1>
-         <a href="{{ asset('register') }}" style="background-color: #fc5000;" class="btn px-4 text-light mt-4 rounded-pill">Join Us</a>
+         <a href="{{ asset('register') }}" style="background-color: #04e3d8;" class="btn px-4 text-light mt-4 rounded-pill">Join Us</a>
       </div>
    </section>
 @endsection

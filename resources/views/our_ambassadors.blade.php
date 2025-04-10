@@ -2,7 +2,7 @@
 @section('content')
    <section id="our_ambassadors">
       <div class="container py-5">
-         <h1>Meet the Trade Nation</h1>
+         <h1>Meet the Spreadex Trade</h1>
          <h1>Brand Ambassadors</h1>
       </div>
    </section>
@@ -13,11 +13,11 @@
             <h6 class="pt-5"><b>OUR SHARED BELIEF</b></h6>
             <h1><b>No shortcuts to success</b></h1>
             <p class="pt-2">
-               This is the mantra connecting Trade Nation to its inspiring bunch of brand ambassadors. We believe traders can learn a lot from this mentality as they embark on their own journeys to success. For a cost-effective trading platform, a range of educational resources, and an excellent customer service team, become part of the Trade Nation community and see what you can achieve.
+               This is the mantra connecting Spreadex Trade to its inspiring bunch of brand ambassadors. We believe traders can learn a lot from this mentality as they embark on their own journeys to success. For a cost-effective trading platform, a range of educational resources, and an excellent customer service team, become part of the Spreadex Trade community and see what you can achieve.
             </p>
 
             <div class="pt-3">
-               <a style="background-color: #fc5000;" class="btn px-4 text-light mt-4 rounded-pill" href="{{ route('register') }}">Join us and start trading</a>
+               <a style="background-color: #04e3d8;" class="btn px-4 text-light mt-4 rounded-pill" href="{{ route('register') }}">Join us and start trading</a>
             </div>
          </div>
       </div>
@@ -43,14 +43,14 @@
                </p>
 
                <p>
-                  Get to know Max Whitlock and learn why he was keen to join Trade Nation in spreading the message on #noshortcutstosuccess.
+                  Get to know Max Whitlock and learn why he was keen to join Spreadex Trade in spreading the message on #noshortcutstosuccess.
                </p>
 
                <!-- <div>
                   <a class="d-flex align-items-center text-dark" target="_self" href="#!">
                      <div class="">
                         <svg class="cta-link__icon icon-color-white icon--circle-arrow" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           <path d="M20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40Z" fill="#FC5000"></path>
+                           <path d="M20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40Z" fill="#04e3d8"></path>
                            <path d="M24.3014 19.4736H14.4238C14.1329 19.4741 13.9004 19.7062 13.9004 19.9974C13.9004 20.2866 14.1308 20.5268 14.4238 20.5268H24.3011L21.4057 23.4168L21.4044 23.4181C21.2042 23.6254 21.2023 23.9603 21.4057 24.1632C21.613 24.3704 21.9492 24.3725 22.1524 24.1625L25.9436 20.3712C26.1526 20.1686 26.1527 19.8323 25.9436 19.6299L22.5224 16.2084C22.3181 16.0041 21.987 16.0031 21.7814 16.2063V16.2063C21.5743 16.4112 21.5733 16.7455 21.7793 16.9515L24.3014 19.4736Z" fill="white" stroke="white" stroke-width="0.2"></path>
                         </svg>
                      </div>
@@ -76,14 +76,14 @@
                </p>
 
                <p>
-                  Learn more about Hollie Pearne Webb and learn why she was keen to join Trade Nation in spreading the message on #noshortcutstosuccess.
+                  Learn more about Hollie Pearne Webb and learn why she was keen to join Spreadex Trade in spreading the message on #noshortcutstosuccess.
                </p>
 
                <div>
                   <!-- <a class="d-flex align-items-center text-dark" target="_self" href="#!">
                      <div class="">
                         <svg class="cta-link__icon icon-color-white icon--circle-arrow" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           <path d="M20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40Z" fill="#FC5000"></path>
+                           <path d="M20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40Z" fill="#04e3d8"></path>
                            <path d="M24.3014 19.4736H14.4238C14.1329 19.4741 13.9004 19.7062 13.9004 19.9974C13.9004 20.2866 14.1308 20.5268 14.4238 20.5268H24.3011L21.4057 23.4168L21.4044 23.4181C21.2042 23.6254 21.2023 23.9603 21.4057 24.1632C21.613 24.3704 21.9492 24.3725 22.1524 24.1625L25.9436 20.3712C26.1526 20.1686 26.1527 19.8323 25.9436 19.6299L22.5224 16.2084C22.3181 16.0041 21.987 16.0031 21.7814 16.2063V16.2063C21.5743 16.4112 21.5733 16.7455 21.7793 16.9515L24.3014 19.4736Z" fill="white" stroke="white" stroke-width="0.2"></path>
                         </svg>
                      </div>
@@ -109,7 +109,7 @@
             <div class="col-md-6">
                <h6 class="pt-4"><b>TWO-TIME KSL TITLE HOLDER WITH WESTERN STORM</b></h6>
                <h1 class="pb-4">
-               Sophie Luff on Trade Nation
+               Sophie Luff on Spreadex Trade
                </h1>
 
                <p>
@@ -117,14 +117,14 @@
                </p>
 
                <p>
-                  Watch our interview with Sophie to find out why the Trade Nation message resonated with her.
+                  Watch our interview with Sophie to find out why the Spreadex Trade message resonated with her.
                </p>
 
                <!-- <div>
                   <a class="d-flex align-items-center text-dark" target="_self" href="#!">
                      <div class="">
                         <svg class="cta-link__icon icon-color-white icon--circle-arrow" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           <path d="M20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40Z" fill="#FC5000"></path>
+                           <path d="M20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40Z" fill="#04e3d8"></path>
                            <path d="M24.3014 19.4736H14.4238C14.1329 19.4741 13.9004 19.7062 13.9004 19.9974C13.9004 20.2866 14.1308 20.5268 14.4238 20.5268H24.3011L21.4057 23.4168L21.4044 23.4181C21.2042 23.6254 21.2023 23.9603 21.4057 24.1632C21.613 24.3704 21.9492 24.3725 22.1524 24.1625L25.9436 20.3712C26.1526 20.1686 26.1527 19.8323 25.9436 19.6299L22.5224 16.2084C22.3181 16.0041 21.987 16.0031 21.7814 16.2063V16.2063C21.5743 16.4112 21.5733 16.7455 21.7793 16.9515L24.3014 19.4736Z" fill="white" stroke="white" stroke-width="0.2"></path>
                         </svg>
                      </div>
@@ -144,7 +144,7 @@
          </div>
 
          <div class="text-center pt-2">
-            <button style="background-color: #fc5000;" class="btn px-4 text-light mt-4 rounded-pill">
+            <button style="background-color: #04e3d8;" class="btn px-4 text-light mt-4 rounded-pill">
                Watch the playlist
             </button>
          </div>
@@ -158,11 +158,11 @@
 
             <div class="col-md-6">
                <h1 class="py-4">
-                  Stuart Lane, Trade Nation CEO on our partnership
+                  Stuart Lane, Spreadex Trade CEO on our partnership
                </h1>
 
                <p>
-                  “Trade Nation is delighted to welcome such an extraordinary group of people on board as our ambassadors. Each and every one of them has achieved greatness through dedication, consistency and talent. We’re very proud to have them in the Trade Nation community and hope our traders will be inspired to follow the same work ethic in order to reach success.”
+                  “Spreadex Trade is delighted to welcome such an extraordinary group of people on board as our ambassadors. Each and every one of them has achieved greatness through dedication, consistency and talent. We’re very proud to have them in the Spreadex Trade community and hope our traders will be inspired to follow the same work ethic in order to reach success.”
                </p>
             </div>
          </div>
@@ -175,7 +175,7 @@
                </h1>
 
                <p>
-                  We’re proud to have worked with such a diverse and inspirational set of collaborators and partners through the years, including the world’s first female rugby ref Sara Cox, cricketer Dom Sibley and Apprentice winner James White, all of which have brought their enthusiasm and dedication to transmitting Trade Nation’s core values of patience and embracing adversity.
+                  We’re proud to have worked with such a diverse and inspirational set of collaborators and partners through the years, including the world’s first female rugby ref Sara Cox, cricketer Dom Sibley and Apprentice winner James White, all of which have brought their enthusiasm and dedication to transmitting Spreadex Trade’s core values of patience and embracing adversity.
                </p>
             </div>
 
@@ -199,19 +199,19 @@
                </h1>
 
                <p class="">
-                  Follow our socials on <span style="color: #EE4E08;">Facebook</span>, <span style="color: #EE4E08;">Instagram</span>, <span style="color: #EE4E08;">YouTube</span>, <span style="color: #EE4E08;">LinkedIn</span> and <span style="color: #EE4E08;">Twitter</span>.
+                  Follow our socials on <span style="color: #04e3d8;">Facebook</span>, <span style="color: #04e3d8;">Instagram</span>, <span style="color: #04e3d8;">YouTube</span>, <span style="color: #04e3d8;">LinkedIn</span> and <span style="color: #04e3d8;">Twitter</span>.
                </p> 
             </div>
          </div>
 
          <div class="pt-5 text-center">
-            <h2 class="pt-5 px-5"><b>Want to know more about becoming a Trade Nation partner?</b></h2>
+            <h2 class="pt-5 px-5"><b>Want to know more about becoming a Spreadex Trade partner?</b></h2>
             <h3 class="pt-3">
                Call us any time Mon-Fri on +44 12543 69752
             </h3>
    
             <div class="py-5">
-               <a href="mailto:support@tradenation-uk.com" style="background-color: #fc5000;" class="btn px-4 text-light mt-4 rounded-pill">Email Us</a>
+               <a href="mailto:support@tradenation-uk.com" style="background-color: #04e3d8;" class="btn px-4 text-light mt-4 rounded-pill">Email Us</a>
             </div>
          </div>
       </div>

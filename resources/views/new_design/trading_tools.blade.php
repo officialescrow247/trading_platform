@@ -2,7 +2,7 @@
 @section('content')
     <section class="px-4 rm_p_2">
         <div class="container-fluid p-5 rm_p_2">
-            <h6 style="color: #EE4E08;"><b>Trading</b></h6>
+            <h6 style="color: #04e3d8;"><b>Trading</b></h6>
 
             <div class="row pt-4">
                 <div class="col-md-6 mb-4">
@@ -20,8 +20,8 @@
                     <img src="https://images.prismic.io/tnfev2/867d2377-a164-42bd-b2bd-ad1bdc9b240c_BRAND++TradingTools+HeroImage+1280x720.png?auto=compress,format" alt="" class="img-fluid" style="border-radius: 30px;">
 
                     <div class="sc-f3a729c-7 jmYnBa">
-                        <svg color="#FC5000" height="200" viewBox="0 0 81 161" style="position: absolute; right: 10%; margin-top: -70px;">
-                            <path fill="#EE4E08" d="M41.0174 0.785624L80.3818 79.0391L40.7013 160.811L0.280648 84.3565L41.0174 0.785624Z"></path>
+                        <svg color="#04e3d8" height="200" viewBox="0 0 81 161" style="position: absolute; right: 10%; margin-top: -70px;">
+                            <path fill="#04e3d8" d="M41.0174 0.785624L80.3818 79.0391L40.7013 160.811L0.280648 84.3565L41.0174 0.785624Z"></path>
                         </svg>
                     </div>
                 </div>

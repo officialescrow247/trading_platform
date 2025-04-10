@@ -15,7 +15,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
         <style>
             .my-bg-color{
-                background-color: #EF5B2D !important;
+                background-color: #04e3d8 !important;
             }
             .text-white{
                 color: #FFFFFF !important;
@@ -47,8 +47,8 @@
                 background-size: cover;
             }
             #our_market_banner h1:first-child{
-                background: #fc5000;
-                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
+                background: #04e3d8;
+                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
                 color: #fff;
                 font-size: 4rem;
                 width: fit-content;
@@ -58,7 +58,7 @@
             }
             #our_market_banner h1:last-child{
                 background: #333333;
-                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
+                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
                 color: #fff;
                 font-size: 4rem;
                 width: fit-content;
@@ -79,8 +79,8 @@
                 background-size: cover;
             }
             #alternative_data_fixed_banner h1:first-child{
-                background: #fc5000;
-                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
+                background: #04e3d8;
+                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
                 color: #fff;
                 font-size: 4rem;
                 width: fit-content;
@@ -90,7 +90,7 @@
             }
             #alternative_data_fixed_banner h1:last-child{
                 background: #333333;
-                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
+                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
                 color: #fff;
                 font-size: 4rem;
                 width: fit-content;
@@ -114,8 +114,8 @@
                 background-size: cover;
             }
             #reliably_regulated_banner h1:first-child{
-                background: #fc5000;
-                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
+                background: #04e3d8;
+                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
                 color: #fff;
                 font-size: 4rem;
                 width: fit-content;
@@ -125,7 +125,7 @@
             }
             #reliably_regulated_banner h1:last-child{
                 background: #333333;
-                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
+                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
                 color: #fff;
                 font-size: 4rem;
                 width: fit-content;
@@ -144,8 +144,8 @@
                 background-size: cover;
             }
             #fairer_banner h1:first-child{
-                background: #fc5000;
-                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
+                background: #04e3d8;
+                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
                 color: #fff;
                 font-size: 4rem;
                 width: fit-content;
@@ -155,7 +155,7 @@
             }
             #fairer_banner h1:last-child{
                 background: #333333;
-                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
+                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
                 color: #fff;
                 font-size: 4rem;
                 width: fit-content;
@@ -175,8 +175,8 @@
                 background-size: cover;
             }
             #support_banner h1:first-child{
-                background: #fc5000;
-                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
+                background: #04e3d8;
+                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
                 color: #fff;
                 font-size: 4rem;
                 width: fit-content;
@@ -186,7 +186,7 @@
             }
             #support_banner h1:last-child{
                 background: #333333;
-                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
+                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
                 color: #fff;
                 font-size: 4rem;
                 width: fit-content;
@@ -335,7 +335,7 @@
                 text-decoration: none !important;
             }
             .footer__social-link > svg > path:hover{
-                fill: #EE4E08 !important;
+                fill: #04e3d8 !important;
             }
             #our_ambassadors{
                 padding-top: 100px;
@@ -348,7 +348,7 @@
             }
             #our_ambassadors h1:first-child{
                 background: #fff;
-                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
+                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
                 /* color: #fff; */
                 font-size: 4rem;
                 width: fit-content;
@@ -358,7 +358,7 @@
             }
             #our_ambassadors h1:last-child{
                 background: #333333;
-                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
+                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
                 color: #fff;
                 font-size: 4rem;
                 width: fit-content;
@@ -418,7 +418,7 @@
             }
             #experts_explain_banner h1:first-child{
                 background: #fff;
-                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
+                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
                 color: #333333;
                 font-size: 4rem;
                 width: fit-content;
@@ -428,7 +428,7 @@
             }
             #experts_explain_banner h1:last-child{
                 background: #333333;
-                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
+                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
                 color: #fff;
                 font-size: 4rem;
                 width: fit-content;
@@ -440,7 +440,7 @@
                 text-decoration: none !important;
             }
             .faq_tabs:hover{
-                background-color: #EE4E08;
+                background-color: #04e3d8;
                 color: white;
             }
             .faq_tabs{
@@ -465,7 +465,7 @@
                 color: #F06326 !important;
             }
             .accordion-button:not(.collapsed){
-                color: #fc5000 !important;
+                color: #04e3d8 !important;
             }
             .accordion-button{
                 font-weight: 600 !important;
@@ -552,7 +552,7 @@
                 margin-bottom: 150px;
             }
             #brokerage_fees h1:first-child{
-                background: #EE4E08;
+                background: #04e3d8;
                 color: #fff;
                 font-size: 3rem;
                 width: fit-content;
@@ -609,7 +609,7 @@
                     </a> -->
 
                     <a href="{{ url('/') }}" class="f-fallback email-masthead_name" style="display: flex; text-decoration: none; align-items: center; color: white; justify-content: center;">
-                        <img src="https://images.prismic.io/tnfev2/44587b9b-c476-4a96-a39e-788e0f04f5e5_HeaderLogoAnimated.gif" alt="site-logo" style="height: 40px;"> <h6 style="padding-left: 10px; padding-top: 10px;">Trade Nation</h6>
+                        <img src="https://images.prismic.io/tnfev2/44587b9b-c476-4a96-a39e-788e0f04f5e5_HeaderLogoAnimated.gif" alt="site-logo" style="height: 40px;"> <h6 style="padding-left: 10px; padding-top: 10px;">Spreadex Trade</h6>
                     </a>
 
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -811,19 +811,19 @@
                         </p>
 
                         <p>
-                            Trade Nation is a trading name of Trade Nation Financial UK Ltd, a financial services company authorised and regulated by the Financial Conduct Authority under firm reference number 525164. Our registered office is 14 Bonhill Street, London, EC2A 4BX, United Kingdom.
+                            Spreadex Trade is a trading name of Spreadex Trade Financial UK Ltd, a financial services company authorised and regulated by the Financial Conduct Authority under firm reference number 525164. Our registered office is 14 Bonhill Street, London, EC2A 4BX, United Kingdom.
                         </p>
 
                         <p>
-                            Trade Nation is a trading name of Trade Nation Australia Pty Ltd, a financial services company authorised and regulated by the Australian Securities and Investments Commission, ACN 158 065 635, AFSL No. 422661
+                            Spreadex Trade is a trading name of Spreadex Trade Australia Pty Ltd, a financial services company authorised and regulated by the Australian Securities and Investments Commission, ACN 158 065 635, AFSL No. 422661
                         </p>
 
                         <p>
-                            Trade Nation Financial (Pty) Ltd, registration number 2018/418755/07, is authorised and regulated by the Financial Sector Conduct Authority, FSP No 49846
+                            Spreadex Trade Financial (Pty) Ltd, registration number 2018/418755/07, is authorised and regulated by the Financial Sector Conduct Authority, FSP No 49846
                         </p>
 
                         <p>
-                            Trade Nation Ltd, registration Number 203493 B, is authorised and regulated by the Securities Commission of the Bahamas, SIA-F216
+                            Spreadex Trade Ltd, registration Number 203493 B, is authorised and regulated by the Securities Commission of the Bahamas, SIA-F216
                         </p>
 
                         <p>
@@ -831,7 +831,7 @@
                         </p>
 
                         <p>
-                            * The Loyalty Bonus is not offered with Trade Nation UK and Trade Nation Australia accounts
+                            * The Loyalty Bonus is not offered with Spreadex Trade UK and Spreadex Trade Australia accounts
                         </p>
                     </div>
                 </div>

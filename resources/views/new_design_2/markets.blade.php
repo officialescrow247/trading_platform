@@ -5,7 +5,7 @@
         <section id="marketBanner"></section>
 
         <section class="container" style="position: relative; top: -250px; margin-bottom: -250px;">
-            <h1 class="py-5" style="font-size: 50px;">Trade the markets <br><span style="color: #fc5000!important;">that move</span></h1>
+            <h1 class="py-5" style="font-size: 50px;">Trade the markets <br><span style="color: #04e3d8!important;">that move</span></h1>
 
             <div id="app">
                 <pairs />
@@ -33,7 +33,7 @@
                                     <li>No expiry on rolling contracts, only futures</li>
                                     <li>24-hour trading (not including weekends)</li>
                                     <li>Trading Cost incorporated within the spread</li>
-                                    <li>Available on MetaTrader 4 and TN Trader</li>
+                                    <li>Available on MetaTrader 4 and SpreadEx Trader</li>
                                 </ul>
         
                                 <div class="pt-4">
@@ -109,12 +109,12 @@
                                 </div>
 
                                 <div class="d-flex pt-5" style="align-items: center;">
-                                    <div style="transform: rotate(10deg); margin: 0; font-size: 18px; line-height: 24px; font-weight: 400; font-family: '__Inter_36bd41','__Inter_Fallback_36bd41'; color: #FC5000; font-size: 115px !important; margin-top: -10px; font-weight: 100!important;">
+                                    <div style="transform: rotate(10deg); margin: 0; font-size: 18px; line-height: 24px; font-weight: 400; font-family: '__Inter_36bd41','__Inter_Fallback_36bd41'; color: #04e3d8; font-size: 115px !important; margin-top: -10px; font-weight: 100!important;">
                                         /
                                     </div>
 
                                     <div class="ms-4">
-                                        <p class="hyd_">The forex market is the world's biggest financial market, <a href="#!" style="color: #FC5000;">with a daily trading volume of about $6.6 trillion.</a></p>
+                                        <p class="hyd_">The forex market is the world's biggest financial market, <a href="#!" style="color: #04e3d8;">with a daily trading volume of about $6.6 trillion.</a></p>
                                     </div>
                                 </div>
                                 
@@ -137,7 +137,7 @@
         
                                     They can be categorised by sector, exchange, or represent entire economies. For example, the Nasdaq-100 is made up of 100 of the biggest tech stocks listed on the NASDAQ, whereas the DAX40 is a mix of companies from different sectors in Germany. <br><br>
 
-                                    When trading indices, you do so in the general direction of that group of instruments. However, they can also track other financial data, such as inflation or volatility. Indices are a common way to diversify, hedge, and invest (long-term). At Trade Nation, you can choose from 40 indices, including major US, European, and Asian ones.
+                                    When trading indices, you do so in the general direction of that group of instruments. However, they can also track other financial data, such as inflation or volatility. Indices are a common way to diversify, hedge, and invest (long-term). At Spreadex Trade, you can choose from 40 indices, including major US, European, and Asian ones.
                                 </p>
                             </div>
 
@@ -169,7 +169,7 @@
                                 <p>
                                     Stocks are fragments of a company that become available to investors when the company is listed on an exchange. In the context of CFDs or spread trades, you don’t purchase shares as you would traditionally, but instead trade on the value of that company, i.e. buy if you believe the share price will go up, and sell if you think it’ll fall.   <br><br>
         
-                                    Stocks are a great way to tap into different economies and sectors. At Trade Nation, you can find hundreds of stocks from Europe, the UK, the US and South Africa, spanning all sectors.
+                                    Stocks are a great way to tap into different economies and sectors. At Spreadex Trade, you can find hundreds of stocks from Europe, the UK, the US and South Africa, spanning all sectors.
                                 </p>
                             </div>
 
@@ -235,11 +235,11 @@
 
         <section style="position: relative; max-width: 100%; overflow: hidden;">
             <!-- Orange Line -->
-            <div style="position: absolute; top: 50%; left: -10%; width: 120%; height: 1px; border-top: 3px solid #fc5000;"></div>
+            <div style="position: absolute; top: 50%; left: -10%; width: 120%; height: 1px; border-top: 3px solid #04e3d8;"></div>
             
             <!-- Centered Content -->
             <div class="d-flex justify-content-center" style="position: relative; z-index: 1;">
-                <div class="row p-5 border_s rounded" style="background-color: #050f19; border: 2px solid #fc5000;">
+                <div class="row p-5 border_s rounded" style="background-color: #050f19; border: 2px solid #04e3d8;">
                     <div class="col-md-8">
                         <h1>
                             The markets are moving. <br>

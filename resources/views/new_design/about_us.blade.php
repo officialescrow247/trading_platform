@@ -2,7 +2,7 @@
 @section('content')
     <section class="px-4 rm_p_2">
         <div class="py-5 container-fluid px-5 rm_p_2">
-            <h6 style="color: #EE4E08;"><b>About us</b></h6>
+            <h6 style="color: #04e3d8;"><b>About us</b></h6>
 
             <div class="row pt-4">
                 <div class="col-md-6 mb-4">
@@ -10,11 +10,11 @@
                         <h1 style="font-size: 90px;" class="my_f"><b>About us</b></h1>
 
                         <p class="pt-3" style="color: #6C7884;">
-                            Trade Nation began life back in 2014, when we were known as Core Spreads. Building on our award-winning reputation for market leading low-cost spreads, we soon grew. And grew. From a single office back in the day, we’re now dotted around the globe - the UK, Australia and Bahamas to be exact.
+                            Spreadex Trade began life back in 2014, when we were known as Core Spreads. Building on our award-winning reputation for market leading low-cost spreads, we soon grew. And grew. From a single office back in the day, we’re now dotted around the globe - the UK, Australia and Bahamas to be exact.
 
                             <br><br>
 
-                            We see many of our competitors promise the world but fail to deliver. In contrast, we treat our clients and colleagues with respect. For traders, this means transparent fees with no hidden costs or nasty surprises. For the people who work at Trade Nation, it’s the opportunity to grow with a fast-paced fintech firm that values ideas, creativity and enthusiasm.
+                            We see many of our competitors promise the world but fail to deliver. In contrast, we treat our clients and colleagues with respect. For traders, this means transparent fees with no hidden costs or nasty surprises. For the people who work at Spreadex Trade, it’s the opportunity to grow with a fast-paced fintech firm that values ideas, creativity and enthusiasm.
                         </p>
                         <!-- <a href="{{ route('register') }}" class="btn px-5 mt-4 trade_now_btn rounded-pill py-3">Trade Now</a> -->
                     </div>
@@ -24,8 +24,8 @@
                     <img src="https://images.prismic.io/tnfev2/feafb15b-027a-4182-9062-d2663301a2b7_BRAND+AboutUs+HeroImage1+1280x720_.png?auto=compress,format" alt="" class="img-fluid" style="border-radius: 30px;">
 
                     <div class="sc-f3a729c-7 jmYnBa">
-                        <svg color="#FC5000" height="150" viewBox="0 0 81 161" style="position: absolute; right: 10%; margin-top: -30px;">
-                            <path fill="#EE4E08" d="M41.0174 0.785624L80.3818 79.0391L40.7013 160.811L0.280648 84.3565L41.0174 0.785624Z"></path>
+                        <svg color="#04e3d8" height="150" viewBox="0 0 81 161" style="position: absolute; right: 10%; margin-top: -30px;">
+                            <path fill="#04e3d8" d="M41.0174 0.785624L80.3818 79.0391L40.7013 160.811L0.280648 84.3565L41.0174 0.785624Z"></path>
                         </svg>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
         <div class="container-fluid px-5 py-5 rm_p_2">
             <div class="d-none d-lg-block py-5" style="position: relative;">
                 <div class="d-flex">
-                    <div class="ps-2 col-md-7" style="background-color: #0A1E32; color: white; border-radius: 40px 0px 0px 40px; position: relative; left: 1%; background-image: '{{ asset('imgs/tr_v.svg') }}'">
+                    <div class="ps-2 col-md-7" style="background-color: #02070b; color: white; border-radius: 40px 0px 0px 40px; position: relative; left: 1%; background-image: '{{ asset('imgs/tr_v.svg') }}'">
                         <div class="p-5" >
                             <h2 style="font-size: 50px;" class="pt-3" id="regulations"><b>Regulations</b></h2>
                             <p class="py-3" style="color: #D7D7D7;">
@@ -67,10 +67,10 @@
                         <img src="https://images.prismic.io/tnfev2/MTJhOTA0YjctNzc1Ny00M2Q2LTlkODYtYWI5MTAyMjk2ZDg2_7cb2de61-a471-4dcd-a7ea-f7bdcf2ebd9b_brand-aboutus-londonskyline-pjc1500px.jpg?auto=compress,format&rect=0,0,1500,1000&w=1500&h=1000" alt="" class="img-fluid h-100" style="border-radius: 0px 40px 40px 0px;">
                     </div>
                 </div>
-                <svg style="position: absolute; top: -40px; right: 150px;" width="81" height="161" viewBox="0 0 81 161" fill="none" xmlns="http://www.w3.org/2000/svg" class="sc-e2a5340d-9 cLZAuh"><path d="M41.0174 0.785624L80.3818 79.0391L40.7013 160.811L0.280648 84.3565L41.0174 0.785624Z" fill="#FC5000"></path></svg>
+                <svg style="position: absolute; top: -40px; right: 150px;" width="81" height="161" viewBox="0 0 81 161" fill="none" xmlns="http://www.w3.org/2000/svg" class="sc-e2a5340d-9 cLZAuh"><path d="M41.0174 0.785624L80.3818 79.0391L40.7013 160.811L0.280648 84.3565L41.0174 0.785624Z" fill="#04e3d8"></path></svg>
             </div>
 
-            <div class="ps-2 col-md-7 d-lg-none d-md-block" style="background-color: #0A1E32; color: white; border-radius: 40px;">
+            <div class="ps-2 col-md-7 d-lg-none d-md-block" style="background-color: #02070b; color: white; border-radius: 40px;">
                 <div class="px-2 py-5">
                     <h2 style="font-size: 50px;" class="pt-3" id="regulations_"><b>Regulations</b></h2>
                     <p class="py-3" style="color: #D7D7D7;">
@@ -193,7 +193,7 @@
 
                     That’s what’s fuelled our growth. But we’re not where we want to be yet. We have big plans and a clear purpose. And you could be the person that helps us reach that next stage of development. <br><br>
 
-                    So if you’d like to work at the cutting edge of fintech with a smashing bunch of people who you can inspire and learn from, get in touch today – and take your first step towards a great career at Trade Nation.
+                    So if you’d like to work at the cutting edge of fintech with a smashing bunch of people who you can inspire and learn from, get in touch today – and take your first step towards a great career at Spreadex Trade.
                 </p>
             </div>
         </div>

@@ -227,7 +227,7 @@
                 </div>
 
                 <div class="text-center">
-                    <a href="{{ route('register') }}" class="btn py-3 px-5 rounded-pill" style="border: 2px solid #0A1E32;"><b>Trade Now</b></a>
+                    <a href="{{ route('register') }}" class="btn py-3 px-5 rounded-pill" style="border: 2px solid #02070b;"><b>Trade Now</b></a>
                 </div>
             </div>
 		</div>
@@ -238,7 +238,7 @@
         <div class="container-fluid px-5 py-5 rm_p">
             <div class="py-5" style="position: relative;">
                 <div class="d-flex">
-                    <div class="ps-2 col-md-6 ff" style="background-color: #0A1E32; color: white; border-radius: 40px 0px 0px 40px; position: relative; left: 1%; background-image: '{{ asset('imgs/tr_v.svg') }}'">
+                    <div class="ps-2 col-md-6 ff" style="background-color: #02070b; color: white; border-radius: 40px 0px 0px 40px; position: relative; left: 1%; background-image: '{{ asset('imgs/tr_v.svg') }}'">
                         <div class="p-5" >
                             <h2 class="pt-3"><b>Where savvy traders go</b></h2>
                             <p class="py-3" style="color: #D7D7D7;">
@@ -271,7 +271,7 @@
                 </div>
                 <img src="https://images.prismic.io/tnfev2/MjE4MzU2ZTMtMmQ4MS00NWNhLThlMWUtOGFjYTM3YmQ5NTQy_3b4bcf1f-4fc8-4f40-aec7-4a3236be14ff_b001specialcomponentimagehomepagesavvytrader1280x720.png" alt="" class="d-lg-none img-fluid" style="border-radius: 0px 0px 40px 40px;">
 
-                <svg style="position: absolute; top: -40px; right: 150px;" width="81" height="161" viewBox="0 0 81 161" fill="none" xmlns="http://www.w3.org/2000/svg" class="sc-e2a5340d-9 cLZAuh"><path d="M41.0174 0.785624L80.3818 79.0391L40.7013 160.811L0.280648 84.3565L41.0174 0.785624Z" fill="#FC5000"></path></svg>
+                <svg style="position: absolute; top: -40px; right: 150px;" width="81" height="161" viewBox="0 0 81 161" fill="none" xmlns="http://www.w3.org/2000/svg" class="sc-e2a5340d-9 cLZAuh"><path d="M41.0174 0.785624L80.3818 79.0391L40.7013 160.811L0.280648 84.3565L41.0174 0.785624Z" fill="#04e3d8"></path></svg>
             </div>
         </div>
     </section>
@@ -287,7 +287,7 @@
                     <p class="pb-4 pt-3">
                         Our Customer Success Team helps you run things smoothly. We’re available 24 hours, Monday to Friday by chat, email or phone.    
                     </p>
-                    <a href="mailto:support@tradenation-uk.com" class="btn rund_h rounded-pill py-2 px-4" style="border: 2px solid #0A1E32; color: #0A1E32;"><b>Contact us</b></a>
+                    <a href="mailto:support@tradenation-uk.com" class="btn rund_h rounded-pill py-2 px-4" style="border: 2px solid #02070b; color: #02070b;"><b>Contact us</b></a>
                 </div>
 
                 <div class="col-md-4 mb-4">
@@ -296,7 +296,7 @@
                     <p class="pb-4 pt-3">
                         We offer some of the tightest spreads around. Commission free. Fixed and transparent.
                     </p>
-                    {{-- <a href="{{ route('why_trade_with_us') }}" class="btn rund_h rounded-pill py-2 px-4" style="border: 2px solid #0A1E32; color: #0A1E32;"><b>Our differene</b></a> --}}
+                    {{-- <a href="{{ route('why_trade_with_us') }}" class="btn rund_h rounded-pill py-2 px-4" style="border: 2px solid #02070b; color: #02070b;"><b>Our differene</b></a> --}}
                 </div>
 
                 <div class="col-md-4 mb-4">
@@ -305,7 +305,7 @@
                     <p class="pb-4 pt-3">
                         We offer some of the tightest spreads around. Commission free. Fixed and transparent.
                     </p>
-                    <a href="{{ route('trading_tools') }}" class="btn rund_h rounded-pill py-2 px-4" style="border: 2px solid #0A1E32; color: #0A1E32;"><b>Explore tools</b></a>
+                    <a href="{{ route('trading_tools') }}" class="btn rund_h rounded-pill py-2 px-4" style="border: 2px solid #02070b; color: #02070b;"><b>Explore tools</b></a>
                 </div>
             </div>
 
@@ -319,7 +319,7 @@
         <div class="container-fluid px-5 py-5 rm_p_2 ff3">
             <div class="row pt-5">
                 <div class="col-md-4">
-                    <h3 style="color: #0A1E32; font-size: 50px;"><b>What do our <br> traders say?</b></h3>
+                    <h3 style="color: #02070b; font-size: 50px;"><b>What do our <br> traders say?</b></h3>
                     <p class="pt-3" style="color: #6D7985;">Don’t just take our word about how we put traders at the heart of everything we do. Here’s what some of our traders have to say:</p>
                 </div>
         
@@ -335,7 +335,7 @@
                                             <div class="col-lg-8">
                                                 <p class="text-muted">
                                                     <i class="fas fa-quote-left pe-2"></i>
-                                                    I have been using Trade Nation since it started. I like them because of the tight spreads, easy interface and excellent customer service.
+                                                    I have been using Spreadex Trade since it started. I like them because of the tight spreads, easy interface and excellent customer service.
                                                 </p>
                                                 <p class="pt-3" style="color: #0F2236;">Anna Choi</p>
                                                 <p style="color: #D3D6DA;">Testimonial</p>

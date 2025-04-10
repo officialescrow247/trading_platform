@@ -151,9 +151,8 @@
     
                 <div style="width: 20%;">
                     <span class="d_2">Trading in</span>
-                    <img src="{{ asset('imgs/en-sc.svg') }}" alt="" class="img-fluid" style="width: 17px;">
-                    {{-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/800px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" alt="" class="img-fluid" style="width: 17px;"> --}}
-                    <span class="d_2">SC</span>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/800px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" alt="" class="img-fluid" style="width: 17px;">
+                    <span class="d_2">UK</span>
                 </div>
             </div>
         </div>
@@ -161,7 +160,7 @@
         <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #050f19;">
             <div class="container pb-3">
                 <a class="navbar-brand text-white" href="{{ url('/') }}">
-                    <img src="{{ asset('imgs/logo.avif') }}" alt="{{ env('APP_NAME') }} logo" style="width: 300px;">    
+                    <img src="{{ asset('imgs/logo_main.png') }}" alt="{{ env('APP_NAME') }} logo" style="width: 300px;">    
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 

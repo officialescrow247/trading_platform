@@ -25,7 +25,7 @@
             <tr>
                 <td bgcolor="#EE4E07" style="padding: 10px 20px;" align="center">
                     <img src="https://images.prismic.io/tnfev2/44587b9b-c476-4a96-a39e-788e0f04f5e5_HeaderLogoAnimated.gif" alt="site-logo" style="height: 40px;">
-                    <h2 style="color: white; padding: 2px; margin: 0;">Trade Nation</h2>
+                    <h2 style="color: white; padding: 2px; margin: 0;">Spreadex Trade</h2>
                 </td>
             </tr>
 

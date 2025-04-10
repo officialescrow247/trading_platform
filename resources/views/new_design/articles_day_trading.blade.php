@@ -185,7 +185,7 @@
                         <p>
                             Bitcoin and Ethereum are currently the two most popular cryptocurrencies with traders. Cryptos' spectacular rise has attracted many new trading enthusiasts. Taking a position on any of these new blockchain-based currencies is becoming simpler. The barriers to entry in crypto day trading are now nearly non-existent, and a recent, very well-publicised fall in price has attracted many new investors keen to speculate on the volatility of these high-risk products. <br><br>
 
-                            Please note, due to regulatory constraints Trade Nation does not offer CFD or spread trading on Cryptocurrencies at this current time.*
+                            Please note, due to regulatory constraints Spreadex Trade does not offer CFD or spread trading on Cryptocurrencies at this current time.*
                         </p>
 
                         <h4 class="pt-3">Commodities</h4>

@@ -15,7 +15,7 @@
                 We’re on a mission to change the trading industry for the better and give all traders a fair and transparent experience. If your organisation shares our values, we’d love for you to become a partner.
             </p>
             <div class="text-center">
-                <a href="{{ route('register') }}" class="btn btnsm rounded-pill text-light px-4" style="background-color: #EE4E08;">Sign up now</a>
+                <a href="{{ route('register') }}" class="btn btnsm rounded-pill text-light px-4" style="background-color: #04e3d8;">Sign up now</a>
             </div>
         </div>
     </section>
@@ -26,13 +26,13 @@
                 <div class="col-md-6">
                     <h1><b>A partner you can depend on</b></h1>
                     <p class="pt-5">
-                        Trade Nation is the most reliable and customer-friendly trading services provider to partner with for forex, spread trading and CFDs.
+                        Spreadex Trade is the most reliable and customer-friendly trading services provider to partner with for forex, spread trading and CFDs.
                     </p>
                     <p>
                         Your customers will have access to hundreds of the most popular markets, a choice of platforms and a bespoke account home page.
                     </p>
                     <p>
-                        Our impeccable customer support team and low fixed spreads (on both the Trade Nation platform and the ever-present MetaTrader 4 terminal) continue to attract new business and cement customer loyalty in the Trade Nation brand.
+                        Our impeccable customer support team and low fixed spreads (on both the Spreadex Trade platform and the ever-present MetaTrader 4 terminal) continue to attract new business and cement customer loyalty in the Spreadex Trade brand.
                     </p>
                 </div>
 
@@ -69,7 +69,7 @@
         </p>
 
         <div class="text-center pt-4">
-            <a href="{{ route('register') }}" class="btn btnsm rounded-pill text-light px-4" style="background-color: #EE4E08;">Join us</a>
+            <a href="{{ route('register') }}" class="btn btnsm rounded-pill text-light px-4" style="background-color: #04e3d8;">Join us</a>
         </div>
     </section>
 
@@ -81,7 +81,7 @@
                 </div>
 
                 <div class="col-md-6">
-                    <h1>Meet the Trade Nation Brand Ambassadors</h1>
+                    <h1>Meet the Spreadex Trade Brand Ambassadors</h1>
                     <p class="3">
                         We’re dedicated to changing trading for the better and we’re ecstatic to announce that we’ve got a growing team of ambassadors helping to spread the message.
                     </p>
@@ -94,7 +94,7 @@
         <div class="container-fluid py-5">
 			<div class="container" style="background-color: #F5F5F5;">
 				<div class="ps-lg-5 ps-md-1">
-					<h6 class="py-5">WHY TRADE NATION?</h6>
+					<h6 class="py-5">WHY Spreadex Trade?</h6>
 	
 					<div class="row">
 						<div class="col-lg-7 col-md-11 mb-4 px-lg-5 px-md-1">
@@ -127,7 +127,7 @@
 								<div>
 									<h3 class="">Reliably regulated</h3>
 									<p class="pt-1">
-										Trade Nation is fully regulated in ever country we operate in, so you and your customers can trust our services
+										Spreadex Trade is fully regulated in ever country we operate in, so you and your customers can trust our services
 									</p>
 								</div>
 							</div>
@@ -144,7 +144,7 @@
 								<div>
 									<h3 class="">Full marketing support</h3>
 									<p class="pt-1">
-                                        As a Trade Nation partner, our marketing professionals are always on hand to help you develop unique campaigns, increase conversions and retain your customers
+                                        As a Spreadex Trade partner, our marketing professionals are always on hand to help you develop unique campaigns, increase conversions and retain your customers
 									</p>
 								</div>
 							</div>
@@ -182,12 +182,12 @@
 
     <section class="pb-5">
         <div class="container text-center px rm_p2">
-            <h1>Want to know more about becoming a Trade Nation partner?</h1>
+            <h1>Want to know more about becoming a Spreadex Trade partner?</h1>
             <p class="pt-4" style="font-size: 30px;">Call us any time Mon-Fri on +44 1254 369752</p>
         </div>
 
         <div class="text-center py-5">
-            <a href="mailto:support@tradenation-uk.com" class="btn btnsm rounded-pill text-light px-4" style="background-color: #EE4E08;">Email us</a>
+            <a href="mailto:support@tradenation-uk.com" class="btn btnsm rounded-pill text-light px-4" style="background-color: #04e3d8;">Email us</a>
         </div>
     </section>
 @endsection

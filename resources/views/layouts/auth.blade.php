@@ -133,13 +133,13 @@
             }
 
             .btn_trade {
-                border: 1px solid #EE4E08;
-                color: #EE4E08;
+                border: 1px solid #04e3d8;
+                color: #04e3d8;
             }
 
             .btn_login:hover , .btn_trade:hover {
-                border: 1px solid #EE4E08;
-                background-color: #EE4E08;
+                border: 1px solid #04e3d8;
+                background-color: #04e3d8;
                 color: #fff !important;
             }
 
@@ -151,11 +151,11 @@
             .cheange_this{
                 text-decoration: none;
                 font-size: 15px;
-                color: #EE4E08;
+                color: #04e3d8;
             }
 
             a:hover{
-                color: #EE4E08 !important;
+                color: #04e3d8 !important;
             }
 
             .style_input {
@@ -247,7 +247,7 @@
 
         <div class="container text-center">
             <a href="{{ url('/') }}" class="pt-5" style="display: flex; text-decoration: none; align-items: center; color: white; justify-content: center;">
-                <img src="https://images.prismic.io/tnfev2/44587b9b-c476-4a96-a39e-788e0f04f5e5_HeaderLogoAnimated.gif" alt="site-logo" style="height: 40px;"> <h2 style="padding-left: 10px;">Trade Nation</h2>
+                <img src="https://images.prismic.io/tnfev2/44587b9b-c476-4a96-a39e-788e0f04f5e5_HeaderLogoAnimated.gif" alt="site-logo" style="height: 40px;"> <h2 style="padding-left: 10px;">Spreadex Trade</h2>
             </a>
         </div> -->
 
@@ -263,7 +263,7 @@
 
                 <span class="d-none d-lg-block">
                     <a href="{{ url('/') }}" class="navbar-brand" style="display: flex; text-decoration: none; align-items: end; color: white; justify-content: center;">
-                        <img src="https://images.prismic.io/tnfev2/44587b9b-c476-4a96-a39e-788e0f04f5e5_HeaderLogoAnimated.gif" alt="site-logo" style="height: 40px;"> <h2 class="text-dark" style="font-weight: 600; padding-left: 10px; font-size: 17px;">Trade Nation</h2>
+                        <img src="https://images.prismic.io/tnfev2/44587b9b-c476-4a96-a39e-788e0f04f5e5_HeaderLogoAnimated.gif" alt="site-logo" style="height: 40px;"> <h2 class="text-dark" style="font-weight: 600; padding-left: 10px; font-size: 17px;">Spreadex Trade</h2>
                     </a>
                 </span>
     
@@ -321,7 +321,7 @@
                             <a class="nav-link btn rounded-pill px-4 btn_login" style="font-weight: 600; color: black;" href="{{ route('login') }}">Log in</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn rounded-pill px-4 btn_trade" style="font-weight: 600; color: #EE4E08;" href="{{ route('login') }}">Trade Now</a>
+                            <a class="nav-link btn rounded-pill px-4 btn_trade" style="font-weight: 600; color: #04e3d8;" href="{{ route('login') }}">Trade Now</a>
                         </li>
                     </ul>
                 </div>
@@ -335,7 +335,7 @@
                 <div class="row py-4">
                     <div class="col-md-4 mb-4">
                         <a href="{{ url('/') }}" class="navbar-brand" style="display: flex; text-decoration: none; align-items: end; color: white; justify-content: start;">
-                            <img src="https://images.prismic.io/tnfev2/44587b9b-c476-4a96-a39e-788e0f04f5e5_HeaderLogoAnimated.gif" alt="site-logo" style="height: 40px;"> <h2 class="text-dark" style="padding-left: 10px; font-size: 20px;">Trade Nation</h2>
+                            <img src="https://images.prismic.io/tnfev2/44587b9b-c476-4a96-a39e-788e0f04f5e5_HeaderLogoAnimated.gif" alt="site-logo" style="height: 40px;"> <h2 class="text-dark" style="padding-left: 10px; font-size: 20px;">Spreadex Trade</h2>
                         </a>
                     </div>
 
@@ -387,7 +387,7 @@
                             <div class="col-md-5">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link" style="color: #EE4E08; font-size: 17px;" href="#"><i class="fa fa-envelope pe-3 text-secondary"></i>support@tradenationltd.co.uk</a>
+                                        <a class="nav-link" style="color: #04e3d8; font-size: 17px;" href="#"><i class="fa fa-envelope pe-3 text-secondary"></i>support@tradenationltd.co.uk</a>
                                     </li>
                                 </ul>
                             </div>
@@ -395,7 +395,7 @@
                             <div class="col-md-7">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link" style="color: #EE4E08; font-size: 17px;" href="#"><i class="fa fa-phone pe-3 text-secondary"></i>+44 1254 369752</a>
+                                        <a class="nav-link" style="color: #04e3d8; font-size: 17px;" href="#"><i class="fa fa-phone pe-3 text-secondary"></i>+44 1254 369752</a>
                                     </li>
                                 </ul>
                             </div>
@@ -414,13 +414,13 @@
                         <article style="font-size: 12px; color: #3c3c3b!important;">
                             Contract for differences are complex financial instruments that requires knowledge and understating as it involves a high risk of losing money rapidly due to leverage. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money. <br><br>
 
-                            Trade Nation is a trading name of Trade Nation Financial UK Ltd, a financial services company authorised and regulated by the Financial Conduct Authority under firm reference number 525164. Our registered office is 14 Bonhill Street, London, EC2A 4BX, United Kingdom.<br><br>
+                            Spreadex Trade is a trading name of Spreadex Trade Financial UK Ltd, a financial services company authorised and regulated by the Financial Conduct Authority under firm reference number 525164. Our registered office is 14 Bonhill Street, London, EC2A 4BX, United Kingdom.<br><br>
 
-                            Trade Nation is a trading name of Trade Nation Australia Pty Ltd, a financial services company authorised and regulated by the Australian Securities and Investments Commission, ACN 158 065 635, AFSL No. 422661<br><br>
+                            Spreadex Trade is a trading name of Spreadex Trade Australia Pty Ltd, a financial services company authorised and regulated by the Australian Securities and Investments Commission, ACN 158 065 635, AFSL No. 422661<br><br>
 
-                            Trade Nation Ltd, registration Number 203493 B, is authorised and regulated by the Securities Commission of the Bahamas, SIA-F216<br><br>
+                            Spreadex Trade Ltd, registration Number 203493 B, is authorised and regulated by the Securities Commission of the Bahamas, SIA-F216<br><br>
 
-                            Trade Nation is a trading name of Trade Nation Financial Markets Ltd, authorised and regulated by The Financial Services Authority Seychelles under licence number SD150. Trade Nation Financial Markets Ltd is registered as a limited company in the Seychelles, 810589-1. Registered office: CT House, Office 6B, Providence, Mahe, Seychelles.<br><br>
+                            Spreadex Trade is a trading name of Spreadex Trade Financial Markets Ltd, authorised and regulated by The Financial Services Authority Seychelles under licence number SD150. Spreadex Trade Financial Markets Ltd is registered as a limited company in the Seychelles, 810589-1. Registered office: CT House, Office 6B, Providence, Mahe, Seychelles.<br><br>
 
                             The information on this site is not directed at residents of the United States or any particular country outside the UK, Australia, South Africa or The Bahamas and is not intended for distribution to, or use by, any person in any country or jurisdiction where such distribution or use would be contrary to local law or regulation.
                         </article>

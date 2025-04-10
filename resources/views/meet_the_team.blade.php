@@ -1575,12 +1575,12 @@
     <section>
         <div class="container-fluid d-none d-lg-block pb-5">
             <div class="d-flex justify-content-end">
-                <div class="row pt-5 pe-5" style="background-color: #EE4E08; width: 80%; padding-bottom: 200px;">
+                <div class="row pt-5 pe-5" style="background-color: #04e3d8; width: 80%; padding-bottom: 200px;">
                     <div class="col-md-4"></div>
                     <div class="ps-5 col-md-8 text-light">
                         <h1>Our commitment to you</h1>
                         <p>
-                            The Trade Nation charter is our commitment to you based on our values of transparency and absolute fairness. We want to bring light to an industry that for so long has operated in the dark and treated some traders very badly. We believe that needed to change. <br><br>
+                            The Spreadex Trade charter is our commitment to you based on our values of transparency and absolute fairness. We want to bring light to an industry that for so long has operated in the dark and treated some traders very badly. We believe that needed to change. <br><br>
     
                             Our charter is how you can hold us to account.
                         </p>
@@ -1594,12 +1594,12 @@
 
         <div class="d-md-block d-lg-none">
             <img src="https://images.prismic.io/trade-nation-marketing-cms/89a485c1-e7c6-4ec1-b2a7-4c7ba35911a6_Client+charter+0.4-960x856px.jpg?auto=compress,format&rect=0,0,960,856&w=960&h=856" class="img-fluid">
-            <div style="background-color: #EE4E08;">
+            <div style="background-color: #04e3d8;">
                 <div class="container-fluid">
                     <div class="pt-5 col-md-8 text-light">
                         <h1><b>Our commitment to you</b></h1>
                         <p class="pb-5">
-                            The Trade Nation charter is our commitment to you based on our values of transparency and absolute fairness. We want to bring light to an industry that for so long has operated in the dark and treated some traders very badly. We believe that needed to change. <br><br>
+                            The Spreadex Trade charter is our commitment to you based on our values of transparency and absolute fairness. We want to bring light to an industry that for so long has operated in the dark and treated some traders very badly. We believe that needed to change. <br><br>
     
                             Our charter is how you can hold us to account.
                         </p>
