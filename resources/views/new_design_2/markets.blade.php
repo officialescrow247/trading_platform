@@ -1,7 +1,7 @@
 @extends('new_design_2.layouts.app')
 @section('content')
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <div style="background-color: #050F19;" class="kanit_thin_font pb-4">
+    <div style="background-color: #000;" class="kanit_thin_font pb-4">
         <section id="marketBanner"></section>
 
         <section class="container" style="position: relative; top: -250px; margin-bottom: -250px;">
@@ -239,7 +239,7 @@
             
             <!-- Centered Content -->
             <div class="d-flex justify-content-center" style="position: relative; z-index: 1;">
-                <div class="row p-5 border_s rounded" style="background-color: #050f19; border: 2px solid #04e3d8;">
+                <div class="row p-5 border_s rounded" style="background-color: #000; border: 2px solid #04e3d8;">
                     <div class="col-md-8">
                         <h1>
                             The markets are moving. <br>

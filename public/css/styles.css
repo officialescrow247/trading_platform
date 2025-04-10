@@ -4,7 +4,7 @@
 }
 
 body {
-    /* background-color: #050f19; */
+    /* background-color: #000; */
 }
 
 .kanit_thin_font {
@@ -24,7 +24,7 @@ body {
 }
 
 .bg_c {
-    background-color: #050f19;
+    background-color: #000;
     color: #fff;
 }
 
@@ -35,7 +35,7 @@ body {
     background-size: cover;
     height: 80vh;
     /* margin-top: 20vh; */
-    background-color: #050f19;
+    background-color: #000;
 }
 
 .sign_in_login_btn {
@@ -164,7 +164,7 @@ body {
     background-position: top;
     background-size: cover;
     height: 70vh;
-    background-color: #050f19;
+    background-color: #000;
 }
 
 #jise__:hover {

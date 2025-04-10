@@ -138,7 +138,7 @@
     </head>
 
     <body class="bg_c">
-        <div class="mb-2 py-3 border border-top-0 border-start-0 border-end-0" style="background-color: #050f19;">
+        <div class="mb-2 py-3 border border-top-0 border-start-0 border-end-0" style="background-color: #000;">
             <div class="d-flex container" style="justify-content: space-between; align-items: center;">
                 <div class="d_">
                     <p class="p-0 m-0">
@@ -157,7 +157,7 @@
             </div>
         </div>
 
-        <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #050f19;">
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #000;">
             <div class="container pb-3">
                 <a class="navbar-brand text-white" href="{{ url('/') }}">
                     <img src="{{ asset('imgs/logo_main.png') }}" alt="{{ env('APP_NAME') }} logo" style="width: 300px;">    
