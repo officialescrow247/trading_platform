@@ -133,13 +133,13 @@
             }
 
             .btn_trade {
-                border: 1px solid #04e3d8;
-                color: #04e3d8;
+                border: 1px solid #fc5000;
+                color: #fc5000;
             }
 
             .btn_login:hover , .btn_trade:hover {
-                border: 1px solid #04e3d8;
-                background-color: #04e3d8;
+                border: 1px solid #fc5000;
+                background-color: #fc5000;
                 color: #fff !important;
             }
 
@@ -151,11 +151,11 @@
             .cheange_this{
                 text-decoration: none;
                 font-size: 15px;
-                color: #04e3d8;
+                color: #fc5000;
             }
 
             a:hover{
-                color: #04e3d8 !important;
+                color: #fc5000 !important;
             }
 
             .style_input {
@@ -321,7 +321,7 @@
                             <a class="nav-link btn rounded-pill px-4 btn_login" style="font-weight: 600; color: black;" href="{{ route('login') }}">Log in</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn rounded-pill px-4 btn_trade" style="font-weight: 600; color: #04e3d8;" href="{{ route('login') }}">Trade Now</a>
+                            <a class="nav-link btn rounded-pill px-4 btn_trade" style="font-weight: 600; color: #fc5000;" href="{{ route('login') }}">Trade Now</a>
                         </li>
                     </ul>
                 </div>
@@ -387,7 +387,7 @@
                             <div class="col-md-5">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link" style="color: #04e3d8; font-size: 17px;" href="#"><i class="fa fa-envelope pe-3 text-secondary"></i>support@tradenationltd.co.uk</a>
+                                        <a class="nav-link" style="color: #fc5000; font-size: 17px;" href="#"><i class="fa fa-envelope pe-3 text-secondary"></i>support@tradenationltd.co.uk</a>
                                     </li>
                                 </ul>
                             </div>
@@ -395,7 +395,7 @@
                             <div class="col-md-7">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link" style="color: #04e3d8; font-size: 17px;" href="#"><i class="fa fa-phone pe-3 text-secondary"></i>+44 1254 369752</a>
+                                        <a class="nav-link" style="color: #fc5000; font-size: 17px;" href="#"><i class="fa fa-phone pe-3 text-secondary"></i>+44 1254 369752</a>
                                     </li>
                                 </ul>
                             </div>

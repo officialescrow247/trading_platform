@@ -48,7 +48,7 @@ body {
 }
 
 ._dess {
-    color: rgb(4, 227, 216);
+    color: #fc5000;
     font-size: 65px;
     line-height: 38px;
 }
@@ -107,7 +107,7 @@ body {
 .hrr {
     width: 90%;
     height: 1px;
-    border: 2px solid #04e3d8;
+    border: 2px solid #fc5000;
 }
 
 .ok_ h3 {
@@ -168,8 +168,8 @@ body {
 }
 
 #jise__:hover {
-    border: 1px solid #04e3d8 !important;
-    box-shadow: 0px 0px 15px 0px #04e3d8;
+    border: 1px solid #fc5000 !important;
+    box-shadow: 0px 0px 15px 0px #fc5000;
 }
 
 .ng_s {
@@ -190,7 +190,7 @@ body {
 .ng_s .active {
     color: rgb(5, 15, 25) !important;
     opacity: 1 !important;
-    border-bottom: 1px solid #04e3d8 !important;
+    border-bottom: 1px solid #fc5000 !important;
 }
 
 .hyd_ {
@@ -204,7 +204,7 @@ body {
 }
 
 .border_s {
-    border: 3px solid #04e3d8 !important;
+    border: 3px solid #fc5000 !important;
     width: 70%;
 }
 
@@ -215,7 +215,7 @@ body {
 }
 
 .more_on_markets img {
-    border-bottom: 8px solid #04e3d8 !important;
+    border-bottom: 8px solid #fc5000 !important;
     margin-bottom: 20px;
 }
 
@@ -318,4 +318,8 @@ body {
         text-align: center !important;
         padding-top: 20px;
     }
+}
+
+.ls_z {
+    font-size: 12px !important;
 }

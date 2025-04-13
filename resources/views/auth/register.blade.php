@@ -3,7 +3,7 @@
 
     <div class="container">
         <div class="d-flex justify-content-center mt-4">
-            <div class="col-lg-5 col-md-12 p-5 shadow-md" style="background-color: #252525 !important; border-top: 2px solid #04e3d8;">
+            <div class="col-lg-5 col-md-12 p-5 shadow-md" style="background-color: #252525 !important; border-top: 2px solid #fc5000;">
                 
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
@@ -119,7 +119,7 @@
                             {{ __('Already registered?') }}
                         </a>
 
-                        <button class="btn btn-sm px-4 ms-3 text-light" style="background-color: #04e3d8;">
+                        <button class="btn btn-sm px-4 ms-3 text-light" style="background-color: #fc5000;">
                             Register
                         </button>
                     </div>

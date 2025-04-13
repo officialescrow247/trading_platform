@@ -120,7 +120,8 @@
             <nav class="d-none d-lg-block navbar navbar-expand-lg navbar-light" style="background-color: #000;">
                 <div class="container pb-3">
                     <a class="navbar-brand text-white" href="{{ url('/') }}">
-                        <img src="{{ asset('imgs/logo_main.png') }}" alt="{{ env('APP_NAME') }} logo" style="width: 200px;">    
+                        <img src="https://images.prismic.io/tnfev2/8c6796eb-086d-4ac1-8846-6ea8b63ee68a_TN-PrimaryLogo-RGB-WhiteText-Strapline.png?auto=compress%2Cformat&fit=max&w=3840" 
+                            alt="{{ env('APP_NAME') }} logo" style="width: 300px;">    
                     </a>
     
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
@@ -208,14 +209,14 @@
                                 </a>
     
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Spreadex Trade</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Spreadex Trade</span></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('why_trade_with_us') }}">Why Trade with Us?</a></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('why_trade_with_us') }}#fixed-spread-trading">Fixed Spread Trading</a></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('why_trade_with_us') }}#cfd-trading">CFD Trading</a></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('why_trade_with_us') }}#negative-balance-protection">Negative Balance Protection</a></li>
     
     
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Trading Cost</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Trading Cost</span></li>
                                     <li>
                                         <a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_costs') }}">Our Costs</a>
                                     </li>
@@ -227,7 +228,7 @@
                                     </li>
     
     
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Trading Tools</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Trading Tools</span></li>
                                     <li>
                                         <a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_tools') }}">Our Tools</a>
                                     </li>
@@ -242,7 +243,7 @@
                                     </li>
     
     
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Trading Explained</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Trading Explained</span></li>
                                     <li>
                                         <a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_explained') }}">Level up Your Trading</a>
                                     </li>
@@ -267,7 +268,7 @@
                                 </a>
     
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Discover Markets</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Discover Markets</span></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('markets') }}#">Trade Popular Markets</a></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('markets') }}#indices">Indices</a></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('markets') }}#forex">Forex</a></li>
@@ -275,7 +276,7 @@
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('markets') }}#all-instruments">All Instruments</a></li>
                         
     
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Our Platforms</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Our Platforms</span></li>
                                     <li>
                                         <a class="dropdown-item" style="text-decoration: none;" href="{{ route('our_platforms') }}#">TMade to Trade</a>
                                     </li>
@@ -284,7 +285,7 @@
                                     </li>
     
     
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Market Information</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Market Information</span></li>
                                     <li>
                                         <a class="dropdown-item" style="text-decoration: none;" href="{{ route('market_information') }}">Market Information Sheet</a>
                                     </li>
@@ -302,7 +303,7 @@
                                     </li>
     
     
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Trading Explained</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Trading Explained</span></li>
                                     <li>
                                         <a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_explained') }}">Level up Your Trading</a>
                                     </li>
@@ -327,14 +328,14 @@
                                 </a>
     
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Insights Hub</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Insights Hub</span></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('insights_hub') }}">Gain Insights</a></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('insights_hub') }}#trading-tools">Trading Tools</a></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('insights_hub') }}#part-time-to-pro">Part-time to Pro</a></li>
                                     <!-- <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('insights_hub') }}#demo">Try Our Demo</a></li> -->
     
     
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Types of Trading</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Types of Trading</span></li>
                                     <li>
                                         <a class="dropdown-item" style="text-decoration: none;" href="{{ route('articles_day_trading') }}">Day Trading</a>
                                     </li>
@@ -349,7 +350,7 @@
                                     </li>
     
     
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Analysis</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Analysis</span></li>
                                     <li>
                                         <a class="dropdown-item" style="text-decoration: none;" href="{{ route('articles_technical_analysis') }}">Technical Analysis</a>
                                     </li>
@@ -358,7 +359,7 @@
                                     </li>
     
     
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Trading Times</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Trading Times</span></li>
                                     <li>
                                         <a class="dropdown-item" style="text-decoration: none;" href="{{ route('articles_what_time_does_forex_market_open') }}">Forex Opening Times</a>
                                     </li>
@@ -374,12 +375,12 @@
                                 </a>
     
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">About Us</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">About Us</span></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('about_us') }}">Who We Are</a></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('about_us') }}#regulations_">Regulations</a></li>
     
     
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Our Community</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Our Community</span></li>
                                     <li>
                                         <a class="dropdown-item" style="text-decoration: none;" href="{{ route('about_us') }}#our-sponsorships">Sponsorship</a>
                                     </li>
@@ -392,13 +393,13 @@
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_stories_new') }}">Customers Reviews</a></li>
     
     
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Careers</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Careers</span></li>
                                     <li>
                                         <a class="dropdown-item" style="text-decoration: none;" href="{{ route('about_us') }}#careers">Join Us</a>
                                     </li>
     
     
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Follow Us</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Follow Us</span></li>
                                     <li>
                                         <a class="dropdown-item" style="text-decoration: none;" href="#!">Twitter</a>
                                     </li>
@@ -595,7 +596,7 @@
                         <h1 class="inter p_w" style="font-size: 40px;">
                             <b>
                                 Trade on our <br>
-                                <span style="color: #04e3d8!important;"><strong>award-winning</strong></span> <br>
+                                <span style="color: #fc5000!important;"><strong>award-winning</strong></span> <br>
                                 platform
                             </b>
                         </h1>
@@ -684,6 +685,8 @@
                 <div class="row">
                     <div class="col-md-6">
                         <a href="{{ route('legals_id', 'cookie-policy') }}" class="text-light pe-5">Cookie Policy</a>
+                        <a href="https://tnfev2.cdn.prismic.io/tnfev2/Zl8qu5m069VX1c2s_BAHPrivacyPolicy-240401TradeNationLtd.pdf" 
+                            class="text-light pe-5">Privacy Policy</a>
                     </div>
                     
                     <div class="col-md-6">

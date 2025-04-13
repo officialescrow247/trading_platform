@@ -2,7 +2,7 @@
 @section('content')
     <section>
         <div class="container-fluid p-5">
-            <h6 style="color: #04e3d8;"><b>Trading</b></h6>
+            <h6 style="color: #fc5000;"><b>Trading</b></h6>
 
             <div class="row pt-4">
                 <div class="col-md-6 mb-4">
@@ -20,11 +20,11 @@
                     <img src="https://images.prismic.io/tnfev2/fea7bfcd-e825-49c5-9d02-6130efca866b_BRAND+TradingCosts+HeroImage3+1280x720.png?auto=compress,format" alt="" class="img-fluid" style="border-radius: 30px;">
 
                     <div class="sc-f3a729c-7 jmYnBa">
-                        <svg color="#04e3d8" height="200" viewBox="0 0 81 161" style="position: absolute; right: 10%; margin-top: -70px;">
+                        <svg color="#fc5000" height="200" viewBox="0 0 81 161" style="position: absolute; right: 10%; margin-top: -70px;">
                             <path fill="#513799" d="M41.0174 0.785624L80.3818 79.0391L40.7013 160.811L0.280648 84.3565L41.0174 0.785624Z"></path>
                         </svg>
 
-                        <svg color="#04e3d8" height="150" viewBox="0 0 81 161" style="position: absolute; right: 20%; margin-top: -30px;">
+                        <svg color="#fc5000" height="150" viewBox="0 0 81 161" style="position: absolute; right: 20%; margin-top: -30px;">
                             <path fill="#FDD55A" d="M41.0174 0.785624L80.3818 79.0391L40.7013 160.811L0.280648 84.3565L41.0174 0.785624Z"></path>
                         </svg>
                     </div>
@@ -37,7 +37,7 @@
         <div class="container p-5">
             <div class="row">
                 <div class="col-md-6">
-                    <svg color="#04e3d8" height="80" viewBox="0 0 81 161">
+                    <svg color="#fc5000" height="80" viewBox="0 0 81 161">
                         <path fill="#513799" d="M41.0174 0.785624L80.3818 79.0391L40.7013 160.811L0.280648 84.3565L41.0174 0.785624Z"></path>
                     </svg>
 
@@ -53,7 +53,7 @@
                 </div>
 
                 <div class="col-md-6">
-                    <svg color="#04e3d8" height="80" viewBox="0 0 81 161">
+                    <svg color="#fc5000" height="80" viewBox="0 0 81 161">
                         <path fill="#4DAD92" d="M41.0174 0.785624L80.3818 79.0391L40.7013 160.811L0.280648 84.3565L41.0174 0.785624Z"></path>
                     </svg>
 

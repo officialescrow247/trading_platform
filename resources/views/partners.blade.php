@@ -15,7 +15,7 @@
                 We’re on a mission to change the trading industry for the better and give all traders a fair and transparent experience. If your organisation shares our values, we’d love for you to become a partner.
             </p>
             <div class="text-center">
-                <a href="{{ route('register') }}" class="btn btnsm rounded-pill text-light px-4" style="background-color: #04e3d8;">Sign up now</a>
+                <a href="{{ route('register') }}" class="btn btnsm rounded-pill text-light px-4" style="background-color: #fc5000;">Sign up now</a>
             </div>
         </div>
     </section>
@@ -69,7 +69,7 @@
         </p>
 
         <div class="text-center pt-4">
-            <a href="{{ route('register') }}" class="btn btnsm rounded-pill text-light px-4" style="background-color: #04e3d8;">Join us</a>
+            <a href="{{ route('register') }}" class="btn btnsm rounded-pill text-light px-4" style="background-color: #fc5000;">Join us</a>
         </div>
     </section>
 
@@ -187,7 +187,7 @@
         </div>
 
         <div class="text-center py-5">
-            <a href="mailto:support@tradenation-uk.com" class="btn btnsm rounded-pill text-light px-4" style="background-color: #04e3d8;">Email us</a>
+            <a href="mailto:support@tradenation-uk.com" class="btn btnsm rounded-pill text-light px-4" style="background-color: #fc5000;">Email us</a>
         </div>
     </section>
 @endsection

@@ -344,7 +344,7 @@
 
 
             .mail_header {
-                background-color: #04e3d8 !important;
+                background-color: #fc5000 !important;
 
             }
             .mail_header td {

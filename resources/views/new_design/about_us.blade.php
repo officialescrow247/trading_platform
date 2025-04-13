@@ -2,7 +2,7 @@
 @section('content')
     <section class="px-4 rm_p_2">
         <div class="py-5 container-fluid px-5 rm_p_2">
-            <h6 style="color: #04e3d8;"><b>About us</b></h6>
+            <h6 style="color: #fc5000;"><b>About us</b></h6>
 
             <div class="row pt-4">
                 <div class="col-md-6 mb-4">
@@ -24,8 +24,8 @@
                     <img src="https://images.prismic.io/tnfev2/feafb15b-027a-4182-9062-d2663301a2b7_BRAND+AboutUs+HeroImage1+1280x720_.png?auto=compress,format" alt="" class="img-fluid" style="border-radius: 30px;">
 
                     <div class="sc-f3a729c-7 jmYnBa">
-                        <svg color="#04e3d8" height="150" viewBox="0 0 81 161" style="position: absolute; right: 10%; margin-top: -30px;">
-                            <path fill="#04e3d8" d="M41.0174 0.785624L80.3818 79.0391L40.7013 160.811L0.280648 84.3565L41.0174 0.785624Z"></path>
+                        <svg color="#fc5000" height="150" viewBox="0 0 81 161" style="position: absolute; right: 10%; margin-top: -30px;">
+                            <path fill="#fc5000" d="M41.0174 0.785624L80.3818 79.0391L40.7013 160.811L0.280648 84.3565L41.0174 0.785624Z"></path>
                         </svg>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                         <img src="https://images.prismic.io/tnfev2/MTJhOTA0YjctNzc1Ny00M2Q2LTlkODYtYWI5MTAyMjk2ZDg2_7cb2de61-a471-4dcd-a7ea-f7bdcf2ebd9b_brand-aboutus-londonskyline-pjc1500px.jpg?auto=compress,format&rect=0,0,1500,1000&w=1500&h=1000" alt="" class="img-fluid h-100" style="border-radius: 0px 40px 40px 0px;">
                     </div>
                 </div>
-                <svg style="position: absolute; top: -40px; right: 150px;" width="81" height="161" viewBox="0 0 81 161" fill="none" xmlns="http://www.w3.org/2000/svg" class="sc-e2a5340d-9 cLZAuh"><path d="M41.0174 0.785624L80.3818 79.0391L40.7013 160.811L0.280648 84.3565L41.0174 0.785624Z" fill="#04e3d8"></path></svg>
+                <svg style="position: absolute; top: -40px; right: 150px;" width="81" height="161" viewBox="0 0 81 161" fill="none" xmlns="http://www.w3.org/2000/svg" class="sc-e2a5340d-9 cLZAuh"><path d="M41.0174 0.785624L80.3818 79.0391L40.7013 160.811L0.280648 84.3565L41.0174 0.785624Z" fill="#fc5000"></path></svg>
             </div>
 
             <div class="ps-2 col-md-7 d-lg-none d-md-block" style="background-color: #02070b; color: white; border-radius: 40px;">

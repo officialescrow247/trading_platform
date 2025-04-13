@@ -236,7 +236,7 @@
    <section>
       <div class="text-center py-5">
          <h1>Be part of our community</h1>
-         <a href="{{ asset('register') }}" style="background-color: #04e3d8;" class="btn px-4 text-light mt-4 rounded-pill">Join Us</a>
+         <a href="{{ asset('register') }}" style="background-color: #fc5000;" class="btn px-4 text-light mt-4 rounded-pill">Join Us</a>
       </div>
    </section>
 @endsection

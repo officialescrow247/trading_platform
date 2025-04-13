@@ -330,7 +330,7 @@
             }
             #our_ambassadors h1:first-child{
                 background: #fff;
-                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
+                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
                 /* color: #fff; */
                 font-size: 4rem;
                 width: fit-content;
@@ -340,7 +340,7 @@
             }
             #our_ambassadors h1:last-child{
                 background: #333333;
-                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
+                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
                 color: #fff;
                 font-size: 4rem;
                 width: fit-content;
@@ -358,7 +358,7 @@
                 margin-bottom: 150px;
             }
             #brokerage_fees h1:first-child{
-                background: #04e3d8;
+                background: #fc5000;
                 color: #fff;
                 font-size: 3rem;
                 width: fit-content;
@@ -543,15 +543,16 @@
 	</head>
 
 	<body>
-		<header class="my-bg-color"  style="margin-bottom: 200px;">
+		<header class="my-bg-color"  style="margin-bottom: 125px;">
 			<nav class="d-none d-lg-block navbar navbar-expand-lg navbar-dark header_bg border border-top-0 border-start-0 border-end-0 fixed-top pb-3">
 				<span class="pb-2 container text-light pt-1 d-flex" style="font-size: 12px;">
 					Financial Spread Bets and CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. 82.8% of retail investor accounts lose money when trading CFDs with this provider. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.
 				</span>
 				
-				<div class="container-fluid px-5">
+				<div class="container-fluid px-5 pt-2">
                     <a href="{{ url('/') }}" class="text-dark" style="display: flex; text-decoration: none; align-items: center; color: white; justify-content: center;">
-                        <img src="{{ asset('imgs/logo_main.png') }}" alt="{{ env('APP_NAME') }} logo" style="width: 200px;">
+                        <img src="https://images.prismic.io/tnfev2/8c6796eb-086d-4ac1-8846-6ea8b63ee68a_TN-PrimaryLogo-RGB-WhiteText-Strapline.png?auto=compress%2Cformat&fit=max&w=3840" 
+                            alt="{{ env('APP_NAME') }} logo" style="width: 300px;">
                     </a>
 
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -627,14 +628,14 @@
 								</a>
 
 								<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Spreadex Trade</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Spreadex Trade</span></li>
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('why_trade_with_us') }}">Why Trade with Us?</a></li>
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('why_trade_with_us') }}#fixed-spread-trading">Fixed Spread Trading</a></li>
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('why_trade_with_us') }}#cfd-trading">CFD Trading</a></li>
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('why_trade_with_us') }}#negative-balance-protection">Negative Balance Protection</a></li>
 
 
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Trading Cost</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Trading Cost</span></li>
 									<li>
 										<a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_costs') }}">Our Costs</a>
 									</li>
@@ -646,7 +647,7 @@
 									</li>
 
 
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Trading Tools</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Trading Tools</span></li>
 									<li>
 										<a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_tools') }}">Our Tools</a>
 									</li>
@@ -661,7 +662,7 @@
 									</li>
 
 
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Trading Explained</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Trading Explained</span></li>
 									<li>
 										<a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_explained') }}">Level up Your Trading</a>
 									</li>
@@ -686,7 +687,7 @@
 								</a>
 
 								<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Discover Markets</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Discover Markets</span></li>
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('markets') }}#">Trade Popular Markets</a></li>
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('markets') }}#indices">Indices</a></li>
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('markets') }}#forex">Forex</a></li>
@@ -694,7 +695,7 @@
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('markets') }}#all-instruments">All Instruments</a></li>
 						
 
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Our Platforms</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Our Platforms</span></li>
 									<li>
 										<a class="dropdown-item" style="text-decoration: none;" href="{{ route('our_platforms') }}#">TMade to Trade</a>
 									</li>
@@ -703,7 +704,7 @@
 									</li>
 
 
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Market Information</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Market Information</span></li>
 									<li>
 										<a class="dropdown-item" style="text-decoration: none;" href="{{ route('market_information') }}">Market Information Sheet</a>
 									</li>
@@ -721,7 +722,7 @@
 									</li>
 
 
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Trading Explained</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Trading Explained</span></li>
 									<li>
 										<a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_explained') }}">Level up Your Trading</a>
 									</li>
@@ -746,14 +747,14 @@
 								</a>
 
 								<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Insights Hub</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Insights Hub</span></li>
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('insights_hub') }}">Gain Insights</a></li>
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('insights_hub') }}#trading-tools">Trading Tools</a></li>
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('insights_hub') }}#part-time-to-pro">Part-time to Pro</a></li>
 									<!-- <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('insights_hub') }}#demo">Try Our Demo</a></li> -->
 
 
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Types of Trading</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Types of Trading</span></li>
 									<li>
 										<a class="dropdown-item" style="text-decoration: none;" href="{{ route('articles_day_trading') }}">Day Trading</a>
 									</li>
@@ -768,7 +769,7 @@
 									</li>
 
 
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Analysis</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Analysis</span></li>
 									<li>
 										<a class="dropdown-item" style="text-decoration: none;" href="{{ route('articles_technical_analysis') }}">Technical Analysis</a>
 									</li>
@@ -777,7 +778,7 @@
 									</li>
 
 
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Trading Times</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Trading Times</span></li>
 									<li>
 										<a class="dropdown-item" style="text-decoration: none;" href="{{ route('articles_what_time_does_forex_market_open') }}">Forex Opening Times</a>
 									</li>
@@ -793,12 +794,12 @@
 								</a>
 
 								<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">About Us</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">About Us</span></li>
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('about_us') }}">Who We Are</a></li>
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('about_us') }}#regulations_">Regulations</a></li>
 
 
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Our Community</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Our Community</span></li>
 									<li>
 										<a class="dropdown-item" style="text-decoration: none;" href="{{ route('about_us') }}#our-sponsorships">Sponsorship</a>
 									</li>
@@ -811,13 +812,13 @@
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_stories_new') }}">Customers Reviews</a></li>
 
 
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Careers</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Careers</span></li>
 									<li>
 										<a class="dropdown-item" style="text-decoration: none;" href="{{ route('about_us') }}#careers">Join Us</a>
 									</li>
 
 
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #04e3d8;">Follow Us</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Follow Us</span></li>
 									<li>
 										<a class="dropdown-item" style="text-decoration: none;" href="#!">Twitter</a>
 									</li>
@@ -1013,31 +1014,31 @@
 			<svg width="710" height="710" fill="#fc6f2c" class="sc-915eeb0c-2 yzosE">
 				<polygon points="0,355, 355,0, 710,355, 355,710 "></polygon>
 			</svg>
-			<svg width="710" height="710" fill="#04e3d8" class="sc-915eeb0c-2 yzotp">
+			<svg width="710" height="710" fill="#fc5000" class="sc-915eeb0c-2 yzotp">
 				<polygon points="0,355, 355,0, 710,355, 355,710 "></polygon>
 			</svg>
 			<svg width="710" height="710" fill="#fc6f2c" class="sc-915eeb0c-2 yzovR">
 				<polygon points="0,355, 355,0, 710,355, 355,710 "></polygon>
 			</svg>
-			<svg width="710" height="710" fill="#04e3d8" class="sc-915eeb0c-2 ilXGCg">
+			<svg width="710" height="710" fill="#fc5000" class="sc-915eeb0c-2 ilXGCg">
 				<polygon points="0,355, 355,0, 710,355, 355,710 "></polygon>
 			</svg>
 			<svg width="710" height="710" fill="#fc6f2c" class="sc-915eeb0c-2 ilXGCj">
 				<polygon points="0,355, 355,0, 710,355, 355,710 "></polygon>
 			</svg>
-			<svg width="710" height="710" fill="#04e3d8" class="sc-915eeb0c-2 ilXGxY">
+			<svg width="710" height="710" fill="#fc5000" class="sc-915eeb0c-2 ilXGxY">
 				<polygon points="0,355, 355,0, 710,355, 355,710 "></polygon>
 			</svg>
 			<svg width="710" height="710" fill="#fc6f2c" class="sc-915eeb0c-2 ilXGCn">
 				<polygon points="0,355, 355,0, 710,355, 355,710 "></polygon>
 			</svg>
-			<svg width="710" height="710" fill="#04e3d8" class="sc-915eeb0c-2 ilXGzV">
+			<svg width="710" height="710" fill="#fc5000" class="sc-915eeb0c-2 ilXGzV">
 				<polygon points="0,355, 355,0, 710,355, 355,710 "></polygon>
 			</svg>
 			<svg width="710" height="710" fill="#fc6f2c" class="sc-915eeb0c-2 yzkTZ">
 				<polygon points="0,355, 355,0, 710,355, 355,710 "></polygon>
 			</svg>
-			<svg width="710" height="710" fill="#04e3d8" class="sc-915eeb0c-2 yznlk">
+			<svg width="710" height="710" fill="#fc5000" class="sc-915eeb0c-2 yznlk">
 				<polygon points="0,355, 355,0, 710,355, 355,710 "></polygon>
 			</svg>
 			<svg width="710" height="710" fill="#fc6f2c" class="sc-915eeb0c-2 yzmfU">

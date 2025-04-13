@@ -271,7 +271,7 @@
                 </div>
                 <img src="https://images.prismic.io/tnfev2/MjE4MzU2ZTMtMmQ4MS00NWNhLThlMWUtOGFjYTM3YmQ5NTQy_3b4bcf1f-4fc8-4f40-aec7-4a3236be14ff_b001specialcomponentimagehomepagesavvytrader1280x720.png" alt="" class="d-lg-none img-fluid" style="border-radius: 0px 0px 40px 40px;">
 
-                <svg style="position: absolute; top: -40px; right: 150px;" width="81" height="161" viewBox="0 0 81 161" fill="none" xmlns="http://www.w3.org/2000/svg" class="sc-e2a5340d-9 cLZAuh"><path d="M41.0174 0.785624L80.3818 79.0391L40.7013 160.811L0.280648 84.3565L41.0174 0.785624Z" fill="#04e3d8"></path></svg>
+                <svg style="position: absolute; top: -40px; right: 150px;" width="81" height="161" viewBox="0 0 81 161" fill="none" xmlns="http://www.w3.org/2000/svg" class="sc-e2a5340d-9 cLZAuh"><path d="M41.0174 0.785624L80.3818 79.0391L40.7013 160.811L0.280648 84.3565L41.0174 0.785624Z" fill="#fc5000"></path></svg>
             </div>
         </div>
     </section>

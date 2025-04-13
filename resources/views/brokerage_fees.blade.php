@@ -31,7 +31,7 @@
             </div>
 
             <div class="pt-3 text-center">
-               <a style="background-color: #04e3d8;" class="btn px-4 text-light mt-4 rounded-pill" href="{{ route('register') }}">How our fees works</a>
+               <a style="background-color: #fc5000;" class="btn px-4 text-light mt-4 rounded-pill" href="{{ route('register') }}">How our fees works</a>
             </div>
          </div>
       </div>
@@ -153,7 +153,7 @@
    <section class="container rm_p2 px-5">
       <div class="rm_p2">
          <div class="py-4 text-center">
-            <a style="background-color: #04e3d8;" class="btn px-4 text-light mt-4 rounded-pill" href="{{ route('register') }}">
+            <a style="background-color: #fc5000;" class="btn px-4 text-light mt-4 rounded-pill" href="{{ route('register') }}">
                Our journey to fairness
             </a>
          </div>
@@ -184,7 +184,7 @@
       </div>
 
       <div class="pt-3 text-center pb-5">
-         <a style="background-color: #04e3d8;" class="btn px-4 text-light mt-4 rounded-pill" href="{{ route('register') }}">
+         <a style="background-color: #fc5000;" class="btn px-4 text-light mt-4 rounded-pill" href="{{ route('register') }}">
             Discovering    
          </a>
       </div>
@@ -210,7 +210,7 @@
 
          <div class="text-center py-5">
             <h1>Like what you see?</h1>
-            <a style="background-color: #04e3d8;" class="btn px-4 text-light mt-4 rounded-pill" href="{{ route('register') }}">
+            <a style="background-color: #fc5000;" class="btn px-4 text-light mt-4 rounded-pill" href="{{ route('register') }}">
                Join us    
             </a>
          </div>

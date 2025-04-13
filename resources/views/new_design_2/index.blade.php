@@ -59,7 +59,7 @@
                     </p>
                     rgb(4, 227, 216)
 
-                    <p class="pt-3" style="font-size: 25px; color: #04e3d8;"><b>And that's what makes us unreal.</b></p>
+                    <p class="pt-3" style="font-size: 25px; color: #fc5000;"><b>And that's what makes us unreal.</b></p>
 
                     <div style="display: flex;" class="justify-content-center pt-5"><div class="hrr"></div></div>
                 </div>
@@ -73,7 +73,7 @@
                         So, no matter how experienced you are at trading, you can thrive at Spreadex Trade.
                     </p>
 
-                    <p style="font-size: 25px; color: #04e3d8;"><b>And that's what makes us unreal.</b></p>
+                    <p style="font-size: 25px; color: #fc5000;"><b>And that's what makes us unreal.</b></p>
                 </div>
             </div>
         </section>

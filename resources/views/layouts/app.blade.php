@@ -15,7 +15,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
         <style>
             .my-bg-color{
-                background-color: #04e3d8 !important;
+                background-color: #fc5000 !important;
             }
             .text-white{
                 color: #FFFFFF !important;
@@ -47,8 +47,8 @@
                 background-size: cover;
             }
             #our_market_banner h1:first-child{
-                background: #04e3d8;
-                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
+                background: #fc5000;
+                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
                 color: #fff;
                 font-size: 4rem;
                 width: fit-content;
@@ -58,7 +58,7 @@
             }
             #our_market_banner h1:last-child{
                 background: #333333;
-                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
+                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
                 color: #fff;
                 font-size: 4rem;
                 width: fit-content;
@@ -79,8 +79,8 @@
                 background-size: cover;
             }
             #alternative_data_fixed_banner h1:first-child{
-                background: #04e3d8;
-                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
+                background: #fc5000;
+                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
                 color: #fff;
                 font-size: 4rem;
                 width: fit-content;
@@ -90,7 +90,7 @@
             }
             #alternative_data_fixed_banner h1:last-child{
                 background: #333333;
-                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
+                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
                 color: #fff;
                 font-size: 4rem;
                 width: fit-content;
@@ -114,8 +114,8 @@
                 background-size: cover;
             }
             #reliably_regulated_banner h1:first-child{
-                background: #04e3d8;
-                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
+                background: #fc5000;
+                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
                 color: #fff;
                 font-size: 4rem;
                 width: fit-content;
@@ -125,7 +125,7 @@
             }
             #reliably_regulated_banner h1:last-child{
                 background: #333333;
-                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
+                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
                 color: #fff;
                 font-size: 4rem;
                 width: fit-content;
@@ -144,8 +144,8 @@
                 background-size: cover;
             }
             #fairer_banner h1:first-child{
-                background: #04e3d8;
-                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
+                background: #fc5000;
+                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
                 color: #fff;
                 font-size: 4rem;
                 width: fit-content;
@@ -155,7 +155,7 @@
             }
             #fairer_banner h1:last-child{
                 background: #333333;
-                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
+                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
                 color: #fff;
                 font-size: 4rem;
                 width: fit-content;
@@ -175,8 +175,8 @@
                 background-size: cover;
             }
             #support_banner h1:first-child{
-                background: #04e3d8;
-                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
+                background: #fc5000;
+                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
                 color: #fff;
                 font-size: 4rem;
                 width: fit-content;
@@ -186,7 +186,7 @@
             }
             #support_banner h1:last-child{
                 background: #333333;
-                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
+                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
                 color: #fff;
                 font-size: 4rem;
                 width: fit-content;
@@ -335,7 +335,7 @@
                 text-decoration: none !important;
             }
             .footer__social-link > svg > path:hover{
-                fill: #04e3d8 !important;
+                fill: #fc5000 !important;
             }
             #our_ambassadors{
                 padding-top: 100px;
@@ -348,7 +348,7 @@
             }
             #our_ambassadors h1:first-child{
                 background: #fff;
-                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
+                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
                 /* color: #fff; */
                 font-size: 4rem;
                 width: fit-content;
@@ -358,7 +358,7 @@
             }
             #our_ambassadors h1:last-child{
                 background: #333333;
-                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
+                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
                 color: #fff;
                 font-size: 4rem;
                 width: fit-content;
@@ -418,7 +418,7 @@
             }
             #experts_explain_banner h1:first-child{
                 background: #fff;
-                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
+                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
                 color: #333333;
                 font-size: 4rem;
                 width: fit-content;
@@ -428,7 +428,7 @@
             }
             #experts_explain_banner h1:last-child{
                 background: #333333;
-                /* box-shadow: 10px 0 0 #04e3d8, -10px 0 0 #04e3d8; */
+                /* box-shadow: 10px 0 0 #fc5000, -10px 0 0 #fc5000; */
                 color: #fff;
                 font-size: 4rem;
                 width: fit-content;
@@ -440,7 +440,7 @@
                 text-decoration: none !important;
             }
             .faq_tabs:hover{
-                background-color: #04e3d8;
+                background-color: #fc5000;
                 color: white;
             }
             .faq_tabs{
@@ -465,7 +465,7 @@
                 color: #F06326 !important;
             }
             .accordion-button:not(.collapsed){
-                color: #04e3d8 !important;
+                color: #fc5000 !important;
             }
             .accordion-button{
                 font-weight: 600 !important;
@@ -552,7 +552,7 @@
                 margin-bottom: 150px;
             }
             #brokerage_fees h1:first-child{
-                background: #04e3d8;
+                background: #fc5000;
                 color: #fff;
                 font-size: 3rem;
                 width: fit-content;

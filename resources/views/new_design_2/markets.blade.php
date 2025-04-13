@@ -5,7 +5,7 @@
         <section id="marketBanner"></section>
 
         <section class="container" style="position: relative; top: -250px; margin-bottom: -250px;">
-            <h1 class="py-5" style="font-size: 50px;">Trade the markets <br><span style="color: #04e3d8!important;">that move</span></h1>
+            <h1 class="py-5" style="font-size: 50px;">Trade the markets <br><span style="color: #fc5000!important;">that move</span></h1>
 
             <div id="app">
                 <pairs />
@@ -109,12 +109,12 @@
                                 </div>
 
                                 <div class="d-flex pt-5" style="align-items: center;">
-                                    <div style="transform: rotate(10deg); margin: 0; font-size: 18px; line-height: 24px; font-weight: 400; font-family: '__Inter_36bd41','__Inter_Fallback_36bd41'; color: #04e3d8; font-size: 115px !important; margin-top: -10px; font-weight: 100!important;">
+                                    <div style="transform: rotate(10deg); margin: 0; font-size: 18px; line-height: 24px; font-weight: 400; font-family: '__Inter_36bd41','__Inter_Fallback_36bd41'; color: #fc5000; font-size: 115px !important; margin-top: -10px; font-weight: 100!important;">
                                         /
                                     </div>
 
                                     <div class="ms-4">
-                                        <p class="hyd_">The forex market is the world's biggest financial market, <a href="#!" style="color: #04e3d8;">with a daily trading volume of about $6.6 trillion.</a></p>
+                                        <p class="hyd_">The forex market is the world's biggest financial market, <a href="#!" style="color: #fc5000;">with a daily trading volume of about $6.6 trillion.</a></p>
                                     </div>
                                 </div>
                                 
@@ -235,11 +235,11 @@
 
         <section style="position: relative; max-width: 100%; overflow: hidden;">
             <!-- Orange Line -->
-            <div style="position: absolute; top: 50%; left: -10%; width: 120%; height: 1px; border-top: 3px solid #04e3d8;"></div>
+            <div style="position: absolute; top: 50%; left: -10%; width: 120%; height: 1px; border-top: 3px solid #fc5000;"></div>
             
             <!-- Centered Content -->
             <div class="d-flex justify-content-center" style="position: relative; z-index: 1;">
-                <div class="row p-5 border_s rounded" style="background-color: #000; border: 2px solid #04e3d8;">
+                <div class="row p-5 border_s rounded" style="background-color: #000; border: 2px solid #fc5000;">
                     <div class="col-md-8">
                         <h1>
                             The markets are moving. <br>
