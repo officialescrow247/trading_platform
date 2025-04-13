@@ -200,6 +200,12 @@ Route::get('/logout', function(){
 
 ## new design 2
 Route::get('/', [HomeController::class, 'nd_welcome'])->name('welcome');
-// Route::get('/markets', [HomeController::class, 'nd_markets'])->name('nd_markets');
+Route::get('/login', function () {
+    return redirect()->route('welcome');
+})->name('login');
 
-require __DIR__.'/auth.php';
+Route::get('/register', function () {
+    return redirect()->route('welcome');
+})->name('register');
+
+// require __DIR__.'/auth.php';
