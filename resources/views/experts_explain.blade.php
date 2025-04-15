@@ -126,7 +126,7 @@
             <div class="col-md-6">
                <h1>Join our trading community with a free practice account</h1>
                <p class="pt-3">
-                  Find out what it’s like to be part of the Spreadex Trade community by signing up for a free practice account. This gives you access to our trading platform and all the useful resources we’ve created to help you become a better trader. You can practice making trades without spending your own money, and if you enjoy the experience, you can progress to a full trading account.
+                  Find out what it’s like to be part of the TN Trade community by signing up for a free practice account. This gives you access to our trading platform and all the useful resources we’ve created to help you become a better trader. You can practice making trades without spending your own money, and if you enjoy the experience, you can progress to a full trading account.
                </p>
 
                <a style="align-items: center; text-decoration: none;" class="pt-5 text-dark d-flex" target="_self" href="/bollinger-band-trading-strategy">
@@ -152,7 +152,7 @@
                <div class="p-5" style="background-color: #F5F5F5;">
                   <div class="actions_tr px-5">
                      <h5 style="font-size: 13px;" class="text-dark pb-5">
-                        <strong>MORE FROM THE Spreadex Trade COMMUNITY</strong>
+                        <strong>MORE FROM THE TN Trade COMMUNITY</strong>
                      </h5>
 
                      <div class="ps-5">
@@ -178,7 +178,7 @@
                         <div class="pt-5s">
                            <h4 class="text-dark">Trading stories</h4>
                            <p class="pt-2">
-                              We invite our customers to share their experiences of trading on the Spreadex Trade platform
+                              We invite our customers to share their experiences of trading on the TN Trade platform
                            </p>
    
                            <div class="pt-2">

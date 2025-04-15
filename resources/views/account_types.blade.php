@@ -90,7 +90,7 @@
                   </tr>
 
                   <tr>
-                     <th>Spreadex Trade Rewards</th>
+                     <th>TN Trade Rewards</th>
                      <td>None</td>
                      <td>Up to €1000 in rewards</td>
                      <td>Up to €5000 in rewards</td>

@@ -628,7 +628,7 @@
 								</a>
 
 								<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Spreadex Trade</span></li>
+									<li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">TN Trade</span></li>
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('why_trade_with_us') }}">Why Trade with Us?</a></li>
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('why_trade_with_us') }}#fixed-spread-trading">Fixed Spread Trading</a></li>
 									<li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('why_trade_with_us') }}#cfd-trading">CFD Trading</a></li>
@@ -857,7 +857,7 @@
 				<div class="container show_nav">
 					<div class="row">
 						<div class="col-md-3">
-							<p class="text-light"><b>Spreadex Trade</b></p>
+							<p class="text-light"><b>TN Trade</b></p>
 
 							<a href="{{ route('why_trade_with_us') }}">Why Trade with Us?</a>
 							<a href="{{ route('why_trade_with_us') }}#fixed-spread-trading">Fixed Spread Trading</a>
@@ -1159,7 +1159,7 @@
 				<hr>
 
 				<div class="text-center">
-					© 2019 - {{ date('Y') }} Spreadex Trade. All Rights Reserved.
+					© 2019 - {{ date('Y') }} TN Trade. All Rights Reserved.
 				</div>
             </div>
         </footer>

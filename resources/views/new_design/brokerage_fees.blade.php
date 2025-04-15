@@ -104,14 +104,14 @@
                         The spread is the difference between the buy and sell prices of a trade, and the smaller the spread, the lower your trading costs.
                      </p>
                      <p class="pt-1">
-                        Some brokers use variable spreads which can become significantly wider when markets become volatile. However, all the Spreadex Trade spreads are low and fixed regardless of any market volatility.
+                        Some brokers use variable spreads which can become significantly wider when markets become volatile. However, all the TN Trade spreads are low and fixed regardless of any market volatility.
                      </p>
                   </div>
       
                   <div class="pt-5 tab-pane fade" id="nav-Trading" role="tabpanel" aria-labelledby="nav-Trading-tab">
                      <h1 style="color: #EF5B2D;"><b>Trading commission transaction fees</b></h1>
                      <p class="pt-3">
-                        On top of the spread, some brokers charge a trading commission for every transaction you make. This is not a fee you have to pay when trading on the Spreadex Trade platform.
+                        On top of the spread, some brokers charge a trading commission for every transaction you make. This is not a fee you have to pay when trading on the TN Trade platform.
                      </p>
                   </div>
       
@@ -176,7 +176,7 @@
             <span class="pe-3">
                <svg width='12' height='12' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill='#F5F5F5' d='M0 0h12v12H0z'/><path d='M0 0h12v12L6 6 0 0Z' fill='#FF5D2E'/></svg>
             </span>
-            <b>At Spreadex Trade, we’re on a mission to make trading accessible to all</b><br>
+            <b>At TN Trade, we’re on a mission to make trading accessible to all</b><br>
             <p>
                We provide a wide range of free resources to educate our community and enable them to become better traders. Sadly, the same can’t be said of all brokers.
             </p>
@@ -198,7 +198,7 @@
             </div>
 
             <div class="col-md-6">
-               <h1><b>How does Spreadex Trade make money?</b></h1>
+               <h1><b>How does TN Trade make money?</b></h1>
                <p class="pt-5">
                   We want our traders to have the fairest possible trading experience, which is why we charge minimal brokerage fees and are fully transparent about what these are.
                </p>

@@ -2,7 +2,7 @@
 @section('content')
    <section id="our_ambassadors">
       <div class="container py-5">
-         <h1>Meet the Spreadex Trade</h1>
+         <h1>Meet the TN Trade</h1>
          <h1>Brand Ambassadors</h1>
       </div>
    </section>
@@ -13,7 +13,7 @@
             <h6 class="pt-5"><b>OUR SHARED BELIEF</b></h6>
             <h1><b>No shortcuts to success</b></h1>
             <p class="pt-2">
-               This is the mantra connecting Spreadex Trade to its inspiring bunch of brand ambassadors. We believe traders can learn a lot from this mentality as they embark on their own journeys to success. For a cost-effective trading platform, a range of educational resources, and an excellent customer service team, become part of the Spreadex Trade community and see what you can achieve.
+               This is the mantra connecting TN Trade to its inspiring bunch of brand ambassadors. We believe traders can learn a lot from this mentality as they embark on their own journeys to success. For a cost-effective trading platform, a range of educational resources, and an excellent customer service team, become part of the TN Trade community and see what you can achieve.
             </p>
 
             <div class="pt-3">
@@ -43,7 +43,7 @@
                </p>
 
                <p>
-                  Get to know Max Whitlock and learn why he was keen to join Spreadex Trade in spreading the message on #noshortcutstosuccess.
+                  Get to know Max Whitlock and learn why he was keen to join TN Trade in spreading the message on #noshortcutstosuccess.
                </p>
 
                <!-- <div>
@@ -76,7 +76,7 @@
                </p>
 
                <p>
-                  Learn more about Hollie Pearne Webb and learn why she was keen to join Spreadex Trade in spreading the message on #noshortcutstosuccess.
+                  Learn more about Hollie Pearne Webb and learn why she was keen to join TN Trade in spreading the message on #noshortcutstosuccess.
                </p>
 
                <div>
@@ -109,7 +109,7 @@
             <div class="col-md-6">
                <h6 class="pt-4"><b>TWO-TIME KSL TITLE HOLDER WITH WESTERN STORM</b></h6>
                <h1 class="pb-4">
-               Sophie Luff on Spreadex Trade
+               Sophie Luff on TN Trade
                </h1>
 
                <p>
@@ -117,7 +117,7 @@
                </p>
 
                <p>
-                  Watch our interview with Sophie to find out why the Spreadex Trade message resonated with her.
+                  Watch our interview with Sophie to find out why the TN Trade message resonated with her.
                </p>
 
                <!-- <div>
@@ -158,11 +158,11 @@
 
             <div class="col-md-6">
                <h1 class="py-4">
-                  Stuart Lane, Spreadex Trade CEO on our partnership
+                  Stuart Lane, TN Trade CEO on our partnership
                </h1>
 
                <p>
-                  “Spreadex Trade is delighted to welcome such an extraordinary group of people on board as our ambassadors. Each and every one of them has achieved greatness through dedication, consistency and talent. We’re very proud to have them in the Spreadex Trade community and hope our traders will be inspired to follow the same work ethic in order to reach success.”
+                  “TN Trade is delighted to welcome such an extraordinary group of people on board as our ambassadors. Each and every one of them has achieved greatness through dedication, consistency and talent. We’re very proud to have them in the TN Trade community and hope our traders will be inspired to follow the same work ethic in order to reach success.”
                </p>
             </div>
          </div>
@@ -175,7 +175,7 @@
                </h1>
 
                <p>
-                  We’re proud to have worked with such a diverse and inspirational set of collaborators and partners through the years, including the world’s first female rugby ref Sara Cox, cricketer Dom Sibley and Apprentice winner James White, all of which have brought their enthusiasm and dedication to transmitting Spreadex Trade’s core values of patience and embracing adversity.
+                  We’re proud to have worked with such a diverse and inspirational set of collaborators and partners through the years, including the world’s first female rugby ref Sara Cox, cricketer Dom Sibley and Apprentice winner James White, all of which have brought their enthusiasm and dedication to transmitting TN Trade’s core values of patience and embracing adversity.
                </p>
             </div>
 
@@ -205,7 +205,7 @@
          </div>
 
          <div class="pt-5 text-center">
-            <h2 class="pt-5 px-5"><b>Want to know more about becoming a Spreadex Trade partner?</b></h2>
+            <h2 class="pt-5 px-5"><b>Want to know more about becoming a TN Trade partner?</b></h2>
             <h3 class="pt-3">
                Call us any time Mon-Fri on +44 12543 69752
             </h3>

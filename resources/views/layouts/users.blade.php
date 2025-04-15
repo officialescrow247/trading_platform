@@ -214,7 +214,7 @@
                 </a> -->
 
                 <a href="{{ route('index') }}" class="navbar-brand" style="display: flex; text-decoration: none; align-items: center; color: white; justify-content: center;">
-                    <img src="https://images.prismic.io/tnfev2/44587b9b-c476-4a96-a39e-788e0f04f5e5_HeaderLogoAnimated.gif" alt="site-logo" style="height: 40px;"> <h5 class="pt-2" style="padding-left: 10px;">Spreadex Trade</h5>
+                    <img src="https://images.prismic.io/tnfev2/44587b9b-c476-4a96-a39e-788e0f04f5e5_HeaderLogoAnimated.gif" alt="site-logo" style="height: 40px;"> <h5 class="pt-2" style="padding-left: 10px;">TN Trade</h5>
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

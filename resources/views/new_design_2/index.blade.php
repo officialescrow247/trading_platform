@@ -6,7 +6,7 @@
                 <h1 class="_dess kanit_thin_font">Harness the power</h1>
                 <p class="text-light _dessw kanit_thin_font">of unreal spreads</p>
                 <p class="text-light _dess_w kanit_thin_font">
-                    Get low-cost fixed spreads when you trade <br> with Spreadex Trade. 
+                    Get low-cost fixed spreads when you trade <br> with TN Trade. 
                     That means when the <br> markets move, your spreads won't.
                 </p>
                 <img src="{{ asset('adv.avif') }}" class="adv">
@@ -19,7 +19,7 @@
                 <h1 class="kanit_thin_font" style="font-size: 40px;"><span style="color: rgb(4, 227, 216);">Harness the power</span> <br /> of unreal spreads </h1>
                 
                 <p class="text-light _dess_w kanit_thin_font">
-                    Get low-cost fixed spreads when you trade with Spreadex Trade. 
+                    Get low-cost fixed spreads when you trade with TN Trade. 
                     That means when the markets move, your spreads won't.
                 </p>
                 <img src="{{ asset('adv.avif') }}" class="adv">
@@ -46,7 +46,7 @@
 
                 <div class="pt-3 d-none d-lg-block">
                     <p>
-                        Other brokers offer variable spreads but with Spreadex Trade's low-cost fixed <br>
+                        Other brokers offer variable spreads but with TN Trade's low-cost fixed <br>
                         spreads, when the markets move, your costs don't.
                     </p>
 
@@ -55,9 +55,8 @@
                     </p>
                     
                     <p>
-                        So, no matter how experienced you are at trading, you can thrive at Spreadex Trade.
+                        So, no matter how experienced you are at trading, you can thrive at TN Trade.
                     </p>
-                    rgb(4, 227, 216)
 
                     <p class="pt-3" style="font-size: 25px; color: #fc5000;"><b>And that's what makes us unreal.</b></p>
 
@@ -66,11 +65,11 @@
 
                 <div class="pt-3 d-lg-none">
                     <p class="px-1">
-                        Other brokers offer variable spreads but with Spreadex Trade's low-cost fixed
+                        Other brokers offer variable spreads but with TN Trade's low-cost fixed
                         spreads, when the markets move, your costs don't.
                         
                         It's no wonder we're the pioneers of trust, value and transparency in trading.
-                        So, no matter how experienced you are at trading, you can thrive at Spreadex Trade.
+                        So, no matter how experienced you are at trading, you can thrive at TN Trade.
                     </p>
 
                     <p style="font-size: 25px; color: #fc5000;"><b>And that's what makes us unreal.</b></p>
@@ -194,12 +193,12 @@
                     <div>
                         <img src="https://images.prismic.io/tnfev2/Zmzyq5m069VX1xqS_TNTrader.png?auto=format%2Ccompress%3Fauto%3Dcompress%2Cformat&fit=max&w=384" class="w-100 img-fluid">
 
-                        <h6 class="pt-4"><b>SpreadEx Trader</b></h6>
+                        <h6 class="pt-4"><b>TN Trader</b></h6>
                         <p style="font-size: 25px;" class="inter"><b>Your streamlined, powerful, low-cost way to trade global markets</b></p>
                         <p class="inter">
-                            Harness SpreadEx Trader to smash your trading goals across desktop and mobile with smart tools like our daily report, chart features, and signal centre. <br><br>
+                            Harness TN Trader to smash your trading goals across desktop and mobile with smart tools like our daily report, chart features, and signal centre. <br><br>
 
-                            Plus, integrate TradingView with SpreadEx Trader, Spreadex Trade's award-winning platform, to get the best of both worlds - ultra low-cost fixed spreads + supercharged supercharts.
+                            Plus, integrate TradingView with TN Trader, TN Trade's award-winning platform, to get the best of both worlds - ultra low-cost fixed spreads + supercharged supercharts.
                         </p>
                     </div>
                 </div>
@@ -279,7 +278,7 @@
                         </p>
                         
                         <p style="font-size: 20px;" class="p-0 m-0 js_">
-                            Power up your trading with Spreadex Trade today.
+                            Power up your trading with TN Trade today.
                         </p>
                     </div>
                 </div>

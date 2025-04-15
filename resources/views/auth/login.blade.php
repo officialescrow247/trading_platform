@@ -59,7 +59,7 @@
         <div class="row">
             <div class="col-md-7 mb-5 login_1">
                 <h2>Welcome to</h2>
-                <h3>Spreadex Trade</h3>
+                <h3>TN Trade</h3>
             </div>
             
             <div class="col-md-5 p-3">

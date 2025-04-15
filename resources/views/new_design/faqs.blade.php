@@ -12,7 +12,7 @@
                         <div class="d-flex justify-content-between">
                             <div>
                                 <svg style="width: 20px;" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="FormatAlignLeftIcon"><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"></path></svg>
-                                <span class="ps-3">Why trade with Spreadex Trade?</span>
+                                <span class="ps-3">Why trade with TN Trade?</span>
                             </div>
 
                             <div>
@@ -25,7 +25,7 @@
                         <div class="d-flex justify-content-between">
                             <div>
                                 <svg style="width: 20px;" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="FormatAlignLeftIcon"><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"></path></svg>
-                                <span class="ps-3">Who is Spreadex Trade regulated by?</span>
+                                <span class="ps-3">Who is TN Trade regulated by?</span>
                             </div>
 
                             <div>
@@ -60,18 +60,18 @@
                         </div>
                     </div> -->
                     <div class="accordion" id="accordionExample">
-                        <h5 class="pb-4"><b>Spreadex Trade FAQ</b></h5>
+                        <h5 class="pb-4"><b>TN Trade FAQ</b></h5>
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                    <strong>Why trade with Spreadex Trade?</strong>
+                                    <strong>Why trade with TN Trade?</strong>
                                 </button>
                             </h2>
 
                             <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     <p>
-                                        Spreadex Trade was born from a simple belief: customers deserve better. Whether you are a new trader just setting out or a seasoned long-time trader, you can be sure that you will be supported on every step of your journey. We adopt a customer-first approach which will help change the way you engage with the financial markets. We offer our clients:
+                                        TN Trade was born from a simple belief: customers deserve better. Whether you are a new trader just setting out or a seasoned long-time trader, you can be sure that you will be supported on every step of your journey. We adopt a customer-first approach which will help change the way you engage with the financial markets. We offer our clients:
                                     </p>
                                     <ul>
                                         <li>
@@ -101,14 +101,14 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    <b>Who is Spreadex Trade regulated by?</b>
+                                    <b>Who is TN Trade regulated by?</b>
                                 </button>
                             </h2>
                             
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     <p>
-                                        Spreadex Trade is regulated by the Financial Conduct Authority (FCA) in the UK, the Australian Securities and Investments Commission (ASIC), the Financial Sector Conduct Authority (FSCA) in South Africa, and the Securities Commission of The Bahamas (SCB).
+                                        TN Trade is regulated by the Financial Conduct Authority (FCA) in the UK, the Australian Securities and Investments Commission (ASIC), the Financial Sector Conduct Authority (FSCA) in South Africa, and the Securities Commission of The Bahamas (SCB).
                                     </p>
                                 </div>
                             </div>
@@ -117,13 +117,13 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    <b>Which countries does Spreadex Trade have offices in?</b>
+                                    <b>Which countries does TN Trade have offices in?</b>
                                 </button>
                             </h2>
 
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <b>Spreadex Trade operates out of the United Kingdom, Australia, South Africa and the Bahamas.</b>
+                                    <b>TN Trade operates out of the United Kingdom, Australia, South Africa and the Bahamas.</b>
                                 </div>
                             </div>
                         </div>
@@ -131,13 +131,13 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    <b>What are Spreadex Trade's opening hours?</b>
+                                    <b>What are TN Trade's opening hours?</b>
                                 </button>
                             </h2>
 
                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    Spreadex Trade opens on Sunday 10pm (GMT) until Friday 10pm (GMT). Our Customer Success teams are here to support you on email, live chat and phone.
+                                    TN Trade opens on Sunday 10pm (GMT) until Friday 10pm (GMT). Our Customer Success teams are here to support you on email, live chat and phone.
                                 </div>
                             </div>
                         </div>
@@ -168,7 +168,7 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                    Does Spreadex Trade offer any guides on how to use the trading platform?
+                                    Does TN Trade offer any guides on how to use the trading platform?
                                 </button>
                             </h2>
                             
@@ -190,7 +190,7 @@
 
                             <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample2">
                                 <div class="accordion-body">
-                                    The Spreadex Trade platform runs on Chrome, Firefox, Safari and Microsoft Edge. For the best experience, we recommend the Google Chrome browser.
+                                    The TN Trade platform runs on Chrome, Firefox, Safari and Microsoft Edge. For the best experience, we recommend the Google Chrome browser.
                                 </div>
                             </div>
                         </div>
@@ -299,7 +299,7 @@
                             <div id="collapse14" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample4">
                                 <div class="accordion-body">
                                     <p>
-                                        The minimum stake size is 1USD on shares and all other markets on the Spreadex Trade platform.
+                                        The minimum stake size is 1USD on shares and all other markets on the TN Trade platform.
                                     </p>
                                 </div>
                             </div>
@@ -315,7 +315,7 @@
                             <div id="collapse15" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample4">
                                 <div class="accordion-body">
                                     <p>
-                                        You can Spread Trade on The Spreadex Trade platform.
+                                        You can Spread Trade on The TN Trade platform.
                                     </p>
                                 </div>
                             </div>
