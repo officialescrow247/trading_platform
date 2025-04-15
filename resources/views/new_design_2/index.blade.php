@@ -269,6 +269,29 @@
             </div>
         </section> --}}
 
+        <section class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="https://images.prismic.io/tnfev2/Z8bzHhsAHJWomGAk_%5Bmobile%5DHome-Aston-Villa-Background-Update-March2025.png?auto=format%2Ccompress&fit=max&w=1920" 
+                        alt="" class="img-fluid" />
+                </div>
+
+                <div class="col-md-6 pt-5">
+                    <div class="d-flex justify-content-center">
+                        <div class="text-center w-75 pt-5">
+                            <h1>The perfect <br> <b>partnership</b></h1>
+                            <p class="pb-5">
+                                We align ourselves with others at the top of their game. 
+                                That’s why we’re proud to be Principal Partners of Aston Villa Football Club.
+                            </p>
+                            <img src="https://images.prismic.io/tnfev2/ZmAv8Zm069VX1eJY_Group.png?auto=format%2Ccompress%3Fauto%3Dcompress%2Cformat&fit=max&w=3840" 
+                            alt="" class="img-fluid" style="width: 100px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="unreal_t">
             <div class="outer">
                 <div class="inner">

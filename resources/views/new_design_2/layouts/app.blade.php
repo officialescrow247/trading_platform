@@ -605,27 +605,67 @@
                     <div class="col-md-7">
                         <div class="multiple-items">
                             <div style="margin-top: 7.5px; max-width: 140px; flex-direction: row;">
-                                <div class="eb5z6795 MuiBox-root css-18n2pc0" style="background-image: url(&quot;https://images.prismic.io/tnfev2/ZmbrPZm069VX1mMG_BestinclassHONS%E2%80%93easeofuse.png?auto=format,compress?auto=compress,format&quot;); background-position: center center; background-repeat: no-repeat; background-size: contain; width: 115px; height: 200px"></div>
+                                <div class="eb5z6795 MuiBox-root css-18n2pc0" style="background-image: url(&quot;https://images.prismic.io/tnfev2/Z4iK0pbqstJ99g4P_Bestinclass%E2%80%93easeofuse2025.png?auto=format,compress?auto=compress,format&quot;); background-position: center center; background-repeat: no-repeat; background-size: contain; width: 115px; height: 200px"></div>
                             </div>
-                            
+
                             <div style="margin-top: 7.5px; max-width: 140px; flex-direction: row;">
-                                <div class="eb5z6795 MuiBox-root css-18n2pc0" style="background-image: url(&quot;https://images.prismic.io/tnfev2/ZmbrpJm069VX1mMP_BestglobalMT4broker.png?auto=format,compress?auto=compress,format&quot;); background-position: center center; background-repeat: no-repeat; background-size: contain; width: 115px; height: 200px"></div>
+                                <div class="eb5z6795 MuiBox-root css-18n2pc0" style="background-image: url(&quot;https://images.prismic.io/tnfev2/Z4iK05bqstJ99g4Q_Bestinclass%E2%80%93commissions%26fees2025.png?auto=format,compress?auto=compress,format&quot;); background-position: center center; background-repeat: no-repeat; background-size: contain; width: 115px; height: 200px"></div>
                             </div>
-                            
+
                             <div style="margin-top: 7.5px; max-width: 140px; flex-direction: row;">
-                                <div class="eb5z6795 MuiBox-root css-18n2pc0" style="background-image: url(&quot;https://images.prismic.io/tnfev2/Zmbr4Zm069VX1mMn_Bestinclass%E2%80%93easeofuse.png?auto=format,compress?auto=compress,format&quot;); background-position: center center; background-repeat: no-repeat; background-size: contain; width: 115px; height: 200px"></div>
+                                <div class="eb5z6795 MuiBox-root css-18n2pc0" style="background-image: url(&quot;https://images.prismic.io/tnfev2/Z4iK0ZbqstJ99g4O_Besttradingplatform2024.png?auto=format,compress?auto=compress,format&quot;); background-position: center center; background-repeat: no-repeat; background-size: contain; width: 115px; height: 200px"></div>
                             </div>
-                            
+
+                            <div style="margin-top: 7.5px; max-width: 140px; flex-direction: row;">
+                                <div class="eb5z6795 MuiBox-root css-18n2pc0" style="background-image: url(&quot;https://images.prismic.io/tnfev2/Z4iK0JbqstJ99g4N_BestIntroducingBrokerProgramme2024.png?auto=format,compress?auto=compress,format&quot;); background-position: center center; background-repeat: no-repeat; background-size: contain; width: 115px; height: 200px"></div>
+                            </div>
+
+                            <div style="margin-top: 7.5px; max-width: 140px; flex-direction: row;">
+                                <div class="eb5z6795 MuiBox-root css-18n2pc0" style="background-image: url(&quot;https://images.prismic.io/tnfev2/ZoKhnR5LeNNTwrYO_Bestspreadbettingprovider-2024.png?auto=format,compress?auto=compress,format?auto=compress,format&quot;); background-position: center center; background-repeat: no-repeat; background-size: contain; width: 115px; height: 200px"></div>
+                            </div>
+
                             <div style="margin-top: 7.5px; max-width: 140px; flex-direction: row;">
                                 <div class="eb5z6795 MuiBox-root css-18n2pc0" style="background-image: url(&quot;https://images.prismic.io/tnfev2/ZmbsH5m069VX1mMy_ADVFNBestspreadbettingplatform.png?auto=format,compress?auto=compress,format&quot;); background-position: center center; background-repeat: no-repeat; background-size: contain; width: 115px; height: 200px"></div>
                             </div>
-                            
+
+                            <div style="margin-top: 7.5px; max-width: 140px; flex-direction: row;">
+                                <div class="eb5z6795 MuiBox-root css-18n2pc0" style="background-image: url(&quot;https://images.prismic.io/tnfev2/Z4iK0pbqstJ99g4P_Bestinclass%E2%80%93easeofuse2025.png?auto=format,compress?auto=compress,format?auto=compress,format&quot;); background-position: center center; background-repeat: no-repeat; background-size: contain; width: 115px; height: 200px"></div>
+                            </div>
+                            <div style="margin-top: 7.5px; max-width: 140px; flex-direction: row;">
+                                <div class="eb5z6795 MuiBox-root css-18n2pc0" style="background-image: url(&quot;https://images.prismic.io/tnfev2/Z4iK05bqstJ99g4Q_Bestinclass%E2%80%93commissions%26fees2025.png?auto=format,compress?auto=compress,format&quot;); background-position: center center; background-repeat: no-repeat; background-size: contain; width: 115px; height: 200px"></div>
+                            </div>
+                            <div style="margin-top: 7.5px; max-width: 140px; flex-direction: row;">
+                                <div class="eb5z6795 MuiBox-root css-18n2pc0" style="background-image: url(&quot;https://images.prismic.io/tnfev2/Z4iK0ZbqstJ99g4O_Besttradingplatform2024.png?auto=format,compress?auto=compress,format&quot;); background-position: center center; background-repeat: no-repeat; background-size: contain; width: 115px; height: 200px"></div>
+                            </div>
+                            <div style="margin-top: 7.5px; max-width: 140px; flex-direction: row;">
+                                <div class="eb5z6795 MuiBox-root css-18n2pc0" style="background-image: url(&quot;https://images.prismic.io/tnfev2/Z4iK0JbqstJ99g4N_BestIntroducingBrokerProgramme2024.png?auto=format,compress,format&quot;); background-position: center center; background-repeat: no-repeat; background-size: contain; width: 115px; height: 200px"></div>
+                            </div>
                             <div style="margin-top: 7.5px; max-width: 140px; flex-direction: row;">
                                 <div class="eb5z6795 MuiBox-root css-18n2pc0" style="background-image: url(&quot;https://images.prismic.io/tnfev2/ZoKhnR5LeNNTwrYO_Bestspreadbettingprovider-2024.png?auto=format,compress?auto=compress,format&quot;); background-position: center center; background-repeat: no-repeat; background-size: contain; width: 115px; height: 200px"></div>
                             </div>
-                            
                             <div style="margin-top: 7.5px; max-width: 140px; flex-direction: row;">
-                                <div class="eb5z6795 MuiBox-root css-18n2pc0" style="background-image: url(&quot;https://images.prismic.io/tnfev2/ZmbsSpm069VX1mND_OMABesttradingplatform.png?auto=format,compress?auto=compress,format&quot;); background-position: center center; background-repeat: no-repeat; background-size: contain; width: 115px; height: 200px"></div>
+                                <div class="eb5z6795 MuiBox-root css-18n2pc0" style="background-image: url(&quot;https://images.prismic.io/tnfev2/Z4iK05bqstJ99g4Q_Bestinclass%E2%80%93commissions%26fees2025.png?auto=format,compress?auto=compress,format&quot;); background-position: center center; background-repeat: no-repeat; background-size: contain; width: 115px; height: 200px"></div>
+                            </div>
+                            <div style="margin-top: 7.5px; max-width: 140px; flex-direction: row;">
+                                <div class="eb5z6795 MuiBox-root css-18n2pc0" style="background-image: url(&quot;https://images.prismic.io/tnfev2/ZmbsH5m069VX1mMy_ADVFNBestspreadbettingplatform.png?auto=format,compress?auto=compress,format&quot;); background-position: center center; background-repeat: no-repeat; background-size: contain; width: 115px; height: 200px"></div>
+                            </div>
+                            <div style="margin-top: 7.5px; max-width: 140px; flex-direction: row;">
+                                <div class="eb5z6795 MuiBox-root css-18n2pc0" style="background-image: url(&quot;https://images.prismic.io/tnfev2/Z4iK0pbqstJ99g4P_Bestinclass%E2%80%93easeofuse2025.png?auto=format,compress&quot;); background-position: center center; background-repeat: no-repeat; background-size: contain; width: 115px; height: 200px"></div>
+                            </div>
+                            <div style="margin-top: 7.5px; max-width: 140px; flex-direction: row;">
+                                <div class="eb5z6795 MuiBox-root css-18n2pc0" style="background-image: url(&quot;https://images.prismic.io/tnfev2/Z4iK05bqstJ99g4Q_Bestinclass%E2%80%93commissions%26fees2025.png?auto=format,compress&quot;); background-position: center center; background-repeat: no-repeat; background-size: contain; width: 115px; height: 200px"></div>
+                            </div>
+                            <div style="margin-top: 7.5px; max-width: 140px; flex-direction: row;">
+                                <div class="eb5z6795 MuiBox-root css-18n2pc0" style="background-image: url(&quot;https://images.prismic.io/tnfev2/Z4iK0ZbqstJ99g4O_Besttradingplatform2024.png?auto=format,compress&quot;); background-position: center center; background-repeat: no-repeat; background-size: contain; width: 115px; height: 200px"></div>
+                            </div>
+                            <div style="margin-top: 7.5px; max-width: 140px; flex-direction: row;">
+                                <div class="eb5z6795 MuiBox-root css-18n2pc0" style="background-image: url(&quot;https://images.prismic.io/tnfev2/Z4iK0JbqstJ99g4N_BestIntroducingBrokerProgramme2024.png?auto=format,compress&quot;); background-position: center center; background-repeat: no-repeat; background-size: contain; width: 115px; height: 200px"></div>
+                            </div>
+                            <div style="margin-top: 7.5px; max-width: 140px; flex-direction: row;">
+                                <div class="eb5z6795 MuiBox-root css-18n2pc0" style="background-image: url(&quot;https://images.prismic.io/tnfev2/ZoKhnR5LeNNTwrYO_Bestspreadbettingprovider-2024.png?auto=format,compress?auto=compress,format&quot;); background-position: center center; background-repeat: no-repeat; background-size: contain; width: 115px; height: 200px"></div>
+                            </div>
+                            <div style="margin-top: 7.5px; max-width: 140px; flex-direction: row;">
+                                <div class="eb5z6795 MuiBox-root css-18n2pc0" style="background-image: url(&quot;https://images.prismic.io/tnfev2/ZmbsH5m069VX1mMy_ADVFNBestspreadbettingplatform.png?auto=format,compress?auto=compress,format&quot;); background-position: center center; background-repeat: no-repeat; background-size: contain; width: 115px; height: 200px"></div>
                             </div>
                         </div>
                     </div>
@@ -653,7 +693,7 @@
                 <hr>
 
                 <div class="row pt-4">
-                    <div class="col-md-3 mb-4">
+                    <div class="col-md-4 mb-4">
                         <h6><b>Payment methods</b></h6>
 
                         <div>
@@ -663,7 +703,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-3 mb-4">
+                    <div class="col-md-4 mb-4">
                         <h6><b>Trade on</b></h6>
 
                         <div>
@@ -671,12 +711,62 @@
                         </div>
                     </div>
 
-                    <div class="col-md-3 mb-4">
+                    <div class="col-md-4 mb-4">
                         <h6><b>Regulatory body</b></h6>
 
                         <ul>
-                            <li>UK - FCA</li>
+                            <li style="font-size: 16px; margin-bottom: 10px;">UK - FCA</li>
+                            <li style="font-size: 16px; margin-bottom: 10px;">Australia - ASIC</li>
+                            <li style="font-size: 16px; margin-bottom: 10px;">Seychelles - FSA</li>
+                            <li style="font-size: 16px; margin-bottom: 10px;">Bahamas - SCB</li>
+                            <li style="font-size: 16px; margin-bottom: 10px;">South Africa - FSCA</li>
                         </ul>
+
+                        <div class="pt-5">
+                            <p>Sponsors of your favourite teams</p>
+                            <img src="https://images.prismic.io/tnfev2/ZmGYk5m069VX1goj_AstonVilla-Crest-RGB-White.png?auto=format,compress" 
+                                alt="" class="img-fluid" width="50px"/>
+                            <img src="https://images.prismic.io/tnfev2/Zl3K3KWtHYXtUB7E_Wyvern_SomersetCountyCricketClub_RGB_WO.png?auto=format,compress" 
+                                alt="" class="img-fluid" width="50px"/>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div>
+                    <h5>The legal stuff</h5>
+                    <div class="container">
+                        <div class="row pt-3" style="font-size: 12px">
+                            <div class="col-md-6">
+                                <p>
+                                    Financial Spread Trades and CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. <b>82.4% of retail investor accounts lose money when trading CFDs with this provider.</b> You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money. Refer to our <a href="{{ route("legals_new") }}" class="text-light">legal documents.</a> 
+                                </p>
+                                <p>
+                                    Trade Nation is a trading name of Trade Nation Financial UK Ltd, a financial services company registered in England & Wales under company number 07073413, is authorised and regulated by the Financial Conduct Authority under firm reference number 525164. Our registered office is 14 Bonhill Street, London, EC2A 4BX, United Kingdom.
+                                </p>
+    
+                                    
+                                <p>
+                                    Trade Nation is a trading name of Trade Nation Australia Pty Ltd, a financial services company registered in Australia under number ACN 158 065 635, is authorised and regulated by the Australian Securities and Investments Commission (ASIC), with licence number AFSL 422661. Our registered office is Level 17, 123 Pitt Street, Sydney, NSW 2000, Australia.
+                                </p>
+                                <p>
+                                    Trade Nation is a trading name of Trade Nation Ltd., a financial services company registered in the Bahamas under number 203493 B, is authorised and regulated by the Securities Commission of the Bahamas (SCB), with licence number SIA-F216. Our registered office is No. 3 Bayside Executive Park, West Bay Street & Blake Road, Nassau, New Providence, The Bahamas.
+                                </p>
+                            </div>
+    
+                            <div class="col-md-6">
+                                <p>
+                                    Trade Nation is a trading name of Trade Nation Financial Markets Ltd, a financial services company registered in the Seychelles under number 810589-1, is authorised and regulated by the Financial Services Authority of Seychelles (FSA) with licence number SD150. Our registered office is CT House, Office 6B, Providence, Mahe, Seychelles.
+                                </p>
+                                <p>
+                                    Trade Nation is a trading name of Trade Nation Financial (Pty) Ltd, a financial services company registered in South Africa under number 2018 / 418755 / 07, is authorised and regulated by the Financial Sector Conduct Authority (FSCA), with licence number 49846. Our registered office is 19 9th Street, Houghton Estate, Johannesburg, Gauteng, 2198 South Africa. 
+                                </p>
+                                <p>
+                                    The information on this site is not directed at residents of the United States or any particular country outside the UK, Australia, South Africa, The Bahamas or Seychelles and is not intended for distribution to, or use by, any person in any country or jurisdiction where such distribution or use would be contrary to local law or regulation.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -684,9 +774,9 @@
                 
                 <div class="row">
                     <div class="col-md-6">
+                        <a href="{{ route("legals_id", "") }}" class="text-light pe-5">Legal documents</a> 
                         <a href="{{ route('legals_id', 'cookie-policy') }}" class="text-light pe-5">Cookie Policy</a>
-                        <a href="https://tnfev2.cdn.prismic.io/tnfev2/Zl8qu5m069VX1c2s_BAHPrivacyPolicy-240401TradeNationLtd.pdf" 
-                            class="text-light pe-5">Privacy Policy</a>
+                        <a href="{{ route("legals_id", "privacy-policies") }}" class="text-light pe-5">Privacy Policy</a>
                     </div>
                     
                     <div class="col-md-6">
