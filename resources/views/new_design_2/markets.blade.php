@@ -33,7 +33,7 @@
                                     <li>No expiry on rolling contracts, only futures</li>
                                     <li>24-hour trading (not including weekends)</li>
                                     <li>Trading Cost incorporated within the spread</li>
-                                    <li>Available on MetaTrader 4 and TN Trader</li>
+                                    <li>Available on MetaTrader 4 and Trade Nationr</li>
                                 </ul>
         
                                 <div class="pt-4">
@@ -137,7 +137,7 @@
         
                                     They can be categorised by sector, exchange, or represent entire economies. For example, the Nasdaq-100 is made up of 100 of the biggest tech stocks listed on the NASDAQ, whereas the DAX40 is a mix of companies from different sectors in Germany. <br><br>
 
-                                    When trading indices, you do so in the general direction of that group of instruments. However, they can also track other financial data, such as inflation or volatility. Indices are a common way to diversify, hedge, and invest (long-term). At TN Trade, you can choose from 40 indices, including major US, European, and Asian ones.
+                                    When trading indices, you do so in the general direction of that group of instruments. However, they can also track other financial data, such as inflation or volatility. Indices are a common way to diversify, hedge, and invest (long-term). At Trade Nation, you can choose from 40 indices, including major US, European, and Asian ones.
                                 </p>
                             </div>
 
@@ -169,7 +169,7 @@
                                 <p>
                                     Stocks are fragments of a company that become available to investors when the company is listed on an exchange. In the context of CFDs or spread trades, you don’t purchase shares as you would traditionally, but instead trade on the value of that company, i.e. buy if you believe the share price will go up, and sell if you think it’ll fall.   <br><br>
         
-                                    Stocks are a great way to tap into different economies and sectors. At TN Trade, you can find hundreds of stocks from Europe, the UK, the US and South Africa, spanning all sectors.
+                                    Stocks are a great way to tap into different economies and sectors. At Trade Nation, you can find hundreds of stocks from Europe, the UK, the US and South Africa, spanning all sectors.
                                 </p>
                             </div>
 

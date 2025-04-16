@@ -13,7 +13,7 @@
         <div class="container pt-2 pb-5">
             <div class="py-5 d-flex align-items-start">
                 <div class="d-none d-lg-block nav flex-column nav-pills pe-5 align-items-start" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <p class="faq_links nav-link {{ ($id == 'why-trade-nation') ? 'active' : '' }}" id="v-pills-why_trade-tab" data-bs-toggle="pill" data-bs-target="#v-pills-why_trade" type="button" role="tab" aria-controls="v-pills-why_trade" aria-selected="true"><b>Why TN Trade</b></p>
+                    <p class="faq_links nav-link {{ ($id == 'why-trade-nation') ? 'active' : '' }}" id="v-pills-why_trade-tab" data-bs-toggle="pill" data-bs-target="#v-pills-why_trade" type="button" role="tab" aria-controls="v-pills-why_trade" aria-selected="true"><b>Why Trade Nation</b></p>
 
                     <p class="faq_links nav-link {{ ($id == 'my-account') ? 'active' : '' }}" id="v-pills-my_acct-tab" data-bs-toggle="pill" data-bs-target="#v-pills-my_acct" type="button" role="tab" aria-controls="v-pills-my_acct" aria-selected="false"><b>My Account</b></p>
 
@@ -24,21 +24,21 @@
 
                 <div class="rm_p pe-5 tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade {{ ($id == 'why-trade-nation') ? 'active show' : '' }}" id="v-pills-why_trade" role="tabpanel" aria-labelledby="v-pills-why_trade-tab">
-                        <h1><b>Why TN Trade</b></h1>
+                        <h1><b>Why Trade Nation</b></h1>
                         <h6>FREQUENTLY ASKED QUESTIONS</h6>
 
                         <div class="accordion pt-5" id="accordionExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <strong>Why trade with TN Trade?</strong>
+                                        <strong>Why trade with Trade Nation?</strong>
                                     </button>
                                 </h2>
 
                                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         <p>
-                                            TN Trade was born from a simple belief: customers deserve better. Whether you are a new trader just setting out or a seasoned long-time trader, you can be sure that you will be supported on every step of your journey. We adopt a customer-first approach which will help change the way you engage with the financial markets. We offer our clients:
+                                            Trade Nation was born from a simple belief: customers deserve better. Whether you are a new trader just setting out or a seasoned long-time trader, you can be sure that you will be supported on every step of your journey. We adopt a customer-first approach which will help change the way you engage with the financial markets. We offer our clients:
                                         </p>
                                         <ul>
                                             <li>
@@ -68,14 +68,14 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Who is TN Trade regulated by?
+                                        Who is Trade Nation regulated by?
                                     </button>
                                 </h2>
                                 
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         <p>
-                                            TN Trade is regulated by the Financial Conduct Authority (FCA) in the UK, the Australian Securities and Investments Commission (ASIC), the Financial Sector Conduct Authority (FSCA) in South Africa, and the Securities Commission of The Bahamas (SCB).
+                                            Trade Nation is regulated by the Financial Conduct Authority (FCA) in the UK, the Australian Securities and Investments Commission (ASIC), the Financial Sector Conduct Authority (FSCA) in South Africa, and the Securities Commission of The Bahamas (SCB).
                                         </p>
                                     </div>
                                 </div>
@@ -84,13 +84,13 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingThree">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Which countries does TN Trade have offices in?
+                                        Which countries does Trade Nation have offices in?
                                     </button>
                                 </h2>
 
                                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        TN Trade operates out of the United Kingdom, Australia, South Africa and the Bahamas.
+                                        Trade Nation operates out of the United Kingdom, Australia, South Africa and the Bahamas.
                                     </div>
                                 </div>
                             </div>
@@ -98,13 +98,13 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingThree">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                        What are TN Trade's opening hours?
+                                        What are Trade Nation's opening hours?
                                     </button>
                                 </h2>
 
                                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        TN Trade opens on Sunday 10pm (GMT) until Friday 10pm (GMT). Our Customer Success teams are here to support you on email, live chat and phone.
+                                        Trade Nation opens on Sunday 10pm (GMT) until Friday 10pm (GMT). Our Customer Success teams are here to support you on email, live chat and phone.
                                     </div>
                                 </div>
                             </div>
@@ -139,7 +139,7 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                        Does TN Trade offer any guides on how to use the trading platform?
+                                        Does Trade Nation offer any guides on how to use the trading platform?
                                     </button>
                                 </h2>
                                 
@@ -161,7 +161,7 @@
 
                                 <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample2">
                                     <div class="accordion-body">
-                                        The TN Trade platform runs on Chrome, Firefox, Safari and Microsoft Edge. For the best experience, we recommend the Google Chrome browser.
+                                        The Trade Nation platform runs on Chrome, Firefox, Safari and Microsoft Edge. For the best experience, we recommend the Google Chrome browser.
                                     </div>
                                 </div>
                             </div>
@@ -278,7 +278,7 @@
                                 <div id="collapse14" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample4">
                                     <div class="accordion-body">
                                         <p>
-                                            The minimum stake size is 1USD on shares and all other markets on the TN Trade platform.
+                                            The minimum stake size is 1USD on shares and all other markets on the Trade Nation platform.
                                         </p>
                                     </div>
                                 </div>
@@ -294,7 +294,7 @@
                                 <div id="collapse15" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample4">
                                     <div class="accordion-body">
                                         <p>
-                                            You can Spread Trade on The TN Trade platform.
+                                            You can Spread Trade on The Trade Nation platform.
                                         </p>
                                     </div>
                                 </div>

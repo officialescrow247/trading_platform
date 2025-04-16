@@ -609,7 +609,7 @@
                     </a> -->
 
                     <a href="{{ url('/') }}" class="f-fallback email-masthead_name" style="display: flex; text-decoration: none; align-items: center; color: white; justify-content: center;">
-                        <img src="https://images.prismic.io/tnfev2/44587b9b-c476-4a96-a39e-788e0f04f5e5_HeaderLogoAnimated.gif" alt="site-logo" style="height: 40px;"> <h6 style="padding-left: 10px; padding-top: 10px;">TN Trade</h6>
+                        <img src="https://images.prismic.io/tnfev2/44587b9b-c476-4a96-a39e-788e0f04f5e5_HeaderLogoAnimated.gif" alt="site-logo" style="height: 40px;"> <h6 style="padding-left: 10px; padding-top: 10px;">Trade Nation</h6>
                     </a>
 
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -811,19 +811,19 @@
                         </p>
 
                         <p>
-                            TN Trade is a trading name of TN Trade Financial UK Ltd, a financial services company authorised and regulated by the Financial Conduct Authority under firm reference number 525164. Our registered office is 14 Bonhill Street, London, EC2A 4BX, United Kingdom.
+                            Trade Nation is a trading name of Trade Nation Financial UK Ltd, a financial services company authorised and regulated by the Financial Conduct Authority under firm reference number 525164. Our registered office is 14 Bonhill Street, London, EC2A 4BX, United Kingdom.
                         </p>
 
                         <p>
-                            TN Trade is a trading name of TN Trade Australia Pty Ltd, a financial services company authorised and regulated by the Australian Securities and Investments Commission, ACN 158 065 635, AFSL No. 422661
+                            Trade Nation is a trading name of Trade Nation Australia Pty Ltd, a financial services company authorised and regulated by the Australian Securities and Investments Commission, ACN 158 065 635, AFSL No. 422661
                         </p>
 
                         <p>
-                            TN Trade Financial (Pty) Ltd, registration number 2018/418755/07, is authorised and regulated by the Financial Sector Conduct Authority, FSP No 49846
+                            Trade Nation Financial (Pty) Ltd, registration number 2018/418755/07, is authorised and regulated by the Financial Sector Conduct Authority, FSP No 49846
                         </p>
 
                         <p>
-                            TN Trade Ltd, registration Number 203493 B, is authorised and regulated by the Securities Commission of the Bahamas, SIA-F216
+                            Trade Nation Ltd, registration Number 203493 B, is authorised and regulated by the Securities Commission of the Bahamas, SIA-F216
                         </p>
 
                         <p>
@@ -831,7 +831,7 @@
                         </p>
 
                         <p>
-                            * The Loyalty Bonus is not offered with TN Trade UK and TN Trade Australia accounts
+                            * The Loyalty Bonus is not offered with Trade Nation UK and Trade Nation Australia accounts
                         </p>
                     </div>
                 </div>

@@ -15,7 +15,7 @@
 	
 					<div data-aos="fade-up" data-aos-duration="2000">
 						<div class="pt-5 text-light pb-4">
-                  Every trader has a story to tell. Find out how our customers rate the TN Trade experience to see if we could be the right fit for you.
+                  Every trader has a story to tell. Find out how our customers rate the Trade Nation experience to see if we could be the right fit for you.
 						</div>
 		
 						<div class="pt-3">
@@ -67,7 +67,7 @@
 				<div class="col-md-6">
 					<h1>”Very clean, very clear”</h1>
 					<p class="pt-5">
-               Our customers have found the TN Trade platform meets their needs without unnecessary complexity.
+               Our customers have found the Trade Nation platform meets their needs without unnecessary complexity.
 					</p>
 				</div>
 			</div>
@@ -80,7 +80,7 @@
             <div class="col-md-6">
 					<h1>”Really easy to navigate, really simple to use”</h1>
 					<p class="pt-5">
-               A lot of our customers are first-time traders who have found TN Trade is the perfect match for them.
+               A lot of our customers are first-time traders who have found Trade Nation is the perfect match for them.
 					</p>
 				</div>
 
@@ -99,7 +99,7 @@
             <div class="col-md-6">
 					<h1>”Clear. Simple. Fun.”</h1>
 					<p class="pt-5">
-               Trading is challenging, but we’re here to make it easier. We challenged our customers to summarise TN Trade in 3 words that might encourage you to try us out.
+               Trading is challenging, but we’re here to make it easier. We challenged our customers to summarise Trade Nation in 3 words that might encourage you to try us out.
 					</p>
 				</div>
 			</div>

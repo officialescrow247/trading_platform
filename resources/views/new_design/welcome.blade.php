@@ -335,7 +335,7 @@
                                             <div class="col-lg-8">
                                                 <p class="text-muted">
                                                     <i class="fas fa-quote-left pe-2"></i>
-                                                    I have been using TN Trade since it started. I like them because of the tight spreads, easy interface and excellent customer service.
+                                                    I have been using Trade Nation since it started. I like them because of the tight spreads, easy interface and excellent customer service.
                                                 </p>
                                                 <p class="pt-3" style="color: #0F2236;">Anna Choi</p>
                                                 <p style="color: #D3D6DA;">Testimonial</p>

@@ -65,10 +65,10 @@
       </div>
 
       <div class="container py-5 px-5">
-         <h1>How does TN Trade's alternative data help traders?</h1>
+         <h1>How does Trade Nation's alternative data help traders?</h1>
          
          <div>
-            <h6 class="pt-3"><strong>Here at TN Trade, we focus specifically on social media - an incredibly valuable type of alternative data. What does this have to do with trading you ask?</strong></h6>
+            <h6 class="pt-3"><strong>Here at Trade Nation, we focus specifically on social media - an incredibly valuable type of alternative data. What does this have to do with trading you ask?</strong></h6>
             <div class="row pt-4">
                <div class="col-md-1">
                   <img src="{{ asset('imgs/arr.svg') }}" class="img-fluid">

@@ -2,7 +2,7 @@
 @section('content')
     <section class="pt-4">
         <div class="container py-5 px-5">
-            <h1 class="pt-5 pb-3">TN Trade</h1>
+            <h1 class="pt-5 pb-3">Trade Nation</h1>
 
             <div class="pt-5">
                 <a href="https://resources.tradenation.com/downloads/Trade_Nation_Risk_Disclosure_Notice.pdf" style="line-height: normal; font-size: 20px; color: #fc5000; display: block;">
@@ -32,53 +32,53 @@
         </div>
 
         <div class="container pb-5 px-5">
-            <h1 class="pt-5 pb-3">TN Trade Australia</h1>
+            <h1 class="pt-5 pb-3">Trade Nation Australia</h1>
             
             <div class="pt-5">
                 <a href="https://trade-nation-marketing-cms.cdn.prismic.io/trade-nation-marketing-cms/7086863e-7df2-4d8b-b0b7-e222e1032e24_Trade_Nation_Australia_Client_Agreement.pdf" style="line-height: normal; font-size: 20px; color: #fc5000; display: block;">
-                    <b>TN Trade Australia - Client Agreement</b>
+                    <b>Trade Nation Australia - Client Agreement</b>
                 </a>
 
                 <a href="https://trade-nation-marketing-cms.cdn.prismic.io/trade-nation-marketing-cms/f2051531-bd2c-4917-aa86-d84224114482_Trade_Nation_Australia_Financial_Services_Guide.pdf" style="line-height: normal; font-size: 20px; color: #fc5000; display: block; padding-top: 10px;">
-                    <b>TN Trade Australia - Financial Services Guide</b>
+                    <b>Trade Nation Australia - Financial Services Guide</b>
                 </a>
 
                 <a href="https://trade-nation-marketing-cms.cdn.prismic.io/trade-nation-marketing-cms/bcac790e-f208-46c0-b2a1-9cc132c05a80_Trade_Nation_Australia_Product_Disclosure_Statement.pdf" style="line-height: normal; font-size: 20px; color: #fc5000; display: block; padding-top: 10px;">
-                    <b>TN Trade Australia - Product Disclosure Statement</b>
+                    <b>Trade Nation Australia - Product Disclosure Statement</b>
                 </a>
                 
                 <a href="https://resources.tradenation.com/downloads/Trade_Nation_Australia_Adequate_Financial_Resources_Statement.pdf" style="line-height: normal; font-size: 20px; color: #fc5000; display: block; padding-top: 10px;">
-                    <b>TN Trade Australia - Adequate Financial Resources Statement</b>
+                    <b>Trade Nation Australia - Adequate Financial Resources Statement</b>
                 </a>
 
                 <a href="https://resources.tradenation.com/downloads/Trade_Nation_Australia_Margin_Call_Policy.pdf" style="line-height: normal; font-size: 20px; color: #fc5000; display: block; padding-top: 10px;">
-                    <b>TN Trade Australia - Margin Call Policy</b>
+                    <b>Trade Nation Australia - Margin Call Policy</b>
                 </a>
                 
                 <a href="https://resources.tradenation.com/downloads/Trade_Nation_Australia_Client_Money_Policy.pdf" style="line-height: normal; font-size: 20px; color: #fc5000; display: block; padding-top: 10px;">
-                    <b>TN Trade Australia - Client Money Policy</b>
+                    <b>Trade Nation Australia - Client Money Policy</b>
                 </a>
 
                 <a href="https://resources.tradenation.com/downloads/Trade_Nation_Australia_Client_Qualification_Policy.pdf" style="line-height: normal; font-size: 20px; color: #fc5000; display: block; padding-top: 10px;">
-                    <b>TN Trade Australia - Client Qualification Policy</b>
+                    <b>Trade Nation Australia - Client Qualification Policy</b>
                 </a>
 
                 <a href="https://resources.tradenation.com/downloads/Trade_Nation_Australia_Hedging_Policy.pdf" style="line-height: normal; font-size: 20px; color: #fc5000; display: block; padding-top: 10px;">
-                    <b>TN Trade Australia - Hedging Policy</b>
+                    <b>Trade Nation Australia - Hedging Policy</b>
                 </a>
                 
-                <a href="TN Trade Australia - Target Market Determination" style="line-height: normal; font-size: 20px; color: #fc5000; display: block; padding-top: 10px;">
-                    <b>TN Trade Australia - Target Market Determination</b>
+                <a href="Trade Nation Australia - Target Market Determination" style="line-height: normal; font-size: 20px; color: #fc5000; display: block; padding-top: 10px;">
+                    <b>Trade Nation Australia - Target Market Determination</b>
                 </a>
             </div>
         </div>
 
         <div class="container pb-5 px-5">
-            <h1 class="pt-5 pb-3">TN Trade Bahamas</h1>
+            <h1 class="pt-5 pb-3">Trade Nation Bahamas</h1>
             
             <div class="pt-5">
                 <a href="https://trade-nation-marketing-cms.cdn.prismic.io/trade-nation-marketing-cms/b10a62a6-b505-4464-9e70-032d31bd083b_Trade_Nation_Bahamas_Client_Agreement.pdf" style="line-height: normal; font-size: 20px; color: #fc5000; display: block;">
-                    <b>TN Trade Bahamas - Client Agreement</b>
+                    <b>Trade Nation Bahamas - Client Agreement</b>
                 </a>
 
                 <a href="https://trade-nation-marketing-cms.cdn.prismic.io/trade-nation-marketing-cms/731f5a88-8756-43e9-9c08-37b15f38f28f_Trade_Nation_Loyalty_Scheme_Terms.pdf" style="line-height: normal; font-size: 20px; color: #fc5000; display: block; padding-top: 10px;">
@@ -96,29 +96,29 @@
         </div>
 
         <div class="container pb-5 px-5">
-            <h1 class="pt-5 pb-3">TN Trade South Africa</h1>
+            <h1 class="pt-5 pb-3">Trade Nation South Africa</h1>
             
             <div class="pt-5">
                 <a href="https://resources.tradenation.com/downloads/Trade_Nation_South_Africa_Client_Agreement.pdf" style="line-height: normal; font-size: 20px; color: #fc5000; display: block;">
-                    <b>TN Trade South Africa - Client Agreement</b>
+                    <b>Trade Nation South Africa - Client Agreement</b>
                 </a>
             </div>
         </div>
 
         <div class="container pb-5 px-5">
-            <h1 class="pt-5 pb-3">TN Trade UK</h1>
+            <h1 class="pt-5 pb-3">Trade Nation UK</h1>
             
             <div class="pt-5">
                 <a href="https://trade-nation-marketing-cms.cdn.prismic.io/trade-nation-marketing-cms/5dcb9307-f19f-4af4-8d0a-0fc011554aea_Trade_Nation_UK_+Customer_Terms_and_Conditions.pdf" style="line-height: normal; font-size: 20px; color: #fc5000; display: block;">
-                    <b>TN Trade UK - Terms & Conditions</b>
+                    <b>Trade Nation UK - Terms & Conditions</b>
                 </a>
 
                 <a href="https://trade-nation-marketing-cms.cdn.prismic.io/trade-nation-marketing-cms/5a9cb9b2-fd16-419d-a33e-21b69633e312_Trade_Nation_UK_Best_Execution_Order_Handling_Policy.pdf" style="line-height: normal; font-size: 20px; color: #fc5000; display: block;">
-                    <b>TN Trade UK - Best Execution & Order Handling Policy</b>
+                    <b>Trade Nation UK - Best Execution & Order Handling Policy</b>
                 </a>
 
                 <a href="https://resources.tradenation.com/downloads/Trade_Nation_PIllar_3_Disclosure.pdf" style="line-height: normal; font-size: 20px; color: #fc5000; display: block;">
-                    <b>TN Trade – Pillar 3 Disclosure</b>
+                    <b>Trade Nation – Pillar 3 Disclosure</b>
                 </a>
             </div>
         </div>

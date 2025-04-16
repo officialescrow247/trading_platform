@@ -209,7 +209,7 @@
                                 </a>
     
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">TN Trade</span></li>
+                                    <li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Trade Nation</span></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('why_trade_with_us') }}">Why Trade with Us?</a></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('why_trade_with_us') }}#fixed-spread-trading">Fixed Spread Trading</a></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('why_trade_with_us') }}#cfd-trading">CFD Trading</a></li>
@@ -439,7 +439,7 @@
             <div class="container show_nav">
                 <div class="row">
                     <div class="col-md-3">
-                        <p class="text-light"><b>TN Trade</b></p>
+                        <p class="text-light"><b>Trade Nation</b></p>
 
                         <a href="{{ route('why_trade_with_us') }}">Why Trade with Us?</a>
                         <a href="{{ route('why_trade_with_us') }}#fixed-spread-trading">Fixed Spread Trading</a>
@@ -693,7 +693,7 @@
                 <hr>
 
                 <div class="row pt-4">
-                    <div class="col-md-4 mb-4">
+                    <div class="col-md-3 mb-4">
                         <h6><b>Payment methods</b></h6>
 
                         <div>
@@ -703,7 +703,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4 mb-4">
+                    <div class="col-md-3 mb-4">
                         <h6><b>Trade on</b></h6>
 
                         <div>
@@ -711,7 +711,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4 mb-4">
+                    <div class="col-md-3 mb-4">
                         <h6><b>Regulatory body</b></h6>
 
                         <ul>
@@ -721,8 +721,10 @@
                             <li style="font-size: 16px; margin-bottom: 10px;">Bahamas - SCB</li>
                             <li style="font-size: 16px; margin-bottom: 10px;">South Africa - FSCA</li>
                         </ul>
+                    </div>
 
-                        <div class="pt-5">
+                    <div class="col-md-3 mb-4">
+                        <div class="">
                             <p>Sponsors of your favourite teams</p>
                             <img src="https://images.prismic.io/tnfev2/ZmGYk5m069VX1goj_AstonVilla-Crest-RGB-White.png?auto=format,compress" 
                                 alt="" class="img-fluid" width="50px"/>
@@ -780,7 +782,7 @@
                     </div>
                     
                     <div class="col-md-6">
-                        <p class="text-end ls_z">© {{ date("Y") }} TN Trade. All Rights Reserved</p>
+                        <p class="text-end ls_z">© {{ date("Y") }} Trade Nation. All Rights Reserved</p>
                     </div>
                 </div>
             </div>

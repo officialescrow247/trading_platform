@@ -2,7 +2,7 @@
 @section('content')
     <section class="py-4">
         <div class="container pt-5 px-5">
-            <h2 class="pt-5 pb-3">TN TradeTN Trade UK - Key Information Documents</h2>
+            <h2 class="pt-5 pb-3">Trade NationTrade Nation UK - Key Information Documents</h2>
 
             <div class="pt-4">
                 <a href="https://trade-nation-marketing-cms.cdn.prismic.io/trade-nation-marketing-cms/5f787e6b-7d98-40ab-8756-cbd987e872cc_Trade_Nation_Key_Information_Document_Bond_Spread_Bet.pdf" style="line-height: normal; font-size: 20px; color: #fc5000; display: block;">

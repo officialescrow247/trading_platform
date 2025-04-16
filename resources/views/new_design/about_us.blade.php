@@ -10,11 +10,11 @@
                         <h1 style="font-size: 90px;" class="my_f"><b>About us</b></h1>
 
                         <p class="pt-3" style="color: #6C7884;">
-                            TN Trade began life back in 2014, when we were known as Core Spreads. Building on our award-winning reputation for market leading low-cost spreads, we soon grew. And grew. From a single office back in the day, we’re now dotted around the globe - the UK, Australia and Bahamas to be exact.
+                            Trade Nation began life back in 2014, when we were known as Core Spreads. Building on our award-winning reputation for market leading low-cost spreads, we soon grew. And grew. From a single office back in the day, we’re now dotted around the globe - the UK, Australia and Bahamas to be exact.
 
                             <br><br>
 
-                            We see many of our competitors promise the world but fail to deliver. In contrast, we treat our clients and colleagues with respect. For traders, this means transparent fees with no hidden costs or nasty surprises. For the people who work at TN Trade, it’s the opportunity to grow with a fast-paced fintech firm that values ideas, creativity and enthusiasm.
+                            We see many of our competitors promise the world but fail to deliver. In contrast, we treat our clients and colleagues with respect. For traders, this means transparent fees with no hidden costs or nasty surprises. For the people who work at Trade Nation, it’s the opportunity to grow with a fast-paced fintech firm that values ideas, creativity and enthusiasm.
                         </p>
                         <!-- <a href="{{ route('register') }}" class="btn px-5 mt-4 trade_now_btn rounded-pill py-3">Trade Now</a> -->
                     </div>
@@ -193,7 +193,7 @@
 
                     That’s what’s fuelled our growth. But we’re not where we want to be yet. We have big plans and a clear purpose. And you could be the person that helps us reach that next stage of development. <br><br>
 
-                    So if you’d like to work at the cutting edge of fintech with a smashing bunch of people who you can inspire and learn from, get in touch today – and take your first step towards a great career at TN Trade.
+                    So if you’d like to work at the cutting edge of fintech with a smashing bunch of people who you can inspire and learn from, get in touch today – and take your first step towards a great career at Trade Nation.
                 </p>
             </div>
         </div>

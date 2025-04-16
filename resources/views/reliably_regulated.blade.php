@@ -27,7 +27,7 @@
                      </p>
    
                      <p>
-                        TN Trade is licensed under the Australian Securities and Investments Commission (ASIC), the Financial Sector Conduct Authority (FSCA) in South Africa, and the Securities Commission of The Bahamas (SCB). You could say we have something of a global reach.
+                        Trade Nation is licensed under the Australian Securities and Investments Commission (ASIC), the Financial Sector Conduct Authority (FSCA) in South Africa, and the Securities Commission of The Bahamas (SCB). You could say we have something of a global reach.
                      </p>
                   </div>
                </div>

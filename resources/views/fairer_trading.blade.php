@@ -92,7 +92,7 @@
 
    <section class="actions_tr" style="padding: 0px 200px;">
       <div class="container py-5">
-         <h1>What actions are TN Trade taking?</h1>
+         <h1>What actions are Trade Nation taking?</h1>
 
          <div>
             <p class="pt-4 pb-3">
@@ -145,7 +145,7 @@
 
          <h1 class="pt-5">However, these steps are just the beginning.</h1>
          <p class="pt-3">
-            Here at TN Trade, we are constantly listening, learning and adapting in order to grow and develop as a company. We always strive for fairness and encourage you to hold us accountable when we fall short so we can learn from our mistakes.
+            Here at Trade Nation, we are constantly listening, learning and adapting in order to grow and develop as a company. We always strive for fairness and encourage you to hold us accountable when we fall short so we can learn from our mistakes.
          </p>
 
          <div class="text-center pt-5">

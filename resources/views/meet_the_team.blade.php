@@ -1580,7 +1580,7 @@
                     <div class="ps-5 col-md-8 text-light">
                         <h1>Our commitment to you</h1>
                         <p>
-                            The TN Trade charter is our commitment to you based on our values of transparency and absolute fairness. We want to bring light to an industry that for so long has operated in the dark and treated some traders very badly. We believe that needed to change. <br><br>
+                            The Trade Nation charter is our commitment to you based on our values of transparency and absolute fairness. We want to bring light to an industry that for so long has operated in the dark and treated some traders very badly. We believe that needed to change. <br><br>
     
                             Our charter is how you can hold us to account.
                         </p>
@@ -1599,7 +1599,7 @@
                     <div class="pt-5 col-md-8 text-light">
                         <h1><b>Our commitment to you</b></h1>
                         <p class="pb-5">
-                            The TN Trade charter is our commitment to you based on our values of transparency and absolute fairness. We want to bring light to an industry that for so long has operated in the dark and treated some traders very badly. We believe that needed to change. <br><br>
+                            The Trade Nation charter is our commitment to you based on our values of transparency and absolute fairness. We want to bring light to an industry that for so long has operated in the dark and treated some traders very badly. We believe that needed to change. <br><br>
     
                             Our charter is how you can hold us to account.
                         </p>

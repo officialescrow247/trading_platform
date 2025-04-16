@@ -10,7 +10,7 @@
    <section class="pt-5" id="our_market_explore">
       <div class="container py-5 text-center">
          <h1>Explore our trading markets & see our charges</h1>
-         <h4>Choosing the right market is key to successful trading, and whatever yours is, we're sure you'll be able to trade it here at TN Trade. We have the markets you want and the best fixed spreads you'll find.</h4>
+         <h4>Choosing the right market is key to successful trading, and whatever yours is, we're sure you'll be able to trade it here at Trade Nation. We have the markets you want and the best fixed spreads you'll find.</h4>
       </div>
    </section>
 
@@ -68,7 +68,7 @@
 
                <div class="col-md-11">
                   <p>
-                     This is the difference between the price you can sell at, and the price at which you can buy. This price difference is one of the ways that TN Trade can make a profit, and the narrower the spread, the smaller your trading costs will be. There are different spreads for each market but our spreads are always low and fixed no matter how volatile the underlying markets become. In fact, it is often the case that our spreads are narrower than those available in the underlying markets, which means a much better deal for you.
+                     This is the difference between the price you can sell at, and the price at which you can buy. This price difference is one of the ways that Trade Nation can make a profit, and the narrower the spread, the smaller your trading costs will be. There are different spreads for each market but our spreads are always low and fixed no matter how volatile the underlying markets become. In fact, it is often the case that our spreads are narrower than those available in the underlying markets, which means a much better deal for you.
                   </p>
                </div>
             </div>

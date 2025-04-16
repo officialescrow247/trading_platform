@@ -352,7 +352,7 @@
 			</div>
 
 			<div class="text-center pt-5">
-				<h3 class="pt-2"><b>Meet the TN Trade Brand Ambassadors</b></h3>
+				<h3 class="pt-2"><b>Meet the Trade Nation Brand Ambassadors</b></h3>
 				<h4 class="pt-4 px-5">
 					We’re dedicated to changing trading for the better and we’ve got a growing team of ambassadors helping to spread the message.
 				</h4>
@@ -366,7 +366,7 @@
 		<div class="container-fluid py-5">
 			<div class="container" style="background-color: #F5F5F5;">
 				<div class="ps-lg-5 ps-md-1">
-					<h6 class="py-5">TN Trade BENEFITS</h6>
+					<h6 class="py-5">Trade Nation BENEFITS</h6>
 	
 					<div class="row">
 						<div class="col-lg-7 col-md-11 mb-4 px-lg-5 px-md-1">
