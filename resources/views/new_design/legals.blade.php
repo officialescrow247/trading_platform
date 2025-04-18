@@ -11,6 +11,7 @@
                 <a href="{{ route('legals_id', 'cookie-policy') }}" class="text-dark pb-2" style="display: block; color: #02070b;">Cookie Notice</a>
                 <a href="{{ route('legals_id', 'third-party-payment-policy') }}" class="text-dark pb-2" style="display: block; color: #02070b;">Third Party Payment Policy</a>
                 <a href="{{ route('legals_id', 'compliants-policy') }}" class="text-dark pb-2" style="display: block; color: #02070b;">Complaints Policy</a>
+                <a href="https://tnfev2.cdn.prismic.io/tnfev2/Zl8qbJm069VX1c2J_BAHClientMoneyPolicy-240401TradeNationLtd.pdf" class="text-dark pb-2" style="display: block; color: #02070b;">Client Money Policy</a>
             </div>
 
             <div class="pt-5 mt-3">
