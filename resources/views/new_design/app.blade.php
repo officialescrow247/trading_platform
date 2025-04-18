@@ -1050,7 +1050,7 @@
 		</section>
 		
 		<footer class="pb-5">
-            <div class="p-5 rm_p_2 container-fluid vedx">
+            {{-- <div class="p-5 rm_p_2 container-fluid vedx">
 				<div class="pb-4 pt-3">
 					<div class="row">
 						<div class="col-md-4 mb-5">
@@ -1161,7 +1161,103 @@
 				<div class="text-center">
 					© 2019 - {{ date('Y') }} Trade Nation. All Rights Reserved.
 				</div>
-            </div>
+            </div> --}}
+			<div class="container">
+				<div class="row pt-4">
+                    <div class="col-md-3 mb-4">
+                        <h6><b>Payment methods</b></h6>
+
+                        <div>
+                            <img src="https://seeklogo.com/images/V/visa-logo-121ECA05B2-seeklogo.com.png" alt="" class="img-fluid" style="width: 50px; margin: 0 20px;">
+                            <img src="https://images.prismic.io/tnfev2/0f76eaa5-c6f6-4b06-8aad-62d978a2d969_mc_symbol_opt_45_3x.png?auto=compress%2Cformat&fit=max&w=1920" alt="" class="img-fluid" style="width: 50px; margin: 0 20px;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1200px-Bitcoin.svg.png" alt="" class="img-fluid mx-2" style="width: 40px; height: 40px;">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-4">
+                        <h6><b>Trade on</b></h6>
+
+                        <div>
+                            <img src="https://images.prismic.io/tnfev2/Zp4Erx5LeNNTxViW_TradeOnbutton-Lighttheme-.png?auto=format%2Ccompress&fit=max&w=1920" alt="" class="img-fluid" style="width: 180px; margin-bottom: 10px;">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-4">
+                        <h6><b>Regulatory body</b></h6>
+
+                        <ul>
+                            <li style="font-size: 16px; margin-bottom: 10px;">UK - FCA</li>
+                            <li style="font-size: 16px; margin-bottom: 10px;">Australia - ASIC</li>
+                            <li style="font-size: 16px; margin-bottom: 10px;">Seychelles - FSA</li>
+                            <li style="font-size: 16px; margin-bottom: 10px;">Bahamas - SCB</li>
+                            <li style="font-size: 16px; margin-bottom: 10px;">South Africa - FSCA</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3 mb-4">
+                        <div class="">
+                            <p>Sponsors of your favourite teams</p>
+                            <img src="https://www.thestainlesscommunity.ie/cdn/shop/files/Aston_Villa_FC_Metal_Wall_Art_Matte_Black_1080x.jpg?v=1730557364" 
+                                alt="" class="img-fluid pt-2" width="80px"/>
+								
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoaMmPMzNITu07BF3tvH71yhmpuN5XgGXtXA&s" 
+                                alt="" class="img-fluid" width="70px"/>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div>
+                    <h5>The legal stuff</h5>
+                    <div class="container">
+                        <div class="row pt-3" style="font-size: 12px">
+                            <div class="col-md-6">
+                                <p>
+                                    Financial Spread Trades and CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. <b>82.4% of retail investor accounts lose money when trading CFDs with this provider.</b> You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money. Refer to our <a href="{{ route("legals_new") }}" class="text-light">legal documents.</a> 
+                                </p>
+                                <p>
+                                    Trade Nation is a trading name of Trade Nation Financial UK Ltd, a financial services company registered in England & Wales under company number 07073413, is authorised and regulated by the Financial Conduct Authority under firm reference number 525164. Our registered office is 14 Bonhill Street, London, EC2A 4BX, United Kingdom.
+                                </p>
+    
+                                    
+                                <p>
+                                    Trade Nation is a trading name of Trade Nation Australia Pty Ltd, a financial services company registered in Australia under number ACN 158 065 635, is authorised and regulated by the Australian Securities and Investments Commission (ASIC), with licence number AFSL 422661. Our registered office is Level 17, 123 Pitt Street, Sydney, NSW 2000, Australia.
+                                </p>
+                                <p>
+                                    Trade Nation is a trading name of Trade Nation Ltd., a financial services company registered in the Bahamas under number 203493 B, is authorised and regulated by the Securities Commission of the Bahamas (SCB), with licence number SIA-F216. Our registered office is No. 3 Bayside Executive Park, West Bay Street & Blake Road, Nassau, New Providence, The Bahamas.
+                                </p>
+                            </div>
+    
+                            <div class="col-md-6">
+                                <p>
+                                    Trade Nation is a trading name of Trade Nation Financial Markets Ltd, a financial services company registered in the Seychelles under number 810589-1, is authorised and regulated by the Financial Services Authority of Seychelles (FSA) with licence number SD150. Our registered office is CT House, Office 6B, Providence, Mahe, Seychelles.
+                                </p>
+                                <p>
+                                    Trade Nation is a trading name of Trade Nation Financial (Pty) Ltd, a financial services company registered in South Africa under number 2018 / 418755 / 07, is authorised and regulated by the Financial Sector Conduct Authority (FSCA), with licence number 49846. Our registered office is 19 9th Street, Houghton Estate, Johannesburg, Gauteng, 2198 South Africa. 
+                                </p>
+                                <p>
+                                    The information on this site is not directed at residents of the United States or any particular country outside the UK, Australia, South Africa, The Bahamas or Seychelles and is not intended for distribution to, or use by, any person in any country or jurisdiction where such distribution or use would be contrary to local law or regulation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="{{ route("legals_id", "") }}" class="text-dark pe-5">Legal documents</a> 
+                        <a href="{{ route('legals_id', 'cookie-policy') }}" class="text-dark pe-5">Cookie Policy</a>
+                        <a href="{{ route("legals_id", "privacy-policies") }}" class="text-dark pe-5">Privacy Policy</a>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <p class="text-end ls_z">© {{ date("Y") }} Trade Nation. All Rights Reserved</p>
+                    </div>
+                </div>
+			</div>
         </footer>
 
         <script src="//code.tidio.co/mg1gml2jvh7u7qrw0eshwhpg0g2hzgdg.js" async></script>
