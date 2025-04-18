@@ -97,12 +97,12 @@
             </a>
         </li>
 
-        <li>
+        {{-- <li>
             <a href="#googtrans(en|pt)" class="dropdown-item lang-pt lang-select" data-lang="pt">
                 <img class="smallflag" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.2cIIL9LGHp7YRLD41c7XSAHaEJ%26pid%3DApi&f=1&ipt=154d274ca133f3d0c3cf5ffcc4220dd7c6441d29e07dbc326c1e4587155d4ae5&ipo=images" alt="Portuguese (Portugal, Brazil)">
                 Portuguese (Portugal, Brazil)
             </a>
-        </li>
+        </li> --}}
 
         <li>
             <a href="#googtrans(en|de)" class="dropdown-item lang-de lang-select" data-lang="de">

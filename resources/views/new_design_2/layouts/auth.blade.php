@@ -135,6 +135,8 @@
                 }
             }
         </style>
+
+        @include('multilingual.multilingual_css2')
     </head>
 
     <body class="bg_c">
@@ -159,20 +161,31 @@
 
         <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #000;">
             <div class="container pb-3">
-                <a href="{{ url('/') }}" class="text-dark" style="display: flex; text-decoration: none; align-items: center; color: white; justify-content: center;">
+                <a href="{{ url('/') }}" class="navbar-brand text-white" style="display: flex; align-items: center; text-decoration: none;">
                     <img src="https://images.prismic.io/tnfev2/8c6796eb-086d-4ac1-8846-6ea8b63ee68a_TN-PrimaryLogo-RGB-WhiteText-Strapline.png?auto=compress%2Cformat&fit=max&w=3840" alt="site-logo" style="height: 50px;">
                 </a>
-
+        
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #fff;">
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" 
+                    aria-label="Toggle navigation" style="background-color: #fff;">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+        
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item" style="margin-right: 6rem;">
+                            @include('multilingual.multilingual_html2')
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
+        
         
         <main>@yield('content')</main>
 
         <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        @include('multilingual.multilingual_js2')
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         @include('sweetalert::alert')
 
