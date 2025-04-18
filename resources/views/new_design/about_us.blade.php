@@ -186,7 +186,8 @@
                         <h3 style="font-size: 40px;" id="careers"><b>Careers</b></h3>
                     </span>
                 </div>
-                <p class="pt-4">
+
+                <p class="py-4">
                     We know that a team is only as good as the people who make it up. Everyone brings something different to the party – and everyone is respected for their individual skills and who they are. But we all have one thing in common: a shared passion and commitment to making things better. <br><br>
 
                     We welcome the curious, the creative, the visionaries, the makers and doers. Everyone has a place here – as long as you want to make a difference. <br><br>
@@ -195,6 +196,111 @@
 
                     So if you’d like to work at the cutting edge of fintech with a smashing bunch of people who you can inspire and learn from, get in touch today – and take your first step towards a great career at Trade Nation.
                 </p>
+
+                <style>
+                    html, body {
+                        margin: 0;
+                        padding: 0;
+                        height: 100%;
+                        width: 100%;
+                    }
+                
+                    .centered-container {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        margin-top: 40px;
+                    }
+                    
+                    .video-wrapper {
+                        position: relative;
+                        width: 90%;
+                        max-width: 1080px;
+                    }
+                
+                    .video-wrapper video {
+                        width: 100%;
+                        height: auto;
+                        border-radius: 8px;
+                        display: block;
+                    }
+                
+                    .custom-play-button {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        z-index: 2;
+                        width: 80px;
+                        height: 80px;
+                        background-color: rgba(0, 0, 0, 0.6);
+                        border-radius: 50%;
+                        cursor: pointer;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                
+                    .custom-play-button::before {
+                        content: '';
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        border-left: 20px solid white;
+                        border-top: 12px solid transparent;
+                        border-bottom: 12px solid transparent;
+                    }
+                
+                    .hide {
+                        display: none;
+                    }
+                </style>
+                  
+                  <!-- First Video -->
+                  <div class="centered-container">
+                    <div class="video-wrapper">
+                      <video 
+                        id="video1"
+                        src="https://tnfev2.cdn.prismic.io/tnfev2/Z6TC85bqstJ9-TZh_TradeNation-VillaPlayersVideo-1920x1080-V5.mp4" 
+                        poster="https://images.prismic.io/tnfev2/Z7RO8p7c43Q3f5gP_Youtube-EndFrame-YouTubeThumbnail-5-1-.png?auto=format,compress"
+                        preload="auto" 
+                        playsinline
+                      ></video>
+                      <div class="custom-play-button" id="playBtn1"></div>
+                    </div>
+                  </div>
+                  
+                  <!-- Second Video -->
+                  <div class="centered-container">
+                    <div class="video-wrapper">
+                      <video 
+                        id="video2"
+                        src="https://tnfev2.cdn.prismic.io/tnfev2/Zks2riol0Zci9R93_TradeNation-SSCCBrandVideo-16x9-V4.mp4" 
+                        poster="https://images.prismic.io/tnfev2/Zmxrx5m069VX1xNd_TradeNation-Thumbnails-SCCC.jpg?auto=format,compress"
+                        preload="auto" 
+                        playsinline
+                      ></video>
+                      <div class="custom-play-button" id="playBtn2"></div>
+                    </div>
+                  </div>
+                  
+                  <script>
+                    const setupCustomVideo = (videoId, playBtnId) => {
+                      const video = document.getElementById(videoId);
+                      const playBtn = document.getElementById(playBtnId);
+                  
+                      playBtn.addEventListener('click', () => {
+                        playBtn.classList.add('hide');
+                        video.setAttribute('controls', 'true');
+                        video.play();
+                      });
+                    };
+                  
+                    setupCustomVideo('video1', 'playBtn1');
+                    setupCustomVideo('video2', 'playBtn2');
+                  </script>
+                  
             </div>
         </div>
     </section>
