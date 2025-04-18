@@ -206,11 +206,11 @@
                     }
                 
                     .centered-container {
-                        display: flex;
+                        /* display: flex;
                         justify-content: center;
                         align-items: center;
                         width: 100%;
-                        margin-top: 40px;
+                        margin-top: 40px; */
                     }
                     
                     .video-wrapper {
@@ -257,33 +257,53 @@
                     }
                 </style>
                   
-                  <!-- First Video -->
-                  <div class="centered-container">
-                    <div class="video-wrapper">
-                      <video 
-                        id="video1"
-                        src="https://tnfev2.cdn.prismic.io/tnfev2/Z6TC85bqstJ9-TZh_TradeNation-VillaPlayersVideo-1920x1080-V5.mp4" 
-                        poster="https://images.prismic.io/tnfev2/Z7RO8p7c43Q3f5gP_Youtube-EndFrame-YouTubeThumbnail-5-1-.png?auto=format,compress"
-                        preload="auto" 
-                        playsinline
-                      ></video>
-                      <div class="custom-play-button" id="playBtn1"></div>
+                <div class="row">
+
+                    <!-- First Video -->
+                    <div class="col-md-6 mb-3 centered-container">
+                        <div class="video-wrapper">
+                          <video 
+                            id="video1"
+                            src="https://tnfev2.cdn.prismic.io/tnfev2/Z6TC85bqstJ9-TZh_TradeNation-VillaPlayersVideo-1920x1080-V5.mp4" 
+                            poster="https://images.prismic.io/tnfev2/Z7RO8p7c43Q3f5gP_Youtube-EndFrame-YouTubeThumbnail-5-1-.png?auto=format,compress"
+                            preload="auto" 
+                            playsinline
+                          ></video>
+                          <div class="custom-play-button" id="playBtn1"></div>
+                        </div>
                     </div>
-                  </div>
-                  
-                  <!-- Second Video -->
-                  <div class="centered-container">
-                    <div class="video-wrapper">
-                      <video 
-                        id="video2"
-                        src="https://tnfev2.cdn.prismic.io/tnfev2/Zks2riol0Zci9R93_TradeNation-SSCCBrandVideo-16x9-V4.mp4" 
-                        poster="https://images.prismic.io/tnfev2/Zmxrx5m069VX1xNd_TradeNation-Thumbnails-SCCC.jpg?auto=format,compress"
-                        preload="auto" 
-                        playsinline
-                      ></video>
-                      <div class="custom-play-button" id="playBtn2"></div>
+                      
+                    <!-- Second Video -->
+                    <div class="col-md-6 mb-3 centered-container">
+                        <div class="video-wrapper">
+                          <video 
+                            id="video2"
+                            src="https://tnfev2.cdn.prismic.io/tnfev2/Zks2riol0Zci9R93_TradeNation-SSCCBrandVideo-16x9-V4.mp4" 
+                            poster="https://images.prismic.io/tnfev2/Zmxrx5m069VX1xNd_TradeNation-Thumbnails-SCCC.jpg?auto=format,compress"
+                            preload="auto" 
+                            playsinline
+                          ></video>
+                          <div class="custom-play-button" id="playBtn2"></div>
+                        </div>
                     </div>
-                  </div>
+
+                    <!-- Third Video -->
+                    <div class="row">
+                        <div class="col-md-6 offset-md-3 mb-3 centered-container">
+                            <div class="video-wrapper">
+                                <video 
+                                id="video3"
+                                src="https://tnfev2.cdn.prismic.io/tnfev2/Zks34Col0Zci9R-t_TradeNation-GJDWWebsiteVideo-1920x1080-V2.mp4" 
+                                poster="https://images.prismic.io/tnfev2/Zmx5eZm069VX1xWU_TradeNation-Thumbnails-GJ.jpg?auto=format,compress?auto=compress,format"
+                                preload="auto" 
+                                playsinline
+                                ></video>
+                                <div class="custom-play-button" id="playBtn3"></div>
+                            </div>
+                        </div>
+                    </div>
+  
+                </div>
                   
                   <script>
                     const setupCustomVideo = (videoId, playBtnId) => {
@@ -299,6 +319,7 @@
                   
                     setupCustomVideo('video1', 'playBtn1');
                     setupCustomVideo('video2', 'playBtn2');
+                    setupCustomVideo('video3', 'playBtn3');
                   </script>
                   
             </div>
