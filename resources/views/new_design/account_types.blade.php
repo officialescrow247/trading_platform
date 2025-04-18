@@ -20,7 +20,7 @@
 
    <section>
       <div class="container pb-5">
-         <div class="table-responsive pb-5">
+         {{-- <div class="table-responsive pb-5">
             <table class="table table-striped table-borderless">
                <thead>
                   <tr class="border-bottom">
@@ -114,7 +114,57 @@
                   </tr>
                </tbody>
             </table>
-         </div>
+         </div> --}}
+
+            <div class="row">
+              <!-- VIP Cards Column -->
+              <div class="col-md-6 mb-4" style="font-size: 13px;">
+                <!-- Repeated VIP Card -->
+                <div class="card mb-5 shadow-sm border-0">
+                  <div class="card-body">
+                    <h5 class="card-title d-flex align-items-center">
+                      BASIC
+                    </h5>
+                  </div>
+                </div>
+          
+                <div class="card mb-5 shadow-sm border-0">
+                  <div class="card-body">
+                    <h5 class="card-title d-flex align-items-center">
+                      GOLD
+                    </h5>
+                  </div>
+                </div>
+          
+                <div class="card mb-5 shadow-sm border-0">
+                  <div class="card-body">
+                    <h5 class="card-title d-flex align-items-center">
+                      PRO <i class="fa-solid fa-crown ps-2" style="color: #fff;"></i>
+                    </h5>
+                  </div>
+                </div>
+          
+                <div class="card mb-5 shadow-sm border-0">
+                  <div class="card-body">
+                    <h5 class="card-title d-flex align-items-center">
+                      VIP <i class="fa-solid fa-crown ps-2" style="color: #F6B742;"></i>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Info Column -->
+              <div class="col-md-6 mb-4 d-flex align-items-center">
+                <div class="card w-100 mb-4 shadow-sm border-0 bg-light">
+                  <div class="card-body text-center p-5">
+                    <h5 class="card-title mb-0" style="font-size: 15px;">
+                      You can view your account types when you login to your dashboard
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
       </div>
    </section>
 @endsection

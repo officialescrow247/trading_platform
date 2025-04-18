@@ -159,8 +159,8 @@
 
         <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #000;">
             <div class="container pb-3">
-                <a class="navbar-brand text-white" href="{{ url('/') }}">
-                    <img src="{{ asset('imgs/logo_main.png') }}" alt="{{ env('APP_NAME') }} logo" style="width: 300px;">    
+                <a href="{{ url('/') }}" class="text-dark" style="display: flex; text-decoration: none; align-items: center; color: white; justify-content: center;">
+                    <img src="https://images.prismic.io/tnfev2/8c6796eb-086d-4ac1-8846-6ea8b63ee68a_TN-PrimaryLogo-RGB-WhiteText-Strapline.png?auto=compress%2Cformat&fit=max&w=3840" alt="site-logo" style="height: 50px;">
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
