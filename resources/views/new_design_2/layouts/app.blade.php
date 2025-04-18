@@ -105,7 +105,7 @@
                             Financial Spread Bets and CFDs are complex instruments and come with a high risk of losing 
                             money rapidly due to leverage. 73.6% of retail investor accounts lose money when trading 
                             CFDs with this provider. You should consider whether you understand how CFDs work and whether 
-                            you can afford to take the high risk of losing your money. Read our Risk Disclosure Notice here.
+                            you can afford to take the high risk of losing your money.
                         </p>
                     </div>
         
