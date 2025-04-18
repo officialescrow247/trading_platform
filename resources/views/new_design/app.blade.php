@@ -560,7 +560,7 @@
 					</button>
 
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<ul class="rm_p navbar-nav me-auto mb-2 mb-lg-0 ps-5">
+						<ul class="rm_p navbar-nav ms-auto mb-2 mb-lg-0 ps-5">
                             <li class="nav-item px-3">
 								<a class="nav-link text-white a_Trading"><b>Trading</b></a>
 							</li>
@@ -582,15 +582,16 @@
 							</li>
 						</ul>
 
-						<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+						<ul class="navbar-nav  mb-2 mb-lg-0">
                             
                             @guest
                                 <li class="nav-item">
-                                    <a class="nav-link text-white login_btn rounded-pill px-5" href="{{ route('login') }}">Login</a>
-                                </li>
-                                <li class="nav-item ps-4">
-                                    <a class="t_now nav-link text-white rounded-pill px-4" href="{{ route('register') }}" style="color: #02070b !important; background-color: #04e3d8; border: 2px solid #04e3d8;">Trade Now</a>
-                                </li>
+                                    <a class="t_now nav-link text-white rounded-pill px-4" 
+										href="{{ route('register') }}" 
+										style="color: #02070b !important; background-color: #04e3d8; border: 2px solid #04e3d8;">
+										<b>Sign up / Log in</b>
+									</a>
+								</li>
                             @else
                                 <li class="nav-item">
                                     <a class="nav-link text-white border border-light rounded-pill px-4" href="{{ route('dashboard') }}"> Goto Dashboard </a>
