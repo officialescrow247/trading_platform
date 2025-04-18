@@ -120,48 +120,62 @@
               <!-- VIP Cards Column -->
               <div class="col-md-6 mb-4" style="font-size: 13px;">
                 <!-- Repeated VIP Card -->
-                <div class="card mb-5 shadow-sm border-0">
+                <div class="card m-5 shadow-sm border-0" style="background-color: #E65456">
                   <div class="card-body">
-                    <h5 class="card-title d-flex align-items-center">
+                    <h5 class="card-title text-center p-2 align-items-center">
                       BASIC
                     </h5>
                   </div>
                 </div>
           
-                <div class="card mb-5 shadow-sm border-0">
+                <div class="card m-5 shadow-sm border-0" style="background-color: #A094F8">
                   <div class="card-body">
-                    <h5 class="card-title d-flex align-items-center">
+                    <h5 class="card-title text-center p-2 align-items-center">
                       GOLD
                     </h5>
                   </div>
                 </div>
           
-                <div class="card mb-5 shadow-sm border-0">
-                  <div class="card-body">
-                    <h5 class="card-title d-flex align-items-center">
-                      PRO <i class="fa-solid fa-crown ps-2" style="color: #fff;"></i>
-                    </h5>
+                <div class="card m-5 shadow-sm border-0" style="background-color: #69BAFA;">
+                    <div class="card-body position-relative d-flex flex-column align-items-center justify-content-center">
+                      <!-- Recommended Badge -->
+                      <div class="position-absolute top-0 start-50 translate-middle-x px-2 py-1 rounded" style="background-color: rgb(6, 150, 6); font-size: 12px; color: #fff;">
+                        (Recommended)
+                      </div>
+                  
+                      <!-- Title -->
+                      <h5 class="card-title text-white mt-4">
+                        PRO <i class="fa-solid fa-star ps-2" style="color: #fff;"></i>
+                      </h5>
+                    </div>
                   </div>
-                </div>
+                  
           
-                <div class="card mb-5 shadow-sm border-0">
+                <div class="card m-5 shadow-sm border-0" style="background-color: #F6B742">
                   <div class="card-body">
-                    <h5 class="card-title d-flex align-items-center">
-                      VIP <i class="fa-solid fa-crown ps-2" style="color: #F6B742;"></i>
+                    <h5 class="card-title text-center p-2 align-items-center">
+                      VIP <i class="fa-solid fa-crown ps-2" style="color: #fff;"></i>
                     </h5>
                   </div>
                 </div>
               </div>
           
               <!-- Info Column -->
-              <div class="col-md-6 mb-4 d-flex align-items-center">
-                <div class="card w-100 mb-4 shadow-sm border-0 bg-light">
-                  <div class="card-body text-center p-5">
-                    <h5 class="card-title mb-0" style="font-size: 15px;">
-                      You can view your account types when you login to your dashboard
+              <div class="col-md-6 mb-4">
+                {{-- <div class="card w-100 mb-4 shadow-sm border-0 bg-light">
+                  <div class="card-body text-center p-5"> --}}
+
+                    <div style="overflow: hidden; position: relative; padding-top: 2%;">
+                        <img src="https://images.prismic.io/tnfev2/Zmw_sZm069VX1wol_Platforms-Mobile-Hero-Background.png?auto=format%2Ccompress%3Fauto%3Dcompress%2Cformat&rect=0%2C0%2C828%2C576&w=1920&fit=max" 
+                            alt="" class="img-flusid" style="width: 110% !important" />
+                    </div>
+
+                    <h5 class="card-title text-center pt-4" style="font-size: 16px;">
+                        <i>"You can view our account type informations after you have logged in to your trade room"</i>
                     </h5>
-                  </div>
-                </div>
+
+                  {{-- </div>
+                </div> --}}
               </div>
             </div>
           

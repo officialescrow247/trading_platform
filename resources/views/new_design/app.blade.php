@@ -1183,7 +1183,7 @@
                     </div>
 
                     <div class="col-md-3 mb-4">
-                        <h6><b>Regulatory body</b></h6>
+                        <h6><b>Regulatory bodies</b></h6>
 
                         <ul>
                             <li style="font-size: 16px; margin-bottom: 10px;">UK - FCA</li>
@@ -1214,7 +1214,7 @@
                         <div class="row pt-3" style="font-size: 12px">
                             <div class="col-md-6">
                                 <p>
-                                    Financial Spread Trades and CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. <b>82.4% of retail investor accounts lose money when trading CFDs with this provider.</b> You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money. Refer to our <a href="{{ route("legals_new") }}" class="text-light">legal documents.</a> 
+                                    Financial Spread Trades and CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. <b>82.4% of retail investor accounts lose money when trading CFDs with this provider.</b> You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money. Refer to our <a href="{{ route("legals_new") }}" class="text-dark">legal documents.</a> 
                                 </p>
                                 <p>
                                     Trade Nation is a trading name of Trade Nation Financial UK Ltd, a financial services company registered in England & Wales under company number 07073413, is authorised and regulated by the Financial Conduct Authority under firm reference number 525164. Our registered office is 14 Bonhill Street, London, EC2A 4BX, United Kingdom.
