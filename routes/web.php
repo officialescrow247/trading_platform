@@ -87,6 +87,7 @@ Route::get('/random', function(){
 })->name('random');
 
 Route::get('/dashboard', function () {
+    return redirect('https://tradenation-cfd.com/');
     if(auth()->user()->hasRole('user')){
         if(auth()->user()->approved == 1){
             return redirect('user');

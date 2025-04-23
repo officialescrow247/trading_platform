@@ -162,10 +162,7 @@
                             </li>
     
                             <li class="nav-item ms-3">
-                                <a class="nav-link rounded-pill sign_in_login_btn px-4 text-dark"
-                                    href="https://tradenation-cfd.com?utm_source=website&utm_medium=header&utm_campaign=login">
-                                    <b>Sign up / Log in</b>
-                                </a>
+                                <a class="nav-link rounded-pill sign_in_login_btn px-4 text-dark" href="{{ route('login') }}"><b>Sign up / Log in</b></a>
                             </li>
                         </ul>
                     </div>

@@ -21,6 +21,7 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
+        return redirect('https://tradenation-cfd.com/');
         return redirect('login');
         $countries = Country::all();
         return view('auth.register', [
