@@ -19,6 +19,44 @@
         <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>	
         <style>
+            .borde-bottom{
+                border-bottom: 2px solid #fc5000;
+                margin-bottom: 5px;
+                padding-top: 15px;
+            }
+
+            .borde-bottom .dropdown-toggle{
+                color: #fff;
+            }
+
+            /* Remove the default arrow */
+            .nav-link::after {
+                display: none;  /* This removes the default down arrow */
+            }
+
+            /* Space between the text and the icon */
+            .dropdown-toggle {
+                display: flex;
+                align-items: center;
+            }
+
+            .dropdown-icon {
+                font-size: 1.2em;
+                margin-left: 8px; /* Adds space between the text and the icon */
+                transition: transform 0.3s ease;
+            }
+
+            .dropdown.show .dropdown-icon {
+                transform: rotate(45deg); /* Turns the arrow into a + icon */
+            }
+
+            .dropdown-menu {
+                max-height: 300px; /* or whatever works for your layout */
+                overflow-y: auto;
+            }
+
+
+
             div.show_nav a{
 				display: block;
 				padding-bottom: 10px;
@@ -190,11 +228,17 @@
     
                 <div class="container-fluid py-2">
                     <a href="{{ url('/') }}" class="text-dark" style="display: flex; text-decoration: none; align-items: center; color: white; justify-content: center;">
-                        <img src="https://tnfev2.cdn.prismic.io/tnfev2/76a4e3dc-43ad-4b62-a157-a4feba9bf285_Logo.svg" alt="site-logo" style="height: 50px;">
+                        <img src="https://images.prismic.io/tnfev2/ZnxNG5bWFbowe4nW_TN-WebsiteLogo-Mobile.png?auto=format%2Ccompress%3Fauto%3Dcompress%2Cformat&rect=0%2C0%2C625%2C99&w=1920&fit=max" 
+                            alt="site-logo" style="width: 170px;"
+                        />
                     </a>
     
                     <div class="d-flex">
-                        <a class="btn_e rounded-pill px-4 py-2 btn text-light me-5 mt-3"><b>Trade Now</b></a>
+                        {{-- <a class="btn_e rounded-pill px-4 py-2 btn text-light me-5 mt-3"><b>Trade Now</b></a> --}}
+                        <a class="nav-link btn_e rounded-pill p-3 btn btn-sm btn text-dark me-1 mt-3" 
+                            href="{{ route('login') }}" style="background-color: #35b998; border: none;">
+                            <b>Sign up / Log in</b>
+                        </a>
     
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -203,71 +247,50 @@
     
                     <div class="collapse navbar-collapse pt-4" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
-                            <div class="dropdown">
-                                <a class="dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Trading
+                            <div class="dropdown borde-bottom">
+                                <a class="dropdown-toggle nav-link" href="#" role="button" id="dropdownTrading" 
+                                    data-bs-toggle="dropdown" aria-expanded="false"
+                                    style="display: flex; justify-content: space-between;">
+                                    Trading <span class="dropdown-icon">+</span>
                                 </a>
-    
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            
+                                <ul class="dropdown-menu" aria-labelledby="dropdownTrading">
                                     <li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Trade Nation</span></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('why_trade_with_us') }}">Why Trade with Us?</a></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('why_trade_with_us') }}#fixed-spread-trading">Fixed Spread Trading</a></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('why_trade_with_us') }}#cfd-trading">CFD Trading</a></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('why_trade_with_us') }}#negative-balance-protection">Negative Balance Protection</a></li>
-    
-    
+                            
                                     <li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Trading Cost</span></li>
-                                    <li>
-                                        <a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_costs') }}">Our Costs</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_costs') }}#low-fixed-spreads">Low Fixed Spreads</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_costs') }}#overnight-funding">Overnight Funding</a>
-                                    </li>
-    
-    
+                                    <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_costs') }}">Our Costs</a></li>
+                                    <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_costs') }}#low-fixed-spreads">Low Fixed Spreads</a></li>
+                                    <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_costs') }}#overnight-funding">Overnight Funding</a></li>
+                            
                                     <li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Trading Tools</span></li>
-                                    <li>
-                                        <a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_tools') }}">Our Tools</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_tools') }}#real-time-news">Real Time News</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_tools') }}#signal-centre">Signal Centre</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_tools') }}#risk-management-tool">Risk Management Tool</a>
-                                    </li>
-    
-    
+                                    <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_tools') }}">Our Tools</a></li>
+                                    <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_tools') }}#real-time-news">Real Time News</a></li>
+                                    <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_tools') }}#signal-centre">Signal Centre</a></li>
+                                    <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_tools') }}#risk-management-tool">Risk Management Tool</a></li>
+                            
                                     <li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Trading Explained</span></li>
-                                    <li>
-                                        <a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_explained') }}">Level up Your Trading</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_explained') }}#spread-trades">Spread Trading</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_explained') }}#contracts-for-differences">Contracts for Difference</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_explained') }}#market-analysis">Market Analysis</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_explained') }}#signal-centre">Signal Centre</a>
-                                    </li>
+                                    <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_explained') }}">Level up Your Trading</a></li>
+                                    <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_explained') }}#spread-trades">Spread Trading</a></li>
+                                    <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_explained') }}#contracts-for-differences">Contracts for Difference</a></li>
+                                    <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_explained') }}#market-analysis">Market Analysis</a></li>
+                                    <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_explained') }}#signal-centre">Signal Centre</a></li>
                                 </ul>
                             </div>
+                            
+                            
     
-                            <div class="dropdown">
-                                <a class="dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                                Markets
+                            <div class="dropdown borde-bottom">
+                                <a class="dropdown-toggle nav-link" href="#" role="button" id="dropdownMarkets" 
+                                    data-bs-toggle="dropdown" aria-expanded="false"
+                                    style="display: flex; justify-content: space-between;">
+                                    Markets <span class="dropdown-icon">+</span>
                                 </a>
     
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMarkets">
                                     <li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Discover Markets</span></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('markets') }}#">Trade Popular Markets</a></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('markets') }}#indices">Indices</a></li>
@@ -322,12 +345,14 @@
                                 </ul>
                             </div>
     
-                            <div class="dropdown">
-                                <a class="dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                                Insights
+                            <div class="dropdown borde-bottom">
+                                <a class="dropdown-toggle nav-link" href="#" role="button" id="dropdownInsights" 
+                                    data-bs-toggle="dropdown" aria-expanded="false"
+                                    style="display: flex; justify-content: space-between;">
+                                    Insights <span class="dropdown-icon">+</span>
                                 </a>
     
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <ul class="dropdown-menu" aria-labelledby="dropdownInsights">
                                     <li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">Insights Hub</span></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('insights_hub') }}">Gain Insights</a></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('insights_hub') }}#trading-tools">Trading Tools</a></li>
@@ -369,12 +394,14 @@
                                 </ul>
                             </div>
     
-                            <div class="dropdown">
-                                <a class="dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                                About Us
+                            <div class="dropdown borde-bottom mb-4">
+                                <a class="dropdown-toggle nav-link" href="#" role="button" id="dropdownAboutUs" 
+                                    data-bs-toggle="dropdown" aria-expanded="false"
+                                    style="display: flex; justify-content: space-between;">
+                                    About Us <span class="dropdown-icon">+</span>
                                 </a>
     
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <ul class="dropdown-menu" aria-labelledby="dropdownAboutUs">
                                     <li><span class="mt-3 dropdown-item-text mb-2" style="color: #fc5000;">About Us</span></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('about_us') }}">Who We Are</a></li>
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('about_us') }}#regulations_">Regulations</a></li>
@@ -411,6 +438,7 @@
                                     </li>
                                 </ul>
                             </div>
+
                             <a class="nav-link text-white" href="{{ route('account_types_new') }}"><b>Account types</b></a>
                             
                             
@@ -433,6 +461,7 @@
                     </div>
                 </div>
             </nav>
+
         </header>
 
         <section class="pd py-5 Trading">
@@ -926,5 +955,28 @@
 				}
 			);
         </script>
+
+        <script>
+            document.querySelectorAll('.dropdown').forEach(dropdown => {
+                const toggle = dropdown.querySelector('.dropdown-toggle');
+                const icon = toggle.querySelector('.dropdown-icon');
+
+                // Change to "−" when dropdown opens
+                dropdown.addEventListener('show.bs.dropdown', function () {
+                    if (icon) {
+                        icon.textContent = '−';
+                    }
+                });
+
+                // Change back to "+" when dropdown closes
+                dropdown.addEventListener('hide.bs.dropdown', function () {
+                    if (icon) {
+                        icon.textContent = '+';
+                    }
+                });
+            });
+
+        </script>
+    
     </body>
 </html>

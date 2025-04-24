@@ -16,7 +16,7 @@
         <section id="nvp_">
             {{-- for mobile start --}}
             <div class="container d-lg-none" id="harness_the_power">
-                <h1 class="kanit_thin_font" style="font-size: 40px;"><span style="color: rgb(4, 227, 216);">Harness the power</span> <br /> of unreal spreads </h1>
+                <h1 class="kanit_thin_font" style="font-size: 40px;"><span style="color: #fc5000;">Harness the power</span> <br /> of unreal spreads </h1>
                 
                 <p class="text-light _dess_w kanit_thin_font">
                     Get low-cost fixed spreads when you trade with Trade Nation. 
