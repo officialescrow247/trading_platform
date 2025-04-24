@@ -576,6 +576,19 @@
             }
         </style>
 		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+		<style>
+			.navbar-toggler-icon {
+				width: 1.5em;
+				height: 1.5em;
+				background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+				background-size: cover;
+			}
+
+			.custom-toggler.open .navbar-toggler-icon {
+				background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' d='M6 6L24 24M6 24L24 6'/%3E%3C/svg%3E");
+			}
+		</style>		
 	</head>
 
 	<body>
@@ -893,40 +906,13 @@
 			<!-- Mobile view nav -->
             <nav class="navbar navbar-expand-lg navbar-dark header_bg d-lg-none fixed-top">
                 <div class="d-flex container" style="justify-content: space-between; align-items: center;">
-                    <div style="width: 75%;">
-                        <p class="p-0 m-0 text-light" style="font-size: 8px;">
-                            Financial Spread Bets and CFDs are complex instruments and come with a high risk of losing 
-                            money rapidly due to leverage. 73.6% of retail investor accounts lose money when trading 
-                            CFDs with this provider. You should consider whether you understand how CFDs work and whether 
-                            you can afford to take the high risk of losing your money.
-                        </p>
-                    </div>
-        
-                    <div style="width: 20%; font-size: 8px;">
-                        <span class="d_2 text-light">Trading in</span>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/800px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" alt="" class="img-fluid" style="width: 17px;">
-                        <span class="d_2 text-light">UK</span>
-                    </div>
+                    <p class="p-0 m-0 text-light" style="font-size: 8px;">
+						Financial Spread Bets and CFDs are complex instruments and come with a high risk of losing 
+						money rapidly due to leverage. 73.6% of retail investor accounts lose money when trading 
+						CFDs with this provider. You should consider whether you understand how CFDs work and whether 
+						you can afford to take the high risk of losing your money.
+					</p>
                 </div>
-
-				<div class="py-3 border border-top-0 border-start-0 border-end-0 d-none d-lg-block" style="background-color: #000 !important;">
-                <div class="d-flex container" style="justify-content: space-between; align-items: center;">
-                    <div class="d_">
-                        <p class="p-0 m-0">
-                            Financial Spread Bets and CFDs are complex instruments and come with a high risk of losing 
-                            money rapidly due to leverage. 73.6% of retail investor accounts lose money when trading 
-                            CFDs with this provider. You should consider whether you understand how CFDs work and whether 
-                            you can afford to take the high risk of losing your money.
-                        </p>
-                    </div>
-        
-                    <div style="width: 20%;">
-                        <span class="d_2">Trading in</span>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/800px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" alt="" class="img-fluid" style="width: 17px;">
-                        <span class="d_2">UK</span>
-                    </div>
-                </div>
-            </div>
     
                 <div class="container-fluid py-2">
                     <a href="{{ url('/') }}" class="text-dark" style="display: flex; text-decoration: none; align-items: center; color: white; justify-content: center;">
@@ -935,20 +921,24 @@
                         />
                     </a>
     
-                    <div class="d-flex">
-                        {{-- <a class="btn_e rounded-pill px-4 py-2 btn text-light me-5 mt-3"><b>Trade Now</b></a> --}}
-                        <a class="nav-link btn_e rounded-pill p-3 btn btn-sm btn text-dark me-1 mt-3" 
-                            href="{{ route('login') }}" style="background-color: #35b998; border: none;">
-                            <b>Sign up / Log in</b>
-                        </a>
-    
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                    </div>
+                    <div class="d-flex align-items-center">
+						<a class="nav-link btn_e rounded-pill p-3 btn btn-sm text-dark me-1 mt-3"
+						   href="{{ route('login') }}"
+						   style="background-color: #35b998; border: none;">
+							<b>Sign up / Log in</b>
+						</a>
+					
+						<button class="navbar-toggler custom-toggler" type="button"
+								data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+								aria-controls="navbarNavAltMarkup" aria-expanded="false"
+								aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+					</div>
+					
     
                     <div class="collapse navbar-collapse pt-4" id="navbarNavAltMarkup">
-                        <div class="navbar-nav">
+                        <div class="navbar-nav" style="height: 100vh !important;">
                             <div class="dropdown borde-bottom">
                                 <a class="dropdown-toggle nav-link" href="#" role="button" id="dropdownTrading" 
                                     data-bs-toggle="dropdown" aria-expanded="false"
@@ -1838,5 +1828,34 @@
 			});
 
 		</script>
+
+		<script>
+			const navbarCollapse = document.getElementById('navbarNavAltMarkup');
+			const authBtn = document.querySelector('.btn_e'); // Adjust if you have more btn_e
+
+			// When navbar menu is shown
+			navbarCollapse.addEventListener('show.bs.collapse', () => {
+				if (authBtn) authBtn.style.display = 'none';
+			});
+
+			// When navbar menu is hidden
+			navbarCollapse.addEventListener('hide.bs.collapse', () => {
+				if (authBtn) authBtn.style.display = 'inline-block';
+			});
+		</script>
+
+		<script>
+			const toggler = document.querySelector('.custom-toggler');
+			const navbar = document.getElementById('navbarNavAltMarkup');
+
+			navbar.addEventListener('shown.bs.collapse', () => {
+				toggler.classList.add('open');
+			});
+
+			navbar.addEventListener('hidden.bs.collapse', () => {
+				toggler.classList.remove('open');
+			});
+		</script>
+
 	</body>
 </html>
