@@ -939,6 +939,24 @@
     
                     <div class="collapse navbar-collapse pt-4" id="navbarNavAltMarkup">
                         <div class="navbar-nav" style="height: 100vh !important;">
+							<div class="dropdown">
+                                <div class="d-flex justify-content-between" style="align-items: anchor-center;">
+                                    <div class="d-flex text-light" style="font-size: 7px">
+                                        <span class="d_2">Trading in</span>
+                                        <img class="mx-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/800px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" 
+											alt="" class="img-fluid" style="width: 17px;">
+                                        <span class="d_2">UK</span>
+                                    </div>
+    
+                                    <div>
+                                        <a class="nav-link btn_e rounded-pill p-3 btn btn-sm btn text-dark me-1 mt-3" 
+                                            href="{{ route('login') }}" style="background-color: #35b998; border: none;">
+                                            <b>Sign up / Log in</b>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="dropdown borde-bottom">
                                 <a class="dropdown-toggle nav-link" href="#" role="button" id="dropdownTrading" 
                                     data-bs-toggle="dropdown" aria-expanded="false"
@@ -972,8 +990,6 @@
                                     <li><a class="dropdown-item" style="text-decoration: none;" href="{{ route('trading_explained') }}#signal-centre">Signal Centre</a></li>
                                 </ul>
                             </div>
-                            
-                            
     
                             <div class="dropdown borde-bottom">
                                 <a class="dropdown-toggle nav-link" href="#" role="button" id="dropdownMarkets" 

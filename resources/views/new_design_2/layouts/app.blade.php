@@ -257,9 +257,10 @@
                         <div class="navbar-nav" style="height: 100vh !important;">
                             <div class="dropdown">
                                 <div class="d-flex justify-content-between" style="align-items: anchor-center;">
-                                    <div class="d-flex">
+                                    <div class="d-flex" style="font-size: 7px">
                                         <span class="d_2">Trading in</span>
-                                        <img class="mx-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/800px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" alt="" class="img-fluid" style="width: 17px;">
+                                        <img class="mx-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/800px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" 
+                                            alt="" class="img-fluid" style="width: 17px;">
                                         <span class="d_2">UK</span>
                                     </div>
     
