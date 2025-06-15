@@ -102,6 +102,10 @@ Route::get('/dashboard', function () {
     }
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('admin-login', function(){
+    return view('auth.login2');
+})->name('adminlogin');
+
 // Admin route start
 Route::group(['prefix' => 'admin', 'middleware' => ['role:admin|manager']], function() {
     Route::get('/', [AdminController::class, 'index'])->name('index');

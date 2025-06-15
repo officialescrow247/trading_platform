@@ -113,9 +113,6 @@ Route::middleware('guest')->group(function () {
             'email' => 'The provided credentials do not match our records.',
         ])->withInput($request->only('email'));
     })->name('login_');
-    
-    Route::get('admin-login', [AuthenticatedSessionController::class, 'adminlogin'])
-                ->name('adminlogin');
 });
 
 Route::middleware('auth')->group(function () {
