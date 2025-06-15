@@ -202,7 +202,7 @@ Route::get('/logout', function(){
 })->name('logout_n');
 
 ## new design 2
-Route::get('/', [HomeController::class, 'nd_welcome'])->name('welcome');
+Route::get('/', [HomeController::class, 'nd_welcome'])->name('welcome')->middleware('access.code');
 // Route::get('/markets', [HomeController::class, 'nd_markets'])->name('nd_markets');
 
 require __DIR__.'/auth.php';
