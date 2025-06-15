@@ -44,7 +44,7 @@ class AccessCodeMiddleware
         if ($cookieCode) {
             $accessCode = DB::table('access_codes')
                 ->where('code', $cookieCode)
-                ->where('status', 'active')
+                ->whereIn('status', ['active', 'used'])
                 ->first();
 
             if ($accessCode) {
