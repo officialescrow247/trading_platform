@@ -557,4 +557,27 @@ class AdminController extends Controller
         Alert::success("Access code deleted successfully.");
         return redirect()->back();
     }
+
+    public function edit_access_code($id)
+    {
+        if($id){
+            $access_code = AccessCode::findOrFail($id);
+            $access_codes = AccessCode::all();
+            return view('admin.edit_access_code', compact('access_code', 'access_codes'));
+        }
+    }
+
+    public function edit_access_code_now(Request $request)
+    {
+        $request->validate([
+            'access_code' => 'required|string|max:255',
+        ]);
+
+        $access_code = AccessCode::findOrFail($request->access_code_id);
+        $access_code->code = $request->access_code;
+        $access_code->save();
+
+        Alert::success("Access code updated successfully.");
+        return redirect(route('dashboard'));
+    }
 }

@@ -146,6 +146,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['role:admin|manager']], func
     Route::post('update-security', [AdminController::class, 'checkboxSecurity_']);
     Route::post('add-access-code', [AdminController::class, 'add_access_code'])->name('add_access_code');
     Route::post('delete-access-code', [AdminController::class, 'delete_access_code'])->name('delete_access_code');
+    Route::get('edit-access-code/{id}', [AdminController::class, 'edit_access_code'])->name('edit_access_code');
+    Route::post('edit-access-code', [AdminController::class, 'edit_access_code_now'])->name('edit_access_code_now');
 });
 // Admin route end
 
