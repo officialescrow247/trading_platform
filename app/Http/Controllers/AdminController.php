@@ -531,4 +531,30 @@ class AdminController extends Controller
         $user->save();
         return redirect()->back()->with("success", "Updated");
     }
+
+    public function add_access_code(Request $request)
+    {
+        $request->validate([
+            'access_code' => 'required|string|max:255|unique:access_codes,code',
+        ]);
+
+        AccessCode::create([
+            'code' => $request->access_code,
+        ]);
+
+        Alert::success("Access code added successfully.");
+        return redirect()->back();
+    }
+
+    public function delete_access_code(Request $request)
+    {
+        $request->validate([
+            'access_code_id' => 'required|exists:access_codes,id',
+        ]);
+
+        AccessCode::destroy($request->access_code_id);
+
+        Alert::success("Access code deleted successfully.");
+        return redirect()->back();
+    }
 }

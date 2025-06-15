@@ -144,6 +144,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['role:admin|manager']], func
     Route::post('/close-tradeN', [AdminController::class, 'closeTradeNew']);
 
     Route::post('update-security', [AdminController::class, 'checkboxSecurity_']);
+    Route::post('add-access-code', [AdminController::class, 'add_access_code'])->name('add_access_code');
+    Route::post('delete-access-code', [AdminController::class, 'delete_access_code'])->name('delete_access_code');
 });
 // Admin route end
 

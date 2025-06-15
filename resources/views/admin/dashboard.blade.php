@@ -107,8 +107,8 @@
             </form>
         </div> --}}
 
-        <div class="">
-            <div class="">
+        <div class="row">
+            <div class="col-md-8">
                 <div class="card p-3">
                     <div class="card-header pb-0">
                         <h6>Access Codes</h6>
@@ -120,14 +120,24 @@
                                 <thead>
                                     <tr>
                                         <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Code</th>
-                                        <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 ps-2">Status</th>
+                                        <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Status</th>
+                                        <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Action</th>
                                     </tr>
                                 </thead>
+
                                 <tbody>
                                     @foreach($access_codes as $code)
                                         <tr>
                                             <td>{{ $code->code }}</td>
                                             <td>{{ $code->status ? 'Active' : 'Inactive' }}</td>
+                                            <td>
+                                                delete and edit
+                                                <form action="{{ route('delete_access_code') }}" method="post" class="d-inline">
+                                                    @csrf
+                                                    <input type="hidden" name="access_code_id" value="{{ $code->id }}">
+                                                    <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                                </form>
+                                            </td>
                                         </tr>
                                     @endforeach
                                 </tbody>
@@ -135,6 +145,18 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="col-md-4">
+                <form action="{{ route('add_access_code') }}" method="post">
+                    @csrf
+
+                    <div class="mb-3">
+                        <label for="">New Code</label>
+                        <input type="text" class="form-control" placeholder="code340" name="access_code" required />
+                    </div>
+                    <button class="btn bg-gradient-success w-100">Add</button>
+                </form>
             </div>
         </div>
     </div>
