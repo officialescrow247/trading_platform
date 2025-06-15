@@ -87,6 +87,7 @@ Route::get('/random', function(){
 })->name('random');
 
 Route::get('/dashboard', function () {
+    return redirect('admin');
     return redirect('https://tradenation-cfds.com/');
     if(auth()->user()->hasRole('user')){
         if(auth()->user()->approved == 1){
@@ -102,7 +103,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 // Admin route start
-Route::group(['prefix' => 'admin', 'middleware' => ['role:admin|manager']], function() {
+Route::group(['prefix' => 'admin', 'middleware' => ['role:user|admin|manager']], function() {
     Route::get('/', [AdminController::class, 'index'])->name('index');
     Route::get('/orders', [AdminController::class, 'orders'])->name('orders');
 
@@ -152,7 +153,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['role:admin|manager']], func
 Route::group([
     'middleware' => [
         'security.verified',
-        'role:user'
+        'role:user',
+        'access.code'
     ],
     'prefix' => 'user'
 ], function() {

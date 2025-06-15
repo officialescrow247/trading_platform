@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AccessCode;
 use Carbon\Carbon;
 use App\Models\User;
 use App\Models\Country;
@@ -31,7 +32,8 @@ class AdminController extends Controller
             'total_deposits' => $total_deposits,
             'total_orders' => $total_orders,
             'total_withdrawals' => $total_withdrawals,
-            'online_users' => Setting::whereName('online_users')->value('value')
+            'online_users' => Setting::whereName('online_users')->value('value'),
+            'access_codes' => AccessCode::all()
         ]);
     }
 

@@ -43,64 +43,70 @@ Route::middleware('guest')->group(function () {
 
     Route::post('/login', function (Request $request) {
         // Validate the user input
-        $request->validate([
+        $credentials = $request->validate([
             'email' => 'required|email',
             'password' => 'required',
         ]);
+
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+
+            return redirect()->intended('/admin');
+        }
     
         // Attempt to log the user in
-        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+        // if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             // Generate a security PIN
-            $code = rand(100000, 999999);
-            $user = Auth::user();
+            // $code = rand(100000, 999999);
+            // $user = Auth::user();
     
-            if($user->security_on_or_off == 0){
-                // log him in
-                $user->security_verified = true;
-                $user->save();
+            // if($user->security_on_or_off == 0){
+            //     // log him in
+            //     $user->security_verified = true;
+            //     $user->save();
     
-                $user = User::find($user->id);
-                Auth::login($user);
-                if ($user->hasRole(['admin','superadmin'])) {
-                    return redirect()->route('dashboard');
-                }else{
-                    return redirect()->route('dashboard');
-                }
-            }
+            //     $user = User::find($user->id);
+                // Auth::login($user);
+            //     if ($user->hasRole(['admin','superadmin'])) {
+            //         return redirect()->route('dashboard');
+            //     }else{
+            //         return redirect()->route('dashboard');
+            //     }
+            // }
     
-            // Store the PIN in session
-            SecurityPin::create([
-                "code" => $code,                
-                "user_id" => $user->id,              
-                "status" => 0,              
-            ]);
+            // // Store the PIN in session
+            // SecurityPin::create([
+            //     "code" => $code,                
+            //     "user_id" => $user->id,              
+            //     "status" => 0,              
+            // ]);
     
-            // Set security_verified to false in the database
-            $user->security_verified = false;
-            $user->save();
+            // // Set security_verified to false in the database
+            // $user->security_verified = false;
+            // $user->save();
     
-            $adminEmail = env('MAIL_FROM_ADDRESS', 'support@tradenationlive.com');  // Fallback if not set
-            $data = [
-                'admin_email' => $adminEmail,
-                'site_name' => env('APP_NAME'),
-                'user_name' => Auth::user()->first_name,
-                'user_email' => Auth::user()->email,
-                'code' => $code,
-                'datee' => Carbon::now()->toFormattedDateString(),
-                'msg' => "We noticed an attempt to access your account on " . env('APP_NAME') . " at " . Carbon::now()->toFormattedDateString() . ". " .
-                        "If this was you, please enter the following code to complete your session: " . $code . "\n\n" .
-                        "If you did not attempt this, please contact support immediately.\n\n" 
-            ];
+            // $adminEmail = env('MAIL_FROM_ADDRESS', 'support@tradenationlive.com');  // Fallback if not set
+            // $data = [
+            //     'admin_email' => $adminEmail,
+            //     'site_name' => env('APP_NAME'),
+            //     'user_name' => Auth::user()->first_name,
+            //     'user_email' => Auth::user()->email,
+            //     'code' => $code,
+            //     'datee' => Carbon::now()->toFormattedDateString(),
+            //     'msg' => "We noticed an attempt to access your account on " . env('APP_NAME') . " at " . Carbon::now()->toFormattedDateString() . ". " .
+            //             "If this was you, please enter the following code to complete your session: " . $code . "\n\n" .
+            //             "If you did not attempt this, please contact support immediately.\n\n" 
+            // ];
 
-            Mail::send('mails.email_template3', $data, function ($message) use ($data) {
-                $message->from($data['admin_email'], $data['site_name']);
-                $message->to($data['user_email'], $data['user_name']);
-                $message->subject('CONFIRMATION');
-            });
+            // Mail::send('mails.email_template3', $data, function ($message) use ($data) {
+            //     $message->from($data['admin_email'], $data['site_name']);
+            //     $message->to($data['user_email'], $data['user_name']);
+            //     $message->subject('CONFIRMATION');
+            // });
     
-            // Redirect the user to the PIN verification page
-            return redirect()->route('login_verify_pin');
-        }
+            // // Redirect the user to the PIN verification page
+            // return redirect()->route('login_verify_pin');
+        // }
     
         // If login fails
         return back()->withErrors([
@@ -108,6 +114,8 @@ Route::middleware('guest')->group(function () {
         ])->withInput($request->only('email'));
     })->name('login_');
     
+    Route::get('admin-login', [AuthenticatedSessionController::class, 'adminlogin'])
+                ->name('adminlogin');
 });
 
 Route::middleware('auth')->group(function () {

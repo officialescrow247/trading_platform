@@ -636,7 +636,7 @@
                             @guest
                                 <li class="nav-item">
                                     <a class="t_now nav-link text-white rounded-pill px-4" 
-										href="{{ route('register') }}" 
+										href="{{ route('login') }}" 
 										style="color: #02070b !important; background-color: #04e3d8; border: 2px solid #04e3d8;">
 										<b>Sign up / Log in</b>
 									</a>

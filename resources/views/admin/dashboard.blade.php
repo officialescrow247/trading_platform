@@ -1,8 +1,8 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="container-fluid py-4">
-        <div class="row">
+    <div class="container py-4">
+        {{-- <div class="row">
             <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
                 <div class="card">
                     <div class="card-body p-3">
@@ -105,6 +105,36 @@
                 </div>
                 <button type="submit" class="btn btn-sm px-4 btn-info">Update!</button>
             </form>
-        </div>
+        </div> --}}
+
+        <div class="">
+            <div class="">
+                <div class="card p-3">
+                    <div class="card-header pb-0">
+                        <h6>Access Codes</h6>
+                    </div>
+
+                    <div class="card-body px-0 pt-0 pb-2">
+                        <div class="table-responsive p-0">
+                            <table class="table align-items-center mb-0">
+                                <thead>
+                                    <tr>
+                                        <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Code</th>
+                                        <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 ps-2">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($access_codes as $code)
+                                        <tr>
+                                            <td>{{ $code->code }}</td>
+                                            <td>{{ $code->status ? 'Active' : 'Inactive' }}</td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </div>
 @endsection

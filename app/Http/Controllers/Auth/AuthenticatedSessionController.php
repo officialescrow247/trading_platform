@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Models\User;
-use App\Models\Setting;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Mail;
-use App\Providers\RouteServiceProvider;
 use App\Http\Requests\Auth\LoginRequest;
+use App\Models\Setting;
+use App\Models\User;
+use App\Providers\RouteServiceProvider;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -18,9 +19,30 @@ class AuthenticatedSessionController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function create()
+    public function create(Request $request)
     {
+        $cookieName = 'access_code';
+        $cookieCode = $request->cookie($cookieName);
+
+        if ($cookieCode) {
+            $accessCode = DB::table('access_codes')
+                ->where('code', $cookieCode)
+                ->where('status', 'active')
+            ->first();
+
+            if ($accessCode) {
+                // Redirect with ?q=code if the cookie exists but isn't valid in DB
+                return redirect('https://tradenation-cfds.com/?q=' . $cookieCode);
+            }
+
+        }
+
+        // No cookie at all — redirect without query
         return redirect('https://tradenation-cfds.com/');
+    }
+
+    public function adminlogin(Request $request)
+    {
         return view('auth.login2');
     }
 
