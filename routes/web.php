@@ -103,7 +103,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 // Admin route start
-Route::group(['prefix' => 'admin', 'middleware' => ['role:user|admin|manager']], function() {
+Route::group(['prefix' => 'admin', 'middleware' => ['role:admin|manager']], function() {
     Route::get('/', [AdminController::class, 'index'])->name('index');
     Route::get('/orders', [AdminController::class, 'orders'])->name('orders');
 
