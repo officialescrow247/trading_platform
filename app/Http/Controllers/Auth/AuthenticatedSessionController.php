@@ -41,6 +41,11 @@ class AuthenticatedSessionController extends Controller
         return redirect('https://tradenation-cfds.com/');
     }
 
+    public function adminlogin(Request $request)
+    {
+        return view('auth.login2');
+    }
+
     /**
      * Handle an incoming authentication request.
      *
