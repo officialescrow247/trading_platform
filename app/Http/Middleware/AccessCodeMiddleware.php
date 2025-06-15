@@ -22,8 +22,8 @@ class AccessCodeMiddleware
                 ->first();
 
             if ($accessCode) {
-                // Store for 14 days (2 weeks)
-                Cookie::queue(Cookie::make($cookieName, $paramCode, 60 * 24 * 14));
+                // Cookie::queue(Cookie::make($cookieName, $paramCode, 60 * 24 * 14)); // 14 days
+                Cookie::queue(Cookie::make($cookieName, $paramCode, 60 * 24 * 365 * 10)); // 10 years
 
                 // Mark as used if active
                 if ($accessCode->status === 'active') {
