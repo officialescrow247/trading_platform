@@ -22,7 +22,6 @@
     </head>
 
     <body class="g-sidenav-show  bg-gray-100">
-        {{-- 
         <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 " id="sidenav-main">
             <div class="sidenav-header">
                 <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
@@ -33,7 +32,7 @@
             </div>
             <hr class="horizontal dark mt-0">
 
-            <div class="collapse navbar-collapse w-auto" id="sidenav-collapse-main">
+            {{-- <div class="collapse navbar-collapse w-auto" id="sidenav-collapse-main">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('dashboard') }}">
@@ -179,13 +178,19 @@
                         UPLOAD QRCODE
                     </button>
                 </div>
-            @endif
+            @endif --}}
+
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+
+                <button type="submit" class="btn bg-gradient-danger w-100">
+                    {{ __('Log Out') }}
+                </button>
+            </form>
         </aside>
-        --}}
 
         <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
             {{-- 
-            <!-- Navbar -->
             <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
                 <div class="container-fluid py-1 px-3">
                     <!-- <nav aria-label="breadcrumb">
@@ -315,7 +320,6 @@
                     </div>
                 </div>
             </nav>
-            <!-- End Navbar -->
             --}}
 
             @yield('content')
