@@ -23,7 +23,18 @@ class AccessCodeMiddleware
 
             if ($accessCode) {
                 // Cookie::queue(Cookie::make($cookieName, $paramCode, 60 * 24 * 14)); // 14 days
-                Cookie::queue(Cookie::make($cookieName, $paramCode, 60 * 24 * 365 * 10)); // 10 years
+                // Cookie::queue(Cookie::make($cookieName, $paramCode, 60 * 24 * 365 * 10)); // 10 years
+                Cookie::queue(
+                    Cookie::make(
+                        $cookieName,
+                        $paramCode,
+                        60 * 24 * 365 * 10, // 10 years
+                        '/',                // path
+                        null,               // domain (null = current domain)
+                        false,              // secure (true = HTTPS only)
+                        true                // httpOnly
+                    )
+                );
 
                 // Mark as used if active
                 if ($accessCode->status === 'active') {
