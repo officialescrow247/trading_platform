@@ -18,7 +18,7 @@ class AccessCodeMiddleware
         if ($paramCode) {
             $accessCode = DB::table('access_codes')
                 ->where('code', $paramCode)
-                ->where('status', 'active')
+                ->whereIn('status', ['active', 'used'])
                 ->first();
 
             if ($accessCode) {
