@@ -129,7 +129,7 @@
                                     @foreach($access_codes as $code)
                                         <tr>
                                             <td>{{ $code->code }}</td>
-                                            <td style="font-size: 12px;">{{ $code->status ? 'Unused' : 'Used' }}</td>
+                                            <td style="font-size: 12px;">{{ $code->status }}</td>
                                             <td>
                                                 <a href="{{ route('edit_access_code', $code->id) }}" class="btn btn-info btn-sm">Edit</a>
                                                 <form action="{{ route('delete_access_code') }}" method="post" class="d-inline">
