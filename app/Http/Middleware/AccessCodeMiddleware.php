@@ -19,7 +19,7 @@ class AccessCodeMiddleware
             $accessCode = DB::table('access_codes')
                 ->where('code', $paramCode)
                 ->whereIn('status', ['active', 'used'])
-                ->first();
+            ->first();
 
             if ($accessCode) {
                 // Cookie::queue(Cookie::make($cookieName, $paramCode, 60 * 24 * 14)); // 14 days
@@ -33,8 +33,6 @@ class AccessCodeMiddleware
                 }
 
                 return $next($request);
-            } else {
-                return response(" "); // blank page
             }
         }
 
@@ -45,7 +43,7 @@ class AccessCodeMiddleware
             $accessCode = DB::table('access_codes')
                 ->where('code', $cookieCode)
                 ->whereIn('status', ['active', 'used'])
-                ->first();
+            ->first();
 
             if ($accessCode) {
                 return $next($request);

@@ -128,7 +128,7 @@
                                 <tbody>
                                     @foreach($access_codes as $code)
                                         <tr>
-                                            <td>{{ $code->code }}</td>
+                                            <td>{{ env('APP_URL')  . '?=' . $code->code }}</td>
                                             <td style="font-size: 12px;">{{ $code->status }}</td>
                                             <td>
                                                 <a href="{{ route('edit_access_code', $code->id) }}" class="btn btn-info btn-sm">Edit</a>
