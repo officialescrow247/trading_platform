@@ -120,6 +120,7 @@
                                 <thead>
                                     <tr>
                                         <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Code</th>
+                                        <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Url</th>
                                         <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Status</th>
                                         <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Action</th>
                                     </tr>
@@ -128,7 +129,8 @@
                                 <tbody>
                                     @foreach($access_codes as $code)
                                         <tr>
-                                            <td>{{ 'https://tradenations-uk.com?q=' . $code->code }}</td>
+                                            <td style="font-size: 12px;">{{ $code->code }}</td>
+                                            <td style="font-size: 12px;">{{ 'https://tradenations-uk.com?q=' . $code->code }}</td>
                                             <td style="font-size: 12px;">{{ $code->status }}</td>
                                             <td>
                                                 <a href="{{ route('edit_access_code', $code->id) }}" class="btn btn-info btn-sm">Edit</a>
