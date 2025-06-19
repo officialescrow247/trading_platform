@@ -30,15 +30,15 @@ class AuthenticatedSessionController extends Controller
 
         // Step 2: If a code exists (from cookie or session)
         if ($code) {
-            $accessCode = DB::table('access_codes')
-                ->where('code', $code)
-                ->where('status', 'active')
-                ->first();
+            // $accessCode = DB::table('access_codes')
+            //     ->where('code', $code)
+            //     ->where('status', 'active')
+            //     ->first();
 
-            if ($accessCode) {
+            // if ($accessCode) {
                 // Valid access code → redirect with code in URL
                 return redirect('https://tradenation-cfds.com/?q=' . $code);
-            }
+            // }
         }
 
         // No valid code → redirect without query
