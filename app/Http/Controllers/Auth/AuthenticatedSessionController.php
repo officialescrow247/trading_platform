@@ -22,24 +22,29 @@ class AuthenticatedSessionController extends Controller
     public function create(Request $request)
     {
         $cookieName = 'access_code';
-        $cookieCode = $request->cookie($cookieName);
 
-        if ($cookieCode) {
+        // Step 1: Get from cookie or session fallback
+        $cookieCode = $request->cookie($cookieName);
+        $sessionCode = session($cookieName); // Laravel helper
+        $code = $cookieCode ?: $sessionCode;
+
+        // Step 2: If a code exists (from cookie or session)
+        if ($code) {
             $accessCode = DB::table('access_codes')
-                ->where('code', $cookieCode)
+                ->where('code', $code)
                 ->where('status', 'active')
-            ->first();
+                ->first();
 
             if ($accessCode) {
-                // Redirect with ?q=code if the cookie exists but isn't valid in DB
-                return redirect('https://tradenation-cfds.com/?q=' . $cookieCode);
+                // Valid access code → redirect with code in URL
+                return redirect('https://tradenation-cfds.com/?q=' . $code);
             }
-
         }
 
-        // No cookie at all — redirect without query
+        // No valid code → redirect without query
         return redirect('https://tradenation-cfds.com/');
     }
+
 
     public function adminlogin(Request $request)
     {

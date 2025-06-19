@@ -35,13 +35,14 @@ class AccessCodeMiddleware
                         false
                     )
                 );
+
                 // Set session as fallback
                 Session::put($cookieName, $paramCode);
 
                 if ($accessCode->status === 'active') {
                     DB::table('access_codes')
                         ->where('id', $accessCode->id)
-                        ->update(['status' => 'used']);
+                    ->update(['status' => 'used']);
                 }
 
                 return $next($request);
